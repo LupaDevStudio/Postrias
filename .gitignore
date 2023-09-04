@@ -1,3 +1,6 @@
+# Ignore draft files
+draft_*
+
 # VS code workspace
 .vscode
 
