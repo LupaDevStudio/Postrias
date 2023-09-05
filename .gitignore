@@ -6,6 +6,7 @@ draft_*
 
 # Data folder
 data
+data.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

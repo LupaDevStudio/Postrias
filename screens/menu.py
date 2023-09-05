@@ -16,7 +16,6 @@ from kivy.properties import (
 from tools.tools_constants import (
     PATH_IMAGES,
     FPS,
-    OPACITY_RATE,
     PATH_TITLE_FONT,
     MOBILE_MODE
 )
@@ -40,7 +39,7 @@ class MenuScreen(Screen):
 
     def init_screen(self):
         self.mobile_mode = MOBILE_MODE
-        self.font_ratio = Window.size[0]/800
+        self.font_ratio = Window.size[0] / 800
         self.width_back_image = Window.size[0]
         self.height_back_image = Window.size[0] * 392 / 632
         if music_mixer.musics["title_music"].state != "play":

@@ -9,15 +9,6 @@ __version__ : str
 MOBILE_MODE : bool
     Whether the application is launched on mobile or not.
 
-APPLICATION_NAME : str
-    Name of the application.
-
-PATH_DATA_FOLDER : str
-    Path to the data folder.
-
-PATH_SETTINGS : str
-    Path to the json file of settings.
-
 PATH_RESOURCES_FOLDER : str
     Path to the resources folder.
 
@@ -30,9 +21,6 @@ PATH_APP_IMAGES : str
 PATH_KIVY_FOLDER : str
     Path to the folder where are stored the different kv files.
 
-DICT_LANGUAGE_FONT : dict
-    Dictionary associating the code of language to the font.
-
 DICT_LANGUAGE_CORRESPONDANCE : dict
     Dictionary associating the language to its code.
 """
@@ -42,15 +30,18 @@ DICT_LANGUAGE_CORRESPONDANCE : dict
 ### Imports ###
 ###############
 
+### Python imports ###
+import os
 
 ### Kivy imports ###
 
 from kivy import platform
 from kivy.config import Config
 
-
+### Local imports ###
 from tools.tools_basis import (
-    load_json_file
+    load_json_file,
+    save_json_file
 )
 
 
@@ -71,55 +62,53 @@ DEBUG_MODE = False
 ### Kivy parameters ###
 
 FPS = 30
-OPACITY_RATE = 0.02
-MSAA_LEVEL = 4
+MSAA_LEVEL = 2
 
 Config.set("graphics", "maxfps", FPS)
 Config.set("graphics", "multisamples", MSAA_LEVEL)
 
 ### Paths ###
 
-PATH_DATA_FOLDER = "data/"
-PATH_SETTINGS = PATH_DATA_FOLDER + "settings.json"
-
+# Path for the folders
 PATH_RESOURCES_FOLDER = "resources/"
+
+# Path for the user data
+PATH_USER_DATA = "data.json"
+
+# Path for the resources
 PATH_LANGUAGE = PATH_RESOURCES_FOLDER + "languages/"
 PATH_IMAGES = PATH_RESOURCES_FOLDER + "images/"
 PATH_MAP_TEXTURES = PATH_IMAGES + "map_textures/"
 PATH_ATLAS = PATH_RESOURCES_FOLDER + "atlas/"
 PATH_KIVY_FOLDER = PATH_RESOURCES_FOLDER + "kivy/"
 PATH_MAPS = PATH_RESOURCES_FOLDER + "maps/"
-PATH_CHARACTER_IMAGES = PATH_IMAGES + "ghost_textures/"
-PATH_LOGO = PATH_RESOURCES_FOLDER + "start_logo/"
 PATH_SOUNDS = PATH_RESOURCES_FOLDER + "sounds/"
 PATH_MUSICS = PATH_RESOURCES_FOLDER + "musics/"
 PATH_FONTS = PATH_RESOURCES_FOLDER + "fonts/"
-PATH_TITLE_FONT = PATH_FONTS + "enchanted_land/Enchanted Land.otf"
-SETTINGS = load_json_file(PATH_SETTINGS)
+
+# Path for the fonts
+PATH_TITLE_FONT = PATH_FONTS + "scratched_letters.ttf"
+PATH_TEXT_FONT = PATH_FONTS + "another_typewriter.ttf"
+
+### File loading ###
+
+# Create the user data json if it does not exist
+if not os.path.exists(PATH_USER_DATA):
+    default_user_data = {
+        "language": "english",
+        "highscore": 0,
+        "endings": {},
+        "music_volume": 0.5,
+        "sound_effects_volume": 0.5
+    }
+    save_json_file(PATH_USER_DATA, default_user_data)
+
+# Load the settings
+USER_DATA = load_json_file(PATH_USER_DATA)
 
 ### Language ###
-
-DICT_LANGUAGE_FONT = {
-    "french": "Roboto",
-    "english": "Roboto"
-}
 
 DICT_LANGUAGE_CORRESPONDANCE = {
     "french": "Français",
     "english": "English"
 }
-
-
-#############
-### Sound ###
-#############
-
-
-SOUND_VOLUME = 0.5
-MUSIC_VOLUME = 0.5
-
-SOUND_RADIUS_CRYSTAL = 3
-SOUND_RADIUS_BEACON = 3
-PROBABILITY_WATER_DROPS = 0.005
-
-GAME_OVER_FREEZE_TIME = 2
