@@ -1,5 +1,10 @@
 # Postrias
 
+![License](https://img.shields.io/github/license/LupaDevStudio/Postrias)
+![Pylint Badge](https://github.com/LupaDevStudio/Postrias/actions/workflows/pylint.yml/badge.svg)
+![Pytest coverage](https://raw.githubusercontent.com/LupaDevStudio/Postrias/coverage-badge/coverage.svg?raw=true)
+![Download Badge](https://img.shields.io/github/downloads/LupaDevStudio/Postrias/total.svg)
+
 ## License
 
 This game is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License.
