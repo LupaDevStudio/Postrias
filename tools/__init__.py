@@ -16,5 +16,5 @@ tools_settings
     Module dealing with the settings of the application.
 """
 
-from tools.tools_basis import *
+from tools.basic_tools.image_tools import *
 from tools.tools_constants import *

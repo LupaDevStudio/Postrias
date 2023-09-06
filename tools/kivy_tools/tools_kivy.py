@@ -46,12 +46,10 @@ my_language = {}
 
 ### Kivy theme ###
 
-window_size = Window.size
-#window_size = (900, 500)
-size_popup = (int(window_size[0] / 1.2), int(window_size[1] / 2))
+size_popup = (int(Window.size[0] / 1.2), int(Window.size[1] / 2))
 global_spacing = {
-    "horizontal": window_size[0] / 50,
-    "vertical": window_size[1] / 50
+    "horizontal": Window.size[0] / 50,
+    "vertical": Window.size[1] / 50
 }
 background_color = (70 / 255, 65 / 255, 62 / 255, 1)
 color_label = (254 / 255, 195 / 255, 3 / 255, 1)
@@ -60,7 +58,14 @@ blue_color = (70 / 255, 130 / 255, 180 / 255, 1)
 pink_color = (229 / 255, 19 / 255, 100 / 255, 1)
 highlight_text_color = (229 / 255, 19 / 255, 100 / 255, 0.5)
 
-scale_image = 3 * window_size[1] / 2340
+scale_image = 3 * Window.size[1] / 2340
+
+
+def get_window_ratio():
+    """
+    Return the ratio of the current window.
+    """
+    return Window.size[0] / Window.size[1]
 
 
 #####################
@@ -72,7 +77,6 @@ def blank_function(*args, **kwargs):
     """
     Function that does nothing
     """
-    pass
 
 
 class ImprovedPopupLayout(FloatLayout):

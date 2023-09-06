@@ -31,17 +31,27 @@ DICT_LANGUAGE_CORRESPONDANCE : dict
 ###############
 
 ### Python imports ###
+
 import os
 
 ### Kivy imports ###
 
 from kivy import platform
-from kivy.config import Config
 
 ### Local imports ###
-from tools.tools_basis import (
+
+from path import (
+    PATH_USER_DATA,
+    PATH_MUSICS,
+    PATH_SOUNDS
+)
+from basic_tools import (
     load_json_file,
     save_json_file
+)
+from game_tools import (
+    load_sounds,
+    DynamicMusicMixer
 )
 
 
@@ -58,37 +68,9 @@ __version__ = "2.0.0"
 
 MOBILE_MODE = platform == "android"
 DEBUG_MODE = False
-
-### Kivy parameters ###
-
 FPS = 30
 MSAA_LEVEL = 2
 
-Config.set("graphics", "maxfps", FPS)
-Config.set("graphics", "multisamples", MSAA_LEVEL)
-
-### Paths ###
-
-# Path for the folders
-PATH_RESOURCES_FOLDER = "resources/"
-
-# Path for the user data
-PATH_USER_DATA = "data.json"
-
-# Path for the resources
-PATH_LANGUAGE = PATH_RESOURCES_FOLDER + "languages/"
-PATH_IMAGES = PATH_RESOURCES_FOLDER + "images/"
-PATH_MAP_TEXTURES = PATH_IMAGES + "map_textures/"
-PATH_ATLAS = PATH_RESOURCES_FOLDER + "atlas/"
-PATH_KIVY_FOLDER = PATH_RESOURCES_FOLDER + "kivy/"
-PATH_MAPS = PATH_RESOURCES_FOLDER + "maps/"
-PATH_SOUNDS = PATH_RESOURCES_FOLDER + "sounds/"
-PATH_MUSICS = PATH_RESOURCES_FOLDER + "musics/"
-PATH_FONTS = PATH_RESOURCES_FOLDER + "fonts/"
-
-# Path for the fonts
-PATH_TITLE_FONT = PATH_FONTS + "scratched_letters.ttf"
-PATH_TEXT_FONT = PATH_FONTS + "another_typewriter.ttf"
 
 ### File loading ###
 
@@ -112,3 +94,13 @@ DICT_LANGUAGE_CORRESPONDANCE = {
     "french": "Français",
     "english": "English"
 }
+
+
+# TEMP, to move inside the app
+# Load the dictionnaries
+MUSIC_DICT = load_sounds(PATH_MUSICS, USER_DATA["music_volume"])
+SOUND_DICT = load_sounds(PATH_SOUNDS, USER_DATA["sound_volume"])
+
+# Create the mixer
+music_mixer = DynamicMusicMixer(MUSIC_DICT)
+sound_mixer = DynamicMusicMixer(SOUND_DICT)

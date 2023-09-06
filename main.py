@@ -24,7 +24,9 @@ from kivy.uix.widget import Widget
 from tools.tools_constants import (
     PATH_KIVY_FOLDER,
     PATH_IMAGES,
-    MOBILE_MODE
+    MOBILE_MODE,
+    FPS,
+    MSAA_LEVEL
 )
 from screens import (
     MenuScreen,
@@ -33,7 +35,7 @@ from screens import (
     GameOverScreen,
     AchievementsScreen
 )
-from tools.tools_kivy import (
+from tools.kivy_tools.tools_kivy import (
     color_label,
     background_color,
     Window
@@ -92,6 +94,17 @@ class MainApp(App, Widget):
     Main class of the application.
     """
 
+    def build_config(self, config):
+        """
+        Build the config file for the application.
+
+        It sets the FPS number and the antialiasing level.
+        """
+        config.setdefaults('graphics', {
+            'maxfps': str(FPS),
+            'multisamples': str(MSAA_LEVEL)
+        })
+
     def build(self):
         """
         Build the application.
@@ -117,8 +130,4 @@ class MainApp(App, Widget):
 
 # Run the application
 if __name__ == "__main__":
-    for file_name in os.listdir(PATH_KIVY_FOLDER):
-        if file_name.endswith(".kv"):
-            Builder.load_file(PATH_KIVY_FOLDER + file_name, encoding="utf-8")
     MainApp().run()
-
