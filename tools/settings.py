@@ -8,7 +8,7 @@ Module for the settings of the applications.
 #################
 
 
-from tools.basic_tools.image_tools import (
+from tools.basic_tools.image import (
     save_json_file
 )
 from tools.constants import (
