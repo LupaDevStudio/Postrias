@@ -7,7 +7,7 @@ Package containing tools and functions for game objects and interactions.
 ###############
 
 
-from sound import (
+from tools.game_tools.sound import (
     MusicMixer,
     DynamicMusicMixer,
     SoundMixer,

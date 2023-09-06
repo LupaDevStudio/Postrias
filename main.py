@@ -16,14 +16,13 @@ import os
 
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, NoTransition, Screen
-from kivy.lang import Builder
 from kivy.uix.widget import Widget
 
 ### Module imports ###
-
-from tools.tools_constants import (
-    PATH_KIVY_FOLDER,
-    PATH_IMAGES,
+from tools.path import (
+    PATH_IMAGES
+)
+from tools.constants import (
     MOBILE_MODE,
     FPS,
     MSAA_LEVEL
@@ -40,7 +39,7 @@ from tools.kivy_tools.tools_kivy import (
     background_color,
     Window
 )
-from tools.tools_sound import (
+from tools import (
     music_mixer
 )
 

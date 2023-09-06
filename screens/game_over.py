@@ -6,14 +6,13 @@ Module for the game over screen
 from kivy.uix.screenmanager import Screen
 from kivy.clock import Clock
 from kivy.core.window import Window
-from tools.tools_constants import (
+from tools.path import (
     PATH_TITLE_FONT,
     PATH_IMAGES,
-    FPS,
-    OPACITY_RATE
 )
+from tools.constants import FPS
 from kivy.properties import StringProperty, ObjectProperty, NumericProperty
-from tools.tools_sound import music_mixer
+from tools import music_mixer
 
 
 class GameOverScreen(Screen):
@@ -29,7 +28,7 @@ class GameOverScreen(Screen):
     score_str = StringProperty("")
 
     def init_screen(self, *args):
-        self.font_ratio = Window.size[0]/800
+        self.font_ratio = Window.size[0] / 800
         self.width_back_image = Window.size[0]
         self.height_back_image = Window.size[0] * 392 / 632
         music_mixer.play("game_over_music", loop=True)
@@ -38,6 +37,6 @@ class GameOverScreen(Screen):
         Clock.schedule_interval(self.update, 1 / FPS)
 
     def update(self, *args):
-        self.ids.back_to_menu.opacity += self.opacity_state * OPACITY_RATE
+        # self.ids.back_to_menu.opacity += self.opacity_state * OPACITY_RATE
         if self.ids.back_to_menu.opacity < 0 or self.ids.back_to_menu.opacity > 1:
             self.opacity_state = -self.opacity_state

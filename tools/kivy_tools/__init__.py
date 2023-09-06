@@ -13,7 +13,7 @@ from kivy.lang import Builder
 
 ### Package imports ###
 
-from screen import ImprovedScreen
+from tools.kivy_tools.screen import ImprovedScreen
 from tools.path import PATH_KIVY_FOLDER
 
 ###############

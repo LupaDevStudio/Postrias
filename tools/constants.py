@@ -40,18 +40,14 @@ from kivy import platform
 
 ### Local imports ###
 
-from path import (
+from tools.path import (
     PATH_USER_DATA,
     PATH_MUSICS,
     PATH_SOUNDS
 )
-from basic_tools import (
+from tools.basic_tools import (
     load_json_file,
     save_json_file
-)
-from game_tools import (
-    load_sounds,
-    DynamicMusicMixer
 )
 
 
@@ -94,13 +90,3 @@ DICT_LANGUAGE_CORRESPONDANCE = {
     "french": "Français",
     "english": "English"
 }
-
-
-# TEMP, to move inside the app
-# Load the dictionnaries
-MUSIC_DICT = load_sounds(PATH_MUSICS, USER_DATA["music_volume"])
-SOUND_DICT = load_sounds(PATH_SOUNDS, USER_DATA["sound_volume"])
-
-# Create the mixer
-music_mixer = DynamicMusicMixer(MUSIC_DICT)
-sound_mixer = DynamicMusicMixer(SOUND_DICT)

@@ -11,7 +11,7 @@ Module for the settings menu
 from kivy.uix.screenmanager import Screen
 from kivy.properties import StringProperty, ObjectProperty, NumericProperty
 from kivy.core.window import Window
-from tools.tools_constants import (
+from tools.path import (
     PATH_TITLE_FONT,
     PATH_IMAGES
 )
@@ -35,8 +35,7 @@ class SettingsScreen(Screen):
     height_back_image = ObjectProperty(Window.size[0] * 392 / 632)
 
     def init_screen(self):
-        self.font_ratio = Window.size[0]/800
+        self.font_ratio = Window.size[0] / 800
         self.width_back_image = Window.size[0]
         self.height_back_image = Window.size[0] * 392 / 632
         pass
-

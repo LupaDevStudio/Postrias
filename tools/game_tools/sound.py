@@ -12,7 +12,7 @@ from math import exp
 
 from kivy.core.audio import SoundLoader
 
-from tools.tools_constants import FPS
+from tools.constants import FPS
 
 
 ###############

@@ -2,23 +2,13 @@
 
 <MenuScreen>:
 
-    Image:
-        id: back_image
-        source: root.path_back_image
-        size_hint: None,None
-        width: root.width_back_image
-        height: root.height_back_image
-        pos_hint: {"center_x":0.5,"center_y":0.5}
-        allow_stretch: True
-        keep_ratio: True
-
     Label:
         id: title_label
         text: "LUMACRYTE"
         size_hint: 1, 0.5
         pos_hint: {"center_x": 0.5, "center_y": 0.85}
         font_size: 60*root.font_ratio
-        font_name: root.font
+        font_name: root.title_font
         color: root.manager.color_label
 
     Label:

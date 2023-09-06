@@ -33,7 +33,7 @@ from functools import partial
 
 ### Modules imports ###
 
-from tools.tools_constants import (
+from tools.path import (
     PATH_KIVY_FOLDER
 )
 my_language = {}
