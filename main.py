@@ -122,8 +122,8 @@ class MainApp(App, Widget):
     def on_start(self):
         if MOBILE_MODE:
             Window.update_viewport()
-        music_mixer.play("title_music", loop=True)
-        self.root_window.children[0].init_screen("menu")
+        music_mixer.play("tortuga", loop=True)
+        # self.root_window.children[0].init_screen("menu")
         return super().on_start()
 
 

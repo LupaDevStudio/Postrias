@@ -1,4 +1,5 @@
-#:kivy 2.1.0
+#: kivy 2.1.0
+#: import PATH_IMAGES tools.path.PATH_IMAGES
 
 <MenuScreen>:
 
@@ -28,7 +29,7 @@
 
     Image:
         id: settings_logo
-        source: root.path_images + "settings_logo.png"
+        source: PATH_IMAGES + "settings_logo.png"
         size_hint: None, 0.15
         pos_hint: {"right": 0.95, "y": 0.05}
         allow_stretch: True
@@ -42,18 +43,18 @@
         on_release:
             root.manager.init_screen("settings")
 
-    Label:
-        id: high_score_label
-        text: root.high_score
-        bold: True
-        color: root.manager.color_label
-        pos_hint: {"right":1, "y":0}
-        size_hint: 0.2, 0.1
-        font_name: root.font
-        font_size: 30*root.font_ratio
+    # Label:
+    #     id: high_score_label
+    #     text: root.high_score
+    #     bold: True
+    #     color: root.manager.color_label
+    #     pos_hint: {"right":1, "y":0}
+    #     size_hint: 0.2, 0.1
+    #     font_name: root.font
+    #     font_size: 30*root.font_ratio
 
     Image:
-        source: root.path_images + "collection_logo.png"
+        source: PATH_IMAGES + "collection_logo.png"
         size_hint: None, 0.15
         pos_hint: {"x": 0.05, "y": 0.05}
         allow_stretch: True
