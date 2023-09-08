@@ -3,6 +3,7 @@
 
 # Ignore draft files
 draft_*
+*_test.*
 
 # VS code workspace
 .vscode

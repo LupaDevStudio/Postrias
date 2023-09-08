@@ -1,0 +1,235 @@
+{
+    "cards": {
+        "cathedral": {
+            "text": "Vous vous êtes engagé à lancer le chantier d'une cathédrale auprès de l'Ordre, mais un milicien vous apprend qu'une brêche a été constatée dans les remparts.",
+            "left": "La cathédrale attendra.",
+            "right": "Ces pierres ne nous protégerons pas de Son courroux, pauvres fous !"
+        },
+        "pteranodon_embryo": {
+            "text": "Un paléontologue vous annonce qu'il a réussi à créer in vitro un embryon de ptéranodon. Il affirme que cela nous permettra de mieux comprendre leurs forces et leurs faiblesses.",
+            "left": "Encourageons-le à poursuivre ses recherches.",
+            "right": "Hérésie ! Brûlons-le avec ses travaux !"
+        },
+        "religious_sacrifice": {
+            "text": "L'évèque vous informe que les visions des oracles de l'Ordre sont sans appel : nous devons sacrifier treize survivants demain à treize heure.",
+            "left": "Qu'il en soit selon la volonté des cieux.",
+            "right": "Quelques poulets feront bien l'affaire."
+        },
+        "tough_winter": {
+            "text": "Un ouvrier agricole vous réclame des vivres pour faire face au rude hiver qui s'annonce.",
+            "left": "Tenez mon brave.",
+            "right": "L'État ne peut pas tout."
+        },
+        "weapons_for_military": {
+            "text": "Le général de la milice se plaint de l'état déplorable des équipements de ses troupes. Il menace de démissionner si les choses ne s'améliorent pas.",
+            "left": "Très bien, très bien, ponctionnez sur les stocks stratégiques !",
+            "right": "Pour qui vous prenez-vous ?!"
+        },
+        "food_for_dragon": {
+            "text": "Un représentant de l'Ordre vous demande des viandes et des huiles pour favoriser la venue du Dragon des derniers jours.",
+            "left": "Qu'on les lui donne !",
+            "right": "Donnons-les plutôt au peuple !"
+        },
+        "security_perimeter": {
+            "text": "Le général de la milice est effaré des sorties régulières des survivants hors des périmètres de sécurité.",
+            "left": "Renforcez les patrouilles et instaurez un couvre-feu !",
+            "right": "Armons les survivants directement !"
+        },
+        "merchant": {
+            "text": "Un marchand vous demande de le couvrir auprès de la milice en échange de vivres et d'outils.",
+            "left": "Il est vrai que nous nos coffres sont désespérément vides...",
+            "right": "Ignorons-le."
+        },
+        "witch": {
+            "text": "Un survivant s'approche de vous avec une paléontologue ligotée qui a été lynchée par la foule. Le survivant affirme l'avoir aperçue en train d'accoucher d'un reptile cornu. Il vous demande de la condamner à mort.",
+            "left": "Libérez cette innocente, pauvre fou !",
+            "right": "C'est une sorcière, qu'il en soit ainsi."
+        },
+        "tough_labour": {
+            "text": "Un survivant qui dit travailler à l'atelier de fabrication d'armes vous implore de réduire les cadences de production. Votre regard s'attarde sur ses mains difformes avilies par le labeur.",
+            "left": "Silence ! Nous avons besoin de plus d'armes ! Augmentez les cadences !",
+            "right": "Oui, cela est juste et bon."
+        },
+        "paleo_tools": {
+            "text": "L'intendant du laboratoire des paléontologues vous apporte un compte-rendu de leurs dépenses en outils. Elles sont anormalement élevées et vous constatez que des armes ont également été consommées.",
+            "left": "Ils savent ce qu'ils font.",
+            "right": "Vous n'aurez rien de plus que d'habitude !"
+        },
+        "black_market": {
+            "text": "Le commandant de la section \"Ordre public\" de la Milice vous somme de prendre des mesures plus fortes pour faire face à la contrebande de vivres.",
+            "left": "Tolérons plutôt ce trafic, beaucoup trop de survivants en dépendent.",
+            "right": "Vous avez carte blanche, commandant."
+        },
+        "paleo_researches": {
+            "text": "L'évèque s'indigne des enseignements prodigués par les paléontologues. Il affirme que ces derniers cherchent à embrigader des survivants dans leur quête du culte impie de la Raison.",
+            "left": "Emprisonnez-les. La connaissance, c'est le pouvoir !",
+            "right": "Et alors ?"
+        },
+        "sioux_falls_ruins": {
+            "text": "Le capitaine d'une brigade d'exploration de la milice vous fait son rapport. Il prétend avoir decouvert un ordinateur d'agronomie dans les ruines de Sioux Falls. Il renferme sans doute de vastes connaissances.",
+            "left": "Demandez aux paléontologues de le décrypter.",
+            "right": "Arrière ! Cet objet est porteur du vice qui a amené sur nous les dinosaures !"
+        },
+        "riots": {
+            "text": "Depuis plusieurs jours des va-nu-pieds s'agglutinent devant votre quartier général pour réclamer des vivres. Certains brûlent vos portraits et portent des banderoles dénonçant l'opulence de l'Ordre.",
+            "left": "Donnons-leur des vivres et parlementons avec eux.",
+            "right": "Que la milice disperse les émeutiers !"
+        },
+        "party_for_the_dragon": {
+            "text": "Une comète a été aperçue dans le ciel. Votre aumônier affirme que c'est un signe de la venue prochaine du Dragon des derniers jours, et qu'il nous faut afficher notre foi en lui offrant une grande part de nos ressources.",
+            "left": "Congédier l'aumônier.",
+            "right": "Faire de l'événement une grande fête populaire."
+        },
+        "alamosaurus": {
+            "text": "Un paléontologue vous informe qu'un nid d'Alamosaurus sanjuanensis a été découvert non loin du campement. Une aubaine pour en savoir plus sur cette sous-espèce ! Mais vos chasseurs préfèrent collecter le bois du nid pour en faire des armes... Hérésie !",
+            "left": "Une sous-espèce... intéressant !",
+            "right": "C'est toi l'hérétique ! Allez prendre ce bois !"
+        },
+        "thief": {
+            "text": "Un soldat vous annonce qu'un adepte est venu voler des outils destinés à la milice pour réparer l'autel de l'Église.",
+            "left": "Punissez-le !",
+            "right": "L'autel est plus important !"
+        },
+        "circle_game": {
+            "text": "Un milicien vous rapporte que des citoyens se sont amusés à faire le jeu du rond aux soldats pour les agacer.",
+            "left": "Ce jeu est idiot...",
+            "right": "Ce jeu est génial !"
+        },
+        "eggs": {
+            "text": "Un survivant vous informe que des œufs ont été trouvés près du camp. Votre peuple a faim, mais vos paléontologues ont besoin de cet œuf pour l'analyser.",
+            "left": "Ce soir, c'est œufs au plat !",
+            "right": "Pas touche à ces œufs !"
+        },
+        "steel_mine": {
+            "text": "Un professeur prétend avoir détecté une ancienne mine d'acier encore exploitable sous notre campement. Les fanatiques affirment qu'elle renferme un artefact sacré qui causera notre perte si nous y accédons.",
+            "left": "De l'acier pour notre survie !",
+            "right": "Arrière, serviteur du diable !"
+        },
+        "services": {
+            "text": "L'évèque dénonce l'absence du peuple aux messes organisées pour assurer la croissance de nos plantations.",
+            "left": "Messe obligatoire !",
+            "right": "Prêtres, à vos charrues !"
+        },
+        "snail_soup": {
+            "text": "Un commerçant affirme que la consommation de serpents fraichement tués est excellente pour gagner de la vigueur en combat.",
+            "left": "Enfin un connaisseur !",
+            "right": "On dit la même chose des fesses de babouin !"
+        },
+        "market": {
+            "text": "Un démocrate vous demande de créer un grand marché hebdomadaire pour lutter contre le trafic de nourriture.",
+            "left": "Vive le capitalisme !",
+            "right": "J'aime le marché noir."
+        },
+        "religious_songs": {
+            "text": "Un habitant se plaint des chants religieux trop forts à côté de chez lui.",
+            "left": "Qu'on les fasse taire.",
+            "right": "Qu'on te fasse taire."
+        },
+        "sunglasses": {
+            "text": "Le général de la milice demande à ce que l'on fournisse des lunettes de soleil à toute la milice pour ne pas être ébloui lors des combats contre les dinosaures de plus de trois mètres de haut.",
+            "left": "Du confort pour être plus fort !",
+            "right": "Brûle-toi les yeux pour ton souverain."
+        },
+        "trapped_by_trex": {
+            "text": "Un paléontologue vous supplie d'aider ses collègues, pris au piège par des tyrannosaures alors qu'ils étudiaient quelques empreintes de chenilles.",
+            "left": "Vite ! Leurs travaux doivent être importants !",
+            "right": "Des imbéciles en moins !"
+        },
+        "conversion": {
+            "text": "Un habitant se plaint car les religieux se sont mis à venir dans sa tente pour tenter de le convertir.",
+            "left": "Stoppez cette pratique !",
+            "right": "Fais comme tout le monde, accepte-les !"
+        },
+        "bananas": {
+            "text": "Un soldat vous rapporte qu'une caisse remplie de bananes encore mûres vient d'être déterrée près de l'église.",
+            "left": "Un festin pour mes soldats !",
+            "right": "Rendez-ça aux prêtres ! "
+        },
+        "horses": {
+            "text": "Un fermier a repéré des chevaux dans une plaine au loin.",
+            "left": "Allez me chercher ces chevaux !",
+            "right": "C'est pas ma priorite vois-tu."
+        },
+        "morphine": {
+            "title": "Vous aurez pas ma morphine !",
+            "text": "Un paléontologue rapporte que les cargaisons de morphine ont été volées par les adeptes.",
+            "left": "Ils paieront pour cet affront !",
+            "right": "Il leur faut au moins ça..."
+        },
+        "therizinosaurus": {
+            "text": "Un général vous explique qu'il faut abattre la reine des therizinosaurus avant qu'elle ne se reproduise.",
+            "left": "Allez-y !",
+            "right": "Pas touche à la maman !"
+        },
+        "buried_weapons": {
+            "text": "Un paléontologue a déterré une caisse d'armes lors de ses fouilles.",
+            "left": "Je prends.",
+            "right": "C'est un piège !"
+        },
+        "magic_tools": {
+            "text": "Un fabricant a inventé un procédé ingénieux permettant de créer des outils, mais il a disparu avoir de l'avoir entièrement finalisé. Une seule utilisation est possible.",
+            "left": "C'est mieux que rien.",
+            "right": "C'est louche."
+        },
+        "monument_for_soldiers": {
+            "text": "Un sergent demande à ce que l'on érige un monument en hommage aux guerriers disparus.",
+            "left": "Nous devons les remercier.",
+            "right": "De quoi parlez-vous ?"
+        },
+        "fertilizer": {
+            "text": "Un paléontologue propose d'utiliser les os de diplodocus broyés au niveau des cultures de mais afin d'en augmenter les rendements.",
+            "left": "Que ces protocoles soient immédiatement appliqués !",
+            "right": "Des os de diplodocus ? Vous voulez corrompre notre sol avec cette horreur ?"
+        },
+        "prison": {
+            "text": "Vous visitez vos geôles et un brigand vous interpelle. Il vous propose de vous livrer le contenu de sa cache d'armes en l'échange de sa liberté.",
+            "left": "Il est vrai que nous manquons cruellement d'armes...",
+            "right": "Je crois que je vais plutôt vous laisser pourrir ici."
+        },
+        "workshop": {
+            "text": "Un artisan patriote décède et décide de vous léguer son atelier. Il ne vous est d'aucune utilité mais vous pouvez récolter des matériaux en le démantelant.",
+            "left": "Brûlez-le ; le feu réchauffera cette nuit nos concitoyens.",
+            "right": "Démantelez l'atelier."
+        },
+        "parade": {
+            "text": "Le général de la Milice demande à organiser un défilé militaire chaque année à la gloire de ses soldats.",
+            "left": "Très bien.",
+            "right": "J'en propose même deux !"
+        },
+        "weapons_manufacture": {
+            "text": "Un fabricant d'armes vous explique qu'il peut augmenter sa production si vous acceptez de lui donner quelques guerriers.",
+            "left": "Sacrifice facile.",
+            "right": "La vie de mes soldats vaut plus !"
+        },
+        "dino_carcass": {
+            "text": "Le directeur des paléontologues veut vous donner les carcasses de dinosaures non utilisées pour nourrir votre camp. Mais il exige des outils en retour.",
+            "left": "Je les prends mais vous n'aurez rien.",
+            "right": "Merci, tenez vos outils."
+        },
+        "tools_food": {
+            "text": "Une paléontologue a inventé un système rendant les outils plus résistants. Elle demande une prime en vivres pour sa découverte.",
+            "left": "Je prends, mais vous n'avez qu'à manger vos outils.",
+            "right": "Merci, cela mérite bien une prime !"
+        },
+        "dino_bile": {
+            "text": "Un chercheur rapporte que les paléontologues ont extrait des armes de l'estomac d'un diplodocus, mais ils veulent les garder pour pouvoir se défendre.",
+            "left": "Très bien, gardez vos armes dégoûtantes.",
+            "right": "Donnez ces armes à mes guerriers !"
+        }
+    },
+    "decrees": {
+        "decree_0": {
+            "text": "Text"
+        }
+    },
+    "events": {
+        "rain": {
+            "text": "Il pleut !"
+        }
+    },
+    "endings": {
+        "order_max": {
+            "text": "fzejghuEZHOGP"
+        }
+    }
+}

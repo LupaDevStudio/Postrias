@@ -1,0 +1,1234 @@
+{
+    "cartes": [
+        {
+            "titre": "Sacrifice religieux",
+            "texte": "L'eveque vous informe que les visions des oracles de l'Ordre sont sans appel : nous devons sacrifier treize survivants demain a treize heure.",
+            "oui": [
+                "Qu'il en soit selon la volonte des cieux",
+                0,
+                0,
+                0,
+                10,
+                0,
+                -10,
+                0
+            ],
+            "non": [
+                "Quelques poulets feront bien l'affaire",
+                -5,
+                0,
+                0,
+                -10,
+                0,
+                10,
+                0
+            ],
+            "guillotine": "ordre"
+        },
+        {
+            "titre": "Construction religieuse ou militaire",
+            "texte": "Vous vous etes engage a lancer le chantier d'une cathedrale aupres de l'Ordre, mais un milicien vous apprend qu'une breche a ete constatee dans les remparts",
+            "oui": [
+                "La cathedrale attendra",
+                0,
+                0,
+                -10,
+                -10,
+                10,
+                0,
+                0
+            ],
+            "non": [
+                "Ces pierres ne nous protegerons pas de Son courroux, pauvres fous !",
+                0,
+                0,
+                -10,
+                10,
+                -10,
+                0,
+                0
+            ],
+            "guillotine": "guerriers"
+        },
+        {
+            "titre": "Religion contre science",
+            "texte": "Un paleontologue vous annonce qu'il a reussi a creer in vitro un embryon de pteranodon. Il affirme que cela nous permettra de mieux comprendre leurs forces et leurs faiblesses.",
+            "oui": [
+                "Encourageons-le a poursuivre ses recherches",
+                0,
+                0,
+                0,
+                -10,
+                0,
+                0,
+                10
+            ],
+            "non": [
+                "Heresie ! Brulons-le avec ses travaux !",
+                0,
+                0,
+                0,
+                10,
+                0,
+                0,
+                -10
+            ],
+            "guillotine": "paleo"
+        },
+        {
+            "titre": "Peuple contre science",
+            "texte": "Un ouvrier agricole vous reclame des vivres pour faire face a l'hiver rude qui s'annonce.",
+            "oui": [
+                "Tenez mon brave",
+                -5,
+                0,
+                0,
+                0,
+                0,
+                10,
+                0
+            ],
+            "non": [
+                "L'Etat ne peut pas tout",
+                0,
+                0,
+                0,
+                0,
+                0,
+                -10,
+                0
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Milice facile",
+            "texte": "Le general de la milice se plaint de l'etat deplorable des equipements de ses troupes. Il menace de demissionner si les choses ne s'ameliorent pas.",
+            "oui": [
+                "Tres bien, tres bien, ponctionnez sur les stocks strategiques !",
+                0,
+                -12,
+                0,
+                0,
+                10,
+                0,
+                0
+            ],
+            "non": [
+                "Pour qui vous prenez-vous !",
+                0,
+                0,
+                0,
+                0,
+                -25,
+                0,
+                0
+            ],
+            "guillotine": "guerriers"
+        },
+        {
+            "titre": "Religion et peuple",
+            "texte": "Un representant de l'Ordre vous demande des viandes et des huiles pour favoriser la venue du Dragon des derniers jours.",
+            "oui": [
+                "Qu'on les lui donne !",
+                -5,
+                0,
+                0,
+                10,
+                0,
+                0,
+                0
+            ],
+            "non": [
+                "Donnons-les plutot au peuple !",
+                -5,
+                0,
+                0,
+                0,
+                0,
+                10,
+                0
+            ],
+            "guillotine": "ordre"
+        },
+        {
+            "titre": "Milice et peuple",
+            "texte": "Le general de la milice est effare des sorties regulieres des survivants hors des perimetres de securite.",
+            "oui": [
+                "Renforcez les patrouilles et instaurez un couvre-feu !",
+                0,
+                -5,
+                0,
+                0,
+                10,
+                -10,
+                0
+            ],
+            "non": [
+                "Armons les survivants directement !",
+                0,
+                -5,
+                0,
+                0,
+                -10,
+                10,
+                0
+            ],
+            "guillotine": "guerriers"
+        },
+        {
+            "titre": "Marchand",
+            "texte": "Un marchand vous demande de le couvrir aupres de la milice en echange de vivre et d'outils.",
+            "oui": [
+                "Il est vrai que nous nos coffres sont desesperement vides...",
+                10,
+                0,
+                10,
+                0,
+                -25,
+                0,
+                0
+            ],
+            "non": [
+                "Ignorons-le...",
+                0,
+                0,
+                0,
+                0,
+                10,
+                0,
+                0
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Sorciere ?",
+            "texte": "Un survivant s'approche de vous avec une paleontologue ligotee qui a ete lynchee par la foule. Le survivant affirme l'avoir apercu en train d'accoucher d'un reptile cornu. Il vous demande de la condamner a mort.",
+            "oui": [
+                "Liberez cette innocente pauvre fou !",
+                0,
+                0,
+                0,
+                -10,
+                0,
+                -10,
+                10
+            ],
+            "non": [
+                "C'est une sorciere, qu'il en soit ainsi",
+                0,
+                0,
+                0,
+                10,
+                0,
+                10,
+                -25
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Production avant tout !",
+            "texte": "Un survivant qui dit travailler a l'atelier de fabrication d'armes vous implore de reduire les cadences de production. Votre regard s'attarde sur ses mains difformes avilies par le labeur.",
+            "oui": [
+                "Silence ! Nous avons besoins de plus d'armes ! Augmentez les cadences !",
+                0,
+                10,
+                0,
+                0,
+                0,
+                -10,
+                0
+            ],
+            "non": [
+                "Oui, cela est juste et bon.",
+                0,
+                -5,
+                0,
+                0,
+                0,
+                10,
+                0
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Malheur aux gaspilleurs",
+            "texte": "L'intendant du laboratoire des paleontologues vous apporte un compte-rendu de leur depense en outil. Elles sont anormalement elevees et vous constatez que des armes ont egalement ete consommees.",
+            "oui": [
+                "Ils savent ce qu'ils font.",
+                0,
+                -5,
+                -12,
+                0,
+                0,
+                0,
+                10
+            ],
+            "non": [
+                "Vous n'aurez rien de plus que d'habitude !",
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -10
+            ],
+            "guillotine": "paleo"
+        },
+        {
+            "titre": "Loi et Ordre public",
+            "texte": "Le commandant de la section \"Ordre public\" de la Milice vous somme de prendre des mesures plus fortes pour faire face a la contrebande de vivres.",
+            "oui": [
+                "Tolerons plutot ce trafic, beaucoup trop de survivants en dependent.",
+                0,
+                0,
+                0,
+                0,
+                -10,
+                10,
+                0
+            ],
+            "non": [
+                "Vous avez carte blanche commandant...",
+                0,
+                0,
+                0,
+                0,
+                10,
+                -10,
+                0
+            ],
+            "guillotine": "guerriers"
+        },
+        {
+            "titre": "Maudits heretiques !",
+            "texte": "L'eveque s'indigne des enseignements prodigues par les paleontologues. Il affirme que ces derniers cherchent a embrigader des survivants dans leur quete du culte impie de la Raison.",
+            "oui": [
+                "Emprisonnez-les. La connaissance c'est le pouvoir !",
+                0,
+                0,
+                0,
+                10,
+                0,
+                0,
+                -10
+            ],
+            "non": [
+                "Et alors ?",
+                0,
+                0,
+                0,
+                -10,
+                0,
+                0,
+                10
+            ],
+            "guillotine": "ordre"
+        },
+        {
+            "titre": "Ruines de Sioux Falls",
+            "texte": "Le capitaine d'une brigade d'exploration de la milice vous fait son rapport. Il pretend avoir decouvert un ordinateur d'agronomie dans les ruines de Sioux Falls. Il renferme sans doute de vastes connaissances.",
+            "oui": [
+                "Demandez aux paleontologues de le decrypter.",
+                10,
+                0,
+                0,
+                -25,
+                5,
+                0,
+                10
+            ],
+            "non": [
+                "Arriere ! Cet objet est porteur du vice qui a amene sur nous les dinosaures !",
+                0,
+                0,
+                0,
+                25,
+                0,
+                0,
+                -10
+            ],
+            "guillotine": "guerriers"
+        },
+        {
+            "titre": "Une revolte ?",
+            "texte": "Depuis plusieurs jours que des va-nu-pieds s'agglutinent devant votre quartier general pour reclamer des vivres. Certains brulent vos portraits et portent des banderoles denoncant l'opulence de l'Ordre.",
+            "oui": [
+                "Donnons-leur des vivres et parlementons avec eux.",
+                -5,
+                0,
+                0,
+                -10,
+                0,
+                10,
+                0
+            ],
+            "non": [
+                "Que la milice disperse les emeutiers !",
+                0,
+                0,
+                0,
+                0,
+                0,
+                -25,
+                0
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "La comete du Dragon",
+            "texte": "Une comete a ete apercue dans le ciel. Votre aumonier affirme que c'est un signe de la venue prochaine du Dragon des derniers jours, et qu'il nous faut afficher notre foi en lui offrant la moitie de nos ressources.",
+            "oui": [
+                "Congediez l'aumonier.",
+                0,
+                0,
+                0,
+                -10,
+                0,
+                -10,
+                0
+            ],
+            "non": [
+                "Faire de l'evenement une grande fete populaire",
+                -15,
+                -15,
+                -15,
+                20,
+                0,
+                10,
+                0
+            ],
+            "guillotine": "ordre"
+        },
+        {
+            "titre": "Les Alamosaurus",
+            "texte": "Un paleontologue vous informe qu'un nid d'Alamosaurus sanjuanensis a ete decouvert non loin du campement. Une aubaine pour en savoir plus sur cette sous-espece ! Mais vos chasseurs preferent collecter le bois du nid pour en faire des armes... Heresie !",
+            "oui": [
+                "Une sous-espece... interessant !",
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                10
+            ],
+            "non": [
+                "C'est toi l'heretique ! Allez prendre ce bois !",
+                0,
+                10,
+                0,
+                0,
+                -10,
+                0,
+                0
+            ],
+            "guillotine": "paleo"
+        },
+        {
+            "titre": "Le voleur",
+            "texte": "Un soldat vous annonce qu'un adepte est venu voler des outils destines a la milice pour reparer l'autel de l'Eglise.",
+            "oui": [
+                "Punissez-le !",
+                0,
+                0,
+                10,
+                -10,
+                10,
+                0,
+                0
+            ],
+            "non": [
+                "L'autel est plus important !",
+                0,
+                0,
+                -5,
+                10,
+                -10,
+                0,
+                0
+            ],
+            "guillotine": "guerriers"
+        },
+        {
+            "titre": "Le jeu du rond...",
+            "texte": "Un milicien vous rapporte que des citoyens se sont amuses a faire le jeu du rond aux soldats pour les agacer.",
+            "oui": [
+                "Ce jeu est idiot...",
+                0,
+                0,
+                0,
+                0,
+                10,
+                -10,
+                0
+            ],
+            "non": [
+                "Ce jeu est genial !",
+                0,
+                0,
+                0,
+                0,
+                -10,
+                10,
+                0
+            ],
+            "guillotine": "guerriers"
+        },
+        {
+            "titre": "Ce soir c'est omelette !",
+            "texte": " Un survivant vous informe que des oeufs ont ete trouves pres du camp. Votre peuple a faim, mais vos paleontologues ont besoin de cet oeuf pour l'analyser.",
+            "oui": [
+                "Ce soir c'est oeuf au plat !",
+                10,
+                0,
+                0,
+                0,
+                0,
+                10,
+                -10
+            ],
+            "non": [
+                "Pas touche a cet oeuf !",
+                -5,
+                0,
+                0,
+                0,
+                0,
+                -10,
+                10
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "La mine sacree",
+            "texte": "Un professeur pretend avoir detecte une ancienne mine d'acier encore exploitable sous notre campement. Les fanatiques affirment qu'elle renferme un artefact sacre qui causera notre perte si nous y accedons.",
+            "oui": [
+                "De l'acier pour notre survie !",
+                0,
+                10,
+                10,
+                -25,
+                10,
+                10,
+                10
+            ],
+            "non": [
+                "Arriere serviteur du diable !",
+                0,
+                -5,
+                -10,
+                25,
+                -10,
+                -10,
+                -10
+            ],
+            "guillotine": "paleo"
+        },
+        {
+            "titre": "La cle des champs",
+            "texte": "L'eveque denonce l'absence du peuple aux messes, organisees pour assurer la croissance de nos plantations.",
+            "oui": [
+                "Messe obligatoire !",
+                10,
+                0,
+                0,
+                10,
+                -10,
+                -10,
+                0
+            ],
+            "non": [
+                "Pretres, a vos charrues !",
+                -5,
+                0,
+                0,
+                -10,
+                0,
+                0,
+                0
+            ],
+            "guillotine": "ordre"
+        },
+        {
+            "titre": "Sssoupe de ssserpents",
+            "texte": "Un commercant affirme que la consommation de serpents fraichement tues est excellente pour gagner de la vigueur en combat.",
+            "oui": [
+                "Enfin un connaisseur !",
+                0,
+                0,
+                0,
+                0,
+                -30,
+                0,
+                0
+            ],
+            "non": [
+                "On dit la meme chose des fesses de babouin !",
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Le Marche",
+            "texte": "Un democrate vous demande de creer un grand marche hebdomadaire pour lutter contre le trafic de nourriture.",
+            "oui": [
+                "Vive le capitalisme !",
+                10,
+                -5,
+                0,
+                0,
+                0,
+                10,
+                0
+            ],
+            "non": [
+                "J'aime le marche noir.",
+                -5,
+                0,
+                0,
+                0,
+                0,
+                -10,
+                0
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Tapage religieux",
+            "texte": "Un habitant se plaint des chants religieux trop forts a cote de chez lui.",
+            "oui": [
+                "Qu'on les fasse taire",
+                0,
+                0,
+                0,
+                -25,
+                0,
+                10,
+                0
+            ],
+            "non": [
+                "Qu'on te fasse taire",
+                0,
+                0,
+                0,
+                10,
+                0,
+                -10,
+                0
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Sus aux Brachios !",
+            "texte": "Le general de la milice demande a ce qu'on fournisse des lunettes de soleil a toute la milice pour ne pas etre ebloui lors des combats contre les dinosaures de plus de 3 metres de haut.",
+            "oui": [
+                "Du confort pour etre plus fort !",
+                0,
+                0,
+                -5,
+                0,
+                10,
+                0,
+                0
+            ],
+            "non": [
+                "Brule-toi les yeux pour ton souverain",
+                0,
+                0,
+                0,
+                -10,
+                0,
+                0,
+                0
+            ],
+            "guillotine": "guerriers"
+        },
+        {
+            "titre": "Pris au piege",
+            "texte": "Un paleontologue vous supplie d'aider ses collegues, pris au piege par des tyrannosaures alors qu'ils etudiaient quelques empreintes de chenilles.",
+            "oui": [
+                "Vite ! Leurs travaux doivent etre importants !",
+                0,
+                -5,
+                0,
+                0,
+                -10,
+                0,
+                10
+            ],
+            "non": [
+                "Des imbeciles en moins !",
+                0,
+                0,
+                0,
+                0,
+                10,
+                0,
+                -10
+            ],
+            "guillotine": "paleo"
+        },
+        {
+            "titre": "Proselytisme",
+            "texte": "Un habitant se plaint car les religieux se sont mis a venir dans sa tente pour tenter de le convertir.",
+            "oui": [
+                "Stoppez cette pratique !",
+                0,
+                0,
+                0,
+                -10,
+                0,
+                25,
+                0
+            ],
+            "non": [
+                "Fais comme tout le monde, ignore les !",
+                0,
+                0,
+                0,
+                -10,
+                0,
+                0,
+                -10
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Pillages !",
+            "texte": "Un soldat vous rapporte qu'une caisse remplie de bananes encore mures vient d'etre deterree pres de l'eglise.",
+            "oui": [
+                "Un festin pour mes soldats !",
+                0,
+                0,
+                0,
+                -10,
+                25,
+                -10,
+                0
+            ],
+            "non": [
+                "Rendez ca aux pretres ! ",
+                0,
+                0,
+                0,
+                25,
+                -10,
+                -10,
+                0
+            ],
+            "guillotine": "guerriers"
+        },
+        {
+            "titre": "Des chevaux sur la plaine",
+            "texte": "Un fermier a repere des chevaux dans une plaine au loin.",
+            "oui": [
+                "Allez me chercher ces chevaux !",
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "non": [
+                "C'est pas ma priorite vois-tu",
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Vous aurez pas ma morphine !",
+            "texte": "Un paleontologue rapporte que les cargaisons de morphine ont ete volees par les adeptes.",
+            "oui": [
+                "Ils paieront pour cet affront !",
+                0,
+                0,
+                0,
+                -25,
+                0,
+                0,
+                10
+            ],
+            "non": [
+                "Il leur faut au moins ca...",
+                0,
+                0,
+                0,
+                25,
+                0,
+                0,
+                -10
+            ],
+            "guillotine": "paleo"
+        },
+        {
+            "titre": "Therizinosaurus",
+            "texte": "Un general vous explique qu'il faut abattre la reine des therizinosaurus avant qu'elle ne se reproduise.",
+            "oui": [
+                "Vahala !",
+                10,
+                -5,
+                0,
+                0,
+                -10,
+                0,
+                0
+            ],
+            "non": [
+                "Pas touche a la maman",
+                0,
+                0,
+                0,
+                -25,
+                0,
+                0,
+                0
+            ],
+            "guillotine": "guerriers"
+        },
+        {
+            "titre": "Armes cachees",
+            "texte": "Un paleontologue a deterre une caisse d'armes lors de ses fouilles.",
+            "oui": [
+                "Je prends",
+                0,
+                30,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "non": [
+                "C'est un piege !",
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -5
+            ],
+            "guillotine": "paleo"
+        },
+        {
+            "titre": "L'inventeur",
+            "texte": "Un fabricant a invente un procede ingenieux permettant de creer des outils, mais il a disparu apres l'avoir finalise. Une seule utilisation est possible.",
+            "oui": [
+                "C'est mieux que rien",
+                0,
+                0,
+                30,
+                0,
+                0,
+                0,
+                0
+            ],
+            "non": [
+                "C'est louche",
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Le monument",
+            "texte": "Un sergent demande a ce que l'on erige un monument en hommage aux guerriers disparus.",
+            "oui": [
+                "Nous devons les remercier",
+                0,
+                10,
+                0,
+                0,
+                30,
+                10,
+                0
+            ],
+            "non": [
+                "De quoi parlez vous ?",
+                0,
+                0,
+                0,
+                0,
+                -10,
+                0,
+                0
+            ],
+            "guillotine": "guerriers"
+        },
+        {
+            "titre": "Engrais",
+            "texte": "Un paleontologue propose d'utiliser les os de diplodocus broyes au niveau des cultures de mais afin d'en augmenter les rendements.",
+            "oui": [
+                "Que ces protocoles soient immediatement appliques !",
+                20,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "non": [
+                "Des os de diplodocus ? Vous voulez corrompre notre sol avec cette horreur ?",
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -10
+            ],
+            "guillotine": "paleo"
+        },
+        {
+            "titre": "La cache du bandit...",
+            "texte": "Vous visitez vos geoles et un brigand vous arrete. Il vous propose de vous livrer le contenu de sa cache d'arme en l'echange de sa liberte.",
+            "oui": [
+                "Il est vrai que nous manquons cruellement d'armes...",
+                0,
+                20,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "non": [
+                "Je crois que je vais plutot vous laisser pourrir ici...",
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Le patriote",
+            "texte": "Un artisan patriote decede et decide de vous leguer son atelier. Il ne vous est d'aucune utilite mais vous pouvez recolter des materiaux en le demantelant.",
+            "oui": [
+                "Euh, merci ?",
+                0,
+                0,
+                20,
+                0,
+                0,
+                0,
+                0
+            ],
+            "non": [
+                "Demantelez l'atelier",
+                0,
+                0,
+                20,
+                0,
+                0,
+                0,
+                0
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Le defile",
+            "texte": "Le general de la Milice demande a organiser un defile militaire chaque annee a la gloire de ses soldats.",
+            "oui": [
+                "Tres bien",
+                0,
+                0,
+                0,
+                0,
+                10,
+                0,
+                0
+            ],
+            "non": [
+                "J'en propose meme deux !",
+                0,
+                0,
+                0,
+                0,
+                20,
+                10,
+                0
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Le fabricantt d'armes",
+            "texte": "Un fabricant d'armes vous explique qu'il peut augmenter sa production si vous acceptez de lui donner quelques guerriers...",
+            "oui": [
+                "Sacrifice facile",
+                0,
+                20,
+                0,
+                0,
+                -10,
+                0,
+                0
+            ],
+            "non": [
+                "La vie de mes soldats vaut plus !",
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "guillotine": "civils"
+        },
+        {
+            "titre": "Viande de dino",
+            "texte": "Le directeur des paleontologues veut vous donner les carcasses de dinosaures non utilisees pour nourrir votre camp. Mais il exige des outils en retour.",
+            "oui": [
+                "Je les prends mais vous n'aurez rien",
+                20,
+                20,
+                0,
+                0,
+                -10,
+                0,
+                -20
+            ],
+            "non": [
+                "Je les prends et vous aurez vos outils",
+                20,
+                0,
+                -10,
+                0,
+                0,
+                0,
+                10
+            ],
+            "guillotine": "paleo"
+        },
+        {
+            "titre": "Des outils solides",
+            "texte": "Une paleontologue a invente un systeme rendant les outils plus resistants. Elle demande une prime en vivres pour sa decouverte.",
+            "oui": [
+                "Je prends, mais vous n'avez qu'a manger vos outils",
+                0,
+                0,
+                20,
+                0,
+                -10,
+                0,
+                -20
+            ],
+            "non": [
+                "Merci, cela merite bien une prime !",
+                -5,
+                0,
+                20,
+                0,
+                0,
+                0,
+                10
+            ],
+            "guillotine": "paleo"
+        },
+        {
+            "titre": "Bile de dinosaure",
+            "texte": "Un chercheur rapporte que les paleontologues ont extrait des armes de l'estomac d'un diplodocus, mais ils veulent les garder pour pouvoir se defendre.",
+            "oui": [
+                "C'est degoutant, gardez les armes",
+                0,
+                0,
+                0,
+                0,
+                -10,
+                0,
+                0
+            ],
+            "non": [
+                "Donnez ces armes a mes guerriers !",
+                0,
+                20,
+                0,
+                0,
+                10,
+                0,
+                -10
+            ],
+            "guillotine": "paleo"
+        }
+    ],
+    "decrets": [
+        {
+            "texte": "Organiser des combats de coqs sur la place centrale",
+            "variable": "civils"
+        },
+        {
+            "texte": "Envoyer des missionnaires dans les ecoles",
+            "variable": "ordre"
+        },
+        {
+            "texte": "Lancer une campagne de propagandes en faveur de la milice",
+            "variable": "guerriers"
+        },
+        {
+            "texte": "Assouplir la reglementation de la recherche",
+            "variable": "paleo"
+        },
+        {
+            "texte": "Requisitionner les artisans pour remettre en etat des armes obsoletes",
+            "variable": "armes"
+        },
+        {
+            "texte": "Introduire de nouvelles especes dans la liste officielle des animaux commestibles",
+            "variable": "vivres"
+        },
+        {
+            "texte": "Desassembler des infrastructures non-essentielles",
+            "variable": "outils"
+        }
+    ],
+    "imprevus": [
+        [
+            "Il pleut !",
+            5,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+        ],
+        [
+            "De plus en plus de survivants s'engagent dans une carriere militaire, avec l'espoir d'acceder ainsi a davantage de facilites materielles. Vaine esperance de leur part, mais cela sert nos interets.",
+            0,
+            0,
+            0,
+            0,
+            20,
+            0,
+            0
+        ],
+        [
+            "La milice a fini par securiser un secteur arbore aux alentours du campement. Le bois de grande qualite de ce secteur nous permettra de produire un grand nombre d'outils.",
+            0,
+            0,
+            20,
+            0,
+            0,
+            0,
+            0
+        ],
+        [
+            "Un ingenieur militaire vient de trouver un moyen particulierement efficace pour transformer des machines agricoles obsoletes en engins d'assaut devastateurs. La Milice saura en tirer profit lors de ses prochaines expeditions.",
+            0,
+            20,
+            0,
+            0,
+            10,
+            0,
+            0
+        ],
+        [
+            "Les paleontologues sont parvenus a un accord avantageux avec l'eveque. Ce dernier ne s'opposera plus a leur recherches sur les amonites, en echange de passe-droits plus que douteux... Il vaudrait mieux que les fideles n'en apprennent rien, mais en attendant, rejouissons-nous des benefices a venir de ces recherches.",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            20
+        ],
+        [
+            "Les craintes suscitees par les orages particulierement violent de ces dernieres semaines ont ete habilement exploites par l'Ordre. Les survivants sont desormais convaincus que l'eveque va interceder en leur faveur pour apaiser la colere du Dragon des derniers jours.",
+            0,
+            0,
+            0,
+            20,
+            0,
+            0,
+            0
+        ],
+        [
+            "Une loterie est organisee par les citoyens pour se changer les idees. Ils trouvent ce jeu particulierement satisfaisant, ce qui leur remonte le moral.",
+            0,
+            0,
+            0,
+            0,
+            0,
+            20,
+            0
+        ],
+        [
+            "Eureka ! Des documents decryptes par nos paleontologues contenaient des patrons d'instruments de menuiserie. Nous allons les mettre a profit pour ameliorer l'efficacite de nos constructions.",
+            0,
+            0,
+            20,
+            0,
+            0,
+            0,
+            0
+        ],
+        [
+            "Une eglise est en feu ! Non seulement l'origine de cet incendie est vraissemblablement criminelle, mais les survivants risquent de douter de l'efficacite de la protection de monseigneur l'eveque sur le campement.",
+            0,
+            0,
+            0,
+            -10,
+            0,
+            0,
+            0
+        ],
+        [
+            "Un homme qui pretend se nommer Oleg et qui viendrait de ce qui etait autrefois la Russie est arrive au camp. Nous n'avons pas l'habitude d'accepter des etrangers, mais les stocks d'armes consequent qu'apporte Oleg faciliteront certainement son integration en ses temps difficiles...",
+            0,
+            20,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        [
+            "Les paleontologues ont decouvert une caverne ou des dinosaures stockaient toutes leurs ressources ! Ils s'empressent de remaner tous les vivres au campement.",
+            20,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ]
+    ],
+    "tuto1": "Tuto global :\nLa civilisation a assiste en silence au retour des dinosaures. Elle a disparu comme elle etait apparue.\nPeu sont ceux qui en gardent un souvenir, et ce n'est guere plus qu'un echo imperceptible.\nL'Humanite se resume peut-etre au campement que vous dirigez dans les grandes plaines du Dakota,\nnon loin de ce qui etait autrefois le parc des Badlands.\nVous devrez assurer la cohesion et la survie de cette communaute face a la menace constante des dinosaures.\nMais ne vous meprenez pas, votre priorite est de maintenir votre pouvoir, quoiqu'il en coute.\nVotre main ne devra pas trembler.\n \nL'Ordre ardent du dragon des derniers jours :\nDes cendres des cultes de jadis est ne L'Ordre ardent du dragon des derniers jours.\n Les temps rudes favorisent l'emergence de cultes et celui-ci a acquis un grand pouvoir sur les consciences.\n Ses membres affirment que l'apparition des dinosaures est un chatiment celeste.\nL'Ordre appelle par consequent a la penitence en attendant la venue du dragon des derniers jours,\nqui delivrera l'Humanite du joug des dinosaures.\nL'Ordre interpretera comme une insulte au Dragon des derniers jours\ntoute tentative profane de regler le probleme des dinosaures.\n \nLa Milice :\nLa Milice est constituee des survivants les plus braves.\nSa mission est de proteger le campement et ses alentours des incursions des dinosaures.\nElle mene egalement des missions d'explorations dans les vestiges de la civilisation anterieur,\nau grand desarroi de l'Ordre.\nLa milice est un formidable outil pour controler la population.\nMais prenez garde a ce qu'elle ne vous devienne pas trop indispensable...",
+    "tuto2": "Les Survivants :\nLes survivants sont les habitants dociles du campement.\nIls produisent des vivres, et fabriquent armes et outils.\nIls vous renverseront s'ils jugent votre pouvoir trop tyrannique.\nVous devrez leur accorder quelques facilites materielles\net faire preuve de justice dans vos jugements pour les contenter.\nMais n'oubliez pas : vous n'etes pas un democrate\n \nLes paleontologues :\nLes paleontologues s'interessent de pres a l'etude des dinosaures.\nIls sont les seuls representants de ce qui etait autrefois \"La Science\".\nLeurs recherchent pourraient vous apporter les connaissances decisives\npour mettre un terme a l'oppression des dinosaures,\na moins que la soif de connaissance des paleontologues ne les attire trop pres du camp...\n \nLes vivres :\nLes vivres sont necessaires a l'alimentation de vos survivants.\nL'Ordre peut egalement les exiger pour des sacrifices.\n \nLes outils :\nLes outils sont l'ensemble des instruments qui permettent a vos survivants de travailler.\nIls sont egalement employes pour les constructions.\n \nLes armes:\nLes armes de toute nature sont absolument essentielle a la milice.\nElle en a besoin pour maintenir l'ordre et proteger le campement des dinosaures.",
+    "ordreMax": "Fort de son pouvoir sur la societe, l'Ordre ardent du Dragon des derniers jours lance un campagne de purification du campement contre ses opposants. Apres avoir massacre les paleontologues et mis la Milice en coupe reglee, l'Ordre envoie la foule se saisir de vous. Vos os et votre chair sont consumes sur un bucher sacrificiel.",
+    "ordreMin": "Alors que le pouvoir de l'Ordre se delite, les survivants prives de l'Esperance du Salut prennent conscience de l'absurdite de l'existence dans un monde qui n'est plus celui des hommes. Ils ne vous obeissent plus et se laissent mourir. Vous etes desormais le dernier des hommes.",
+    "guerriersMax": "La Milice est devenue si puissante que l'on ne sait plus tres bien ce qui la contraint a vous obeir. Elle meme se le demande. Vos gardes vous trahissent dans la nuit et la Milice se saisit de vous. Par un petite ouverture dans la toile du camion qui semble vous emmener hors du campement, vous avez le temps d'apercevoir des affiches de propagandes a l'effigie du general de la Milice couvrir les murs de votre ancienne possession.",
+    "guerriersMin": "La poignee d'hommes qui reste dans la Milice n'est guere plus armee que de quelques vieilles armes rouillees quand l'attaque de velociraptors survient. Vos defenses sont submergees et le campement est rase de la carte.",
+    "paleoMax": "Les Paleontologues, convaincus d'avoir enfin mis au point un appareil permettant de communiquer avec les dinosaures, se decident a en introduire quelques-uns sur le campement. Contre toute attente, l'essai est un echec. Les dinosaures ne sont pas receptifs aux messages envoyes. Ils se dechainent sur les survivants et vous perissez entre les machoires d'un tyrannosaure.",
+    "paleoMin": "L'Ordre ardent du dragon des derniers jours dechaine une foule d'adepte sur ce qui reste du laboratoire des paleontologues. Ses derniers occupants sont lynches et leurs travaux sont livres en autodafe. Sans le recours de la science, la qualites des equipements de la milice, et la productivite agricole declinent. Ce n'est plus qu'une question de temps avant que vous mourriez de faim ou d'une attaque de dinosaures.",
+    "civilsMax": "Vous avez ete trop tendre et les survivants se sentent pousser des ailes. La foule parvient a rallier la Milice a sa cause pour exiger la fin de votre pouvoir et la mise en place d'une gouvernance democratique. L'emeute degenere et les survivants debordent vos positions. Ils s'emparent de vous et vous emmenent vers la guillotine.",
+    "civilsMin": "Votre pouvoir n'a jamais semble aussi fort. Les survivants sont a votre botte et semblent completement apathiques. Toutefois, vous observez progressivement le campement se depeupler. Il vous semble que ceux qui restent ne produisent presque plus rien . La poignee d'homme qui occupe alors le campement ne peut guere vous defendre lors de l'attaque des pteranodons, et vous perissez entre leurs griffes.",
+    "vivres": "Les survivants commencent a faire bouillir leurs chaussures et leurs vetements pour se nourrir. Votre autorite n'a plus de sens pour ces hommes dont le denuement nourri des pulsions revolutionnaires. Ces corps decharnes vous saisissent et vous conduisent dans un immense chaudron sur la place publique. Vos jours s'achevent en bain-marie. Vous n'obtenez guere mieux que les intestins des survivants pour sepulture.",
+    "armes": "C'est equipee de frondes et de lance-pierre que la milice doit faire face a une enieme attaque de triceratops. Les pierres et les boulettes de de papiers rebondissent sur leurs ecailles et ces derniers ravages le campement. Vous terminez pietine sous une charge devastatrice du troupeau.",
+    "outils": "Les equipements du camp tombent en ruine et vous ne parvenez pas a les reparer. L'agriculture, les dispositifs de securite et la recherche sont paralyses. Vous vous decidez a mener une expedition dans les vestiges des villes alentours afin de recolter des outils et des materiaux. L'eveque profite de votre absence pour prendre le pouvoir et vous etes attaques sur le chemin du retour par des velociraptors. Vous etes emporte au commande de l'ultime charge de votre groupe."
+}
