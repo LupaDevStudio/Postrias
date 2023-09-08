@@ -17,7 +17,7 @@ from kivy.uix.label import Label
 from kivy.uix.relativelayout import RelativeLayout
 from kivy.core.window import Window
 from kivy.properties import StringProperty, ObjectProperty, NumericProperty
-from tools.tools_constants import (
+from tools.path import (
     PATH_TITLE_FONT,
     PATH_IMAGES
 )

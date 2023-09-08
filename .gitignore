@@ -1,4 +1,8 @@
-# Test folders and files
+# Ignore ini files
+*ini
+
+# Ignore draft files
+draft_*
 *_test.*
 
 # VS code workspace
@@ -6,6 +10,7 @@
 
 # Data folder
 data
+data.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -34,12 +39,6 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
 
 # Installer logs
 pip-log.txt

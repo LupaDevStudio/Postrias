@@ -16,15 +16,16 @@ import os
 
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, NoTransition, Screen
-from kivy.lang import Builder
 from kivy.uix.widget import Widget
 
 ### Module imports ###
-
-from tools.tools_constants import (
-    PATH_KIVY_FOLDER,
-    PATH_IMAGES,
-    MOBILE_MODE
+from tools.path import (
+    PATH_IMAGES
+)
+from tools.constants import (
+    MOBILE_MODE,
+    FPS,
+    MSAA_LEVEL
 )
 from screens import (
     MenuScreen,
@@ -33,12 +34,12 @@ from screens import (
     GameOverScreen,
     AchievementsScreen
 )
-from tools.tools_kivy import (
+from tools.kivy_tools.tools_kivy import (
     color_label,
     background_color,
     Window
 )
-from tools.tools_sound import (
+from tools import (
     music_mixer
 )
 
@@ -92,6 +93,17 @@ class MainApp(App, Widget):
     Main class of the application.
     """
 
+    def build_config(self, config):
+        """
+        Build the config file for the application.
+
+        It sets the FPS number and the antialiasing level.
+        """
+        config.setdefaults('graphics', {
+            'maxfps': str(FPS),
+            'multisamples': str(MSAA_LEVEL)
+        })
+
     def build(self):
         """
         Build the application.
@@ -110,15 +122,11 @@ class MainApp(App, Widget):
     def on_start(self):
         if MOBILE_MODE:
             Window.update_viewport()
-        music_mixer.play("title_music", loop=True)
-        self.root_window.children[0].init_screen("menu")
+        music_mixer.play("tortuga", loop=True)
+        # self.root_window.children[0].init_screen("menu")
         return super().on_start()
 
 
 # Run the application
 if __name__ == "__main__":
-    for file_name in os.listdir(PATH_KIVY_FOLDER):
-        if file_name.endswith(".kv"):
-            Builder.load_file(PATH_KIVY_FOLDER + file_name, encoding="utf-8")
     MainApp().run()
-

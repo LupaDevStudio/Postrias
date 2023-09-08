@@ -3,65 +3,56 @@ Module for the main menu
 """
 
 
-from kivy.uix.screenmanager import Screen
 from kivy.clock import Clock
-from kivy.core.window import Window
 from kivy.properties import (
     StringProperty,
-    BooleanProperty,
-    ObjectProperty,
-    NumericProperty
+    BooleanProperty
 )
 
-from tools.tools_constants import (
+from tools.path import (
     PATH_IMAGES,
+    PATH_TITLE_FONT
+)
+from tools.constants import (
     FPS,
-    OPACITY_RATE,
-    PATH_TITLE_FONT,
     MOBILE_MODE
 )
-from tools.tools_sound import music_mixer
+from tools.kivy_tools import ImprovedScreen
+from tools import music_mixer
 
 
-class MenuScreen(Screen):
+class MenuScreen(ImprovedScreen):
+
+    mobile_mode = BooleanProperty(MOBILE_MODE)
+    title_font = StringProperty(PATH_TITLE_FONT)
+
     def __init__(self, **kw):
-        super().__init__(**kw)
 
+        super().__init__(
+            back_image_path=PATH_IMAGES + "menu_background.png",
+            **kw)
         self.opacity_state = -1
+        self.opacity_rate = 0.02
 
-    path_images = PATH_IMAGES
-    font = PATH_TITLE_FONT
-    path_back_image = PATH_IMAGES + "menu_background.png"
-    font_ratio = NumericProperty(0)
-    width_back_image = ObjectProperty(Window.size[0])
-    height_back_image = ObjectProperty(Window.size[0] * 392 / 632)
-    mobile_mode = BooleanProperty(True)
-    high_score = StringProperty("")
+    def on_enter(self, *args):
+        # Launch the title music
+        music_mixer.play("title_music", loop=True)
 
-    def init_screen(self):
-        self.mobile_mode = MOBILE_MODE
-        self.font_ratio = Window.size[0]/800
-        self.width_back_image = Window.size[0]
-        self.height_back_image = Window.size[0] * 392 / 632
-        if music_mixer.musics["title_music"].state != "play":
-            music_mixer.play("title_music", loop=True)
-
-        try:
-            if MOBILE_MODE:
-                self.remove_widget(self.ids.settings_logo)
-                self.remove_widget(self.ids.settings_button)
-            else:
-                self.remove_widget(self.ids.high_score_label)
-        except:
-            pass
-
-        try:
-            Clock.unschedule(self.update)
-        except:
-            pass
+        # Schedule the update for the text opacity effect
         Clock.schedule_interval(self.update, 1 / FPS)
 
+        return super().on_enter(*args)
+
+    def on_leave(self, *args):
+        # Stop the title music
+        music_mixer.stop()
+
+        # Unschedule the clock update
+        Clock.unschedule(self.update, 1 / FPS)
+
+        return super().on_leave(*args)
+
     def update(self, *args):
-        self.ids.start_label.opacity += self.opacity_state * OPACITY_RATE
+        self.ids.start_label.opacity += self.opacity_state * self.opacity_rate
         if self.ids.start_label.opacity < 0 or self.ids.start_label.opacity > 1:
             self.opacity_state = -self.opacity_state
