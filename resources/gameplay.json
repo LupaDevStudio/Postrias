@@ -1,481 +1,481 @@
 {
     "cards": {
         "cathedral": {
-            "left": {
+            "yes": {
                 "order": -10,
                 "military": 10,
                 "tools": -10
             },
-            "right": {
+            "no": {
                 "order": 10,
                 "military": -10,
                 "tools": -10
             },
-            "execute": "military"
+            "complainant": "military"
         },
         "pteranodon_embryo": {
-            "left": {
+            "yes": {
                 "order": 10,
                 "paleo": -10
             },
-            "right": {
+            "no": {
                 "order": 10,
                 "paleo": -10
             },
-            "execute": "paleo"
+            "complainant": "paleo"
         },
         "religious_sacrifice": {
-            "left": {
+            "yes": {
                 "order": 10,
                 "civilians": -10
             },
-            "right": {
+            "no": {
                 "order": -10,
                 "civilians": 10,
                 "food": -5
             },
-            "execute": "order"
+            "complainant": "order"
         },
         "tough_winter": {
-            "left": {
+            "yes": {
                 "civilians": 10,
                 "food": -5
             },
-            "right": {
+            "no": {
                 "civilians": -10
             },
-            "execute": "civilians"
+            "complainant": "civilians"
         },
         "weapons_for_military": {
-            "left": {
+            "yes": {
                 "military": 10,
                 "weapons": -12
             },
-            "right": {
+            "no": {
                 "military": -25
             },
-            "execute": "military"
+            "complainant": "military"
         },
         "food_for_dragon": {
-            "left": {
+            "yes": {
                 "food": -5,
                 "order": 10
             },
-            "right": {
+            "no": {
                 "food": -5,
                 "order": -10,
                 "civilians": 10
             },
-            "execute": "order"
+            "complainant": "order"
         },
         "security_perimeter": {
-            "left": {
+            "yes": {
                 "weapons": -5,
                 "military": 10,
                 "civilians": -10
             },
-            "right": {
+            "no": {
                 "weapons": -5,
                 "military": -10,
                 "civilians": 10
             },
-            "execute": "military"
+            "complainant": "military"
         },
         "merchant": {
-            "left": {
+            "yes": {
                 "food": 10,
                 "tools": 10,
                 "military": -25
             },
-            "right": {
+            "no": {
                 "military": 10
             },
-            "execute": "civilians"
+            "complainant": "civilians"
         },
         "witch": {
-            "left": {
+            "yes": {
                 "order": -10,
                 "civilians": -10,
                 "paleo": 10
             },
-            "right": {
+            "no": {
                 "order": 10,
                 "civilians": 10,
                 "paleo": -25
             },
-            "execute": "civilians"
+            "complainant": "civilians"
         },
         "tough_labour": {
-            "left": {
+            "yes": {
                 "weapons": 10,
                 "civilians": -10
             },
-            "right": {
+            "no": {
                 "weapons": -5,
                 "civilians": 10
             },
-            "execute": "civilians"
+            "complainant": "civilians"
         },
         "paleo_tools": {
-            "left": {
+            "yes": {
                 "weapons": -5,
                 "tools": -12,
                 "paleo": 10
             },
-            "right": {
+            "no": {
                 "paleo": -10
             },
-            "execute": "paleo"
+            "complainant": "paleo"
         },
         "black_market": {
-            "left": {
+            "yes": {
                 "military": -10,
                 "civilians": 10
             },
-            "right": {
+            "no": {
                 "military": 10,
                 "civilians": -10
             },
-            "execute": "military"
+            "complainant": "military"
         },
         "paleo_researches": {
-            "left": {
+            "yes": {
                 "order": 10,
                 "paleo": -10
             },
-            "right": {
+            "no": {
                 "order": -10,
                 "paleo": 10
             },
-            "execute": "order"
+            "complainant": "order"
         },
         "sioux_falls_ruins": {
-            "left": {
+            "yes": {
                 "food": 10,
                 "order": -25,
                 "military": 5,
                 "paleo": 10
             },
-            "right": {
+            "no": {
                 "order": 25,
                 "paleo": -10
             },
-            "execute": "military"
+            "complainant": "military"
         },
         "riots": {
-            "left": {
+            "yes": {
                 "food": -5,
                 "order": -10,
                 "civilians": 10
             },
-            "right": {
+            "no": {
                 "civilians": -25
             },
-            "execute": "civilians"
+            "complainant": "civilians"
         },
         "party_for_the_dragon": {
-            "left": {
+            "yes": {
                 "order": -10,
                 "civilians": -10
             },
-            "right": {
+            "no": {
                 "food": -15,
                 "weapons": -15,
                 "tools": -15,
                 "order": 20,
                 "civilians": 10
             },
-            "execute": "order"
+            "complainant": "order"
         },
         "alamosaurus": {
-            "left": {
+            "yes": {
                 "paleo": 10
             },
-            "right": {
+            "no": {
                 "weapons": 10,
                 "paleo": -10
             },
-            "execute": "paleo"
+            "complainant": "paleo"
         },
         "thief": {
-            "left": {
+            "yes": {
                 "tools": 10,
                 "order": -10,
                 "military": 10
             },
-            "right": {
+            "no": {
                 "tools": -10,
                 "order": 10,
                 "military": -10
             },
-            "execute": "military"
+            "complainant": "military"
         },
         "circle_game": {
-            "left": {
+            "yes": {
                 "military": 10,
                 "civilians": -10
             },
-            "right": {
+            "no": {
                 "military": -10,
                 "civilians": 10
             },
-            "execute": "military"
+            "complainant": "military"
         },
         "eggs": {
-            "left": {
+            "yes": {
                 "food": 10,
                 "civilians": 10,
                 "paleo": -10
             },
-            "right": {
+            "no": {
                 "food": -5,
                 "civilians": -10,
                 "paleo": 10
             },
-            "execute": "civilians"
+            "complainant": "civilians"
         },
         "steel_mine": {
-            "left": {
+            "yes": {
                 "weapons": 10,
                 "tools": 10,
                 "order": -25
             },
-            "right": {
+            "no": {
                 "weapons": -5,
                 "tools": -10,
                 "order": 25,
                 "paleo": -10
             },
-            "execute": "paleo"
+            "complainant": "paleo"
         },
         "services": {
-            "left": {
+            "yes": {
                 "food": -5,
                 "order": 10,
                 "civilians": -10
             },
-            "right": {
+            "no": {
                 "food": 10,
                 "order": -10
             },
-            "execute": "order"
+            "complainant": "order"
         },
         "snail_soup": {
-            "left": {
+            "yes": {
                 "military": -30
             },
-            "right": {
+            "no": {
                 "military": 10
             },
-            "execute": "civilians"
+            "complainant": "civilians"
         },
         "market": {
-            "left": {
+            "yes": {
                 "food": 10,
                 "civilians": 10
             },
-            "right": {
+            "no": {
                 "food": -5,
                 "civilians": -10,
                 "weapons": 10
             },
-            "execute": "civilians"
+            "complainant": "civilians"
         },
         "religious_songs": {
-            "left": {
+            "yes": {
                 "order": -25,
                 "civilians": 10
             },
-            "right": {
+            "no": {
                 "order": 10,
                 "civilians": -10
             },
-            "execute": "civilians"
+            "complainant": "civilians"
         },
         "sunglasses": {
-            "left": {
+            "yes": {
                 "tools": -5,
                 "military": 10
             },
-            "right": {
+            "no": {
                 "military": -10
             },
-            "execute": "military"
+            "complainant": "military"
         },
         "trapped_by_trex": {
-            "left": {
+            "yes": {
                 "weapons": -5,
                 "military": -10,
                 "paleo": 10
             },
-            "right": {
+            "no": {
                 "military": 10,
                 "paleo": -10
             },
-            "execute": "paleo"
+            "complainant": "paleo"
         },
         "conversion": {
-            "left": {
+            "yes": {
                 "order": -10,
                 "civilians": 25
             },
-            "right": {
+            "no": {
                 "order": 10,
                 "civilians": -10
             },
-            "execute": "civilians"
+            "complainant": "civilians"
         },
         "bananas": {
-            "left": {
+            "yes": {
                 "order": -10,
                 "military": 25
             },
-            "right": {
+            "no": {
                 "order": 25,
                 "military": -10
             },
-            "execute": "military"
+            "complainant": "military"
         },
         "horses": {
-            "left": {
+            "yes": {
                 "civilians": -10,
                 "weapons": 5
             },
-            "right": {},
-            "execute": "civilians"
+            "no": {},
+            "complainant": "civilians"
         },
         "morphine": {
-            "left": {
+            "yes": {
                 "order": -25,
                 "paleo": 10
             },
-            "right": {
+            "no": {
                 "order": 25,
                 "paleo": -10
             },
-            "execute": "paleo"
+            "complainant": "paleo"
         },
         "therizinosaurus": {
-            "left": {
+            "yes": {
                 "food": 10,
                 "weapons": -5,
                 "military": 10
             },
-            "right": {
+            "no": {
                 "military": -25
             },
-            "execute": "military"
+            "complainant": "military"
         },
         "buried_weapons": {
-            "left": {
+            "yes": {
                 "weapons": 30
             },
-            "right": {
+            "no": {
                 "paleo": -5
             },
-            "execute": "paleo"
+            "complainant": "paleo"
         },
         "magic_tools": {
-            "left": {
+            "yes": {
                 "tools": 30
             },
-            "right": {
+            "no": {
                 "paleo": -5
             },
-            "execute": "civilians"
+            "complainant": "civilians"
         },
         "monument_for_soldiers": {
-            "left": {
+            "yes": {
                 "tools": -10,
                 "military": 30,
                 "civilians": 10
             },
-            "right": {
+            "no": {
                 "military": -25
             },
-            "execute": "military"
+            "complainant": "military"
         },
         "fertilizer": {
-            "left": {
+            "yes": {
                 "food": 20
             },
-            "right": {
+            "no": {
                 "paleo": -10
             },
-            "execute": "paleo"
+            "complainant": "paleo"
         },
         "prison": {
-            "left": {
+            "yes": {
                 "weapons": 20,
                 "civilians": -10,
                 "military": -10
             },
-            "right": {},
-            "execute": "civilians"
+            "no": {},
+            "complainant": "civilians"
         },
         "workshop": {
-            "left": {
+            "yes": {
                 "civilians": 10
             },
-            "right": {
+            "no": {
                 "tools": 20
             },
-            "execute": "civilians"
+            "complainant": "civilians"
         },
         "parade": {
-            "left": {
+            "yes": {
                 "military": 10
             },
-            "right": {
+            "no": {
                 "military": 20,
                 "civilians": 10
             },
-            "execute": "military"
+            "complainant": "military"
         },
         "weapons_manufacture": {
-            "left": {
+            "yes": {
                 "weapons": 20,
                 "military": -10
             },
-            "right": {
+            "no": {
                 "civilians": -10
             },
-            "execute": "civilians"
+            "complainant": "civilians"
         },
         "dino_carcass": {
-            "left": {
+            "yes": {
                 "food": 20,
                 "paleo": -20
             },
-            "right": {
+            "no": {
                 "food": 20,
                 "tools": -10,
                 "paleo": 10
             },
-            "execute": "paleo"
+            "complainant": "paleo"
         },
         "tools_food": {
-            "left": {
+            "yes": {
                 "tools": 20,
                 "paleo": -20
             },
-            "right": {
+            "no": {
                 "food": -5,
                 "tools": 20,
                 "paleo": 10
             },
-            "execute": "paleo"
+            "complainant": "paleo"
         },
         "dino_bile": {
-            "left": {
+            "yes": {
                 "paleo": 10
             },
-            "right": {
+            "no": {
                 "weapons": 20,
                 "military": 10,
                 "paleo": -10
             },
-            "execute": "paleo"
+            "complainant": "paleo"
         }
     },
     "decrees": {
