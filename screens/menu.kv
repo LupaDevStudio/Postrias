@@ -5,16 +5,16 @@
 
     Label:
         id: title_label
-        text: "LUMACRYTE"
+        text: "Postrias"
         size_hint: 1, 0.5
         pos_hint: {"center_x": 0.5, "center_y": 0.85}
         font_size: 60*root.font_ratio
-        font_name: root.title_font
+        font_name: root.font
         color: root.manager.color_label
 
     Label:
         id: start_label
-        text: "Start a new game" if root.mobile_mode else "Press space to start a new game"
+        text: "Start a new game" if root.mobile_mode else "Click to start a new game"
         size_hint: 1, 0.25
         pos_hint: {"center_x": 0.5, "center_y": 0.45}
         font_size: 40*root.font_ratio
@@ -25,7 +25,7 @@
         pos_hint: {"center_x": 0.5, "center_y": 0.45}
         background_color: 0, 0, 0, 0
         on_release:
-            root.manager.init_screen("world_explorer")
+            root.manager.current = "game"
 
     Image:
         id: settings_logo
@@ -41,7 +41,7 @@
         background_color: (0, 0, 0, 0)
         width: self.height
         on_release:
-            root.manager.init_screen("settings")
+            root.manager.current = "settings"
 
     # Label:
     #     id: high_score_label
@@ -65,4 +65,4 @@
         background_color: (0, 0, 0, 0)
         width: self.height
         on_release:
-            root.manager.init_screen("collection")
+            root.manager.current = "collection"

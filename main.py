@@ -8,10 +8,6 @@ Main module of the generator of dialogs.
 ###############
 
 
-### Python imports ###
-
-import os
-
 ### Kivy imports ###
 
 from kivy.app import App
@@ -39,21 +35,7 @@ from tools.kivy_tools.tools_kivy import (
     background_color,
     Window
 )
-from tools import (
-    music_mixer
-)
 
-
-def change_window_size(*args):
-    global WINDOW_SIZE, SCREEN_RATIO
-
-    # Compute the size of one tile in pixel
-    WINDOW_SIZE = Window.size
-    SCREEN_RATIO = WINDOW_SIZE[0] / WINDOW_SIZE[1]
-
-
-Window.bind(on_resize=change_window_size)
-change_window_size()
 
 # Set the fullscreen
 if not MOBILE_MODE:
@@ -79,13 +61,6 @@ class WindowManager(ScreenManager):
         self.add_widget(Screen(name="opening"))
         self.current = "opening"
         self.list_former_screens = []
-
-    def init_screen(self, screen_name, *args):
-        if screen_name == "game":
-            music_mixer.play("game_music", loop=True)
-        Window.clearcolor = self.gray_color
-        self.current = screen_name
-        self.get_screen(self.current).init_screen(*args)
 
 
 class MainApp(App, Widget):
@@ -122,8 +97,10 @@ class MainApp(App, Widget):
     def on_start(self):
         if MOBILE_MODE:
             Window.update_viewport()
-        music_mixer.play("tortuga", loop=True)
-        # self.root_window.children[0].init_screen("menu")
+
+        # Open the menu screen
+        self.root_window.children[0].current = "menu"
+
         return super().on_start()
 
 

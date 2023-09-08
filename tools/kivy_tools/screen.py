@@ -69,7 +69,7 @@ class ImprovedScreen(KivyScreen):
 
         # Compute the ratio to use for size computations
         width, height = get_image_size(back_image_path)
-        self.back_image_ratio = height / width
+        self.back_image_ratio = width / height
 
         # Update the size of the background image
         self.update_back_image_size()
@@ -78,8 +78,13 @@ class ImprovedScreen(KivyScreen):
         """
         Update the size of the background image
         """
-        self.back_image_width = Window.size[0]
-        self.back_image_height = Window.size[0] * self.back_image_ratio
+        window_ratio = Window.size[0] / Window.size[1]
+        if window_ratio > self.back_image_ratio:
+            self.back_image_width = Window.size[0]
+            self.back_image_height = Window.size[0] / self.back_image_ratio
+        else:
+            self.back_image_width = Window.size[1] * self.back_image_ratio
+            self.back_image_height = Window.size[1]
 
     def on_enter(self, *args):
         """
@@ -88,6 +93,8 @@ class ImprovedScreen(KivyScreen):
 
         # Bind to update attributes when the size of the window is changed
         Window.bind(on_resize=self.on_resize)
+
+        self.manager.list_former_screens.append(self.name)
 
         return super().on_enter(*args)
 
@@ -112,4 +119,4 @@ class ImprovedScreen(KivyScreen):
         """
         Update the font ratio to use on the screen to keep letter size constant with Window size changes.
         """
-        self.font_ratio = Window.size[0] / 800
+        self.font_ratio = Window.size[1] / 600
