@@ -1,0 +1,492 @@
+{
+    "cards": {
+        "cathedral": {
+            "left": {
+                "order": -10,
+                "military": 10,
+                "tools": -10
+            },
+            "right": {
+                "order": 10,
+                "military": -10,
+                "tools": -10
+            },
+            "execute": "military"
+        },
+        "pteranodon_embryo": {
+            "left": {
+                "order": 10,
+                "paleo": -10
+            },
+            "right": {
+                "order": 10,
+                "paleo": -10
+            },
+            "execute": "paleo"
+        },
+        "religious_sacrifice": {
+            "left": {
+                "order": 10,
+                "civilians": -10
+            },
+            "right": {
+                "order": -10,
+                "civilians": 10,
+                "food": -5
+            },
+            "execute": "order"
+        },
+        "tough_winter": {
+            "left": {
+                "civilians": 10,
+                "food": -5
+            },
+            "right": {
+                "civilians": -10
+            },
+            "execute": "civilians"
+        },
+        "weapons_for_military": {
+            "left": {
+                "military": 10,
+                "weapons": -12
+            },
+            "right": {
+                "military": -25
+            },
+            "execute": "military"
+        },
+        "food_for_dragon": {
+            "left": {
+                "food": -5,
+                "order": 10
+            },
+            "right": {
+                "food": -5,
+                "order": -10,
+                "civilians": 10
+            },
+            "execute": "order"
+        },
+        "security_perimeter": {
+            "left": {
+                "weapons": -5,
+                "military": 10,
+                "civilians": -10
+            },
+            "right": {
+                "weapons": -5,
+                "military": -10,
+                "civilians": 10
+            },
+            "execute": "military"
+        },
+        "merchant": {
+            "left": {
+                "food": 10,
+                "tools": 10,
+                "military": -25
+            },
+            "right": {
+                "military": 10
+            },
+            "execute": "civilians"
+        },
+        "witch": {
+            "left": {
+                "order": -10,
+                "civilians": -10,
+                "paleo": 10
+            },
+            "right": {
+                "order": 10,
+                "civilians": 10,
+                "paleo": -25
+            },
+            "execute": "civilians"
+        },
+        "tough_labour": {
+            "left": {
+                "weapons": 10,
+                "civilians": -10
+            },
+            "right": {
+                "weapons": -5,
+                "civilians": 10
+            },
+            "execute": "civilians"
+        },
+        "paleo_tools": {
+            "left": {
+                "weapons": -5,
+                "tools": -12,
+                "paleo": 10
+            },
+            "right": {
+                "paleo": -10
+            },
+            "execute": "paleo"
+        },
+        "black_market": {
+            "left": {
+                "military": -10,
+                "civilians": 10
+            },
+            "right": {
+                "military": 10,
+                "civilians": -10
+            },
+            "execute": "military"
+        },
+        "paleo_researches": {
+            "left": {
+                "order": 10,
+                "paleo": -10
+            },
+            "right": {
+                "order": -10,
+                "paleo": 10
+            },
+            "execute": "order"
+        },
+        "sioux_falls_ruins": {
+            "left": {
+                "food": 10,
+                "order": -25,
+                "military": 5,
+                "paleo": 10
+            },
+            "right": {
+                "order": 25,
+                "paleo": -10
+            },
+            "execute": "military"
+        },
+        "riots": {
+            "left": {
+                "food": -5,
+                "order": -10,
+                "civilians": 10
+            },
+            "right": {
+                "civilians": -25
+            },
+            "execute": "civilians"
+        },
+        "party_for_the_dragon": {
+            "left": {
+                "order": -10,
+                "civilians": -10
+            },
+            "right": {
+                "food": -15,
+                "weapons": -15,
+                "tools": -15,
+                "order": 20,
+                "civilians": 10
+            },
+            "execute": "order"
+        },
+        "alamosaurus": {
+            "left": {
+                "paleo": 10
+            },
+            "right": {
+                "weapons": 10,
+                "paleo": -10
+            },
+            "execute": "paleo"
+        },
+        "thief": {
+            "left": {
+                "tools": 10,
+                "order": -10,
+                "military": 10
+            },
+            "right": {
+                "tools": -10,
+                "order": 10,
+                "military": -10
+            },
+            "execute": "military"
+        },
+        "circle_game": {
+            "left": {
+                "military": 10,
+                "civilians": -10
+            },
+            "right": {
+                "military": -10,
+                "civilians": 10
+            },
+            "execute": "military"
+        },
+        "eggs": {
+            "left": {
+                "food": 10,
+                "civilians": 10,
+                "paleo": -10
+            },
+            "right": {
+                "food": -5,
+                "civilians": -10,
+                "paleo": 10
+            },
+            "execute": "civilians"
+        },
+        "steel_mine": {
+            "left": {
+                "weapons": 10,
+                "tools": 10,
+                "order": -25
+            },
+            "right": {
+                "weapons": -5,
+                "tools": -10,
+                "order": 25,
+                "paleo": -10
+            },
+            "execute": "paleo"
+        },
+        "services": {
+            "left": {
+                "food": -5,
+                "order": 10,
+                "civilians": -10
+            },
+            "right": {
+                "food": 10,
+                "order": -10
+            },
+            "execute": "order"
+        },
+        "snail_soup": {
+            "left": {
+                "military": -30
+            },
+            "right": {
+                "military": 10
+            },
+            "execute": "civilians"
+        },
+        "market": {
+            "left": {
+                "food": 10,
+                "civilians": 10
+            },
+            "right": {
+                "food": -5,
+                "civilians": -10,
+                "weapons": 10
+            },
+            "execute": "civilians"
+        },
+        "religious_songs": {
+            "left": {
+                "order": -25,
+                "civilians": 10
+            },
+            "right": {
+                "order": 10,
+                "civilians": -10
+            },
+            "execute": "civilians"
+        },
+        "sunglasses": {
+            "left": {
+                "tools": -5,
+                "military": 10
+            },
+            "right": {
+                "military": -10
+            },
+            "execute": "military"
+        },
+        "trapped_by_trex": {
+            "left": {
+                "weapons": -5,
+                "military": -10,
+                "paleo": 10
+            },
+            "right": {
+                "military": 10,
+                "paleo": -10
+            },
+            "execute": "paleo"
+        },
+        "conversion": {
+            "left": {
+                "order": -10,
+                "civilians": 25
+            },
+            "right": {
+                "order": 10,
+                "civilians": -10
+            },
+            "execute": "civilians"
+        },
+        "bananas": {
+            "left": {
+                "order": -10,
+                "military": 25
+            },
+            "right": {
+                "order": 25,
+                "military": -10
+            },
+            "execute": "military"
+        },
+        "horses": {
+            "left": {
+                "civilians": -10,
+                "weapons": 5
+            },
+            "right": {},
+            "execute": "civilians"
+        },
+        "morphine": {
+            "left": {
+                "order": -25,
+                "paleo": 10
+            },
+            "right": {
+                "order": 25,
+                "paleo": -10
+            },
+            "execute": "paleo"
+        },
+        "therizinosaurus": {
+            "left": {
+                "food": 10,
+                "weapons": -5,
+                "military": 10
+            },
+            "right": {
+                "military": -25
+            },
+            "execute": "military"
+        },
+        "buried_weapons": {
+            "left": {
+                "weapons": 30
+            },
+            "right": {
+                "paleo": -5
+            },
+            "execute": "paleo"
+        },
+        "magic_tools": {
+            "left": {
+                "tools": 30
+            },
+            "right": {
+                "paleo": -5
+            },
+            "execute": "civilians"
+        },
+        "monument_for_soldiers": {
+            "left": {
+                "tools": -10,
+                "military": 30,
+                "civilians": 10
+            },
+            "right": {
+                "military": -25
+            },
+            "execute": "military"
+        },
+        "fertilizer": {
+            "left": {
+                "food": 20
+            },
+            "right": {
+                "paleo": -10
+            },
+            "execute": "paleo"
+        },
+        "prison": {
+            "left": {
+                "weapons": 20,
+                "civilians": -10,
+                "military": -10
+            },
+            "right": {},
+            "execute": "civilians"
+        },
+        "workshop": {
+            "left": {
+                "civilians": 10
+            },
+            "right": {
+                "tools": 20
+            },
+            "execute": "civilians"
+        },
+        "parade": {
+            "left": {
+                "military": 10
+            },
+            "right": {
+                "military": 20,
+                "civilians": 10
+            },
+            "execute": "military"
+        },
+        "weapons_manufacture": {
+            "left": {
+                "weapons": 20,
+                "military": -10
+            },
+            "right": {
+                "civilians": -10
+            },
+            "execute": "civilians"
+        },
+        "dino_carcass": {
+            "left": {
+                "food": 20,
+                "paleo": -20
+            },
+            "right": {
+                "food": 20,
+                "tools": -10,
+                "paleo": 10
+            },
+            "execute": "paleo"
+        },
+        "tools_food": {
+            "left": {
+                "tools": 20,
+                "paleo": -20
+            },
+            "right": {
+                "food": -5,
+                "tools": 20,
+                "paleo": 10
+            },
+            "execute": "paleo"
+        },
+        "dino_bile": {
+            "left": {
+                "paleo": 10
+            },
+            "right": {
+                "weapons": 20,
+                "military": 10,
+                "paleo": -10
+            },
+            "execute": "paleo"
+        }
+    },
+    "decrees": {
+        "decree_0": {
+            "civilian": 10
+        }
+    },
+    "events": {
+        "rain": {
+            "order": 0,
+            "civilian": ""
+        }
+    }
+}
