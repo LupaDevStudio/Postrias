@@ -2,11 +2,13 @@
 
 ![License](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png)
 ![Pylint Badge](https://github.com/LupaDevStudio/Postrias/actions/workflows/pylint.yml/badge.svg)
-![Pytest coverage](https://raw.githubusercontent.com/LupaDevStudio/Postrias/coverage-badge/coverage.svg?raw=true)
+
 
 ## License
 
 This game is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+Some dependencies and assets of this game are licensed by their creators under different licenses. You can find them in the `licenses` folder.
 
 ## Introduction
 

@@ -15,8 +15,8 @@
         },
         "pteranodon_embryo": {
             "yes": {
-                "order": 10,
-                "paleo": -10
+                "order": -10,
+                "paleo": 10
             },
             "no": {
                 "order": 10,
@@ -27,24 +27,24 @@
         "religious_sacrifice": {
             "yes": {
                 "order": 10,
-                "civilians": -10
+                "civilian": -10
             },
             "no": {
                 "order": -10,
-                "civilians": 10,
+                "civilian": 10,
                 "food": -5
             },
             "complainant": "order"
         },
         "tough_winter": {
             "yes": {
-                "civilians": 10,
+                "civilian": 10,
                 "food": -5
             },
             "no": {
-                "civilians": -10
+                "civilian": -10
             },
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
         "weapons_for_military": {
             "yes": {
@@ -64,7 +64,7 @@
             "no": {
                 "food": -5,
                 "order": -10,
-                "civilians": 10
+                "civilian": 10
             },
             "complainant": "order"
         },
@@ -72,12 +72,12 @@
             "yes": {
                 "weapons": -5,
                 "military": 10,
-                "civilians": -10
+                "civilian": -10
             },
             "no": {
                 "weapons": -5,
                 "military": -10,
-                "civilians": 10
+                "civilian": 10
             },
             "complainant": "military"
         },
@@ -90,31 +90,31 @@
             "no": {
                 "military": 10
             },
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
         "witch": {
             "yes": {
                 "order": -10,
-                "civilians": -10,
+                "civilian": -10,
                 "paleo": 10
             },
             "no": {
                 "order": 10,
-                "civilians": 10,
+                "civilian": 10,
                 "paleo": -25
             },
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
         "tough_labour": {
             "yes": {
                 "weapons": 10,
-                "civilians": -10
+                "civilian": -10
             },
             "no": {
                 "weapons": -5,
-                "civilians": 10
+                "civilian": 10
             },
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
         "paleo_tools": {
             "yes": {
@@ -129,12 +129,12 @@
         },
         "black_market": {
             "yes": {
-                "military": -10,
-                "civilians": 10
+                "military": 10,
+                "civilian": -10
             },
             "no": {
-                "military": 10,
-                "civilians": -10
+                "military": -10,
+                "civilian": 10
             },
             "complainant": "military"
         },
@@ -166,24 +166,24 @@
             "yes": {
                 "food": -5,
                 "order": -10,
-                "civilians": 10
+                "civilian": 10
             },
             "no": {
-                "civilians": -25
+                "civilian": -25
             },
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
         "party_for_the_dragon": {
             "yes": {
-                "order": -10,
-                "civilians": -10
-            },
-            "no": {
                 "food": -15,
                 "weapons": -15,
                 "tools": -15,
                 "order": 20,
-                "civilians": 10
+                "civilian": 10
+            },
+            "no": {
+                "order": -10,
+                "civilian": -10
             },
             "complainant": "order"
         },
@@ -213,28 +213,28 @@
         "circle_game": {
             "yes": {
                 "military": 10,
-                "civilians": -10
+                "civilian": -10
             },
             "no": {
                 "military": -10,
-                "civilians": 10
+                "civilian": 10
             },
             "complainant": "military"
         },
         "eggs": {
             "yes": {
                 "food": 10,
-                "civilians": 10,
+                "civilian": 10,
                 "paleo": -10
             },
             "no": {
                 "food": -5,
-                "civilians": -10,
+                "civilian": -10,
                 "paleo": 10
             },
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
-        "steel_mine": {
+        "iron_mine": {
             "yes": {
                 "weapons": 10,
                 "tools": 10,
@@ -252,7 +252,7 @@
             "yes": {
                 "food": -5,
                 "order": 10,
-                "civilians": -10
+                "civilian": -10
             },
             "no": {
                 "food": 10,
@@ -260,37 +260,37 @@
             },
             "complainant": "order"
         },
-        "snail_soup": {
+        "snake_soup": {
             "yes": {
                 "military": -30
             },
             "no": {
                 "military": 10
             },
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
         "market": {
             "yes": {
                 "food": 10,
-                "civilians": 10
+                "civilian": 10
             },
             "no": {
                 "food": -5,
-                "civilians": -10,
+                "civilian": -10,
                 "weapons": 10
             },
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
         "religious_songs": {
             "yes": {
                 "order": -25,
-                "civilians": 10
+                "civilian": 10
             },
             "no": {
                 "order": 10,
-                "civilians": -10
+                "civilian": -10
             },
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
         "sunglasses": {
             "yes": {
@@ -317,13 +317,13 @@
         "conversion": {
             "yes": {
                 "order": -10,
-                "civilians": 25
+                "civilian": 25
             },
             "no": {
                 "order": 10,
-                "civilians": -10
+                "civilian": -10
             },
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
         "bananas": {
             "yes": {
@@ -338,11 +338,13 @@
         },
         "horses": {
             "yes": {
-                "civilians": -10,
+                "civilian": -10,
                 "weapons": 5
             },
-            "no": {},
-            "complainant": "civilians"
+            "no": {
+                "civilian": 5
+            },
+            "complainant": "civilian"
         },
         "morphine": {
             "yes": {
@@ -382,13 +384,13 @@
             "no": {
                 "paleo": -5
             },
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
         "monument_for_soldiers": {
             "yes": {
                 "tools": -10,
                 "military": 30,
-                "civilians": 10
+                "civilian": 10
             },
             "no": {
                 "military": -25
@@ -407,20 +409,20 @@
         "prison": {
             "yes": {
                 "weapons": 20,
-                "civilians": -10,
+                "civilian": -10,
                 "military": -10
             },
             "no": {},
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
         "workshop": {
             "yes": {
-                "civilians": 10
+                "civilian": 10
             },
             "no": {
                 "tools": 20
             },
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
         "parade": {
             "yes": {
@@ -428,7 +430,7 @@
             },
             "no": {
                 "military": 20,
-                "civilians": 10
+                "civilian": -10
             },
             "complainant": "military"
         },
@@ -438,31 +440,31 @@
                 "military": -10
             },
             "no": {
-                "civilians": -10
+                "civilian": -10
             },
-            "complainant": "civilians"
+            "complainant": "civilian"
         },
         "dino_carcass": {
             "yes": {
                 "food": 20,
-                "paleo": -20
+                "tools": -10,
+                "paleo": 10
             },
             "no": {
                 "food": 20,
-                "tools": -10,
-                "paleo": 10
+                "paleo": -20
             },
             "complainant": "paleo"
         },
         "tools_food": {
             "yes": {
-                "tools": 20,
-                "paleo": -20
-            },
-            "no": {
                 "food": -5,
                 "tools": 20,
                 "paleo": 10
+            },
+            "no": {
+                "tools": 20,
+                "paleo": -20
             },
             "complainant": "paleo"
         },

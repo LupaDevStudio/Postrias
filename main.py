@@ -23,17 +23,17 @@ from tools.constants import (
     FPS,
     MSAA_LEVEL
 )
-from screens import (
+from tools.kivy_tools.tools_kivy import (
+    color_label,
+    background_color,
+    Window
+)
+from screens import (   # pylint: disable=unused-import
     MenuScreen,
     GameScreen,
     SettingsScreen,
     GameOverScreen,
     AchievementsScreen
-)
-from tools.kivy_tools.tools_kivy import (
-    color_label,
-    background_color,
-    Window
 )
 
 

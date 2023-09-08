@@ -57,8 +57,8 @@
         },
         "black_market": {
             "text": "Le commandant de la section \"Ordre public\" de la Milice vous somme de prendre des mesures plus fortes pour faire face à la contrebande de vivres.",
-            "yes": "Tolérons plutôt ce trafic, beaucoup trop de survivants en dépendent.",
-            "no": "Vous avez carte blanche, commandant."
+            "yes": "Vous avez carte blanche, commandant.",
+            "no": "Tolérons plutôt ce trafic, beaucoup trop de survivants en dépendent."
         },
         "paleo_researches": {
             "text": "L’évêque s'indigne des enseignements prodigués par les paléontologues. Il affirme que ces derniers cherchent à embrigader des survivants dans leur quête du culte impie de la Raison.",
@@ -66,7 +66,7 @@
             "no": "Et alors ?"
         },
         "sioux_falls_ruins": {
-            "text": "Le capitaine d'une brigade d'exploration de la milice vous fait son rapport. Il prétend avoir découvert un ordinateur d'agronomie dans les ruines de Sioux Falls. Il renferme sans doute de vastes connaissances.",
+            "text": "Le capitaine d'une brigade d'exploration de la milice vous fait son rapport. Il prétend avoir découvert un ordinateur d'agronomie dans les ruines de Sioux Falls. Il renferme sans doute de nombreuses connaissances.",
             "yes": "Demandez aux paléontologues de le décrypter.",
             "no": "Arrière ! Cet objet est porteur du vice qui a amené sur nous les dinosaures !"
         },
@@ -77,8 +77,8 @@
         },
         "party_for_the_dragon": {
             "text": "Une comète a été aperçue dans le ciel. Votre aumônier affirme que c'est un signe de la venue prochaine du Dragon des derniers jours, et qu'il nous faut afficher notre foi en lui offrant une grande part de nos ressources.",
-            "yes": "Congédier l'aumônier.",
-            "no": "Faire de l'événement une grande fête populaire."
+            "yes": "Faire de l'événement une grande fête populaire.",
+            "no": "Congédier l'aumônier."
         },
         "alamosaurus": {
             "text": "Un paléontologue vous informe qu'un nid d'Alamosaurus sanjuanensis a été découvert non loin du campement. Une aubaine pour en savoir plus sur cette sous-espèce ! Mais vos chasseurs préfèrent collecter le bois du nid pour en faire des armes... Hérésie !",
@@ -100,8 +100,8 @@
             "yes": "Ce soir, c'est œufs au plat !",
             "no": "Pas touche à ces œufs !"
         },
-        "steel_mine": {
-            "text": "Un professeur prétend avoir détecté une ancienne mine d'acier encore exploitable sous notre campement. Les fanatiques affirment qu'elle renferme un artefact sacré qui causera notre perte si nous y accédons.",
+        "iron_mine": {
+            "text": "Un professeur prétend avoir détecté une ancienne mine de fer encore exploitable sous notre campement. Les fanatiques affirment qu'elle renferme un artefact sacré qui causera notre perte si nous y accédons.",
             "yes": "De l'acier pour notre survie !",
             "no": "Arrière, serviteur du diable !"
         },
@@ -110,10 +110,10 @@
             "yes": "Messe obligatoire !",
             "no": "Prêtres, à vos charrues !"
         },
-        "snail_soup": {
-            "text": "Un commerçant affirme que la consommation de serpents fraîchement tués est excellente pour gagner de la vigueur en combat.",
+        "snake_soup": {
+            "text": "Un commerçant affirme que la consommation de serpents fraîchement tués est excellente pour gagner de la vigueur en combat et souhaite en servir une soupe à la Milice.",
             "yes": "Enfin un connaisseur !",
-            "no": "On dit la même chose des fesses de babouin !"
+            "no": "On dit la même chose des fesses de babouin ! Pas de ça chez moi !"
         },
         "market": {
             "text": "Un démocrate vous demande de créer un grand marché hebdomadaire pour lutter contre le trafic de nourriture.",
@@ -126,7 +126,7 @@
             "no": "Qu'on te fasse taire."
         },
         "sunglasses": {
-            "text": "Le général de la milice demande à ce que l'on fournisse des lunettes de soleil à toute la milice pour ne pas être ébloui lors des combats contre les dinosaures de plus de trois mètres de haut.",
+            "text": "Le général de la milice demande à ce que l'on fournisse des lunettes de soleil à toute la Milice pour ne pas être ébloui lors des combats contre les dinosaures de plus de trois mètres de haut.",
             "yes": "Du confort pour être plus fort !",
             "no": "Brûle-toi les yeux pour ton souverain."
         },
@@ -146,12 +146,11 @@
             "no": "Rendez-ça aux prêtres ! "
         },
         "horses": {
-            "text": "Un fermier a repéré des chevaux dans une plaine au loin.",
+            "text": "Un fermier a repéré des chevaux dans une plaine au loin. Ils pourraient aider les miliciens à se déplacer mais les volontaires ne se bousculent pas pour aller les attraper.",
             "yes": "Allez me chercher ces chevaux !",
             "no": "C'est pas ma priorité vois-tu."
         },
         "morphine": {
-            "title": "Vous aurez pas ma morphine !",
             "text": "Un paléontologue rapporte que les cargaisons de morphine ont été volées par les adeptes.",
             "yes": "Ils paieront pour cet affront !",
             "no": "Il leur faut au moins ça..."
@@ -188,7 +187,7 @@
         },
         "workshop": {
             "text": "Un artisan patriote décède et décide de vous léguer son atelier. Il ne vous est d'aucune utilité mais vous pouvez récolter des matériaux en le démantelant.",
-            "yes": "Brûlez-le ; le feu réchauffera cette nuit nos concitoyens.",
+            "yes": "Conservez-le, il inspirera les générations futures.",
             "no": "Démantelez l'atelier."
         },
         "parade": {
@@ -252,7 +251,7 @@
         "civilian_max": "Vous avez été trop tendre et les survivants se sentent pousser des ailes. La foule parvient à rallier la Milice à sa cause pour exiger la fin de votre pouvoir et la mise en place d'une gouvernance démocratique. l’émeute dégénère et les survivants débordent vos positions. Ils s'emparent de vous et vous emmènent vers la guillotine.",
         "civilian_min": "Votre pouvoir n'a jamais semble aussi fort. Les survivants sont à votre botte et semblent complètement apathiques. Toutefois, vous observez progressivement le campement se dépeupler. Il vous semble que ceux qui restent ne produisent presque plus rien . La poignée d'homme qui occupe alors le campement ne peut guère vous défendre lors de l'attaque des ptéranodons, et vous périssez entre leurs griffes.",
         "food": "Les survivants commencent à faire bouillir leurs chaussures et leurs vêtements pour se nourrir. Votre autorité n'a plus de sens pour ces hommes dont le dénuement nourrit des pulsions révolutionnaires. Ces corps décharnés vous saisissent et vous conduisent dans un immense chaudron sur la place publique. Vos jours s’achèvent en bain-marie. Vous n'obtenez guère mieux que les intestins des survivants pour sépulture.",
-        "tools": "Les équipements du camp tombent en ruine et vous ne parvenez pas à les réparer. L'agriculture, les dispositifs de sécurité et la recherche sont paralysés. Vous vous décidez à mener une expedition dans les vestiges des villes alentours afin de récolter des outils et des matériaux. l’évêque profite de votre absence pour prendre le pouvoir et vous êtes attaqué sur le chemin du retour par des vélociraptors. Vous êtes emporté à la tête de l'ultime charge de votre groupe.",
+        "tools": "Les équipements du camp tombent en ruine et vous ne parvenez pas à les réparer. L'agriculture, les dispositifs de sécurité et la recherche sont paralysés. Vous vous décidez à mener une expédition dans les vestiges des villes alentours afin de récolter des outils et des matériaux. l’évêque profite de votre absence pour prendre le pouvoir et vous êtes attaqués sur le chemin du retour par des vélociraptors. Vous êtes emporté à la tête de l'ultime charge de votre groupe.",
         "weapons": "C'est équipée de frondes et de bâtons que la milice doit faire face à une énième attaque de tricératops. Les pierres et les boulettes de de papiers rebondissent sur leurs écailles et ces derniers ravagent le campement. Vous terminez piétiné sous une charge dévastatrice du troupeau."
     },
     "introduction": {
