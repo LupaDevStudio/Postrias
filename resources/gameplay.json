@@ -478,17 +478,117 @@
                 "paleo": -10
             },
             "complainant": "paleo"
+        },
+        "tools_with_bones": {
+            "yes": {
+                "paleo": 15
+            },
+            "no": {
+                "tools": 10,
+                "paleo": -10
+            },
+            "complainant": "paleo"
+        },
+        "weapons_for_paleo": {
+            "yes": {
+                "paleo": -10,
+                "military": 10,
+                "weapons": 10
+            },
+            "no": {
+                "military": -15
+            },
+            "complainant": "military"
+        },
+        "suspect_individual": {
+            "yes": {
+                "military": -10,
+                "tools": 15,
+                "civilian": 10
+            },
+            "no": {
+                "civilian": -10
+            },
+            "complainant": "civilian"
         }
     },
     "decree": {
-        "decree_0": {
-            "civilian": 10
+        "cocks": {
+            "civilian": 20
+        },
+        "missionaries": {
+            "order": 20
+        },
+        "propaganda": {
+            "military": 20
+        },
+        "researches": {
+            "paleo": 20
+        },
+        "obsolete_weapons": {
+            "weapons": 20
+        },
+        "edible_animals": {
+            "food": 20
+        },
+        "non_essential_infrastructures": {
+            "tools": 20
+        },
+        "prayers": {
+            "order": 10,
+            "food": 10
+        },
+        "puzzle": {
+            "civilian": 10,
+            "paleo": 10
         }
     },
     "event": {
         "rain": {
-            "order": 0,
-            "civilian": ""
+            "food": 5,
+            "weapons": -1,
+            "tools": -1,
+            "order": -1,
+            "military": -1,
+            "civilian": -1,
+            "paleo": -1
+        },
+        "military_career": {
+            "military": 20
+        },
+        "wooded_sector": {
+            "tools": 20
+        },
+        "agricultural_machines": {
+            "weapons": 20,
+            "military": 10
+        },
+        "researches_amonites": {
+            "paleo": 20
+        },
+        "storm_fear": {
+            "order": 20
+        },
+        "lottery": {
+            "civilian": 20
+        },
+        "carpentry_tools": {
+            "tools": 20
+        },
+        "fire_church": {
+            "order": -10
+        },
+        "oleg": {
+            "weapons": 20
+        },
+        "dino_cave": {
+            "food": 20
+        },
+        "dino_attack": {
+            "weapons": -10,
+            "civilian": -10,
+            "food": 10,
+            "paleo": 10
         }
     }
 }
