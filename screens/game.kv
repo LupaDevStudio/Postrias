@@ -1,1 +1,101 @@
 #:kivy 2.1.0
+#:import PATH_IMAGES tools.path.PATH_IMAGES
+#:set center_x_faction 0.11
+#:set center_x_resource 0.95
+#:set upper_y_indic 0.95
+#:set vertical_spacing_indic 0.09
+#:set label_image_spacing 0.05
+#:set image_size_indic 0.08
+
+<IndicatorLabel@Label>:
+    size_hint: 1, 0.5
+
+<GameScreen>:
+
+    # Faction indicators
+    IndicatorLabel:
+        id: order_label
+        text: root.order_value
+        pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic}
+        font_size: 30*root.font_ratio
+        font_name: root.font
+        color: root.manager.color_label
+    Image:
+        id: order_image
+        source: PATH_IMAGES + "order.png"
+        size_hint: None, image_size_indic
+        pos_hint: {"center_x": center_x_faction - label_image_spacing, "center_y": upper_y_indic}
+        allow_stretch: True
+        width: self.height
+    IndicatorLabel:
+        id: military_label
+        text: root.military_value
+        pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic - vertical_spacing_indic*1}
+        font_size: 30*root.font_ratio
+        font_name: root.font
+        color: root.manager.color_label
+    Image:
+        id: military_image
+        source: PATH_IMAGES + "military.png"
+        size_hint: None, image_size_indic
+        pos_hint: {"center_x": center_x_faction - label_image_spacing, "center_y": upper_y_indic - vertical_spacing_indic*1}
+        allow_stretch: True
+        width: self.height
+    IndicatorLabel:
+        id: civilian_label
+        text: root.civilian_value
+        pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic - vertical_spacing_indic*2}
+        font_size: 30*root.font_ratio
+        font_name: root.font
+        color: root.manager.color_label
+    Image:
+        id: civilian_image
+        source: PATH_IMAGES + "civilian.png"
+        size_hint: None, image_size_indic
+        pos_hint: {"center_x": center_x_faction - label_image_spacing, "center_y": upper_y_indic - vertical_spacing_indic*2}
+        allow_stretch: True
+        width: self.height
+    IndicatorLabel:
+        id: paleo_label
+        text: root.paleo_value
+        pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic - vertical_spacing_indic*3}
+        font_size: 30*root.font_ratio
+        font_name: root.font
+        color: root.manager.color_label
+    Image:
+        id: paleo_image
+        source: PATH_IMAGES + "paleo.png"
+        size_hint: None, image_size_indic
+        pos_hint: {"center_x": center_x_faction - label_image_spacing, "center_y": upper_y_indic - vertical_spacing_indic*3}
+        allow_stretch: True
+        width: self.height
+
+    # Resources indicator
+    IndicatorLabel:
+        id: food_label
+        text: root.food_value
+        pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic}
+        font_size: 30*root.font_ratio
+        font_name: root.font
+        color: root.manager.color_label
+    Image:
+        id: food_image
+        source: PATH_IMAGES + "food.png"
+        size_hint: None, image_size_indic
+        pos_hint: {"center_x": center_x_resource - label_image_spacing, "center_y": upper_y_indic}
+        allow_stretch: True
+        width: self.height
+    IndicatorLabel:
+        id: weapons_label
+        text: root.weapons_value
+        pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic}
+        font_size: 30*root.font_ratio
+        font_name: root.font
+        color: root.manager.color_label
+    Image:
+        id: weapons_image
+        source: PATH_IMAGES + "weapons.png"
+        size_hint: None, image_size_indic
+        pos_hint: {"center_x": center_x_resource - label_image_spacing, "center_y": upper_y_indic}
+        allow_stretch: True
+        width: self.height
