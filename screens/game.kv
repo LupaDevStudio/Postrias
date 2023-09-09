@@ -88,7 +88,7 @@
     IndicatorLabel:
         id: weapons_label
         text: root.weapons_value
-        pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic -vertical_spacing_indic*1}
         font_size: 30*root.font_ratio
         font_name: root.font
         color: root.manager.color_label
@@ -96,6 +96,20 @@
         id: weapons_image
         source: PATH_IMAGES + "weapons.png"
         size_hint: None, image_size_indic
-        pos_hint: {"center_x": center_x_resource - label_image_spacing, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_resource - label_image_spacing, "center_y": upper_y_indic -vertical_spacing_indic*1}
+        allow_stretch: True
+        width: self.height
+    IndicatorLabel:
+        id: tools_label
+        text: root.tools_value
+        pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic -vertical_spacing_indic*2}
+        font_size: 30*root.font_ratio
+        font_name: root.font
+        color: root.manager.color_label
+    Image:
+        id: tools_image
+        source: PATH_IMAGES + "tools.png"
+        size_hint: None, image_size_indic
+        pos_hint: {"center_x": center_x_resource - label_image_spacing, "center_y": upper_y_indic -vertical_spacing_indic*2}
         allow_stretch: True
         width: self.height

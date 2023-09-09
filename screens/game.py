@@ -25,12 +25,16 @@ from tools.kivy_tools import ImprovedScreen
 
 class GameScreen(ImprovedScreen):
 
+    # Create factions values for Label
     order_value = StringProperty("0")
     military_value = StringProperty("0")
     civilian_value = StringProperty("0")
     paleo_value = StringProperty("0")
+
+    # Create
     food_value = StringProperty("0")
     weapons_value = StringProperty("0")
+    tools_value = StringProperty("0")
 
     def __init__(self, **kw):
         super().__init__(
