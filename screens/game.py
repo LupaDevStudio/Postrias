@@ -1,9 +1,16 @@
 """
-Module for the game over screen
+Module for the game screen
 """
 
+###############
+### Imports ###
+###############
 
+### Kivy imports ###
 from kivy.clock import Clock
+from kivy.properties import StringProperty
+
+### Module imports ###
 from tools.path import (
     PATH_TEXT_FONT,
     PATH_IMAGES,
@@ -17,6 +24,14 @@ from tools.kivy_tools import ImprovedScreen
 
 
 class GameScreen(ImprovedScreen):
+
+    order_value = StringProperty("0")
+    military_value = StringProperty("0")
+    civilian_value = StringProperty("0")
+    paleo_value = StringProperty("0")
+    food_value = StringProperty("0")
+    weapons_value = StringProperty("0")
+
     def __init__(self, **kw):
         super().__init__(
             back_image_path=PATH_IMAGES + "day_camp.png",
