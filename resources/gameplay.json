@@ -426,11 +426,11 @@
         },
         "parade": {
             "yes": {
-                "military": 10
-            },
-            "no": {
                 "military": 20,
                 "civilian": -10
+            },
+            "no": {
+                "military": 10
             },
             "complainant": "military"
         },

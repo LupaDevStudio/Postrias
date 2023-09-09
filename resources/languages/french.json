@@ -192,8 +192,8 @@
         },
         "parade": {
             "text": "Le général de la Milice demande à organiser un défilé militaire chaque année à la gloire de ses soldats.",
-            "yes": "Très bien.",
-            "no": "J'en propose même deux !"
+            "yes": "J'en propose même deux !",
+            "no": "Très bien mais pas cher ! Pas de folies cette année !"
         },
         "weapons_manufacture": {
             "text": "Un fabricant d'armes vous explique qu'il peut augmenter sa production si vous acceptez de lui donner quelques guerriers.",
