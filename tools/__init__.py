@@ -28,7 +28,7 @@ from tools.constants import (
     USER_DATA
 )
 
-from tools.game import Game
+from tools.postrias import Game
 
 
 ###############

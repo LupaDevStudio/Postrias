@@ -1,5 +1,5 @@
 {
-    "decisions": {
+    "decision": {
         "cathedral": {
             "text": "Vous vous êtes engagé à lancer le chantier d'une cathédrale auprès de l'Ordre, mais un milicien vous apprend qu'une brèche a été constatée dans les remparts.",
             "yes": "La cathédrale attendra.",
@@ -216,7 +216,7 @@
             "no": "Donnez ces armes à mes guerriers !"
         }
     },
-    "answers": {
+    "answer": {
         "yes": {
             "order": "L'homme d’église vous adresse sa bénédiction et s’en retourne dans son temple.",
             "military": "Le milicien vous salue et quitte les lieux.",
@@ -231,17 +231,17 @@
         },
         "guillotine": "Vous regardez les miliciens s’emparer du condamné et le conduire à l’échafaud. Vous entendez le sifflement sinistre de la lame fendre l'air."
     },
-    "decrees": {
+    "decree": {
         "decree_0": {
             "text": "Text"
         }
     },
-    "events": {
+    "event": {
         "rain": {
             "text": "Il pleut !"
         }
     },
-    "endings": {
+    "ending": {
         "order_max": "Fort de son pouvoir sur la société, l'Ordre ardent du Dragon des derniers jours lance une campagne de purification du campement contre ses opposants. Après avoir massacré les paléontologues et pris le contrôle de la Milice, l'Ordre envoie la foule se saisir de vous. Vos os et votre chair sont consumés sur un bûcher sacrificiel.",
         "order_min": "Alors que le pouvoir de l'Ordre se délite, les survivants privés de l'Espérance du Salut prennent conscience de l’absurdité de l'existence dans un monde qui n'est plus celui des hommes. Ils ne vous obéissent plus et se laissent mourir. Vous êtes désormais le dernier des hommes.",
         "military_max": "La Milice est devenue si puissante que l'on ne sait plus très bien ce qui la contraint à vous obéir. Elle-même se le demande. Vos gardes vous trahissent dans la nuit et la Milice se saisit de vous. Par un petite ouverture dans la toile du camion qui semble vous emmener hors du campement, vous avez le temps d'apercevoir des affiches de propagandes à l'effigie du général de la Milice couvrir les murs de votre ancienne demeure.",
@@ -266,9 +266,12 @@
         "weapons": "Les armes :\n\nLes armes de toute nature sont absolument essentielles à la Milice. Elle en a besoin pour maintenir l'ordre et protéger le campement des dinosaures."
     },
     "tutorial": "To do",
-    "menu_screen": {
+    "menu": {
         "press_to_start": "Cliquez sur l'écran pour commencer une partie"
     },
-    "settings_screen": {},
-    "game_over_screen": {}
+    "settings": {},
+    "game_over": {},
+    "game": {
+        "decree": "To do"
+    }
 }

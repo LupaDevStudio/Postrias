@@ -1,5 +1,5 @@
 {
-    "decisions": {
+    "decision": {
         "cathedral": {
             "yes": {
                 "order": -10,
@@ -480,12 +480,12 @@
             "complainant": "paleo"
         }
     },
-    "decrees": {
+    "decree": {
         "decree_0": {
             "civilian": 10
         }
     },
-    "events": {
+    "event": {
         "rain": {
             "order": 0,
             "civilian": ""
