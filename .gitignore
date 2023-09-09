@@ -5,8 +5,9 @@ reports
 *ini
 
 # Ignore draft files
-draft_*
+draft*
 *_test.*
+ideas.md
 
 # VS code workspace
 .vscode

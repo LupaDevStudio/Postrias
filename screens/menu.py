@@ -17,7 +17,10 @@ from tools.constants import (
     MOBILE_MODE
 )
 from tools.kivy_tools import ImprovedScreen
-from tools import music_mixer
+from tools import (
+    music_mixer,
+    game
+)
 
 
 class MenuScreen(ImprovedScreen):
@@ -36,7 +39,7 @@ class MenuScreen(ImprovedScreen):
 
     def on_enter(self, *args):
         # Launch the title music
-        music_mixer.play("tortuga", loop=True)
+        music_mixer.play("cinematic_dramatic", loop=True)
 
         # Schedule the update for the text opacity effect
         Clock.schedule_interval(self.update, 1 / FPS)

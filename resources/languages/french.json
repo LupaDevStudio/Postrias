@@ -1,5 +1,5 @@
 {
-    "cards": {
+    "decisions": {
         "cathedral": {
             "text": "Vous vous êtes engagé à lancer le chantier d'une cathédrale auprès de l'Ordre, mais un milicien vous apprend qu'une brèche a été constatée dans les remparts.",
             "yes": "La cathédrale attendra.",

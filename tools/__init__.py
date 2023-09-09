@@ -28,10 +28,19 @@ from tools.constants import (
     USER_DATA
 )
 
+from tools.game import Game
+
+
+###############
+### Process ###
+###############
+
 # Load the dictionnaries
-MUSIC_DICT = load_sounds(PATH_MUSICS, USER_DATA["music_volume"])
-SOUND_DICT = load_sounds(PATH_SOUNDS, USER_DATA["sound_effects_volume"])
+MUSIC_DICT = load_sounds(PATH_MUSICS, USER_DATA.music_volume)
+SOUND_DICT = load_sounds(PATH_SOUNDS, USER_DATA.sound_effects_volume)
 
 # Create the mixer
-music_mixer = DynamicMusicMixer(MUSIC_DICT, USER_DATA["music_volume"])
-sound_mixer = DynamicMusicMixer(SOUND_DICT, USER_DATA["sound_effects_volume"])
+music_mixer = DynamicMusicMixer(MUSIC_DICT, USER_DATA.music_volume)
+sound_mixer = DynamicMusicMixer(SOUND_DICT, USER_DATA.sound_effects_volume)
+
+game = Game()

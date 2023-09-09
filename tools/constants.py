@@ -33,6 +33,7 @@ DICT_LANGUAGE_CORRESPONDANCE : dict
 ### Python imports ###
 
 import os
+from typing import Any
 
 ### Kivy imports ###
 
@@ -82,9 +83,24 @@ if not os.path.exists(PATH_USER_DATA):
     save_json_file(PATH_USER_DATA, default_user_data)
 
 # Load the settings
-USER_DATA = load_json_file(PATH_USER_DATA)
+
+
+class UserData():
+    """A class to store the user data."""
+
+    def __init__(self) -> None:
+        data = load_json_file(PATH_USER_DATA)
+        self.language = data["language"]
+        self.highscore = data["highscore"]
+        self.endings = data["endings"]
+        self.music_volume = data["music_volume"]
+        self.sound_effects_volume = data["sound_effects_volume"]
+
+
+USER_DATA = UserData()
 
 ### Language ###
+
 
 DICT_LANGUAGE_CORRESPONDANCE = {
     "french": "Français",
