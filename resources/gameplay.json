@@ -1,5 +1,5 @@
 {
-    "decisions": {
+    "decision": {
         "cathedral": {
             "yes": {
                 "order": -10,
@@ -512,7 +512,7 @@
             "complainant": "civilian"
         }
     },
-    "decrees": {
+    "decree": {
         "cocks": {
             "civilian": 20
         },
@@ -543,7 +543,7 @@
             "paleo": 10
         }
     },
-    "events": {
+    "event": {
         "rain": {
             "food": 5,
             "weapons": -1,

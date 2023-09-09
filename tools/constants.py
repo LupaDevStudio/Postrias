@@ -33,7 +33,6 @@ DICT_LANGUAGE_CORRESPONDANCE : dict
 ### Python imports ###
 
 import os
-from typing import Any
 
 ### Kivy imports ###
 
@@ -43,8 +42,7 @@ from kivy import platform
 
 from tools.path import (
     PATH_USER_DATA,
-    PATH_MUSICS,
-    PATH_SOUNDS
+    PATH_LANGUAGE
 )
 from tools.basic_tools import (
     load_json_file,
@@ -106,3 +104,31 @@ DICT_LANGUAGE_CORRESPONDANCE = {
     "french": "Français",
     "english": "English"
 }
+
+
+class Text():
+    def __init__(self, language) -> None:
+        self.change_language(language)
+
+    def change_language(self, language):
+        """
+        Change the language of the text contained in the class.
+        """
+
+        # Load the json file
+        data = load_json_file(PATH_LANGUAGE + language + ".json")
+
+        # Split the text contained in the screens
+        self.menu = data["menu"]
+        self.settings = data["settings"]
+        self.game_over = data["game_over"]
+        self.game = data["game"]
+
+        # Split the text for the cards
+        self.decision = data["decision"]
+        self.event = data["event"]
+        self.decree = data["decree"]
+        self.answer = data["answer"]
+
+
+TEXT = Text(language=USER_DATA.language)

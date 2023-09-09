@@ -1,5 +1,5 @@
 {
-    "decisions": {
+    "decision": {
         "cathedral": {
             "text": "Vous vous êtes engagé à lancer le chantier d'une cathédrale auprès de l'Ordre, mais un milicien vous apprend qu'une brèche a été constatée dans les remparts.",
             "yes": "La cathédrale attendra.",
@@ -231,7 +231,7 @@
             "no": "Qu'on te fasse taire, toi et tes mensonges !"
         }
     },
-    "answers": {
+    "answer": {
         "yes": {
             "order": "L'homme d’église vous adresse sa bénédiction et s’en retourne dans son temple.",
             "military": "Le milicien vous salue et quitte les lieux.",
@@ -248,7 +248,7 @@
         "decree": "Le décret a été appliqué selon votre volonté. Votre suprématie est réaffirmée.",
         "event": "À la suite de ces péripéties, vous partez vous coucher en espérant que le jour suivant sera moins mouvementé."
     },
-    "decrees": {
+    "decree": {
         "cocks": {
             "text": "Organiser des combats de coqs sur la place centrale."
         },
@@ -277,7 +277,7 @@
             "text": "Organiser sur la place publique un atelier puzzle géant avec des os de brachiosaures."
         }
     },
-    "events": {
+    "event": {
         "rain": {
             "text": "Il pleut !"
         },
@@ -315,7 +315,7 @@
             "text": "Une horde de compsognathus attaque votre campement sans prévenir. Les survivants sont affolés mais la milice parvient à contenir la crise moyennant quelques armes. De nombreux cadavres de ces petites bestioles sont parsemés dans votre camp, pour le plus grand bonheur des paléontologues qui s'empressent d'en subtiliser quelques-uns pour les étudier. Les autres sont utilisés pour regarnir vos réserves de nourriture."
         }
     },
-    "endings": {
+    "ending": {
         "order_max": "Fort de son pouvoir sur la société, l'Ordre ardent du Dragon des derniers jours lance une campagne de purification du campement contre ses opposants. Après avoir massacré les paléontologues et pris le contrôle de la Milice, l'Ordre envoie la foule se saisir de vous. Vos os et votre chair sont consumés sur un bûcher sacrificiel.",
         "order_min": "Alors que le pouvoir de l'Ordre se délite, les survivants privés de l'Espérance du Salut prennent conscience de l’absurdité de l'existence dans un monde qui n'est plus celui des hommes. Ils ne vous obéissent plus et se laissent mourir. Vous êtes désormais le dernier des hommes.",
         "military_max": "La Milice est devenue si puissante que l'on ne sait plus très bien ce qui la contraint à vous obéir. Elle-même se le demande. Vos gardes vous trahissent dans la nuit et la Milice se saisit de vous. Par un petite ouverture dans la toile du camion qui semble vous emmener hors du campement, vous avez le temps d'apercevoir des affiches de propagandes à l'effigie du général de la Milice couvrir les murs de votre ancienne demeure.",
@@ -340,12 +340,12 @@
         "weapons": "Les armes :\n\nLes armes de toute nature sont absolument essentielles à la Milice. Elle en a besoin pour maintenir l'ordre et protéger le campement des dinosaures."
     },
     "tutorial": "To do",
-    "menu_screen": {
+    "menu": {
         "press_to_start": "Cliquez sur l'écran pour commencer une partie"
     },
     "game": {
         "decree": "TO DO"
     },
-    "settings_screen": {},
-    "game_over_screen": {}
+    "settings": {},
+    "game_over": {}
 }

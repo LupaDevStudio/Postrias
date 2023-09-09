@@ -13,6 +13,7 @@ from typing import Literal
 # Module imports
 from tools.basic_tools import load_json_file
 from tools.path import PATH_GAMEPLAY
+from tools.constants import TEXT
 
 #################
 ### Constants ###
@@ -22,6 +23,8 @@ EVENT_PROBABILITY = 0.1
 DECREE_DELAY = 7
 RESOURCES_START_VALUE = 50
 FACTION_START_VALUE = 50
+RESOURCES_CONSO_PER_DAY = 3
+MALUS_ON_EXECUTION = 10
 
 #############
 ### Class ###
@@ -40,18 +43,21 @@ class Game():
         self.reset_effect_dict()
 
         # Initialise other variables
-        self.has_event: bool
-        self.can_decree: bool
-        self.event_id: str
-        self.decree_id: str
-        self.decision_id: str
+        self.phase: str
         self.gameplay: dict
+        self.card_id: str
+        self.text_dict: dict
+        self.ending: str
+        self.game_over = False
 
     def load_resources(self):
         """Load all resources necessary to run the game."""
         self.gameplay = load_json_file(PATH_GAMEPLAY)
 
     def reset_effect_dict(self):
+        """
+        Reset the dictionnary containing the effects to apply.
+        """
         self.effect_dict = {
             "order": 0,
             "military": 0,
@@ -79,26 +85,70 @@ class Game():
         self.order = FACTION_START_VALUE
         self.paleo = FACTION_START_VALUE
 
-    def draw(self, mode: Literal["events", "decrees", "decisions"]) -> str:
+    def draw(self, mode: Literal["event", "decree", "decision"]) -> str:
         """Draw a an id corresponding to the given mode."""
 
         # Extract the ids of the cards
         cards_ids = self.gameplay[mode].keys()
 
         # Pick a random id
-        choosen_id = random.randint(0, len(cards_ids))
-        choosen_card_id = cards_ids[choosen_id]
+        if mode in ("event", "decision"):
+            choosen_id = random.randint(0, len(cards_ids))
+            choosen_card_id = cards_ids[choosen_id]
+        else:
+            choosen_card_id = random.sample(cards_ids, 3)
 
         return choosen_card_id
 
     def end_day(self):
-        pass
+        """
+        End the current day in the game.
+
+        Apply all the effects contained in the dict and check the game over
+        conditions.
+        """
+
+        # Apply the effects
+        self.food += self.effect_dict["food"]
+        self.tools += self.effect_dict["tools"]
+        self.weapons += self.effect_dict["weapons"]
+        self.order += self.effect_dict["order"]
+        self.military += self.effect_dict["military"]
+        self.civilian += self.effect_dict["civilian"]
+        self.paleo += self.effect_dict["paleo"]
+
+        # Check the game over conditions for resources
+        self.game_over = True
+        if self.food < 0:
+            self.ending = "food"
+        elif self.tools < 0:
+            self.ending = "tools"
+        elif self.weapons < 0:
+            self.ending = "weapons"
+        elif self.order < 0:
+            self.ending = "order_min"
+        elif self.order > 100:
+            self.ending = "order_max"
+        elif self.military < 0:
+            self.ending = "military_min"
+        elif self.military > 100:
+            self.ending = "military_max"
+        elif self.civilian < 0:
+            self.ending = "civilian_min"
+        elif self.civilian > 100:
+            self.ending = "civilian_max"
+        elif self.paleo < 0:
+            self.ending = "paleo_min"
+        elif self.paleo > 100:
+            self.ending = "paleo_max"
+        else:
+            self.game_over = False
 
     def start_day(self):
         """
         Start a new day in the game.
 
-        It determines which phase have to be played and draws the cards for it.
+        It determines which phase has to be played and draws the card for it.
         """
 
         # Raise an error if the gameplay json is not loaded
@@ -111,22 +161,93 @@ class Game():
         # Increment the day counter
         self.day += 1
 
-        # Determine whether to play an event or not
-        self.has_event = random.random() < EVENT_PROBABILITY
+        # Decrease resources
+        self.effect_dict["food"] -= RESOURCES_CONSO_PER_DAY
+        self.effect_dict["tools"] -= RESOURCES_CONSO_PER_DAY
+        self.effect_dict["weapons"] -= RESOURCES_CONSO_PER_DAY
 
-        # Draw an event if necessary
-        if self.has_event:
-            self.event_id = self.draw("events")
+        # Determine which phase has to be played
+        if self.day % DECREE_DELAY == 0:
+            self.phase = "decree"
+        elif random.random() < EVENT_PROBABILITY:
+            self.phase = "event"
+        else:
+            self.phase = "decision"
 
-        # Determine if a decree can be choosen today
-        self.can_decree = self.day % DECREE_DELAY == 0
+        # Draw the card corresponding to the phase
+        self.card_id = self.draw(self.phase)
 
-        # Draw a decree if necessary
-        if self.can_decree:
-            self.decree_id = self.draw("decrees")
+        # Extract the texts to display
+        if self.phase == "decree":
+            self.text_dict["card"] = TEXT.game["decree"]
+            self.text_dict["left"] = TEXT.decree[self.card_id[0]]
+            self.text_dict["down"] = TEXT.decree[self.card_id[1]]
+            self.text_dict["right"] = TEXT.decree[self.card_id[2]]
+        elif self.phase == "event":
+            self.text_dict["card"] = TEXT.event[self.card_id]
+        elif self.phase == "decision":
+            self.text_dict["card"] = TEXT.decision[self.card_id]["text"]
+            self.text_dict["left"] = TEXT.decision[self.card_id]["no"]
+            self.text_dict["right"] = TEXT.decision[self.card_id]["yes"]
+        else:
+            raise ValueError
 
-        # Draw a decision
-        self.decision_id = self.draw("decisions")
+    def add_effect(self, consequence_dict: dict):
+        """
+        Add the effects of a choice to the effect dict.
+        """
 
-    def choose_decree(self, choice):
-        pass
+        for key in consequence_dict:
+            self.effect_dict += consequence_dict[key]
+
+    def make_choice(self, choice: Literal["left", "down", "right"]):
+        """
+        Treat the decision of the player.
+        """
+
+        if self.phase == "decree":
+
+            # Select the decree using the given direction
+            if choice == "left":
+                idx = 0
+            elif choice == "down":
+                idx = 1
+            elif choice == "right":
+                idx = 2
+
+            # Extract the consequence dict
+            consequence_dict = self.gameplay[self.card_id[idx]]
+
+        elif self.phase == "event":
+            # Extract the consequence dict
+            consequence_dict = self.gameplay[self.card_id]
+
+        elif self.phase == "decision":
+            # Interpret the direction
+            if choice == "left":
+                choice = "no"
+            elif choice == "down":
+                choice = "execute"
+            elif choice == "right":
+                choice = "yes"
+
+            # Treat the choice to obtain the consequence dict
+            if choice in ("yes", "no"):
+                consequence_dict = self.gameplay[self.card_id][choice]
+            else:
+                consequence_dict = {
+                    self.gameplay[self.card_id]["complainant"]: -
+                    MALUS_ON_EXECUTION
+                }
+        else:
+            raise ValueError
+
+        # Add the effect of the decision
+        self.add_effect(consequence_dict)
+
+        # Extract the text to display after the choice
+        if self.phase in ("decree", "event"):
+            self.text_dict["answer"] = TEXT.answer[self.phase]
+        elif self.phase == "decision":
+            self.text_dict["answer"] = \
+                TEXT.answer[choice][self.gameplay[self.card_id]["complainant"]]
