@@ -1,18 +1,11 @@
 #:kivy 2.1.0
+#: import PATH_IMAGES tools.path.PATH_IMAGES
+#: import USER_DATA tools.constants.USER_DATA
+
 <CollectionScreen>:
 
     Image:
-        id: back_image
-        source: root.path_back_image
-        size_hint: None,None
-        width: root.width_back_image
-        height: root.height_back_image
-        pos_hint: {"center_x":0.5,"center_y":0.5}
-        allow_stretch: True
-        keep_ratio: True
-        
-    Image:
-        source: root.path_images + "back_arrow.png"
+        source: PATH_IMAGES + "back_arrow.png"
         size_hint: None, 0.1
         pos_hint: {"x":0.025, "top": 0.975}
         allow_stretch: True
@@ -23,16 +16,16 @@
         pos_hint: {"x":0.025, "top": 0.975}
         background_color: (0, 0, 0, 0)
         on_release:
-            root.manager.init_screen("menu")
+            root.manager.current = "menu"
 
     Label:
-        text: root.counter_precious_stones
+        text: str(USER_DATA.highscore)
         bold: True
         color: root.manager.color_label
         pos_hint: {"right":1, "top":1}
         size_hint: 0.1, 0.1
+        font_size: 25*root.font_ratio
         font_name: root.font
-        font_size: 30*root.font_ratio
 
     RelativeLayout:
         size_hint: 1, 0.9

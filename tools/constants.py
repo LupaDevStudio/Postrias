@@ -127,6 +127,7 @@ class Text():
         # Split the text for the cards
         self.decision = data["decision"]
         self.event = data["event"]
+        self.ending = data["ending"]
         self.decree = data["decree"]
         self.answer = data["answer"]
 
