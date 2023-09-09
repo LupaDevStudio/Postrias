@@ -1,5 +1,6 @@
 #: kivy 2.1.0
 #: import PATH_IMAGES tools.path.PATH_IMAGES
+#: import TITLE_FONT_COLOR tools.constants.TITLE_FONT_COLOR
 
 <MenuScreen>:
 
@@ -10,7 +11,7 @@
         pos_hint: {"center_x": 0.5, "center_y": 0.85}
         font_size: 60*root.font_ratio
         font_name: root.font
-        color: root.manager.color_label
+        color: TITLE_FONT_COLOR
 
     Label:
         id: start_label
@@ -19,7 +20,7 @@
         pos_hint: {"center_x": 0.5, "center_y": 0.45}
         font_size: 40*root.font_ratio
         font_name: root.font
-        color: root.manager.color_label
+        color: TITLE_FONT_COLOR
     Button:
         size_hint: 1, 0.25
         pos_hint: {"center_x": 0.5, "center_y": 0.45}
@@ -47,7 +48,7 @@
     #     id: high_score_label
     #     text: root.high_score
     #     bold: True
-    #     color: root.manager.color_label
+    #     color: TITLE_FONT_COLOR
     #     pos_hint: {"right":1, "y":0}
     #     size_hint: 0.2, 0.1
     #     font_name: root.font

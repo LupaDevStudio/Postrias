@@ -1,53 +1,53 @@
 #:kivy 2.1.0
 
 <GameOverScreen>:
-    Image:
-        id: back_image
-        source: root.path_back_image
-        size_hint: None,None
-        width: root.width_back_image
-        height: root.height_back_image
-        pos_hint: {"center_x":0.5,"center_y":0.5}
-        allow_stretch: True
-        keep_ratio: True
+    # Image:
+    #     id: back_image
+    #     source: root.path_back_image
+    #     size_hint: None,None
+    #     width: root.width_back_image
+    #     height: root.height_back_image
+    #     pos_hint: {"center_x":0.5,"center_y":0.5}
+    #     allow_stretch: True
+    #     keep_ratio: True
 
-    Label:
-        id: title_label
-        text: "Game Over"
-        size_hint: 1, 0.5
-        pos_hint: {"center_x": 0.5, "center_y": 0.9}
-        font_size: 50*root.font_ratio
-        font_name: root.font
-        color: root.manager.color_label
+    # Label:
+    #     id: title_label
+    #     text: "Game Over"
+    #     size_hint: 1, 0.5
+    #     pos_hint: {"center_x": 0.5, "center_y": 0.9}
+    #     font_size: 50*root.font_ratio
+    #     font_name: root.font
+    #     color: root.manager.color_label
     
-    Label:
-        id: credit_label
-        text: "Game created by :\n - Agathe\n - Paul"
-        size_hint: 1, 0.5
-        pos_hint: {"center_x": 0.2, "center_y": 0.5}
-        font_size: 40*root.font_ratio
-        font_name: root.font
-        color: root.manager.color_label
+    # Label:
+    #     id: credit_label
+    #     text: "Game created by :\n - Agathe\n - Paul"
+    #     size_hint: 1, 0.5
+    #     pos_hint: {"center_x": 0.2, "center_y": 0.5}
+    #     font_size: 40*root.font_ratio
+    #     font_name: root.font
+    #     color: root.manager.color_label
     
-    Label:
-        id: score_label
-        size_hint: 1, 0.5
-        pos_hint: {"center_x": 0.8, "center_y": 0.5}
-        font_size: 40*root.font_ratio
-        font_name: root.font
-        color: root.manager.color_label
+    # Label:
+    #     id: score_label
+    #     size_hint: 1, 0.5
+    #     pos_hint: {"center_x": 0.8, "center_y": 0.5}
+    #     font_size: 40*root.font_ratio
+    #     font_name: root.font
+    #     color: root.manager.color_label
     
-    Label:
-        id: back_to_menu
-        text: "Back to main menu"
-        font_name: root.font
-        font_size: 40*root.font_ratio
-        color: root.manager.color_label
-        pos_hint: {"center_x":0.5, "center_y": 0.15}
-        size_hint: 0.2, 0.1
-    Button:
-        size_hint: 0.2, 0.1
-        pos_hint: {"center_x":0.5, "center_y": 0.15}
-        background_color: (0, 0, 0, 0)
-        on_release:
-            root.manager.init_screen("menu")
+    # Label:
+    #     id: back_to_menu
+    #     text: "Back to main menu"
+    #     font_name: root.font
+    #     font_size: 40*root.font_ratio
+    #     color: root.manager.color_label
+    #     pos_hint: {"center_x":0.5, "center_y": 0.15}
+    #     size_hint: 0.2, 0.1
+    # Button:
+    #     size_hint: 0.2, 0.1
+    #     pos_hint: {"center_x":0.5, "center_y": 0.15}
+    #     background_color: (0, 0, 0, 0)
+    #     on_release:
+    #         root.manager.init_screen("menu")
