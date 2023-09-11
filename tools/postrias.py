@@ -46,8 +46,8 @@ class Game():
         self.phase: str
         self.gameplay: dict
         self.card_id: str
-        self.text_dict: dict
         self.ending: str
+        self.text_dict = {}
         self.game_over = False
 
     def load_resources(self):
@@ -89,11 +89,11 @@ class Game():
         """Draw a an id corresponding to the given mode."""
 
         # Extract the ids of the cards
-        cards_ids = self.gameplay[mode].keys()
+        cards_ids = list(self.gameplay[mode].keys())
 
         # Pick a random id
         if mode in ("event", "decision"):
-            choosen_id = random.randint(0, len(cards_ids))
+            choosen_id = random.randint(0, len(cards_ids) - 1)
             choosen_card_id = cards_ids[choosen_id]
         else:
             choosen_card_id = random.sample(cards_ids, 3)

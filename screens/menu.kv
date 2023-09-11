@@ -55,7 +55,7 @@
     #     font_size: 30*root.font_ratio
 
     Image:
-        source: PATH_IMAGES + "collection_logo.png"
+        source: PATH_IMAGES + "achievements_logo.png"
         size_hint: None, 0.15
         pos_hint: {"x": 0.05, "y": 0.05}
         allow_stretch: True
@@ -66,4 +66,4 @@
         background_color: (0, 0, 0, 0)
         width: self.height
         on_release:
-            root.manager.current = "collection"
+            root.manager.current = "achievements"

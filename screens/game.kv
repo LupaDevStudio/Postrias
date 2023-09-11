@@ -1,12 +1,21 @@
 #:kivy 2.1.0
 #:import PATH_IMAGES tools.path.PATH_IMAGES
-#: import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
+#:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
 #:set center_x_faction 0.11
 #:set center_x_resource 0.95
 #:set upper_y_indic 0.93
 #:set vertical_spacing_indic 0.09
 #:set label_image_spacing 0.05
 #:set image_size_indic 0.08
+#:set center_img_height 0.45
+#:set center_img_width 0.5
+#:set center_img_center_y 0.7
+#:set side_img_width 0.3
+#:set side_img_height 0.2
+#:set side_img_center_x 0.175
+#:set side_img_center_y 0.25
+#:set text_filling_ratio 0.9
+
 
 <IndicatorLabel@Label>:
     size_hint: 1, 0.5
@@ -27,7 +36,7 @@
         id: order_label
         text: root.order_value
         pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic}
-        font_size: 30*root.font_ratio
+        font_size: 20*root.font_ratio
         font_name: root.font
         color: TEXT_FONT_COLOR
     Image:
@@ -41,7 +50,7 @@
         id: military_label
         text: root.military_value
         pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic - vertical_spacing_indic*1}
-        font_size: 30*root.font_ratio
+        font_size: 20*root.font_ratio
         font_name: root.font
         color: TEXT_FONT_COLOR
     Image:
@@ -55,7 +64,7 @@
         id: civilian_label
         text: root.civilian_value
         pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic - vertical_spacing_indic*2}
-        font_size: 30*root.font_ratio
+        font_size: 20*root.font_ratio
         font_name: root.font
         color: TEXT_FONT_COLOR
     Image:
@@ -69,7 +78,7 @@
         id: paleo_label
         text: root.paleo_value
         pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic - vertical_spacing_indic*3}
-        font_size: 30*root.font_ratio
+        font_size: 20*root.font_ratio
         font_name: root.font
         color: TEXT_FONT_COLOR
     Image:
@@ -80,12 +89,21 @@
         allow_stretch: True
         width: self.height
 
+    # Resources background
+    Image:
+        id: order_image
+        source: PATH_IMAGES + "card_layout.png"
+        size_hint: 0.15, vertical_spacing_indic*3.6
+        pos_hint: {"center_x": center_x_resource - label_image_spacing*0.6, "center_y": 0.84}
+        allow_stretch: True
+        keep_ratio:False
+    
     # Resources indicator
     IndicatorLabel:
         id: food_label
         text: root.food_value
         pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic}
-        font_size: 30*root.font_ratio
+        font_size: 20*root.font_ratio
         font_name: root.font
         color: TEXT_FONT_COLOR
     Image:
@@ -99,7 +117,7 @@
         id: weapons_label
         text: root.weapons_value
         pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic -vertical_spacing_indic*1}
-        font_size: 30*root.font_ratio
+        font_size: 20*root.font_ratio
         font_name: root.font
         color: TEXT_FONT_COLOR
     Image:
@@ -113,7 +131,7 @@
         id: tools_label
         text: root.tools_value
         pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic -vertical_spacing_indic*2}
-        font_size: 30*root.font_ratio
+        font_size: 20*root.font_ratio
         font_name: root.font
         color: TEXT_FONT_COLOR
     Image:
@@ -123,3 +141,148 @@
         pos_hint: {"center_x": center_x_resource - label_image_spacing, "center_y": upper_y_indic -vertical_spacing_indic*2}
         allow_stretch: True
         width: self.height
+
+    # Decision center
+    Image:
+        id: decision_center_background
+        source: PATH_IMAGES + "decision_center_background.png"
+        size_hint: center_img_width, center_img_height
+        pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
+        allow_stretch: True
+        keep_ratio:False
+    Label:
+        id: decision_center_label
+        text: root.decision_text
+        size_hint: center_img_width, center_img_height
+        pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
+        font_size: 15*root.font_ratio
+        font: root.font
+        color: TEXT_FONT_COLOR
+        shorten: False
+        text_size: (self.width*text_filling_ratio,None)
+    
+    # Decision left
+    Image:
+        id: decision_left_background
+        source: PATH_IMAGES + "decision_choice_background.png"
+        size_hint: side_img_width, side_img_height
+        pos_hint: {"center_x": side_img_center_x, "center_y": side_img_center_y}
+        allow_stretch: True
+        keep_ratio:False
+    Label:
+        id: decision_left_label
+        text: root.decision_no_text
+        size_hint: side_img_width, side_img_height
+        pos_hint: {"center_x": side_img_center_x, "center_y": side_img_center_y}
+        font_size: 15*root.font_ratio
+        font: root.font
+        color: TEXT_FONT_COLOR
+        shorten: False
+        text_size: (self.width*text_filling_ratio,None)
+
+    # Decision right
+    Image:
+        id: decision_right_background
+        source: PATH_IMAGES + "decision_choice_background.png"
+        size_hint: side_img_width, side_img_height
+        pos_hint: {"center_x": 1- side_img_center_x, "center_y":side_img_center_y}
+        allow_stretch: True
+        keep_ratio:False
+    Label:
+        id: decision_right_label
+        text: root.decision_yes_text
+        size_hint: side_img_width, side_img_height
+        pos_hint: {"center_x": 1- side_img_center_x, "center_y":side_img_center_y}
+        font_size: 15*root.font_ratio
+        font: root.font
+        color: TEXT_FONT_COLOR
+        shorten: False
+        text_size: (self.width*text_filling_ratio,None)
+    
+    # Decision guillotine
+    Image:
+        id: decision_guillotine
+        source: PATH_IMAGES + "guillotine.png"
+        size_hint: None, 0.15
+        pos_hint: {"center_x": 0.5, "center_y": 0.1}
+        allow_stretch: True
+        keep_ratio: False
+        width: self.height
+    
+    # Event background
+    Image:
+        id: event_background
+        source: PATH_IMAGES + "event_background.png"
+        size_hint: center_img_width, center_img_height
+        pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
+        allow_stretch: True
+        keep_ratio:False
+    Label:
+        id: event_label
+        text: root.event_text
+        size_hint: center_img_width, center_img_height
+        pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
+        font_size: 15*root.font_ratio
+        font: root.font
+        color: TEXT_FONT_COLOR
+        shorten: False
+        text_size: (self.width*text_filling_ratio,None)
+
+    # Decree background
+    Image:
+        id: decree_background
+        source: PATH_IMAGES + "decree_background.png"
+        size_hint: center_img_width, center_img_height
+        pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
+        allow_stretch: True
+        keep_ratio:False
+    Label:
+        id: decree_center_label
+        text: root.decree_center_text
+        size_hint: center_img_width, center_img_height
+        pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
+        font_size: 15*root.font_ratio
+        font: root.font
+        color: TEXT_FONT_COLOR
+        shorten: False
+        text_size: (self.width*text_filling_ratio,None)
+    
+    # Decree left
+    Image:
+        id: decree_left_background
+        source: PATH_IMAGES + "decree_choice_background.png"
+        size_hint: side_img_width, side_img_height
+        pos_hint: {"center_x": side_img_center_x, "center_y":side_img_center_y}
+        allow_stretch: True
+        keep_ratio:False
+    Label:
+        id: decree_left_label
+        text: root.decree_left_text
+        size_hint: side_img_width, side_img_height
+        pos_hint: {"center_x": side_img_center_x, "center_y":side_img_center_y}
+        font_size: 15*root.font_ratio
+        font: root.font
+        color: TEXT_FONT_COLOR
+        shorten: False
+        text_size: (self.width*text_filling_ratio,None)
+    
+    # Decree right
+    Image:
+        id: decree_right_background
+        source: PATH_IMAGES + "decree_choice_background.png"
+        size_hint: side_img_width, side_img_height
+        pos_hint: {"center_x": 1- side_img_center_x, "center_y": side_img_center_y}
+        allow_stretch: True
+        keep_ratio:False
+    Label:
+        id: decree_right_label
+        text: root.decree_right_text
+        size_hint: side_img_width, side_img_height
+        pos_hint: {"center_x": 1- side_img_center_x, "center_y": side_img_center_y}
+        font_size: 15*root.font_ratio
+        font: root.font
+        color: TEXT_FONT_COLOR
+        shorten: False
+        text_size: (self.width*text_filling_ratio,None)
+
+    
