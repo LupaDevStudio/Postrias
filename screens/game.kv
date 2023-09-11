@@ -242,49 +242,27 @@
         text_color: TEXT_FONT_COLOR
     
     # Decree left
-    # ImageWithText:
-    #     id: decree_left
-    #     source: PATH_IMAGES + "decree_choice_background.png"
-    #     size_hint: side_img_width, side_img_height
-    #     pos_hint: {"center_x": side_img_center_x, "center_y":side_img_center_y}
-    #     allow_stretch: True
-    #     keep_ratio:False
-    #     text: root.decree_center_text
-    Image:
-        id: decree_left_background
+    ImageWithText:
+        id: decree_left
         source: PATH_IMAGES + "decree_choice_background.png"
         size_hint: side_img_width, side_img_height
         pos_hint: {"center_x": side_img_center_x, "center_y":side_img_center_y}
         allow_stretch: True
         keep_ratio:False
-    Label:
-        id: decree_left_label
         text: root.decree_left_text
-        size_hint: side_img_width, side_img_height
-        pos_hint: {"center_x": side_img_center_x, "center_y":side_img_center_y}
-        font_size: 15*root.font_ratio
-        font_name: root.font
-        color: TEXT_FONT_COLOR
-        shorten: False
-        text_size: (self.width*text_filling_ratio,None)
+        text_font: root.font
+        text_color: TEXT_FONT_COLOR
     
     # Decree right
-    Image:
-        id: decree_right_background
+    ImageWithText:
+        id: decree_right
         source: PATH_IMAGES + "decree_choice_background.png"
         size_hint: side_img_width, side_img_height
-        pos_hint: {"center_x": 1- side_img_center_x, "center_y": side_img_center_y}
+        pos_hint: {"center_x": 1-side_img_center_x, "center_y":side_img_center_y}
         allow_stretch: True
         keep_ratio:False
-    Label:
-        id: decree_right_label
         text: root.decree_right_text
-        size_hint: side_img_width, side_img_height
-        pos_hint: {"center_x": 1- side_img_center_x, "center_y": side_img_center_y}
-        font_size: 15*root.font_ratio
-        font_name: root.font
-        color: TEXT_FONT_COLOR
-        shorten: False
-        text_size: (self.width*text_filling_ratio,None)
+        text_font: root.font
+        text_color: TEXT_FONT_COLOR
 
     

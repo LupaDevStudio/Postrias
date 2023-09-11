@@ -58,14 +58,11 @@ class GameScreen(ImprovedScreen):
     decree_right_text = StringProperty()
     decree_left_text = StringProperty()
 
-    font = StringProperty(PATH_TEXT_FONT)
-
     def __init__(self, **kw):
         super().__init__(
             back_image_path=PATH_IMAGES + "day_camp.png",
             font=PATH_TEXT_FONT,
             ** kw)
-        self.font = PATH_TEXT_FONT
 
     def on_pre_enter(self, *args):
 
