@@ -1,0 +1,15 @@
+#:kivy 2.1.0
+
+<ImageWithText>:
+    Label:
+        id: text_widget
+        text: root.text
+        size: root.size
+        pos: root.pos
+        shorten: False
+        text_size: (root.width*root.text_filling_ratio,None)
+        color: root.text_color
+        font: root.font
+        font_size: root.text_font_size * root.parent.font_ratio
+        halign: root.text_halign
+        valign: root.text_valign
