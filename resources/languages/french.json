@@ -377,7 +377,7 @@
         "press_to_start": "Cliquez sur l'écran pour commencer une partie"
     },
     "game": {
-        "decree": "TO DO"
+        "decree": "Le conseil d'aujourd'hui se termine tard dans la nuit. Vos conseillers vous ont préparé trois décrets pour améliorer le moral dans le camp.\nLequel choisissez-vous d'appliquer ?"
     },
     "settings": {},
     "game_over": {}

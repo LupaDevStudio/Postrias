@@ -13,6 +13,7 @@ Main module of the generator of dialogs.
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, NoTransition, Screen
 from kivy.uix.widget import Widget
+from kivy.core.window import Window
 
 ### Module imports ###
 from tools.path import (
@@ -22,11 +23,6 @@ from tools.constants import (
     MOBILE_MODE,
     FPS,
     MSAA_LEVEL
-)
-from tools.kivy_tools.tools_kivy import (
-    color_label,
-    background_color,
-    Window
 )
 from screens import (   # pylint: disable=unused-import
     MenuScreen,
@@ -55,8 +51,6 @@ class WindowManager(ScreenManager):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.gray_color = background_color
-        self.color_label = color_label
         self.transition = NoTransition()
         self.add_widget(Screen(name="opening"))
         self.current = "opening"
