@@ -1,5 +1,5 @@
 """
-Module to deal with fonts in kivy.
+Module to create an improved kivy screen with background and font support.
 """
 
 ###############

@@ -20,7 +20,9 @@ from tools import (
     music_mixer,
     game
 )
-from tools.kivy_tools import ImprovedScreen
+from tools.kivy_tools import (
+    ImprovedScreen
+)
 
 
 class GameScreen(ImprovedScreen):

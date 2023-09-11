@@ -14,12 +14,13 @@ from kivy.lang import Builder
 ### Package imports ###
 
 from tools.kivy_tools.screen import ImprovedScreen
-from tools.path import PATH_KIVY_FOLDER
+from tools.kivy_tools.image_with_text import ImageWithText
 
 ###############
 ### Process ###
 ###############
 
+PATH_KIVY_FOLDER = "tools/kivy_tools/"
 
 ### Kv files ###
 
@@ -28,3 +29,6 @@ Builder.load_file(PATH_KIVY_FOLDER + "extended_style.kv", encoding="utf-8")
 
 # Build the kv file for screen
 Builder.load_file(PATH_KIVY_FOLDER + "screen.kv", encoding="utf-8")
+
+# Build the kv file for image with text
+Builder.load_file(PATH_KIVY_FOLDER + "image_with_text.kv", encoding="utf-8")
