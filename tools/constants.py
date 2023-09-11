@@ -136,4 +136,4 @@ TEXT = Text(language=USER_DATA.language)
 ### Colors ###
 BACKGROUND_COLOR = (0, 0, 0, 1)
 TITLE_FONT_COLOR = (0, 0, 0, 1)
-TEXT_FONT_COLOR = (50 / 255, 50 / 255, 50 / 255, 1)
+TEXT_FONT_COLOR = (50 / 255, 50 / 255, 255 / 255, 1)

@@ -1,5 +1,6 @@
 #:kivy 2.1.0
 #:import PATH_IMAGES tools.path.PATH_IMAGES
+#:import PATH_TEXT_FONT tools.path.PATH_TEXT_FONT
 #:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
 #:set center_x_faction 0.11
 #:set center_x_resource 0.95
@@ -156,7 +157,7 @@
         size_hint: center_img_width, center_img_height
         pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
         font_size: 15*root.font_ratio
-        font: root.font
+        font_name: root.font
         color: TEXT_FONT_COLOR
         shorten: False
         text_size: (self.width*text_filling_ratio,None)
@@ -175,7 +176,7 @@
         size_hint: side_img_width, side_img_height
         pos_hint: {"center_x": side_img_center_x, "center_y": side_img_center_y}
         font_size: 15*root.font_ratio
-        font: root.font
+        font_name: root.font
         color: TEXT_FONT_COLOR
         shorten: False
         text_size: (self.width*text_filling_ratio,None)
@@ -194,7 +195,7 @@
         size_hint: side_img_width, side_img_height
         pos_hint: {"center_x": 1- side_img_center_x, "center_y":side_img_center_y}
         font_size: 15*root.font_ratio
-        font: root.font
+        font_name: root.font
         color: TEXT_FONT_COLOR
         shorten: False
         text_size: (self.width*text_filling_ratio,None)
@@ -223,7 +224,7 @@
         size_hint: center_img_width, center_img_height
         pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
         font_size: 15*root.font_ratio
-        font: root.font
+        font_name: root.font
         color: TEXT_FONT_COLOR
         shorten: False
         text_size: (self.width*text_filling_ratio,None)
@@ -237,8 +238,18 @@
         allow_stretch: True
         keep_ratio:False
         text: root.decree_center_text
+        text_font: root.font
+        text_color: TEXT_FONT_COLOR
     
     # Decree left
+    # ImageWithText:
+    #     id: decree_left
+    #     source: PATH_IMAGES + "decree_choice_background.png"
+    #     size_hint: side_img_width, side_img_height
+    #     pos_hint: {"center_x": side_img_center_x, "center_y":side_img_center_y}
+    #     allow_stretch: True
+    #     keep_ratio:False
+    #     text: root.decree_center_text
     Image:
         id: decree_left_background
         source: PATH_IMAGES + "decree_choice_background.png"
@@ -252,7 +263,7 @@
         size_hint: side_img_width, side_img_height
         pos_hint: {"center_x": side_img_center_x, "center_y":side_img_center_y}
         font_size: 15*root.font_ratio
-        font: root.font
+        font_name: root.font
         color: TEXT_FONT_COLOR
         shorten: False
         text_size: (self.width*text_filling_ratio,None)
@@ -271,7 +282,7 @@
         size_hint: side_img_width, side_img_height
         pos_hint: {"center_x": 1- side_img_center_x, "center_y": side_img_center_y}
         font_size: 15*root.font_ratio
-        font: root.font
+        font_name: root.font
         color: TEXT_FONT_COLOR
         shorten: False
         text_size: (self.width*text_filling_ratio,None)
