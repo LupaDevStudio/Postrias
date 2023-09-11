@@ -6,11 +6,13 @@ Module for the game class of postrias.
 ### Imports ###
 ###############
 
-# Python imports
+### Python imports ###
+
 import random
 from typing import Literal
 
-# Module imports
+### Module imports ###
+
 from tools.basic_tools import load_json_file
 from tools.path import PATH_GAMEPLAY
 from tools.constants import TEXT

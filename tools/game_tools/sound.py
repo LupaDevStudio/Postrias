@@ -120,7 +120,7 @@ class SoundMixer():
             for i in range(channel_number):
                 self.sounds[key][i].volume = volume
 
-    def play(self, name: str, volume: float | None = None):
+    def play(self, name: str, volume: float = None):
         """
         Play the selected sound.
         """
@@ -134,7 +134,7 @@ class SoundMixer():
         else:
             print("Unable to play the desired sound due to channel saturation")
 
-    def change_volume(self, new_volume: float, name: str | None = None):
+    def change_volume(self, new_volume: float, name: str = None):
         if name is not None:
             for i in range(self.channel_number):
                 self.sounds[name][i].volume = new_volume

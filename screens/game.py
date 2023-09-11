@@ -7,10 +7,12 @@ Module for the game screen
 ###############
 
 ### Kivy imports ###
+
 from kivy.clock import Clock
 from kivy.properties import StringProperty
 
 ### Module imports ###
+
 from tools.path import (
     PATH_TEXT_FONT,
     PATH_IMAGES,
@@ -23,6 +25,11 @@ from tools import (
 from tools.kivy_tools import (
     ImprovedScreen
 )
+
+
+#############
+### Class ###
+#############
 
 
 class GameScreen(ImprovedScreen):
