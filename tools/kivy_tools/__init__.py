@@ -15,6 +15,7 @@ from kivy.lang import Builder
 
 from tools.kivy_tools.screen import ImprovedScreen
 from tools.kivy_tools.image_with_text import ImageWithText
+from tools.kivy_tools.tools_kivy import MyScrollViewLayout
 
 ###############
 ### Process ###
