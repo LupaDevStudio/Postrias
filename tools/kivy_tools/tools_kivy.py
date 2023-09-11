@@ -32,12 +32,8 @@ from kivy.factory import Factory
 from functools import partial
 
 ### Modules imports ###
-
-from tools.path import (
-    PATH_KIVY_FOLDER
-)
 my_language = {}
-
+PATH_KIVY_FOLDER = "tools/kivy_tools/"
 
 ########################
 ### Global Variables ###
