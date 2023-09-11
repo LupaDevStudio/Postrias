@@ -8,6 +8,11 @@ Main module of the generator of dialogs.
 ###############
 
 
+### Python imports ###
+
+import os
+os.environ['KIVY_TEXT'] = 'pil'
+
 ### Kivy imports ###
 
 from kivy.app import App
@@ -16,6 +21,7 @@ from kivy.uix.widget import Widget
 from kivy.core.window import Window
 
 ### Module imports ###
+
 from tools.path import (
     PATH_IMAGES
 )

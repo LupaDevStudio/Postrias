@@ -32,6 +32,7 @@ from kivy.factory import Factory
 from functools import partial
 
 ### Modules imports ###
+
 my_language = {}
 PATH_KIVY_FOLDER = "tools/kivy_tools/"
 

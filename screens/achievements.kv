@@ -1,5 +1,6 @@
 #:kivy 2.1.0
 #: import PATH_IMAGES tools.path.PATH_IMAGES
+#:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
 #: import USER_DATA tools.constants.USER_DATA
 
 <AchievementsScreen>:
@@ -21,7 +22,7 @@
     Label:
         text: str(USER_DATA.highscore)
         bold: True
-        color: root.manager.color_label
+        color: TEXT_FONT_COLOR
         pos_hint: {"right":1, "top":1}
         size_hint: 0.1, 0.1
         font_size: 25*root.font_ratio
