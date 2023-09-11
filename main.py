@@ -10,8 +10,11 @@ Main module of the generator of dialogs.
 
 ### Python imports ###
 
-import os
-os.environ['KIVY_TEXT'] = 'pil'
+import platform
+os_name = platform.system()
+if os_name == "Windows":
+    import os
+    os.environ['KIVY_TEXT'] = 'pil'
 
 ### Kivy imports ###
 
