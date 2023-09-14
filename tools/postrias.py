@@ -53,7 +53,9 @@ class Game():
         self.game_over = False
 
     def load_resources(self):
-        """Load all resources necessary to run the game."""
+        """
+        Load all resources necessary to run the game.
+        """
         self.gameplay = load_json_file(PATH_GAMEPLAY)
 
     def reset_effect_dict(self):
@@ -71,7 +73,9 @@ class Game():
         }
 
     def reset_variables(self):
-        """Initialise the game variables to their default values."""
+        """
+        Initialise the game variables to their default values.
+        """
 
         # Day counter
         self.day = 0
@@ -88,7 +92,9 @@ class Game():
         self.paleo = FACTION_START_VALUE
 
     def draw(self, mode: Literal["event", "decree", "decision"]) -> str:
-        """Draw a an id corresponding to the given mode."""
+        """
+        Draw an id corresponding to the given mode.
+        """
 
         # Extract the ids of the cards
         cards_ids = list(self.gameplay[mode].keys())
@@ -182,11 +188,11 @@ class Game():
         # Extract the texts to display
         if self.phase == "decree":
             self.text_dict["card"] = TEXT.game["decree"]
-            self.text_dict["left"] = TEXT.decree[self.card_id[0]]
-            self.text_dict["down"] = TEXT.decree[self.card_id[1]]
-            self.text_dict["right"] = TEXT.decree[self.card_id[2]]
+            self.text_dict["left"] = TEXT.decree[self.card_id[0]]["text"]
+            self.text_dict["down"] = TEXT.decree[self.card_id[1]]["text"]
+            self.text_dict["right"] = TEXT.decree[self.card_id[2]]["text"]
         elif self.phase == "event":
-            self.text_dict["card"] = TEXT.event[self.card_id]
+            self.text_dict["card"] = TEXT.event[self.card_id]["text"]
         elif self.phase == "decision":
             self.text_dict["card"] = TEXT.decision[self.card_id]["text"]
             self.text_dict["left"] = TEXT.decision[self.card_id]["no"]
@@ -200,7 +206,7 @@ class Game():
         """
 
         for key in consequence_dict:
-            self.effect_dict += consequence_dict[key]
+            self.effect_dict[key] += consequence_dict[key]
 
     def make_choice(self, choice: Literal["left", "down", "right"]):
         """
@@ -218,11 +224,11 @@ class Game():
                 idx = 2
 
             # Extract the consequence dict
-            consequence_dict = self.gameplay[self.card_id[idx]]
+            consequence_dict = self.gameplay["decree"][self.card_id[idx]]
 
         elif self.phase == "event":
             # Extract the consequence dict
-            consequence_dict = self.gameplay[self.card_id]
+            consequence_dict = self.gameplay["event"][self.card_id]
 
         elif self.phase == "decision":
             # Interpret the direction
@@ -235,10 +241,10 @@ class Game():
 
             # Treat the choice to obtain the consequence dict
             if choice in ("yes", "no"):
-                consequence_dict = self.gameplay[self.card_id][choice]
+                consequence_dict = self.gameplay["decision"][self.card_id][choice]
             else:
                 consequence_dict = {
-                    self.gameplay[self.card_id]["complainant"]: -
+                    self.gameplay["decision"][self.card_id]["complainant"]: -
                     MALUS_ON_EXECUTION
                 }
         else:
@@ -252,4 +258,6 @@ class Game():
             self.text_dict["answer"] = TEXT.answer[self.phase]
         elif self.phase == "decision":
             self.text_dict["answer"] = \
-                TEXT.answer[choice][self.gameplay[self.card_id]["complainant"]]
+                TEXT.answer[choice][self.gameplay["decision"][self.card_id]["complainant"]]
+
+game = Game()

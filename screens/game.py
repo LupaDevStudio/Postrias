@@ -6,6 +6,10 @@ Module for the game screen
 ### Imports ###
 ###############
 
+### Python imports ###
+
+from typing import Literal
+
 ### Kivy imports ###
 
 from kivy.clock import Clock
@@ -88,6 +92,8 @@ class GameScreen(ImprovedScreen):
         self.decree_cards = ["decree_center",
                              "decree_left",
                              "decree_right"]
+        
+        self.event_cards = ["event"]
 
     def on_pre_enter(self, *args):
 
@@ -117,10 +123,40 @@ class GameScreen(ImprovedScreen):
             self.ids["decision_yes"].text = game.text_dict["right"]
             for card in self.decision_cards:
                 self.enable_widget(self.ids[card])
+        if game.phase == "decree":
+            self.ids["decree_center"].text = game.text_dict["card"]
+            self.ids["decree_left"].text = game.text_dict["left"]
+            self.ids["decree_right"].text = game.text_dict["right"]
+            for card in self.decree_cards:
+                self.enable_widget(self.ids[card])
+        if game.phase == "event":
+            self.ids["event"].text = game.text_dict["card"]
+            for card in self.event_cards:
+                self.enable_widget(self.ids[card])
 
-    def test(self):
-        print("toto")
+    def choose_answer(self, choice: Literal["left", "right", "down"], *args):
+        game.make_choice(choice=choice)
+        game.end_day()
+        self.start_day()
+
+    def update_display_resources(self):
+        """
+        Update the values of the seven resources displayed on the screen.
+        """
+        self.order_value = str(game.order)
+        self.military_value = str(game.military)
+        self.civilian_value = str(game.civilian)
+        self.paleo_value = str(game.paleo)
+        self.food_value = str(game.food)
+        self.weapons_value = str(game.weapons)
+        self.tools_value = str(game.tools)
 
     def start_day(self, *args):
-        game.start_day()
-        self.display_card()
+        if not game.game_over:
+            game.start_day()
+            self.display_card()
+            self.update_display_resources()
+        else:
+            self.update_display_resources()
+            self.manager.current = "game_over"
+

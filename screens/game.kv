@@ -156,7 +156,7 @@
         text_color: TEXT_FONT_COLOR
     
     # Decision left
-    ImageWithTextButton:
+    ImageWithText:
         id: decision_no
         source: PATH_IMAGES + "decision_choice_background.png"
         size_hint: side_img_width, side_img_height
@@ -166,7 +166,12 @@
         text: root.decision_no_text
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
-        release_function: root.test
+    Button:
+        size_hint: side_img_width, side_img_height
+        pos_hint: {"center_x": side_img_center_x, "center_y":side_img_center_y+0.1}
+        background_color: (0,1,0,0.5)
+        on_release:
+            root.choose_answer("left")
 
     # Decision right
     ImageWithText:

@@ -42,12 +42,6 @@ from screens import (   # pylint: disable=unused-import
 )
 
 
-# Set the fullscreen
-if not MOBILE_MODE:
-    # Window.fullscreen = "auto"
-    pass
-
-
 ###############
 ### General ###
 ###############
