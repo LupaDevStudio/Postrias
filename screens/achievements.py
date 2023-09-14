@@ -34,10 +34,11 @@ global_spacing = {
 ### Class ###
 #############
 
+
 class AchievementsScreen(ImprovedScreen):
     def __init__(self, **kw):
         super().__init__(
-            font=PATH_TITLE_FONT,
+            font_name=PATH_TITLE_FONT,
             back_image_path=PATH_IMAGES + "collection_background.png",
             **kw)
 
@@ -53,8 +54,8 @@ class AchievementsScreen(ImprovedScreen):
         return super().on_enter(*args)
 
     def build_scroll_view(self):
-        image_dimension = (Window.size[0] - 2 * self.padding[0] - \
-            self.spacing * (self.number_cols - 1)) / self.number_cols
+        image_dimension = (Window.size[0] - 2 * self.padding[0] -
+                           self.spacing * (self.number_cols - 1)) / self.number_cols
         height_layout = image_dimension + self.label_height
         for code_ending in USER_DATA.endings:
             if USER_DATA.endings[code_ending]:
@@ -70,8 +71,8 @@ class AchievementsScreen(ImprovedScreen):
                     color=self.manager.color_label,
                     text=TEXT.ending[code_ending]["title"],
                     pos_hint={"x": 0, "y": 0},
-                    font_name=self.font,
-                    font_size=25*self.font_ratio
+                    font_name=self.font_name,
+                    font_size=25 * self.font_ratio
                 )
                 relative_layout.add_widget(name_label)
                 # Image

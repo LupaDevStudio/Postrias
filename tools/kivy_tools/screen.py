@@ -9,7 +9,8 @@ Module to create an improved kivy screen with background and font support.
 ### Kivy imports ###
 
 from kivy.core.window import Window
-from kivy.uix.screenmanager import Screen as KivyScreen
+from kivy.uix.screenmanager import Screen
+from kivy.uix.widget import Widget
 from kivy.properties import (
     StringProperty,
     NumericProperty,
@@ -25,7 +26,7 @@ from tools.basic_tools import get_image_size
 ###############
 
 
-class ImprovedScreen(KivyScreen):
+class ImprovedScreen(Screen):
     """
     Improved Screen class based on the kivy one.
     """
@@ -36,11 +37,11 @@ class ImprovedScreen(KivyScreen):
     back_image_disabled = BooleanProperty(False)
     back_image_path = StringProperty()
 
-    # Create the font properties
+    # Create the font_name properties
     font_ratio = NumericProperty(1)
-    font = StringProperty("Roboto")
+    font_name = StringProperty("Roboto")
 
-    def __init__(self, font=None, back_image_path=None, **kw):
+    def __init__(self, font_name=None, back_image_path=None, **kw):
 
         # Init the kv screen
         super().__init__(**kw)
@@ -56,8 +57,8 @@ class ImprovedScreen(KivyScreen):
             self.back_image_disabled = True
 
         # Set the font
-        if font is not None:
-            self.font = font
+        if font_name is not None:
+            self.font_name = font_name
 
     def set_back_image(self, back_image_path):
         """
@@ -121,6 +122,20 @@ class ImprovedScreen(KivyScreen):
 
     def update_font_ratio(self):
         """
-        Update the font ratio to use on the screen to keep letter size constant with Window size changes.
+        Update the font_name ratio to use on the screen to keep letter size constant with Window size changes.
         """
         self.font_ratio = Window.size[1] / 600
+
+    def disable_widget(self, widget: Widget):
+        """
+        Disable the given widget.
+        """
+        widget.opacity = 0
+        widget.disabled = True
+
+    def enable_widget(self, widget: Widget):
+        """
+        Enable the given widget.
+        """
+        widget.opacity = 1
+        widget.disabled = False

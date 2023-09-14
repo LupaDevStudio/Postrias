@@ -19,7 +19,7 @@ class GameOverScreen(Screen):
     def __init__(self, **kw):
         super().__init__(**kw)
 
-    font = PATH_TITLE_FONT
+    font_name = PATH_TITLE_FONT
     path_back_image = PATH_IMAGES + "game_over_background.png"
     width_back_image = ObjectProperty(Window.size[0])
     height_back_image = ObjectProperty(Window.size[0] * 392 / 632)

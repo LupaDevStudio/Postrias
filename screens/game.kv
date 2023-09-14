@@ -38,7 +38,7 @@
         text: root.order_value
         pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic}
         font_size: 20*root.font_ratio
-        font_name: root.font
+        font_name: root.font_name
         color: TEXT_FONT_COLOR
     Image:
         id: order_image
@@ -52,7 +52,7 @@
         text: root.military_value
         pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic - vertical_spacing_indic*1}
         font_size: 20*root.font_ratio
-        font_name: root.font
+        font_name: root.font_name
         color: TEXT_FONT_COLOR
     Image:
         id: military_image
@@ -66,7 +66,7 @@
         text: root.civilian_value
         pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic - vertical_spacing_indic*2}
         font_size: 20*root.font_ratio
-        font_name: root.font
+        font_name: root.font_name
         color: TEXT_FONT_COLOR
     Image:
         id: civilian_image
@@ -80,7 +80,7 @@
         text: root.paleo_value
         pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic - vertical_spacing_indic*3}
         font_size: 20*root.font_ratio
-        font_name: root.font
+        font_name: root.font_name
         color: TEXT_FONT_COLOR
     Image:
         id: paleo_image
@@ -105,7 +105,7 @@
         text: root.food_value
         pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic}
         font_size: 20*root.font_ratio
-        font_name: root.font
+        font_name: root.font_name
         color: TEXT_FONT_COLOR
     Image:
         id: food_image
@@ -119,7 +119,7 @@
         text: root.weapons_value
         pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic -vertical_spacing_indic*1}
         font_size: 20*root.font_ratio
-        font_name: root.font
+        font_name: root.font_name
         color: TEXT_FONT_COLOR
     Image:
         id: weapons_image
@@ -133,7 +133,7 @@
         text: root.tools_value
         pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic -vertical_spacing_indic*2}
         font_size: 20*root.font_ratio
-        font_name: root.font
+        font_name: root.font_name
         color: TEXT_FONT_COLOR
     Image:
         id: tools_image
@@ -144,61 +144,40 @@
         width: self.height
 
     # Decision center
-    Image:
-        id: decision_center_background
-        source: PATH_IMAGES + "decision_center_background.png"
+    ImageWithText:
+        id: decision_center
+        source: PATH_IMAGES + "decision_background.png"
         size_hint: center_img_width, center_img_height
         pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
         allow_stretch: True
         keep_ratio:False
-    Label:
-        id: decision_center_label
         text: root.decision_text
-        size_hint: center_img_width, center_img_height
-        pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
-        font_size: 15*root.font_ratio
-        font_name: root.font
-        color: TEXT_FONT_COLOR
-        shorten: False
-        text_size: (self.width*text_filling_ratio,None)
+        text_font_name: root.font_name
+        text_color: TEXT_FONT_COLOR
     
     # Decision left
-    Image:
-        id: decision_left_background
+    ImageWithText:
+        id: decision_no
         source: PATH_IMAGES + "decision_choice_background.png"
         size_hint: side_img_width, side_img_height
-        pos_hint: {"center_x": side_img_center_x, "center_y": side_img_center_y}
+        pos_hint: {"center_x": side_img_center_x, "center_y":side_img_center_y}
         allow_stretch: True
         keep_ratio:False
-    Label:
-        id: decision_left_label
         text: root.decision_no_text
-        size_hint: side_img_width, side_img_height
-        pos_hint: {"center_x": side_img_center_x, "center_y": side_img_center_y}
-        font_size: 15*root.font_ratio
-        font_name: root.font
-        color: TEXT_FONT_COLOR
-        shorten: False
-        text_size: (self.width*text_filling_ratio,None)
+        text_font_name: root.font_name
+        text_color: TEXT_FONT_COLOR
 
     # Decision right
-    Image:
-        id: decision_right_background
+    ImageWithText:
+        id: decision_yes
         source: PATH_IMAGES + "decision_choice_background.png"
         size_hint: side_img_width, side_img_height
-        pos_hint: {"center_x": 1- side_img_center_x, "center_y":side_img_center_y}
+        pos_hint: {"center_x": 1-side_img_center_x, "center_y":side_img_center_y}
         allow_stretch: True
         keep_ratio:False
-    Label:
-        id: decision_right_label
         text: root.decision_yes_text
-        size_hint: side_img_width, side_img_height
-        pos_hint: {"center_x": 1- side_img_center_x, "center_y":side_img_center_y}
-        font_size: 15*root.font_ratio
-        font_name: root.font
-        color: TEXT_FONT_COLOR
-        shorten: False
-        text_size: (self.width*text_filling_ratio,None)
+        text_font_name: root.font_name
+        text_color: TEXT_FONT_COLOR
     
     # Decision guillotine
     Image:
@@ -211,23 +190,16 @@
         width: self.height
     
     # Event background
-    Image:
-        id: event_background
+    ImageWithText:
+        id: event
         source: PATH_IMAGES + "event_background.png"
         size_hint: center_img_width, center_img_height
         pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
         allow_stretch: True
         keep_ratio:False
-    Label:
-        id: event_label
         text: root.event_text
-        size_hint: center_img_width, center_img_height
-        pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
-        font_size: 15*root.font_ratio
-        font_name: root.font
-        color: TEXT_FONT_COLOR
-        shorten: False
-        text_size: (self.width*text_filling_ratio,None)
+        text_font_name: root.font_name
+        text_color: TEXT_FONT_COLOR
 
     # Decree background
     ImageWithText:
@@ -238,7 +210,7 @@
         allow_stretch: True
         keep_ratio:False
         text: root.decree_center_text
-        text_font: root.font
+        text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
     
     # Decree left
@@ -250,7 +222,7 @@
         allow_stretch: True
         keep_ratio:False
         text: root.decree_left_text
-        text_font: root.font
+        text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
     
     # Decree right
@@ -262,7 +234,7 @@
         allow_stretch: True
         keep_ratio:False
         text: root.decree_right_text
-        text_font: root.font
+        text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
 
     

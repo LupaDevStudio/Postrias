@@ -32,7 +32,7 @@ class MenuScreen(ImprovedScreen):
 
         super().__init__(
             back_image_path=PATH_IMAGES + "menu_background.png",
-            font=PATH_TITLE_FONT,
+            font_name=PATH_TITLE_FONT,
             **kw)
         self.opacity_state = -1
         self.opacity_rate = 0.03

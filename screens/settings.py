@@ -22,7 +22,7 @@ class SettingsScreen(Screen):
         super().__init__(**kw)
 
     path_images = PATH_IMAGES
-    font = PATH_TITLE_FONT
+    font_name = PATH_TITLE_FONT
     high_score = StringProperty("")
     top_key = StringProperty()
     left_key = StringProperty("")

@@ -3,7 +3,9 @@ Module containing basis functions to deal with images.
 
 Functions
 ---------
-get_image_size
+get_image_size 
+    :Author:      Paulo Scardine (based on code from Emmanuel VAÏSSE)
+    https://raw.githubusercontent.com/scardine/image_size/master/get_image_size.py
     Get the size of an image without opening it
 """
 
