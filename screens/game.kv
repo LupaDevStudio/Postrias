@@ -2,6 +2,7 @@
 #:import PATH_IMAGES tools.path.PATH_IMAGES
 #:import PATH_TEXT_FONT tools.path.PATH_TEXT_FONT
 #:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
+#:import partial functools.partial
 #:set center_x_faction 0.11
 #:set center_x_resource 0.95
 #:set upper_y_indic 0.93
@@ -151,42 +152,35 @@
         pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
         allow_stretch: True
         keep_ratio:False
-        text: root.decision_text
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
     
     # Decision left
-    ImageWithText:
+    ImageWithTextButton:
         id: decision_no
         source: PATH_IMAGES + "decision_choice_background.png"
         size_hint: side_img_width, side_img_height
         pos_hint: {"center_x": side_img_center_x, "center_y":side_img_center_y}
         allow_stretch: True
         keep_ratio: False
-        text: root.decision_no_text
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
-    Button:
-        size_hint: side_img_width, side_img_height
-        pos_hint: {"center_x": side_img_center_x, "center_y":side_img_center_y+0.1}
-        background_color: (0,1,0,0.5)
-        on_release:
-            root.choose_answer("left")
+        release_function: partial(root.choose_answer, "left")
 
     # Decision right
-    ImageWithText:
+    ImageWithTextButton:
         id: decision_yes
         source: PATH_IMAGES + "decision_choice_background.png"
         size_hint: side_img_width, side_img_height
         pos_hint: {"center_x": 1-side_img_center_x, "center_y":side_img_center_y}
         allow_stretch: True
         keep_ratio: False
-        text: root.decision_yes_text
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
+        release_function: partial(root.choose_answer, "right")
     
     # Decision guillotine
-    Image:
+    ImageWithTextButton:
         id: decision_guillotine
         source: PATH_IMAGES + "guillotine.png"
         size_hint: None, 0.15
@@ -194,53 +188,63 @@
         allow_stretch: True
         keep_ratio: False
         width: self.height
+        release_function: partial(root.choose_answer, "down")
     
     # Event background
-    ImageWithText:
+    ImageWithTextButton:
         id: event
         source: PATH_IMAGES + "event_background.png"
         size_hint: center_img_width, center_img_height
         pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
         allow_stretch: True
-        keep_ratio:False
-        text: root.event_text
+        keep_ratio: False
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
+        release_function: root.go_to_next_card
 
     # Decree background
-    ImageWithText:
+    ImageWithTextButton:
         id: decree_center
         source: PATH_IMAGES + "decree_background.png"
         size_hint: center_img_width, center_img_height
         pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
         allow_stretch: True
-        keep_ratio:False
-        text: root.decree_center_text
+        keep_ratio: False
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
     
     # Decree left
-    ImageWithText:
+    ImageWithTextButton:
         id: decree_left
         source: PATH_IMAGES + "decree_choice_background.png"
         size_hint: side_img_width, side_img_height
         pos_hint: {"center_x": side_img_center_x, "center_y":side_img_center_y}
         allow_stretch: True
-        keep_ratio:False
-        text: root.decree_left_text
+        keep_ratio: False
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
+        release_function: partial(root.choose_answer, "left")
     
     # Decree right
-    ImageWithText:
+    ImageWithTextButton:
         id: decree_right
         source: PATH_IMAGES + "decree_choice_background.png"
         size_hint: side_img_width, side_img_height
         pos_hint: {"center_x": 1-side_img_center_x, "center_y":side_img_center_y}
         allow_stretch: True
-        keep_ratio:False
-        text: root.decree_right_text
+        keep_ratio: False
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
+        release_function: partial(root.choose_answer, "right")
 
-    
+    # Decree down
+    ImageWithTextButton:
+        id: decree_down
+        source: PATH_IMAGES + "decree_choice_background.png"
+        size_hint: side_img_width, side_img_height
+        pos_hint: {"center_x": 0.5, "center_y": 0.1}
+        allow_stretch: True
+        keep_ratio: False
+        text_font_name: root.font_name
+        text_color: TEXT_FONT_COLOR
+        release_function: partial(root.choose_answer, "down")

@@ -21,7 +21,6 @@ from tools.path import (
     PATH_TEXT_FONT,
     PATH_IMAGES,
 )
-from tools.constants import TEXT
 from tools import (
     music_mixer,
     game
@@ -49,18 +48,8 @@ class GameScreen(ImprovedScreen):
     weapons_value = StringProperty("0")
     tools_value = StringProperty("0")
 
-    # Create text for decisions
-    decision_text = StringProperty()
-    decision_no_text = StringProperty()
-    decision_yes_text = StringProperty()
-
-    # Create text for events
-    event_text = StringProperty()
-
-    # Create text for decrees
-    decree_center_text = StringProperty(TEXT.game["decree"])
-    decree_right_text = StringProperty()
-    decree_left_text = StringProperty()
+    # Boolean indicating if the current moment is an answer or not
+    is_answer = False
 
     def hide_cards(self, *_):
         """
@@ -73,7 +62,8 @@ class GameScreen(ImprovedScreen):
                       "decision_guillotine",
                       "decree_center",
                       "decree_left",
-                      "decree_right"]
+                      "decree_right",
+                      "decree_down"]
 
         for card in cards_list:
             self.disable_widget(self.ids[card])
@@ -91,7 +81,8 @@ class GameScreen(ImprovedScreen):
 
         self.decree_cards = ["decree_center",
                              "decree_left",
-                             "decree_right"]
+                             "decree_right",
+                             "decree_down"]
         
         self.event_cards = ["event"]
 
@@ -100,6 +91,7 @@ class GameScreen(ImprovedScreen):
         # Load the gameplay json
         game.load_resources()
         game.reset_variables()
+        self.update_display_resources()
 
         # Hide all cards
         self.hide_cards()
@@ -127,6 +119,7 @@ class GameScreen(ImprovedScreen):
             self.ids["decree_center"].text = game.text_dict["card"]
             self.ids["decree_left"].text = game.text_dict["left"]
             self.ids["decree_right"].text = game.text_dict["right"]
+            self.ids["decree_down"].text = game.text_dict["down"]
             for card in self.decree_cards:
                 self.enable_widget(self.ids[card])
         if game.phase == "event":
@@ -137,6 +130,7 @@ class GameScreen(ImprovedScreen):
     def choose_answer(self, choice: Literal["left", "right", "down"], *args):
         game.make_choice(choice=choice)
         game.end_day()
+        self.display_answer()
         self.start_day()
 
     def update_display_resources(self):
@@ -151,11 +145,35 @@ class GameScreen(ImprovedScreen):
         self.weapons_value = str(game.weapons)
         self.tools_value = str(game.tools)
 
+    def display_answer(self):
+        """
+        Display the card containing the answer to the previous card.
+        It also displays the effects of the decision or the event. TODO
+        """
+        self.is_answer = True
+        self.update_display_resources()
+
+    def go_to_next_card(self):
+        """
+        Go to the next card when clicking on the next button.
+        When an answer is currently displayed, we'll go to the next day.
+        When an event is displayed, we'll go to the answer to this answer.
+        """
+        if self.is_answer:
+            self.is_answer = False
+            self.start_day()
+        else:
+            game.end_day()
+            self.display_answer()
+
     def start_day(self, *args):
+        """
+        Start a new day with a new batch of cards.
+        """
         if not game.game_over:
             game.start_day()
+            self.hide_cards()
             self.display_card()
-            self.update_display_resources()
         else:
             self.update_display_resources()
             self.manager.current = "game_over"

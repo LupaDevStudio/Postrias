@@ -11,6 +11,7 @@ Module to create an improved kivy screen with background and font support.
 from kivy.core.window import Window
 from kivy.uix.screenmanager import Screen
 from kivy.uix.widget import Widget
+from kivy.uix.button import Button
 from kivy.properties import (
     StringProperty,
     NumericProperty,
@@ -131,11 +132,15 @@ class ImprovedScreen(Screen):
         Disable the given widget.
         """
         widget.opacity = 0
-        widget.disabled = True
+        if len(widget.children) == 2 and type(widget.children[0]) == Button:
+            print("toto")
+            widget.children[0].disabled = True
 
     def enable_widget(self, widget: Widget):
         """
         Enable the given widget.
         """
         widget.opacity = 1
-        widget.disabled = False
+        if len(widget.children) == 2 and type(widget.children[0]) == Button:
+            widget.children[0].disabled = False
+            print(widget.children[0].disabled)
