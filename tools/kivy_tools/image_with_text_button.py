@@ -33,3 +33,7 @@ class ImageWithTextButton(Image):
     text_valign = "center"
     text_font_size = 15
     release_function = ObjectProperty()
+
+    def on_touch_down(self, touch):
+        self.ids["button_widget"].on_touch_down(touch)
+        return super().on_touch_down(touch)
