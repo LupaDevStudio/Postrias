@@ -6,12 +6,14 @@ Module to create an improved kivy screen with background and font support.
 ### Imports ###
 ###############
 
+### Python imports ###
+
+from copy import copy
+
 ### Kivy imports ###
 
 from kivy.core.window import Window
 from kivy.uix.screenmanager import Screen
-from kivy.uix.widget import Widget
-from kivy.uix.button import Button
 from kivy.properties import (
     StringProperty,
     NumericProperty,
@@ -43,6 +45,8 @@ class ImprovedScreen(Screen):
     font_name = StringProperty("Roboto")
 
     def __init__(self, font_name=None, back_image_path=None, **kw):
+
+        self.temp_pos = {}
 
         # Init the kv screen
         super().__init__(**kw)
@@ -127,20 +131,22 @@ class ImprovedScreen(Screen):
         """
         self.font_ratio = Window.size[1] / 600
 
-    def disable_widget(self, widget: Widget):
+    def disable_widget(self, widget_id: str):
         """
         Disable the given widget.
         """
-        widget.opacity = 0
-        if len(widget.children) == 2 and type(widget.children[0]) == Button:
-            print("toto")
-            widget.children[0].disabled = True
+        widget = self.ids[widget_id]
+        if not widget.disabled:
+            widget.opacity = 0
+            self.temp_pos[widget_id] = copy(widget.pos_hint)
+            widget.pos_hint = {"x": 1, "y": 1}
+            widget.disabled = True
 
-    def enable_widget(self, widget: Widget):
+    def enable_widget(self, widget_id: str):
         """
         Enable the given widget.
         """
+        widget = self.ids[widget_id]
         widget.opacity = 1
-        if len(widget.children) == 2 and type(widget.children[0]) == Button:
-            widget.children[0].disabled = False
-            print(widget.children[0].disabled)
+        widget.disabled = False
+        widget.pos_hint = self.temp_pos[widget_id]

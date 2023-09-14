@@ -66,7 +66,7 @@ class GameScreen(ImprovedScreen):
                       "decree_down"]
 
         for card in cards_list:
-            self.disable_widget(self.ids[card])
+            self.disable_widget(card)
 
     def __init__(self, **kw):
         super().__init__(
@@ -83,7 +83,7 @@ class GameScreen(ImprovedScreen):
                              "decree_left",
                              "decree_right",
                              "decree_down"]
-        
+
         self.event_cards = ["event"]
 
     def on_pre_enter(self, *args):
@@ -114,18 +114,18 @@ class GameScreen(ImprovedScreen):
             self.ids["decision_no"].text = game.text_dict["left"]
             self.ids["decision_yes"].text = game.text_dict["right"]
             for card in self.decision_cards:
-                self.enable_widget(self.ids[card])
+                self.enable_widget(card)
         if game.phase == "decree":
             self.ids["decree_center"].text = game.text_dict["card"]
             self.ids["decree_left"].text = game.text_dict["left"]
             self.ids["decree_right"].text = game.text_dict["right"]
             self.ids["decree_down"].text = game.text_dict["down"]
             for card in self.decree_cards:
-                self.enable_widget(self.ids[card])
+                self.enable_widget(card)
         if game.phase == "event":
             self.ids["event"].text = game.text_dict["card"]
             for card in self.event_cards:
-                self.enable_widget(self.ids[card])
+                self.enable_widget(card)
 
     def choose_answer(self, choice: Literal["left", "right", "down"], *args):
         game.make_choice(choice=choice)
@@ -177,4 +177,3 @@ class GameScreen(ImprovedScreen):
         else:
             self.update_display_resources()
             self.manager.current = "game_over"
-

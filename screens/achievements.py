@@ -53,9 +53,6 @@ class AchievementsScreen(ImprovedScreen):
         self.build_scroll_view()
         return super().on_enter(*args)
 
-    def test(self):
-        print("toto")
-
     def build_scroll_view(self):
         image_dimension = (Window.size[0] - 2 * self.padding[0] -
                            self.spacing * (self.number_cols - 1)) / self.number_cols
