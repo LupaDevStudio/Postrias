@@ -16,6 +16,7 @@ from kivy.lang import Builder
 from tools.kivy_tools.tools_kivy import MyScrollViewLayout
 from tools.kivy_tools.screen import ImprovedScreen
 from tools.kivy_tools.image_with_text import ImageWithText
+from tools.kivy_tools.image_with_text_button import ImageWithTextButton
 
 ###############
 ### Process ###
@@ -33,3 +34,6 @@ Builder.load_file(PATH_KIVY_FOLDER + "screen.kv", encoding="utf-8")
 
 # Build the kv file for image with text
 Builder.load_file(PATH_KIVY_FOLDER + "image_with_text.kv", encoding="utf-8")
+
+# Build the kv file for image with text and button
+Builder.load_file(PATH_KIVY_FOLDER + "image_with_text_button.kv", encoding="utf-8")

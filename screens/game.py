@@ -118,6 +118,9 @@ class GameScreen(ImprovedScreen):
             for card in self.decision_cards:
                 self.enable_widget(self.ids[card])
 
+    def test(self):
+        print("toto")
+
     def start_day(self, *args):
         game.start_day()
         self.display_card()
