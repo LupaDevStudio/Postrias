@@ -200,10 +200,9 @@
         keep_ratio: False
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
-        release_function: root.go_to_next_card
 
     # Decree background
-    ImageWithTextButton:
+    ImageWithText:
         id: decree_center
         source: PATH_IMAGES + "decree_background.png"
         size_hint: center_img_width, center_img_height
@@ -242,9 +241,30 @@
         id: decree_down
         source: PATH_IMAGES + "decree_choice_background.png"
         size_hint: side_img_width, side_img_height
-        pos_hint: {"center_x": 0.5, "center_y": 0.1}
+        pos_hint: {"center_x": 0.5, "center_y": 0.15}
         allow_stretch: True
         keep_ratio: False
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
         release_function: partial(root.choose_answer, "down")
+
+    # Answer
+    ImageWithText:
+        id: answer
+        source: PATH_IMAGES + "answer_background.png"
+        size_hint: center_img_width, center_img_height
+        pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
+        allow_stretch: True
+        keep_ratio: False
+        text_font_name: root.font_name
+        text_color: TEXT_FONT_COLOR
+    
+    # Next button
+    ImageWithTextButton:
+        id: next_button
+        source: PATH_IMAGES + "next_button.png"
+        size_hint: side_img_width, side_img_height
+        pos_hint: {"center_x": 0.5, "center_y": 0.15}
+        allow_stretch: True
+        keep_ratio: False
+        release_function: root.go_to_next_card

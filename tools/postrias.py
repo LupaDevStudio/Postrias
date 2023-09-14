@@ -127,27 +127,27 @@ class Game():
 
         # Check the game over conditions for resources
         self.game_over = True
-        if self.food < 0:
+        if self.food <= 0:
             self.ending = "food"
-        elif self.tools < 0:
+        elif self.tools <= 0:
             self.ending = "tools"
-        elif self.weapons < 0:
+        elif self.weapons <= 0:
             self.ending = "weapons"
-        elif self.order < 0:
+        elif self.order <= 0:
             self.ending = "order_min"
-        elif self.order > 100:
+        elif self.order >= 100:
             self.ending = "order_max"
-        elif self.military < 0:
+        elif self.military <= 0:
             self.ending = "military_min"
-        elif self.military > 100:
+        elif self.military >= 100:
             self.ending = "military_max"
-        elif self.civilian < 0:
+        elif self.civilian <= 0:
             self.ending = "civilian_min"
-        elif self.civilian > 100:
+        elif self.civilian >= 100:
             self.ending = "civilian_max"
-        elif self.paleo < 0:
+        elif self.paleo <= 0:
             self.ending = "paleo_min"
-        elif self.paleo > 100:
+        elif self.paleo >= 100:
             self.ending = "paleo_max"
         else:
             self.game_over = False
@@ -259,8 +259,10 @@ class Game():
         elif self.phase == "decision":
             if choice in ["yes", "no"]:
                 self.text_dict["answer"] = \
-                    TEXT.answer[choice][self.gameplay["decision"][self.card_id]["complainant"]]
+                    TEXT.answer[choice][self.gameplay["decision"]
+                                        [self.card_id]["complainant"]]
             else:
                 self.text_dict["answer"] = TEXT.answer[choice]
+
 
 game = Game()

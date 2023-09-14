@@ -63,7 +63,9 @@ class GameScreen(ImprovedScreen):
                       "decree_center",
                       "decree_left",
                       "decree_right",
-                      "decree_down"]
+                      "decree_down",
+                      "answer",
+                      "next_button"]
 
         for card in cards_list:
             self.disable_widget(card)
@@ -84,7 +86,13 @@ class GameScreen(ImprovedScreen):
                              "decree_right",
                              "decree_down"]
 
-        self.event_cards = ["event"]
+        self.event_cards = ["event", "next_button"]
+
+        self.answer_cards = ["answer", "next_button"]
+
+    def enable_cards(self, cards_list):
+        for card in cards_list:
+            self.enable_widget(card)
 
     def on_pre_enter(self, *args):
 
@@ -108,30 +116,26 @@ class GameScreen(ImprovedScreen):
 
         return super().on_enter(*args)
 
-    def display_card(self, *args):
+    def display_card(self, *_):
         if game.phase == "decision":
             self.ids["decision_center"].text = game.text_dict["card"]
             self.ids["decision_no"].text = game.text_dict["left"]
             self.ids["decision_yes"].text = game.text_dict["right"]
-            for card in self.decision_cards:
-                self.enable_widget(card)
+            self.enable_cards(self.decision_cards)
         if game.phase == "decree":
             self.ids["decree_center"].text = game.text_dict["card"]
             self.ids["decree_left"].text = game.text_dict["left"]
             self.ids["decree_right"].text = game.text_dict["right"]
             self.ids["decree_down"].text = game.text_dict["down"]
-            for card in self.decree_cards:
-                self.enable_widget(card)
+            self.enable_cards(self.decree_cards)
         if game.phase == "event":
             self.ids["event"].text = game.text_dict["card"]
-            for card in self.event_cards:
-                self.enable_widget(card)
+            self.enable_cards(self.event_cards)
 
     def choose_answer(self, choice: Literal["left", "right", "down"], *args):
         game.make_choice(choice=choice)
         game.end_day()
         self.display_answer()
-        self.start_day()
 
     def update_display_resources(self):
         """
@@ -150,8 +154,12 @@ class GameScreen(ImprovedScreen):
         Display the card containing the answer to the previous card.
         It also displays the effects of the decision or the event. TODO
         """
+        self.hide_cards()
         self.is_answer = True
         self.update_display_resources()
+        # self.display_plus_minus()
+        self.enable_cards(self.answer_cards)
+        self.ids["answer"].text = game.text_dict["answer"]
 
     def go_to_next_card(self):
         """
@@ -163,8 +171,7 @@ class GameScreen(ImprovedScreen):
             self.is_answer = False
             self.start_day()
         else:
-            game.end_day()
-            self.display_answer()
+            self.choose_answer("down")
 
     def start_day(self, *args):
         """
