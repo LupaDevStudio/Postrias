@@ -4,7 +4,7 @@
 #:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
 #:import partial functools.partial
 #:set center_x_faction 0.11
-#:set center_x_resource 0.95
+#:set center_x_resource 0.93
 #:set upper_y_indic 0.93
 #:set vertical_spacing_indic 0.09
 #:set label_image_spacing 0.05
@@ -17,6 +17,8 @@
 #:set side_img_center_x 0.175
 #:set side_img_center_y 0.25
 #:set text_filling_ratio 0.9
+#:set sign_offset 0.035
+#:set plus_minus_ratio 1/2.5
 
 
 <IndicatorLabel@Label>:
@@ -28,10 +30,68 @@
     Image:
         id: order_image
         source: PATH_IMAGES + "card_layout.png"
-        size_hint: 0.15, vertical_spacing_indic*4.6
-        pos_hint: {"center_x": center_x_faction - label_image_spacing*0.6, "center_y": 0.79}
+        size_hint: 0.17, vertical_spacing_indic*4.6
+        pos_hint: {"center_x": center_x_faction - label_image_spacing*0.45, "center_y": 0.79}
         allow_stretch: True
         keep_ratio:False
+
+    # Plus and minus for factions
+    Image:
+        id: plus_order
+        source: PATH_IMAGES + "plus.png"
+        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
+    Image:
+        id: minus_order
+        source: PATH_IMAGES + "minus.png"
+        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
+    Image:
+        id: plus_military
+        source: PATH_IMAGES + "plus.png"
+        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic- vertical_spacing_indic*1}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
+    Image:
+        id: minus_military
+        source: PATH_IMAGES + "minus.png"
+        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic- vertical_spacing_indic*1}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
+    Image:
+        id: plus_civilian
+        source: PATH_IMAGES + "plus.png"
+        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic- vertical_spacing_indic*2}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
+    Image:
+        id: minus_civilian
+        source: PATH_IMAGES + "minus.png"
+        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic- vertical_spacing_indic*2}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
+    Image:
+        id: plus_paleo
+        source: PATH_IMAGES + "plus.png"
+        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic- vertical_spacing_indic*3}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
+    Image:
+        id: minus_paleo
+        source: PATH_IMAGES + "minus.png"
+        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic- vertical_spacing_indic*3}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
 
     # Faction indicators
     IndicatorLabel:
@@ -93,12 +153,56 @@
 
     # Resources background
     Image:
-        id: order_image
+        id: resources_background
         source: PATH_IMAGES + "card_layout.png"
-        size_hint: 0.15, vertical_spacing_indic*3.6
-        pos_hint: {"center_x": center_x_resource - label_image_spacing*0.6, "center_y": 0.84}
+        size_hint: 0.16, vertical_spacing_indic*3.6
+        pos_hint: {"center_x": center_x_resource - label_image_spacing*0.45, "center_y": 0.84}
         allow_stretch: True
         keep_ratio:False
+    
+    # Plus and minus for resources
+    Image:
+        id: plus_food
+        source: PATH_IMAGES + "plus.png"
+        pos_hint: {"center_x": center_x_resource + sign_offset, "center_y": upper_y_indic}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
+    Image:
+        id: minus_food
+        source: PATH_IMAGES + "minus.png"
+        pos_hint: {"center_x": center_x_resource + sign_offset, "center_y": upper_y_indic}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
+    Image:
+        id: plus_weapons
+        source: PATH_IMAGES + "plus.png"
+        pos_hint: {"center_x": center_x_resource + sign_offset, "center_y": upper_y_indic - 1* vertical_spacing_indic}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
+    Image:
+        id: minus_weapons
+        source: PATH_IMAGES + "minus.png"
+        pos_hint: {"center_x": center_x_resource + sign_offset, "center_y": upper_y_indic - 1* vertical_spacing_indic}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
+    Image:
+        id: plus_tools
+        source: PATH_IMAGES + "plus.png"
+        pos_hint: {"center_x": center_x_resource + sign_offset, "center_y": upper_y_indic - 2* vertical_spacing_indic}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
+    Image:
+        id: minus_tools
+        source: PATH_IMAGES + "minus.png"
+        pos_hint: {"center_x": center_x_resource + sign_offset, "center_y": upper_y_indic - 2* vertical_spacing_indic}
+        size_hint: None, image_size_indic * plus_minus_ratio
+        allow_stretch: True
+        width: self.height
     
     # Resources indicator
     IndicatorLabel:
@@ -263,8 +367,8 @@
     ImageWithTextButton:
         id: next_button
         source: PATH_IMAGES + "next_button.png"
-        size_hint: side_img_width, side_img_height
+        size_hint: side_img_width * 0.7, None
         pos_hint: {"center_x": 0.5, "center_y": 0.15}
         allow_stretch: True
-        keep_ratio: False
+        keep_ratio: True
         release_function: root.go_to_next_card

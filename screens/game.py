@@ -68,7 +68,21 @@ class GameScreen(ImprovedScreen):
                       "decree_right",
                       "decree_down",
                       "answer",
-                      "next_button"]
+                      "next_button",
+                      "plus_order",
+                      "minus_order",
+                      "plus_military",
+                      "minus_military",
+                      "plus_civilian",
+                      "minus_civilian",
+                      "plus_paleo",
+                      "minus_paleo",
+                      "plus_food",
+                      "minus_food",
+                      "plus_weapons",
+                      "minus_weapons",
+                      "plus_tools",
+                      "minus_tools"]
 
         for card in cards_list:
             self.disable_widget(card)
@@ -92,6 +106,21 @@ class GameScreen(ImprovedScreen):
         self.event_cards = ["event", "next_button"]
 
         self.answer_cards = ["answer", "next_button"]
+
+        self.plus_minus = ["plus_order",
+                           "minus_order",
+                           "plus_military",
+                           "minus_military",
+                           "plus_civilian",
+                           "minus_civilian",
+                           "plus_paleo",
+                           "minus_paleo",
+                           "plus_food",
+                           "minus_food",
+                           "plus_weapons",
+                           "minus_weapons",
+                           "plus_tools",
+                           "minus_tools"]
 
     def enable_cards(self, cards_list):
         """
@@ -161,15 +190,28 @@ class GameScreen(ImprovedScreen):
         self.weapons_value = str(game.weapons)
         self.tools_value = str(game.tools)
 
+    def display_plus_minus(self):
+        """
+        Display the plus and minus signs.
+        """
+        for (effect, value) in game.effect_dict.items():
+            prefix = None
+            if value > 0:
+                prefix = "plus"
+            elif value < 0:
+                prefix = "minus"
+            if prefix is not None:
+                self.enable_widget(prefix + "_" + effect)
+
     def display_answer(self):
         """
         Display the card containing the answer to the previous card.
-        It also displays the effects of the decision or the event. TODO
+        It also displays the effects of the decision or the event.
         """
         self.hide_cards()
         self.is_answer = True
         self.update_display_resources()
-        # self.display_plus_minus()
+        self.display_plus_minus()
         self.enable_cards(self.answer_cards)
         self.ids["answer"].text = game.text_dict["answer"]
 
