@@ -74,7 +74,19 @@ if not os.path.exists(PATH_USER_DATA):
     default_user_data = {
         "language": "english",
         "highscore": 0,
-        "endings": {},
+        "endings": {
+            "order_max": False,
+            "order_min": False,
+            "military_max": False,
+            "military_min": False,
+            "civilian_max": False,
+            "civilian_min": False,
+            "paleo_max": False,
+            "paleo_min": False,
+            "food": False,
+            "weapons": False,
+            "tools": False,
+        },
         "music_volume": 0.5,
         "sound_effects_volume": 0.5
     }

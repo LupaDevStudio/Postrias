@@ -1,45 +1,45 @@
 #:kivy 2.1.0
 #: import PATH_IMAGES tools.path.PATH_IMAGES
 #:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
-#: import USER_DATA tools.constants.USER_DATA
 
 <AchievementsScreen>:
-    Image:
+    ImageWithTextButton:
         source: PATH_IMAGES + "back_arrow.png"
         size_hint: None, 0.1
         pos_hint: {"x":0.025, "top": 0.975}
         allow_stretch: True
         width: self.height
-    Button:
-        size_hint: None, 0.1
-        width: self.height
-        pos_hint: {"x":0.025, "top": 0.975}
-        background_color: (0, 0, 0, 0)
-        on_release:
-            root.manager.current = "menu"
+        release_function: root.go_to_menu
 
     Label:
-        text: str(USER_DATA.highscore)
+        text: root.my_highscore
         bold: True
         color: TEXT_FONT_COLOR
-        pos_hint: {"right":1, "top":1}
-        size_hint: 0.1, 0.1
+        pos_hint: {"right":0.95, "top": 0.95}
+        size_hint: 1.0, 0.1
         font_size: 25*root.font_ratio
         font_name: root.font_name
+        halign: "right"
+        text_size: (root.width,None)
 
     RelativeLayout:
-        size_hint: 1, 0.9
+        size_hint: 1, 0.85
         pos_hint: {"x":0, "y":0}
         ScrollView:
             id: scroll_view
             do_scroll_x: False
             do_scroll_y: True
             bar_width: 0
+            height: root.height
+            width: root.width
 
             MyScrollViewLayout:
                 id: my_sv_layout
                 cols: root.number_cols
+                # margin: 20
                 spacing: root.spacing
                 padding: root.padding
-                height: self.minimum_height+root.label_height
+                width: root.width
+                height: root.height * 1.1
+                # height: self.minimum_height+root.label_height
                 pos: root.pos
