@@ -36,6 +36,9 @@ from tools.kivy_tools import (
 
 
 class GameScreen(ImprovedScreen):
+    """
+    Screen used to play the game.
+    """
 
     # Create factions values for Label
     order_value = StringProperty("0")
@@ -91,6 +94,9 @@ class GameScreen(ImprovedScreen):
         self.answer_cards = ["answer", "next_button"]
 
     def enable_cards(self, cards_list):
+        """
+        Enable the given list of cards.
+        """
         for card in cards_list:
             self.enable_widget(card)
 
@@ -117,6 +123,9 @@ class GameScreen(ImprovedScreen):
         return super().on_enter(*args)
 
     def display_card(self, *_):
+        """
+        Load and display the cards depending on the game phase.
+        """
         if game.phase == "decision":
             self.ids["decision_center"].text = game.text_dict["card"]
             self.ids["decision_no"].text = game.text_dict["left"]
@@ -132,7 +141,10 @@ class GameScreen(ImprovedScreen):
             self.ids["event"].text = game.text_dict["card"]
             self.enable_cards(self.event_cards)
 
-    def choose_answer(self, choice: Literal["left", "right", "down"], *args):
+    def choose_answer(self, choice: Literal["left", "right", "down"], *_):
+        """
+        Treat the action of the player.
+        """
         game.make_choice(choice=choice)
         game.end_day()
         self.display_answer()
@@ -173,7 +185,7 @@ class GameScreen(ImprovedScreen):
         else:
             self.choose_answer("down")
 
-    def start_day(self, *args):
+    def start_day(self, *_):
         """
         Start a new day with a new batch of cards.
         """

@@ -6,7 +6,12 @@ build-backend = "Buildozer"
 recursive = "y"
 load-plugins = "pylint_report"
 ignore-patterns = ["draft*", "venv", "build", "dist", "old*"]
-disable = ["wrong-import-position", "no-member", "no-name-in-module"]
+disable = [
+    "wrong-import-position",
+    "no-member",
+    "no-name-in-module",
+    "too-many-instance-attributes",
+]
 
 [tool.pylint.basic]
 # Add names that will always be accepted by pylint
