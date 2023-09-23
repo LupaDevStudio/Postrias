@@ -23,6 +23,7 @@ from tools.path import (
 )
 from tools import (
     music_mixer,
+    sound_mixer,
     game
 )
 from tools.kivy_tools import (
@@ -170,10 +171,24 @@ class GameScreen(ImprovedScreen):
             self.ids["event"].text = game.text_dict["card"]
             self.enable_cards(self.event_cards)
 
+    def play_choice_sound(self, choice: Literal["left", "right", "down"]):
+        """
+        Play the sound associated to the choice.
+        """
+
+        if game.phase == "decree":
+            sound_mixer.play("decree")
+        elif game.phase == "decision":
+            if choice == "down":
+                sound_mixer.play("guillotine")
+            else:
+                sound_mixer.play("decision")
+
     def choose_answer(self, choice: Literal["left", "right", "down"], *_):
         """
         Treat the action of the player.
         """
+        self.play_choice_sound(choice=choice)
         game.make_choice(choice=choice)
         game.end_day()
         self.display_answer()
