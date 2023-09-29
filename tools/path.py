@@ -10,6 +10,9 @@ PATH_RESOURCES_FOLDER = "resources/"
 # Path for the user data
 PATH_USER_DATA = "data.json"
 
+# Path for the screen
+PATH_SCREENS = "screens/"
+
 # Path for the resources
 PATH_LANGUAGE = PATH_RESOURCES_FOLDER + "languages/"
 PATH_IMAGES = PATH_RESOURCES_FOLDER + "images/"

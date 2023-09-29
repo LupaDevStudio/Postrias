@@ -21,7 +21,8 @@ from tools.game_tools import (
 
 from tools.path import (
     PATH_MUSICS,
-    PATH_SOUNDS
+    PATH_SOUNDS,
+    PATH_IMAGES
 )
 
 from tools.constants import (
@@ -43,4 +44,5 @@ SOUND_DICT = load_sounds(PATH_SOUNDS, USER_DATA.sound_effects_volume)
 music_mixer = DynamicMusicMixer(MUSIC_DICT, USER_DATA.music_volume)
 sound_mixer = DynamicMusicMixer(SOUND_DICT, USER_DATA.sound_effects_volume)
 
+# Initialise the game
 game = Game()

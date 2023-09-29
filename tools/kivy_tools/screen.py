@@ -17,7 +17,8 @@ from kivy.uix.screenmanager import Screen
 from kivy.properties import (
     StringProperty,
     NumericProperty,
-    BooleanProperty
+    BooleanProperty,
+    ObjectProperty
 )
 
 ### Local imports ###
@@ -38,22 +39,47 @@ class ImprovedScreen(Screen):
     back_image_width = NumericProperty(Window.size[0])
     back_image_height = NumericProperty(Window.size[1])
     back_image_disabled = BooleanProperty(False)
-    back_image_path = StringProperty()
+    back_image_path = ObjectProperty("")
 
     # Create the font_name properties
     font_ratio = NumericProperty(1)
     font_name = StringProperty("Roboto")
 
-    def __init__(self, font_name=None, back_image_path=None, **kw):
+    def __init__(self, font_name="Roboto", back_image_path=None, **kw):
 
+        # Create a dictionnary to store the positions of hidden widgets
         self.temp_pos = {}
+
+        # Boolean to indicate whether the screen is loaded or no
+        self.is_loaded = False
 
         # Init the kv screen
         super().__init__(**kw)
 
+        # Set the font
+        self.font_name = font_name
+
+        # Store the back image path
+        self.sto_back_image_path = back_image_path
+
+        # Define all variables
+        self.back_image_disabled = False
+        self.back_image_opacity = 1
+        self.back_image_ratio = 1
+
+    def preload(self):
+        """
+        Load all the assets of the screen.
+
+        This is done here to be easily controlled and avoid computations on the app start.
+        """
+
+        # Indicate that the screen is loaded
+        self.is_loaded = True
+
         # Set the background image
-        if back_image_path is not None:
-            self.set_back_image(back_image_path)
+        if self.sto_back_image_path is not None:
+            self.set_back_image_path(self.sto_back_image_path)
             self.back_image_opacity = 1
             self.back_image_disabled = False
         else:
@@ -61,13 +87,9 @@ class ImprovedScreen(Screen):
             self.back_image_opacity = 0
             self.back_image_disabled = True
 
-        # Set the font
-        if font_name is not None:
-            self.font_name = font_name
-
-    def set_back_image(self, back_image_path):
+    def set_back_image_path(self, back_image_path):
         """
-        Set a background image for the screen.
+        Set a background image for the screen using a path.
         """
 
         # Set the source of the background image
@@ -75,6 +97,21 @@ class ImprovedScreen(Screen):
 
         # Compute the ratio to use for size computations
         width, height = get_image_size(back_image_path)
+        self.back_image_ratio = width / height
+
+        # Update the size of the background image
+        self.update_back_image_size()
+
+    def set_back_image_texture(self, back_image_texture):
+        """
+        Set a background image for the screen using a texture.
+        """
+
+        # Set the source of the background image
+        self.ids["back_image"].texture = back_image_texture
+
+        # Compute the ratio to use for size computations
+        width, height = back_image_texture.size
         self.back_image_ratio = width / height
 
         # Update the size of the background image
@@ -91,6 +128,13 @@ class ImprovedScreen(Screen):
         else:
             self.back_image_width = Window.size[1] * self.back_image_ratio
             self.back_image_height = Window.size[1]
+
+    def on_pre_enter(self, *args):
+        super().on_pre_enter(*args)
+
+        # Load the assets if it has not been done before
+        if not self.is_loaded:
+            self.preload()
 
     def on_enter(self, *args):
         """

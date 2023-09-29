@@ -12,19 +12,22 @@ from typing import Literal
 
 ### Kivy imports ###
 
+from kivy.lang import Builder
 from kivy.clock import Clock
 from kivy.properties import StringProperty
+from kivy.loader import Loader, ProxyImage
 
 ### Module imports ###
 
 from tools.path import (
     PATH_TEXT_FONT,
     PATH_IMAGES,
+    PATH_SCREENS
 )
 from tools import (
     music_mixer,
     sound_mixer,
-    game
+    game,
 )
 from tools.kivy_tools import (
     ImprovedScreen
@@ -54,39 +57,6 @@ class GameScreen(ImprovedScreen):
 
     # Boolean indicating if the current moment is an answer or not
     is_answer = False
-
-    def hide_cards(self, *_):
-        """
-        Hide all cards on the screen.
-        """
-        cards_list = ["event",
-                      "decision_center",
-                      "decision_yes",
-                      "decision_no",
-                      "decision_guillotine",
-                      "decree_center",
-                      "decree_left",
-                      "decree_right",
-                      "decree_down",
-                      "answer",
-                      "next_button",
-                      "plus_order",
-                      "minus_order",
-                      "plus_military",
-                      "minus_military",
-                      "plus_civilian",
-                      "minus_civilian",
-                      "plus_paleo",
-                      "minus_paleo",
-                      "plus_food",
-                      "minus_food",
-                      "plus_weapons",
-                      "minus_weapons",
-                      "plus_tools",
-                      "minus_tools"]
-
-        for card in cards_list:
-            self.disable_widget(card)
 
     def __init__(self, **kw):
         super().__init__(
@@ -123,6 +93,57 @@ class GameScreen(ImprovedScreen):
                            "plus_tools",
                            "minus_tools"]
 
+        self.night_camp_background: ProxyImage
+        self.day_camp_background: ProxyImage
+
+    def preload(self, *_):
+
+        # Load the kv content
+        # Builder.load_file(PATH_SCREENS + "game.kv", encoding="utf-8")
+
+        # Load the night camp background
+        self.night_camp_background = Loader.image(
+            PATH_IMAGES + "night_camp.png")
+
+        self.day_camp_background = Loader.image(
+            PATH_IMAGES + "day_camp.png")
+
+        # Preload the class
+        super().preload()
+
+    def hide_cards(self, *_):
+        """
+        Hide all cards on the screen.
+        """
+        cards_list = ["event",
+                      "decision_center",
+                      "decision_yes",
+                      "decision_no",
+                      "decision_guillotine",
+                      "decree_center",
+                      "decree_left",
+                      "decree_right",
+                      "decree_down",
+                      "answer",
+                      "next_button",
+                      "plus_order",
+                      "minus_order",
+                      "plus_military",
+                      "minus_military",
+                      "plus_civilian",
+                      "minus_civilian",
+                      "plus_paleo",
+                      "minus_paleo",
+                      "plus_food",
+                      "minus_food",
+                      "plus_weapons",
+                      "minus_weapons",
+                      "plus_tools",
+                      "minus_tools"]
+
+        for card in cards_list:
+            self.disable_widget(card)
+
     def enable_cards(self, cards_list):
         """
         Enable the given list of cards.
@@ -132,6 +153,8 @@ class GameScreen(ImprovedScreen):
 
     def on_pre_enter(self, *args):
 
+        super().on_pre_enter(*args)
+
         # Load the gameplay json
         game.load_resources()
         game.reset_variables()
@@ -139,8 +162,6 @@ class GameScreen(ImprovedScreen):
 
         # Hide all cards
         self.hide_cards()
-
-        return super().on_pre_enter(*args)
 
     def on_enter(self, *args):
 
@@ -223,6 +244,7 @@ class GameScreen(ImprovedScreen):
         Display the card containing the answer to the previous card.
         It also displays the effects of the decision or the event.
         """
+        self.set_back_image_texture(self.night_camp_background.image.texture)
         self.hide_cards()
         self.is_answer = True
         self.update_display_resources()
@@ -247,9 +269,17 @@ class GameScreen(ImprovedScreen):
         Start a new day with a new batch of cards.
         """
         if not game.game_over:
-            game.start_day()
+            # Hide the cards
             self.hide_cards()
+
+            # Initialise the new day
+            game.start_day()
+
+            # Display the new cards
             self.display_card()
+
+            # Set the day background
+            self.set_back_image_texture(self.day_camp_background.image.texture)
         else:
             self.update_display_resources()
             self.manager.current = "game_over"

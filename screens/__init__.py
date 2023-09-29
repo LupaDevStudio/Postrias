@@ -16,6 +16,7 @@ from kivy.lang import Builder
 
 ### Module imports ###
 
+from tools.path import PATH_SCREENS
 from screens.menu import MenuScreen
 from screens.settings import SettingsScreen
 from screens.game import GameScreen
@@ -32,3 +33,4 @@ from screens.achievements import AchievementsScreen
 kv_files = [file for file in os.listdir("screens") if file.endswith(".kv")]
 for file in kv_files:
     Builder.load_file(f"screens/{file}", encoding="utf-8")
+# Builder.load_file(PATH_SCREENS + "menu.kv", encoding="utf-8")

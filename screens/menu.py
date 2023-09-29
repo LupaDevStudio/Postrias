@@ -44,6 +44,9 @@ class MenuScreen(ImprovedScreen):
         # Schedule the update for the text opacity effect
         Clock.schedule_interval(self.update, 1 / FPS)
 
+        # Schedule preload of the game screen
+        Clock.schedule_once(self.manager.get_screen("game").preload)
+
         return super().on_enter(*args)
 
     def on_pre_leave(self, *args):
