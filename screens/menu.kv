@@ -1,6 +1,7 @@
 #:kivy 2.1.0
 #: import PATH_IMAGES tools.path.PATH_IMAGES
 #: import TITLE_FONT_COLOR tools.constants.TITLE_FONT_COLOR
+#: import MOBILE_MODE tools.constants.MOBILE_MODE
 
 <MenuScreen>:
 
@@ -15,7 +16,7 @@
 
     Label:
         id: start_label
-        text: "Start a new game" if root.mobile_mode else "Click to start a new game"
+        text: "Start a new game" if MOBILE_MODE else "Click to start a new game"
         size_hint: 1, 0.25
         pos_hint: {"center_x": 0.5, "center_y": 0.45}
         font_size: 40*root.font_ratio

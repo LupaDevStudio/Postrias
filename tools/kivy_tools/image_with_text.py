@@ -11,7 +11,9 @@ Module to create images with text on it.
 from kivy.uix.image import Image
 from kivy.properties import (
     StringProperty,
-    ObjectProperty
+    ObjectProperty,
+    ColorProperty,
+    NumericProperty
 )
 
 #############
@@ -32,3 +34,5 @@ class ImageWithText(Image):
     text_halign = "center"
     text_valign = "center"
     text_font_size = 15
+    text_outline_color = ColorProperty()
+    text_outline_width = NumericProperty()

@@ -381,6 +381,8 @@
     },
     "settings": {},
     "game_over": {
-        "highscore": "Meilleur score : "
+        "highscore": "Meilleur score : ",
+        "score": "Score : ",
+        "credits": "Jeu original développé par :\n\n- Paul Creusy\n-TODO\n\nRemasterisé par :\n\n- Paul Creusy\n- Agathe Aris"
     }
 }

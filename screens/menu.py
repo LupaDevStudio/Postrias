@@ -14,19 +14,14 @@ from tools.path import (
 )
 from tools.constants import (
     FPS,
-    MOBILE_MODE
 )
 from tools.kivy_tools import ImprovedScreen
 from tools import (
-    music_mixer,
-    game
+    music_mixer
 )
 
 
 class MenuScreen(ImprovedScreen):
-
-    mobile_mode = BooleanProperty(MOBILE_MODE)
-    # title_font = StringProperty(PATH_TITLE_FONT)
 
     def __init__(self, **kw):
 

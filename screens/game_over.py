@@ -2,41 +2,57 @@
 Module for the game over screen
 """
 
-
-from kivy.uix.screenmanager import Screen
-from kivy.clock import Clock
-from kivy.core.window import Window
+from kivy.properties import StringProperty, ObjectProperty, NumericProperty
+from tools.kivy_tools import ImprovedScreen
 from tools.path import (
     PATH_TITLE_FONT,
     PATH_IMAGES,
+    PATH_TEXT_FONT
 )
-from tools.constants import FPS
-from kivy.properties import StringProperty, ObjectProperty, NumericProperty
-from tools import music_mixer
+from tools import (
+    music_mixer,
+    game
+)
+from tools.constants import (
+    TEXT,
+    USER_DATA
+)
 
 
-class GameOverScreen(Screen):
+class GameOverScreen(ImprovedScreen):
+    """
+    Screen of Game Over.
+    """
+
+    ending_text = StringProperty()
+    credits_text = StringProperty()
+    score_text = StringProperty()
+
     def __init__(self, **kw):
-        super().__init__(**kw)
+        super().__init__(
+            back_image_path=PATH_IMAGES + "game_over_background.png",
+            font_name=PATH_TEXT_FONT,
+            **kw)
+        self.credits_text = TEXT.game_over["credits"]
 
-    font_name = PATH_TITLE_FONT
-    path_back_image = PATH_IMAGES + "game_over_background.png"
-    width_back_image = ObjectProperty(Window.size[0])
-    height_back_image = ObjectProperty(Window.size[0] * 392 / 632)
-    opacity_state = - 1
-    font_ratio = NumericProperty(0)
-    score_str = StringProperty("")
+    def on_enter(self, *args):
+        music_mixer.play("time_of_the_apocalypse")
+        self.ending_text = game.ending_text
 
-    def init_screen(self, *args):
-        self.font_ratio = Window.size[0] / 800
-        self.width_back_image = Window.size[0]
-        self.height_back_image = Window.size[0] * 392 / 632
-        music_mixer.play("game_over_music", loop=True)
-        score_str = f"Score: {int(args[0])}"
-        self.ids.score_label.text = score_str
-        Clock.schedule_interval(self.update, 1 / FPS)
+        if game.score > USER_DATA.highscore:
+            new_highscore = True
+            USER_DATA.highscore = game.score
+        else:
+            new_highscore = False
 
-    def update(self, *args):
-        # self.ids.back_to_menu.opacity += self.opacity_state * OPACITY_RATE
-        if self.ids.back_to_menu.opacity < 0 or self.ids.back_to_menu.opacity > 1:
-            self.opacity_state = -self.opacity_state
+        self.score_text = TEXT.game_over["score"] + str(game.score) + \
+            TEXT.game_over["highscore"] + str(USER_DATA.highscore)
+
+        # Display something when getting a new highscore
+        return super().on_enter(*args)
+
+    def back_to_menu(self):
+        """
+        Go back to the main menu
+        """
+        self.manager.current = "menu"

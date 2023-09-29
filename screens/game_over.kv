@@ -1,53 +1,63 @@
 #:kivy 2.1.0
+#:import TITLE_FONT_COLOR tools.constants.TITLE_FONT_COLOR
+#:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
 
 <GameOverScreen>:
-    # Image:
-    #     id: back_image
-    #     source: root.path_back_image
-    #     size_hint: None,None
-    #     width: root.width_back_image
-    #     height: root.height_back_image
-    #     pos_hint: {"center_x":0.5,"center_y":0.5}
-    #     allow_stretch: True
-    #     keep_ratio: True
 
-    # Label:
-    #     id: title_label
-    #     text: "Game Over"
-    #     size_hint: 1, 0.5
-    #     pos_hint: {"center_x": 0.5, "center_y": 0.9}
-    #     font_size: 50*root.font_ratio
-    #     font_name: root.font
-    #     color: root.manager.color_label
-    
-    # Label:
-    #     id: credit_label
-    #     text: "Game created by :\n - Agathe\n - Paul"
-    #     size_hint: 1, 0.5
-    #     pos_hint: {"center_x": 0.2, "center_y": 0.5}
-    #     font_size: 40*root.font_ratio
-    #     font_name: root.font
-    #     color: root.manager.color_label
-    
-    # Label:
-    #     id: score_label
-    #     size_hint: 1, 0.5
-    #     pos_hint: {"center_x": 0.8, "center_y": 0.5}
-    #     font_size: 40*root.font_ratio
-    #     font_name: root.font
-    #     color: root.manager.color_label
-    
-    # Label:
-    #     id: back_to_menu
-    #     text: "Back to main menu"
-    #     font_name: root.font
-    #     font_size: 40*root.font_ratio
-    #     color: root.manager.color_label
-    #     pos_hint: {"center_x":0.5, "center_y": 0.15}
-    #     size_hint: 0.2, 0.1
-    # Button:
-    #     size_hint: 0.2, 0.1
-    #     pos_hint: {"center_x":0.5, "center_y": 0.15}
-    #     background_color: (0, 0, 0, 0)
-    #     on_release:
-    #         root.manager.init_screen("menu")
+    # Game Over Label
+    Label:
+        id: game_over_label
+        text: "Game Over"
+        size_hint: 1, 0.5
+        pos_hint: {"center_x": 0.5, "center_y": 0.9}
+        font_size: 50*root.font_ratio
+        font_name: root.font_name
+        color: TITLE_FONT_COLOR
+        outline_color: (1,1,1,1)
+        outline_width: 3
+
+    # Back button
+    ImageWithTextButton:
+        id: back_button
+        source: PATH_IMAGES + "back_arrow.png"
+        size_hint: None, 0.15
+        pos_hint: {"x": 0.05, "y": 0.05}
+        allow_stretch: True
+        keep_ratio: True
+        release_function: root.back_to_menu
+
+    # Score
+    ImageWithText:
+        id: score_label
+        text: root.score_text
+        source: PATH_IMAGES + "ending_background.png"
+        size_hint: 0.2, 0.15
+        pos_hint: {"center_x": 0.75, "center_y": 0.7}
+        allow_stretch: True
+        keep_ratio:False
+        text_font_name: root.font_name
+        text_color: TEXT_FONT_COLOR
+
+    # Ending story
+    ImageWithText:
+        id: ending_label
+        text: root.ending_text
+        source: PATH_IMAGES + "ending_background.png"
+        size_hint: 0.4, 0.4
+        pos_hint: {"center_x": 0.75, "center_y": 0.4}
+        allow_stretch: True
+        keep_ratio:False
+        text_font_name: root.font_name
+        text_color: TEXT_FONT_COLOR
+
+    # Credit background
+    ImageWithText:
+        id: credits_label
+        text: root.credits_text
+        source: PATH_IMAGES + "credits_background.png"
+        size_hint: 0.3, 0.4
+        pos_hint: {"center_x": 0.25, "center_y": 0.5}
+        allow_stretch: True
+        keep_ratio:False
+        text_font_name: root.font_name
+        text_color: TEXT_FONT_COLOR

@@ -49,6 +49,8 @@ class Game():
         self.gameplay: dict
         self.card_id: str
         self.ending: str
+        self.ending_text: str
+        self.score: int
         self.text_dict = {}
         self.game_over = False
 
@@ -151,6 +153,18 @@ class Game():
             self.ending = "paleo_max"
         else:
             self.game_over = False
+
+        # Load the ending text
+        if self.game_over:
+            self.ending_text = TEXT.ending[self.ending]["text"]
+            self.score = self.compute_score()
+
+    def compute_score(self):
+        """
+        Compute the score at the end of the game.
+        """
+        print("TODO")
+        return 0
 
     def start_day(self):
         """
