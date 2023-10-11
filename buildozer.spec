@@ -4,10 +4,10 @@
 title = Postrias
 
 # (str) Package name
-package.name = tramwaycollector
+package.name = postrias
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = lupa.dev.studio.com
+package.domain = lupadevstudio.com
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -37,7 +37,7 @@ version = 2.0.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,androidstorage4kivy
+requirements = python3,kivy
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -93,7 +93,7 @@ android.presplash_lottie = resources/presplash.json
 #icon.adaptive_background.filename = %(source.dir)s/data/icon_bg.png
 
 # (list) Permissions
-android.permissions = READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, INTERNET
+android.permissions = INTERNET, ACCESS_NETWORK_STATE
 
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host
@@ -187,7 +187,7 @@ android.sdk = 34
 #android.add_assets =
 
 # (list) Gradle dependencies to add
-#android.gradle_dependencies =
+android.gradle_dependencies ='com.google.android.gms:play-services-ads:20.3.0'
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
@@ -239,7 +239,7 @@ android.sdk = 34
 #android.wakelock = False
 
 # (list) Android application meta-data to set (key=value format)
-#android.meta_data =
+android.meta_data = com.google.android.gms.ads.APPLICATION_ID=ca-app-pub-3940256099942544~3347511713
 
 # (list) Android library project to add (will be added in the
 # project.properties automatically.)
