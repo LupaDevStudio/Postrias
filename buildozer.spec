@@ -47,10 +47,10 @@ requirements = python3,kivy
 #presplash.filename = ./resources/logo_collector_1024.png
 
 # (str) Icon of the application
-icon.filename = ./resources/logo_collector_1024.png
+icon.filename = ./resources/logo.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
-orientation = portrait
+orientation = landscape
 
 # (list) List of service to declare
 #services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
@@ -187,7 +187,7 @@ android.sdk = 34
 #android.add_assets =
 
 # (list) Gradle dependencies to add
-android.gradle_dependencies ='com.google.android.gms:play-services-ads:20.3.0'
+android.gradle_dependencies = com.google.android.gms:play-services-ads:20.3.0
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
