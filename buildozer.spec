@@ -13,7 +13,7 @@ package.domain = lupadevstudio.com
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas,json,txt,ttf,wav,ico,ogg,otf
+source.include_exts = py,png,jpg,kv,atlas,json,txt,ttf,wav,ico,ogg,otf,mp3
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
@@ -73,13 +73,14 @@ osx.kivy_version = 2.1.0
 #
 
 # (bool) Indicate if the application should be fullscreen or not
-fullscreen = 0
+fullscreen = 1
 
 # (string) Presplash background color (for android toolchain)
 # Supported formats are: #RRGGBB #AARRGGBB or one of the following names:
 # red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray,
 # darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy,
 # olive, purple, silver, teal.
+# Postrias res : ec1c24
 android.presplash_color = #e6e6e6
 
 # (string) Presplash animation using Lottie format.

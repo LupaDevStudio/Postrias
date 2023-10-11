@@ -11,7 +11,8 @@ Module to create images with text on it and a transparent button.
 from kivy.uix.image import Image
 from kivy.properties import (
     StringProperty,
-    ObjectProperty
+    ObjectProperty,
+    NumericProperty
 )
 
 #############
@@ -31,5 +32,5 @@ class ImageWithTextButton(Image):
     text_filling_ratio = 0.9
     text_halign = "center"
     text_valign = "center"
-    text_font_size = 15
+    text_font_size = NumericProperty(15)
     release_function = ObjectProperty()

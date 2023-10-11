@@ -14,7 +14,7 @@ from typing import Literal
 
 from kivy.lang import Builder
 from kivy.clock import Clock
-from kivy.properties import StringProperty
+from kivy.properties import StringProperty, NumericProperty
 from kivy.loader import Loader, ProxyImage
 
 ### Module imports ###
@@ -54,6 +54,8 @@ class GameScreen(ImprovedScreen):
     food_value = StringProperty("0")
     weapons_value = StringProperty("0")
     tools_value = StringProperty("0")
+
+    font_size_expand = NumericProperty(1.25)
 
     # Boolean indicating if the current moment is an answer or not
     is_answer = False
