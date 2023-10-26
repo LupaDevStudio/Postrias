@@ -5,18 +5,18 @@
 #:import partial functools.partial
 #:set center_x_faction 0.11
 #:set center_x_resource 0.93
-#:set upper_y_indic 0.93
+#:set upper_y_indic 0.92
 #:set vertical_spacing_indic 0.09
 #:set label_image_spacing 0.05
 #:set image_size_indic 0.08
-#:set center_img_height 0.45
+#:set center_img_height 0.5
 #:set center_img_width 0.5
 #:set center_img_center_y 0.7
 #:set side_img_width 0.3
 #:set side_img_height 0.2
 #:set side_img_center_x 0.175
 #:set side_img_center_y 0.25
-#:set text_filling_ratio 0.9
+#:set text_filling_ratio 0.85
 #:set sign_offset 0.035
 #:set plus_minus_ratio 1/2.5
 
@@ -270,6 +270,7 @@
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
         release_function: partial(root.choose_answer, "left")
+        text_filling_ratio: text_filling_ratio
 
     # Decision right
     ImageWithTextButton:
@@ -282,6 +283,7 @@
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
         release_function: partial(root.choose_answer, "right")
+        text_filling_ratio: text_filling_ratio
     
     # Decision guillotine
     ImageWithTextButton:

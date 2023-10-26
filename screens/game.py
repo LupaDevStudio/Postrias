@@ -64,7 +64,7 @@ class GameScreen(ImprovedScreen):
     weapons_value = StringProperty("0")
     tools_value = StringProperty("0")
 
-    font_size_expand = NumericProperty(1.25)
+    # font_size_expand = NumericProperty(1.25)
 
     # Boolean indicating if the current moment is an answer or not
     is_answer = False

@@ -178,9 +178,11 @@ class ImprovedScreen(Screen):
         Update the font_name ratio to use on the screen to keep letter size constant with Window size changes.
         """
         if MOBILE_MODE:
-            self.font_ratio = Window.size[0] / 600
+            self.font_ratio = Window.size[1] / \
+                600 + (Window.size[0] / Window.size[1] - 1) * 0.5
         else:
-            self.font_ratio = Window.size[0] / 800
+            self.font_ratio = Window.size[1] / \
+                600 + (Window.size[0] / Window.size[1] - 1) * 0.5
 
     def disable_widget(self, widget_id: str):
         """
