@@ -22,15 +22,24 @@ from kivy.loader import Loader, ProxyImage
 from tools.path import (
     PATH_TEXT_FONT,
     PATH_IMAGES,
-    PATH_SCREENS
+    PATH_MUSICS,
+    PATH_SOUNDS
 )
 from tools import (
     music_mixer,
     sound_mixer,
     game,
+    USER_DATA
 )
 from tools.kivy_tools import (
     ImprovedScreen
+)
+from tools.game_tools import (
+    load_sounds
+)
+from tools.constants import (
+    MUSIC_LIST,
+    SOUND_LIST
 )
 
 
@@ -100,15 +109,21 @@ class GameScreen(ImprovedScreen):
 
     def preload(self, *_):
 
-        # Load the kv content
-        # Builder.load_file(PATH_SCREENS + "game.kv", encoding="utf-8")
-
         # Load the night camp background
         self.night_camp_background = Loader.image(
             PATH_IMAGES + "night_camp.png")
 
+        # Load the day camp background
         self.day_camp_background = Loader.image(
             PATH_IMAGES + "day_camp.png")
+
+        # Load the musics and sounds
+        new_musics = load_sounds(
+            MUSIC_LIST, PATH_MUSICS, USER_DATA.music_volume)
+        new_sounds = load_sounds(SOUND_LIST, PATH_SOUNDS,
+                                 USER_DATA.sound_effects_volume)
+        music_mixer.add_sounds(new_musics)
+        sound_mixer.add_sounds(new_sounds)
 
         # Preload the class
         super().preload()

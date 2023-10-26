@@ -138,6 +138,8 @@ class ImprovedScreen(Screen):
         if not self.is_loaded:
             self.preload()
 
+        self.update_font_ratio()
+
     def on_enter(self, *args):
         """
         Initialize the screen when it is opened.

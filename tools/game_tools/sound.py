@@ -10,7 +10,7 @@ from math import exp
 
 from kivy.core.audio import SoundLoader
 
-from tools.constants import FPS, MUSIC_LIST
+from tools.constants import FPS
 
 
 ###############
@@ -62,6 +62,17 @@ class DynamicMusicMixer(MusicMixer):
             dico_frame_state[key] = 0
         self.dico_frame_state = dico_frame_state
         self.volume = volume
+
+    def add_sounds(self, sound_dict):
+        for sound_name in sound_dict:
+            self.dico_frame_state[sound_name] = 0
+            self.musics[sound_name] = sound_dict[sound_name]
+            self.musics[sound_name].volume = self.volume
+
+    def add_sound(self, sound, sound_name):
+        self.dico_frame_state[sound_name] = 0
+        self.musics[sound_name] = sound
+        self.musics[sound_name].volume = self.volume
 
     def fade_out(self, name, duration, mode="linear"):
         if mode == "exp":

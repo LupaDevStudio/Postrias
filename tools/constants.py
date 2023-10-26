@@ -152,6 +152,6 @@ TITLE_FONT_COLOR = (0, 0, 0, 1)
 TEXT_FONT_COLOR = (50 / 255, 50 / 255, 50 / 255, 1)
 
 ### Musics ###
-MUSIC_LIST = ["cinematic_dramatic.mp3",
-              "game_music.mp3", "time_of_the_apocalypse.mp3"]
+MUSIC_LIST = ["game_music.mp3", "time_of_the_apocalypse.mp3"]
 SOUND_LIST = ["decision.wav", "decree.wav", "guillotine.wav"]
+START_MUSIC_LIST = ["cinematic_dramatic.mp3",]
