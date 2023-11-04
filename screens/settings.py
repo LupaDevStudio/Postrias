@@ -7,35 +7,42 @@ Module for the settings menu
 # Réglage volume musique bruitage
 # Désactiver les pubs
 
-
-from kivy.uix.screenmanager import Screen
-from kivy.properties import StringProperty, ObjectProperty, NumericProperty
-from kivy.core.window import Window
+from kivy.uix.spinner import Spinner
+from kivy.properties import StringProperty, ObjectProperty, NumericProperty, ListProperty
 from tools.path import (
     PATH_TITLE_FONT,
-    PATH_IMAGES
+    PATH_IMAGES,
+    PATH_TEXT_FONT
+)
+from tools.kivy_tools import (
+    ImprovedScreen
+)
+from tools.constants import (
+    USER_DATA,
+    LANGUAGES_LIST,
+    DICT_LANGUAGE_CORRESPONDANCE
 )
 
 
-class SettingsScreen(Screen):
+class SettingsScreen(ImprovedScreen):
+
+    current_language = StringProperty(
+        DICT_LANGUAGE_CORRESPONDANCE[USER_DATA.language])
+    values_language_list = ListProperty()
+
     def __init__(self, **kw):
-        super().__init__(**kw)
+        super().__init__(
+            back_image_path=PATH_IMAGES + "settings_background.jpg",
+            font_name=PATH_TEXT_FONT,
+            **kw)
 
-    path_images = PATH_IMAGES
-    font_name = PATH_TITLE_FONT
-    high_score = StringProperty("")
-    top_key = StringProperty()
-    left_key = StringProperty("")
-    bottom_key = StringProperty("")
-    right_key = StringProperty("")
-    interact_key = StringProperty("")
-    path_back_image = PATH_IMAGES + "settings_background.png"
-    font_ratio = NumericProperty(0)
-    width_back_image = ObjectProperty(Window.size[0])
-    height_back_image = ObjectProperty(Window.size[0] * 392 / 632)
+    def on_enter(self, *args):
+        print(LANGUAGES_LIST)
+        self.values_language_list = LANGUAGES_LIST
+        return super().on_enter(*args)
 
-    def init_screen(self):
-        self.font_ratio = Window.size[0] / 800
-        self.width_back_image = Window.size[0]
-        self.height_back_image = Window.size[0] * 392 / 632
-        pass
+    def go_to_menu(self):
+        """
+        Go back to the main menu.
+        """
+        self.manager.current = "menu"

@@ -41,7 +41,7 @@ class AchievementsScreen(ImprovedScreen):
     def __init__(self, **kw):
         super().__init__(
             font_name=PATH_TEXT_FONT,
-            back_image_path=PATH_IMAGES + "collection_background.png",
+            back_image_path=PATH_IMAGES + "collection_background.jpg",
             **kw)
 
     my_highscore = StringProperty("")
@@ -79,7 +79,7 @@ class AchievementsScreen(ImprovedScreen):
             path_image = PATH_IMAGES + "ending_unknown.png"
             title_ending = "???"
             if bool_ending:
-                path_image = PATH_IMAGES + "ending_" + code_ending + ".png"
+                path_image = PATH_IMAGES + "ending_" + code_ending + ".jpg"
                 title_ending = TEXT.ending[code_ending]["title"]
 
             name_label = Button(

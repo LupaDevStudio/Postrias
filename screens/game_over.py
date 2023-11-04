@@ -30,7 +30,7 @@ class GameOverScreen(ImprovedScreen):
 
     def __init__(self, **kw):
         super().__init__(
-            back_image_path=PATH_IMAGES + "game_over_background.png",
+            back_image_path=PATH_IMAGES + "game_over_background.jpg",
             font_name=PATH_TEXT_FONT,
             **kw)
         self.credits_text = TEXT.game_over["credits"]

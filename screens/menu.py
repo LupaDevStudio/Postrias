@@ -26,7 +26,7 @@ class MenuScreen(ImprovedScreen):
     def __init__(self, **kw):
 
         super().__init__(
-            back_image_path=PATH_IMAGES + "menu_background.png",
+            back_image_path=PATH_IMAGES + "menu_background.jpg",
             font_name=PATH_TITLE_FONT,
             **kw)
         self.opacity_state = -1
@@ -46,7 +46,8 @@ class MenuScreen(ImprovedScreen):
 
     def on_pre_leave(self, *args):
         # Stop the title music
-        music_mixer.stop()
+        if self.manager.current != "settings":
+            music_mixer.stop()
 
         # Unschedule the clock update
         Clock.unschedule(self.update, 1 / FPS)

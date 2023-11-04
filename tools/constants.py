@@ -116,6 +116,7 @@ DICT_LANGUAGE_CORRESPONDANCE = {
     "french": "Français",
     "english": "English"
 }
+LANGUAGES_LIST = tuple(DICT_LANGUAGE_CORRESPONDANCE.values())
 
 
 class Text():
