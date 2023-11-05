@@ -1,4 +1,7 @@
 #:kivy 2.1.0
+#:import PATH_IMAGES tools.path.PATH_IMAGES
+#:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
+#:import LANGUAGES_LIST tools.constants.LANGUAGES_LIST
 
 <SettingsScreen>:
 
@@ -11,20 +14,60 @@
         width: self.height
         release_function: root.go_to_menu
 
-    # Language
+    Slider:
+        id: sound_slider
+        min: 0
+        max: 1
+        value: 0.5
+        pos_hint: {"center_x":0.5, "center_y": 0.6}
+        size_hint: 0.5, 0.1
+
     Label:
-        text: root.language_label
-        bold: True
-        pos_hint: {"center_x": 0.5, "y": 0.95}
-        size_hint: 0.4, 0.05
-        color: root.manager.color_label
-        font_name: root.font
-    FocusableSpinner:
+        text: "Sound volume"
+        pos_hint: {"center_x":0.5, "center_y": 0.65}
+        font_size: 25*root.font_ratio
+        color: TEXT_FONT_COLOR
+        outline_width: 2
+        outline_color: (1,1,1,1)
+
+    Slider:
+        id: music_slider
+        min: 0
+        max: 1
+        value: 0.5
+        pos_hint: {"center_x":0.5, "center_y": 0.8}
+        size_hint: 0.5, 0.1
+
+    Label:
+        text: "Music volume"
+        pos_hint: {"center_x":0.5, "center_y": 0.85}
+        font_size: 25*root.font_ratio
+        color: TEXT_FONT_COLOR
+        outline_width: 2
+        outline_color: (1,1,1,1)
+
+    Spinner:
         id: language_spinner
-        text: root.default_language
-        values: root.list_languages
-        pos_hint: {"center_x": 0.5, "y": 0.9}
-        size_hint: 0.4, 0.05
-        font_name: root.font_name
-        on_text:
-            root.change_language()
+        text: root.current_language
+        pos_hint: {"center_x":0.5, "center_y": 0.2}
+        size_hint: 0.3, 0.1
+        font_size: 20*root.font_ratio
+        # size_hint: None,None
+        # size: 100,44
+        values: root.values_language_list
+        on_press:
+            print("The spinner {} has values {}".format(self, self.values))
+    
+    TextInput:
+        id: code_input
+        text: "Enter your code"
+        pos_hint: {"center_x":0.4, "center_y": 0.4}
+        size_hint: 0.4, 0.08
+        font_size: 20*root.font_ratio
+    
+    Button:
+        id: enter_code_button
+        text: "Validate"
+        pos_hint: {"center_x":0.7, "center_y": 0.4}
+        size_hint: 0.2, 0.08
+        font_size: 20*root.font_ratio
