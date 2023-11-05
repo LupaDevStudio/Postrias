@@ -120,12 +120,15 @@ DICT_LANGUAGE_CORRESPONDANCE = {
 
 class Text():
     def __init__(self, language) -> None:
+        self.language = language
         self.change_language(language)
 
     def change_language(self, language):
         """
         Change the language of the text contained in the class.
         """
+        # Change the language
+        self.language = language
 
         # Load the json file
         data = load_json_file(PATH_LANGUAGE + language + ".json")

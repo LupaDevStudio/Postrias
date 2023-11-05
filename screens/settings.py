@@ -6,36 +6,34 @@ Module for the settings menu
 # Changement de langue (fr en)
 # Réglage volume musique bruitage
 # Désactiver les pubs
+# Revoir le tutoriel
 
 
-from kivy.uix.screenmanager import Screen
 from kivy.properties import StringProperty, ObjectProperty, NumericProperty
 from kivy.core.window import Window
 from tools.path import (
-    PATH_TITLE_FONT,
-    PATH_IMAGES
+    PATH_TEXT_FONT,
+    PATH_IMAGES,
+    TEXT
 )
+from tools.kivy_tools import ImprovedScreen
 
 
-class SettingsScreen(Screen):
+class SettingsScreen(ImprovedScreen):
     def __init__(self, **kw):
-        super().__init__(**kw)
+        super().__init__(
+            font_name=PATH_TEXT_FONT,
+            back_image_path=PATH_IMAGES + "settings_background.png",
+            **kw)
 
-    path_images = PATH_IMAGES
-    font_name = PATH_TITLE_FONT
-    high_score = StringProperty("")
-    top_key = StringProperty()
-    left_key = StringProperty("")
-    bottom_key = StringProperty("")
-    right_key = StringProperty("")
-    interact_key = StringProperty("")
-    path_back_image = PATH_IMAGES + "settings_background.png"
-    font_ratio = NumericProperty(0)
-    width_back_image = ObjectProperty(Window.size[0])
-    height_back_image = ObjectProperty(Window.size[0] * 392 / 632)
+    language_label = StringProperty("")
 
-    def init_screen(self):
-        self.font_ratio = Window.size[0] / 800
-        self.width_back_image = Window.size[0]
-        self.height_back_image = Window.size[0] * 392 / 632
-        pass
+    def on_enter(self):
+        super().on_enter()
+        self.language_label = TEXT.settings["language"]
+
+    def go_to_menu(self):
+        """
+        Go back to the main menu.
+        """
+        self.manager.current = "menu"
