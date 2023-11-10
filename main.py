@@ -23,6 +23,20 @@ from kivy.uix.screenmanager import ScreenManager, NoTransition, Screen
 from kivy.uix.widget import Widget
 from kivy.core.window import Window
 
+
+### Ads imports ###
+
+from kivy.utils import platform
+if platform == "android":
+    from kivads import (
+        BannerAd,
+        InterstitialAd,
+        KivAds,
+        RewardedAd,
+        RewardedInterstitial,
+        TestID,
+    )
+
 ### Module imports ###
 
 from tools.path import (
@@ -90,6 +104,16 @@ class MainApp(App, Widget):
         """
         Window.clearcolor = (0, 0, 0, 1)
         self.icon = PATH_IMAGES + "logo.png"
+        # self.ads = KivAds()
+        # self.interstitial = InterstitialAd(TestID.INTERSTITIAL)
+        # self.banner = BannerAd(TestID.BANNER, int(Window.width))
+        # self.reward = RewardedAd(TestID.REWARD, self.reward_callback)
+        # self.reward_interstitial = RewardedInterstitial(
+        #     TestID.REWARD_INTERSTITIAL, self.reward_callback
+        # )
+
+    # def reward_callback(self, *args):
+    #     print("ADS REWARD")
 
     def on_start(self):
         if MOBILE_MODE:
