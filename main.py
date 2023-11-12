@@ -18,6 +18,10 @@ if os_name == "Windows":
 
 ### Kivy imports ###
 
+# Remove the red dots when right-clicking
+from kivy.config import Config
+Config.set("input", "mouse", "mouse,disable_multitouch")
+
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, NoTransition, Screen
 from kivy.uix.widget import Widget
