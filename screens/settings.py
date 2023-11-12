@@ -6,6 +6,7 @@ Module for the settings menu
 # Changement de langue (fr en)
 # Réglage volume musique bruitage
 # Désactiver les pubs
+# Revoir le tutoriel
 
 # from kivy.uix.spinner import Spinner
 from kivy.properties import StringProperty, ObjectProperty, NumericProperty, ListProperty
