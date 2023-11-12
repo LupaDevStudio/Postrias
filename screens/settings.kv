@@ -1,6 +1,7 @@
 #:kivy 2.1.0
 #:import PATH_IMAGES tools.path.PATH_IMAGES
 #:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
+#:import TEXT tools.constants.TEXT
 #:import LANGUAGES_LIST tools.constants.LANGUAGES_LIST
 
 <SettingsScreen>:
@@ -18,12 +19,12 @@
         min: 0
         max: 1
         value: 0.5
-        pos_hint: {"center_x":0.5, "center_y": 0.6}
-        size_hint: 0.5, 0.1
+        pos_hint: {"center_x":0.75, "center_y": 0.4}
+        size_hint: 0.3, 0.1
 
     Label:
-        text: "Sound volume"
-        pos_hint: {"center_x":0.5, "center_y": 0.65}
+        text: root.sound_volume_label
+        pos_hint: {"center_x":0.75, "center_y": 0.45}
         font_size: 25*root.font_ratio
         color: TEXT_FONT_COLOR
         outline_width: 2
@@ -34,39 +35,61 @@
         min: 0
         max: 1
         value: 0.5
-        pos_hint: {"center_x":0.5, "center_y": 0.8}
-        size_hint: 0.5, 0.1
+        pos_hint: {"center_x":0.75, "center_y": 0.6}
+        size_hint: 0.3, 0.1
 
     Label:
-        text: "Music volume"
-        pos_hint: {"center_x":0.5, "center_y": 0.85}
+        text: root.music_volume_label
+        pos_hint: {"center_x":0.75, "center_y": 0.65}
         font_size: 25*root.font_ratio
         color: TEXT_FONT_COLOR
         outline_width: 2
         outline_color: (1,1,1,1)
 
-    Spinner:
-        id: language_spinner
-        text: root.current_language
-        pos_hint: {"center_x":0.5, "center_y": 0.2}
+    Button:
+        id: apply_music_settings
+        text: root.apply_label
+        pos_hint: {"center_x":0.75, "center_y": 0.225}
         size_hint: 0.3, 0.1
         font_size: 20*root.font_ratio
-        # size_hint: None,None
-        # size: 100,44
+
+    ### Language ###
+    Label:
+        text: root.language_label
+        pos_hint: {"center_x":0.25, "center_y": 0.7}
+        font_size: 25*root.font_ratio
+        color: TEXT_FONT_COLOR
+        outline_width: 2
+        outline_color: (1,1,1,1)
+    FocusableSpinner:
+        id: language_spinner
+        text: root.current_language
+        pos_hint: {"center_x":0.25, "center_y": 0.6}
+        size_hint: 0.3, 0.1
+        font_size: 20*root.font_ratio
         values: root.values_language_list
-        on_press:
-            print("The spinner {} has values {}".format(self, self.values))
-    
+        on_text:
+            root.change_language(self.text)
+
+    ### Ads ###
+    Label:
+        text: root.disable_ads_label
+        pos_hint: {"center_x":0.25, "center_y": 0.45}
+        font_size: 25*root.font_ratio
+        color: TEXT_FONT_COLOR
+        outline_width: 2
+        outline_color: (1,1,1,1)
+
     TextInput:
         id: code_input
-        text: "Enter your code"
-        pos_hint: {"center_x":0.4, "center_y": 0.4}
-        size_hint: 0.4, 0.08
+        hint_text: root.enter_code_label
+        pos_hint: {"center_x":0.25, "center_y": 0.35}
+        size_hint: 0.3, 0.1
         font_size: 20*root.font_ratio
     
     Button:
         id: enter_code_button
-        text: "Validate"
-        pos_hint: {"center_x":0.7, "center_y": 0.4}
-        size_hint: 0.2, 0.08
+        text: root.validate_label
+        pos_hint: {"center_x":0.25, "center_y": 0.225}
+        size_hint: 0.3, 0.1
         font_size: 20*root.font_ratio

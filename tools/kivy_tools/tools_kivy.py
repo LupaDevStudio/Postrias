@@ -277,7 +277,8 @@ class FocusableSpinner(FocusBehavior, Spinner):
                     text=value,
                     size_hint_y=None,
                     height=self.height,
-                    font_name=self.font_name
+                    font_name=self.font_name,
+                    font_size=self.font_size
                 )
                 btn.on_release = partial(self.on_button_press, btn)
                 self._dropdown.add_widget(btn)
