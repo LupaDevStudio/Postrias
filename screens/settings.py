@@ -62,8 +62,6 @@ class SettingsScreen(ImprovedScreen):
         self.music_volume_label = TEXT.settings["music_volume"]
         self.apply_label = TEXT.settings["apply"]
         self.language_label = TEXT.settings["language"]
-        self.disable_ads_label = TEXT.settings["disable_ads"]
-        self.enter_code_label = TEXT.settings["enter_code"]
         self.validate_label = TEXT.settings["validate"]
 
     def on_enter(self, *args):

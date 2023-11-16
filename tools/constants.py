@@ -105,13 +105,10 @@ class UserData():
         self.endings = data["endings"]
         self.music_volume = data["music_volume"]
         self.sound_effects_volume = data["sound_effects_volume"]
-        self.ads_enabled = data["ads_enabled"]
-
 
 USER_DATA = UserData()
 
 ### Language ###
-
 
 DICT_LANGUAGE_CORRESPONDANCE = {
     "french": "Français",
