@@ -106,6 +106,7 @@ class UserData():
         self.music_volume = data["music_volume"]
         self.sound_effects_volume = data["sound_effects_volume"]
 
+
 USER_DATA = UserData()
 
 ### Language ###
@@ -160,4 +161,4 @@ TEXT_FONT_COLOR = (0, 0, 0, 1)
 ### Musics ###
 MUSIC_LIST = ["game_music.mp3", "time_of_the_apocalypse.mp3"]
 SOUND_LIST = ["decision.wav", "decree.wav", "guillotine.wav"]
-START_MUSIC_LIST = ["cinematic_dramatic.mp3",]
+START_MUSIC_LIST = ["cinematic_dramatic.mp3", "my_office.mp3"]

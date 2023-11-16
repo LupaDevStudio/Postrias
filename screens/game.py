@@ -109,24 +109,26 @@ class GameScreen(ImprovedScreen):
 
     def preload(self, *_):
 
-        # Load the night camp background
-        self.night_camp_background = Loader.image(
-            PATH_IMAGES + "night_camp.jpg")
+        if not self.is_loaded:
 
-        # Load the day camp background
-        self.day_camp_background = Loader.image(
-            PATH_IMAGES + "day_camp.jpg")
+            # Load the night camp background
+            self.night_camp_background = Loader.image(
+                PATH_IMAGES + "night_camp.jpg")
 
-        # Load the musics and sounds
-        new_musics = load_sounds(
-            MUSIC_LIST, PATH_MUSICS, USER_DATA.music_volume)
-        new_sounds = load_sounds(SOUND_LIST, PATH_SOUNDS,
-                                 USER_DATA.sound_effects_volume)
-        music_mixer.add_sounds(new_musics)
-        sound_mixer.add_sounds(new_sounds)
+            # Load the day camp background
+            self.day_camp_background = Loader.image(
+                PATH_IMAGES + "day_camp.jpg")
 
-        # Preload the class
-        super().preload()
+            # Load the musics and sounds
+            new_musics = load_sounds(
+                MUSIC_LIST, PATH_MUSICS, USER_DATA.music_volume)
+            new_sounds = load_sounds(SOUND_LIST, PATH_SOUNDS,
+                                     USER_DATA.sound_effects_volume)
+            music_mixer.add_sounds(new_musics)
+            sound_mixer.add_sounds(new_sounds)
+
+            # Preload the class
+            super().preload()
 
     def hide_cards(self, *_):
         """
