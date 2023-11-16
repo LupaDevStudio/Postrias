@@ -9,9 +9,8 @@ Module for the settings menu
 # Revoir le tutoriel
 
 # from kivy.uix.spinner import Spinner
-from kivy.properties import StringProperty, ObjectProperty, NumericProperty, ListProperty
+from kivy.properties import StringProperty, NumericProperty, ListProperty
 from tools.path import (
-    PATH_TITLE_FONT,
     PATH_IMAGES,
     PATH_TEXT_FONT
 )
@@ -23,7 +22,8 @@ from tools.constants import (
     LANGUAGES_LIST,
     DICT_LANGUAGE_CORRESPONDANCE,
     DICT_LANGUAGE_NAME_TO_CODE,
-    TEXT
+    TEXT,
+    __version__
 )
 from tools import (
     music_mixer,
@@ -44,6 +44,8 @@ class SettingsScreen(ImprovedScreen):
     disable_ads_label = StringProperty()
     enter_code_label = StringProperty()
     validate_label = StringProperty()
+    tutorial_label = StringProperty()
+    version_label = StringProperty()
 
     sound_volume_value = NumericProperty(0.5)
     music_volume_value = NumericProperty(0.5)
@@ -63,6 +65,8 @@ class SettingsScreen(ImprovedScreen):
         self.apply_label = TEXT.settings["apply"]
         self.language_label = TEXT.settings["language"]
         self.validate_label = TEXT.settings["validate"]
+        self.tutorial_label = TEXT.settings["tutorial"]
+        self.version_label = TEXT.settings["version"] + __version__
 
     def on_enter(self, *args):
         # Load the labels
@@ -102,3 +106,7 @@ class SettingsScreen(ImprovedScreen):
 
         USER_DATA.music_volume = self.music_volume_value
         USER_DATA.sound_effects_volume = self.sound_volume_value
+
+    def watch_tutorial(self):
+        # TODO
+        pass

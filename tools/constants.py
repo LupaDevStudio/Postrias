@@ -155,7 +155,7 @@ TEXT = Text(language=USER_DATA.language)
 ### Colors ###
 BACKGROUND_COLOR = (0, 0, 0, 1)
 TITLE_FONT_COLOR = (0, 0, 0, 1)
-TEXT_FONT_COLOR = (50 / 255, 50 / 255, 50 / 255, 1)
+TEXT_FONT_COLOR = (0, 0, 0, 1)
 
 ### Musics ###
 MUSIC_LIST = ["game_music.mp3", "time_of_the_apocalypse.mp3"]
