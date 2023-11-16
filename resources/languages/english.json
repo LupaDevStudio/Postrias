@@ -384,9 +384,9 @@
         "validate": "Valider",
         "music_volume": "Volume de la musique",
         "sound_volume": "Volume des bruitages",
-        "enter_code": "Entrez le code",
         "language": "Language",
-        "disable_ads": "Désactiver les publicités"
+        "tutorial": "Tutorial",
+        "version": "Version "
     },
     "game_over": {
         "highscore": "Meilleur score : ",

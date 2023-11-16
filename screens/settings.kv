@@ -20,12 +20,12 @@
         min: 0
         max: 1
         value: root.sound_volume_value
-        pos_hint: {"center_x":0.75, "center_y": 0.4}
+        pos_hint: {"center_x":0.75, "center_y": 0.5}
         size_hint: 0.3, 0.1
 
     Label:
         text: root.sound_volume_label
-        pos_hint: {"center_x":0.75, "center_y": 0.45}
+        pos_hint: {"center_x":0.75, "center_y": 0.55}
         font_size: 25*root.font_ratio
         color: TEXT_FONT_COLOR
         outline_width: 2
@@ -36,12 +36,12 @@
         min: 0
         max: 1
         value: root.music_volume_value
-        pos_hint: {"center_x":0.75, "center_y": 0.6}
+        pos_hint: {"center_x":0.75, "center_y": 0.7}
         size_hint: 0.3, 0.1
 
     Label:
         text: root.music_volume_label
-        pos_hint: {"center_x":0.75, "center_y": 0.65}
+        pos_hint: {"center_x":0.75, "center_y": 0.75}
         font_size: 25*root.font_ratio
         color: TEXT_FONT_COLOR
         outline_width: 2
@@ -50,15 +50,16 @@
     Button:
         id: apply_music_settings_button
         text: root.apply_label
-        pos_hint: {"center_x":0.75, "center_y": 0.225}
+        pos_hint: {"center_x":0.75, "center_y": 0.325}
         size_hint: 0.3, 0.1
         font_size: 20*root.font_ratio
-        on_release: root.apply_music_settings
+        on_release:
+            root.apply_music_settings()
 
     ### Language ###
     Label:
         text: root.language_label
-        pos_hint: {"center_x":0.25, "center_y": 0.7}
+        pos_hint: {"center_x":0.25, "center_y": 0.75}
         font_size: 25*root.font_ratio
         color: TEXT_FONT_COLOR
         outline_width: 2
@@ -66,12 +67,31 @@
     FocusableSpinner:
         id: language_spinner
         text: root.current_language
-        pos_hint: {"center_x":0.25, "center_y": 0.6}
+        pos_hint: {"center_x":0.25, "center_y": 0.65}
         size_hint: 0.3, 0.1
         font_size: 20*root.font_ratio
         values: root.values_language_list
         on_text:
             root.change_language(self.text)
+
+    ### Tutorial ###
+    Button:
+        id: watch_tutorial
+        text: root.tutorial_label
+        pos_hint: {"center_x":0.25, "center_y": 0.325}
+        size_hint: 0.3, 0.1
+        font_size: 20*root.font_ratio
+        on_release:
+            root.watch_tutorial()
+
+    ### Version ###
+    Label:
+        text: root.version_label
+        pos_hint: {"center_x":0.5, "center_y": 0.05}
+        font_size: 15*root.font_ratio
+        color: TEXT_FONT_COLOR
+        outline_width: 2
+        outline_color: (1,1,1,1)
 
     # ### Ads ###
     # Label:
