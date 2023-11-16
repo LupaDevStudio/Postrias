@@ -25,6 +25,10 @@ from tools.constants import (
     DICT_LANGUAGE_NAME_TO_CODE,
     TEXT
 )
+from tools import (
+    music_mixer,
+    sound_mixer
+)
 
 
 class SettingsScreen(ImprovedScreen):
@@ -41,6 +45,9 @@ class SettingsScreen(ImprovedScreen):
     enter_code_label = StringProperty()
     validate_label = StringProperty()
 
+    sound_volume_value = NumericProperty(0.5)
+    music_volume_value = NumericProperty(0.5)
+
     def __init__(self, **kw):
         super().__init__(
             back_image_path=PATH_IMAGES + "settings_background.jpg",
@@ -48,6 +55,9 @@ class SettingsScreen(ImprovedScreen):
             **kw)
 
     def load_labels(self):
+        """
+        Load the text labels of the screen.
+        """
         self.sound_volume_label = TEXT.settings["sound_volume"]
         self.music_volume_label = TEXT.settings["music_volume"]
         self.apply_label = TEXT.settings["apply"]
@@ -57,11 +67,21 @@ class SettingsScreen(ImprovedScreen):
         self.validate_label = TEXT.settings["validate"]
 
     def on_enter(self, *args):
+        # Load the labels
         self.load_labels()
+        # Set the values of the language spinner
         self.values_language_list = LANGUAGES_LIST
         return super().on_enter(*args)
 
     def change_language(self, language_name):
+        """
+        Change the language of the game interface.
+
+        Parameters
+        ----------
+        language_name : str
+            Name of the language.
+        """
         language_code = DICT_LANGUAGE_NAME_TO_CODE[language_name]
         USER_DATA.language = language_code
         TEXT.change_language(language_code)
@@ -71,4 +91,16 @@ class SettingsScreen(ImprovedScreen):
         """
         Go back to the main menu.
         """
+
         self.manager.current = "menu"
+
+    def apply_music_settings(self):
+        """
+        Apply the music settings choosed by the user using the sliders.
+        """
+
+        music_mixer.change_volume(self.music_volume_value)
+        sound_mixer.change_volume(self.sound_volume_value)
+
+        USER_DATA.music_volume = self.music_volume_value
+        USER_DATA.sound_effects_volume = self.sound_volume_value

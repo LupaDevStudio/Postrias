@@ -19,7 +19,7 @@
         id: sound_slider
         min: 0
         max: 1
-        value: 0.5
+        value: root.sound_volume_value
         pos_hint: {"center_x":0.75, "center_y": 0.4}
         size_hint: 0.3, 0.1
 
@@ -35,7 +35,7 @@
         id: music_slider
         min: 0
         max: 1
-        value: 0.5
+        value: root.music_volume_value
         pos_hint: {"center_x":0.75, "center_y": 0.6}
         size_hint: 0.3, 0.1
 
@@ -48,11 +48,12 @@
         outline_color: (1,1,1,1)
 
     Button:
-        id: apply_music_settings
+        id: apply_music_settings_button
         text: root.apply_label
         pos_hint: {"center_x":0.75, "center_y": 0.225}
         size_hint: 0.3, 0.1
         font_size: 20*root.font_ratio
+        on_release: root.apply_music_settings
 
     ### Language ###
     Label:

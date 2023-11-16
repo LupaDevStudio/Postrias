@@ -300,3 +300,6 @@ class GameScreen(ImprovedScreen):
         else:
             self.update_display_resources()
             self.manager.current = "game_over"
+
+    def rewind(self):
+        pass
