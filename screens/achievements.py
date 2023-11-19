@@ -112,10 +112,11 @@ class AchievementsScreen(ImprovedScreen):
         """
         Go to the game over menu and display the ending.
         """
-        game.ending_text = TEXT.ending[ending_code]["text"]
-        game.score = 0
-        game.ending = ending_code
-        self.manager.current = "game_over"
+        if USER_DATA.endings[ending_code]:
+            game.ending_text = TEXT.ending[ending_code]["text"]
+            game.score = 0
+            game.ending = ending_code
+            self.manager.current = "game_over"
 
     def build_scroll_view(self):
         self.ids.my_sv_layout.reset_screen()
