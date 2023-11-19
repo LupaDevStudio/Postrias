@@ -26,7 +26,7 @@ from tools import (
     music_mixer,
     game
 )
-from tools.kivy_tools import ImprovedScreen
+from tools.kivy_tools import ImprovedScreen, ImageWithTextButton
 
 ################
 ### Constant ###
@@ -149,7 +149,7 @@ class AchievementsScreen(ImprovedScreen):
             # Image
             image = Image(
                 source=path_image,
-                size_hint=(0.8, 0.7),
+                size_hint=(0.7, 0.7),
                 width=self.image_dimension,
                 height=self.image_dimension,
                 allow_stretch=True,
@@ -161,14 +161,24 @@ class AchievementsScreen(ImprovedScreen):
             # Frame
             frame = Image(
                 source=PATH_IMAGES + "collection_frame.png",
-                size_hint=(0.8, 0.7),
+                size_hint=(0.8, 0.8),
                 width=self.image_dimension,
                 height=self.image_dimension,
                 allow_stretch=True,
                 keep_ratio=False,
-                pos_hint={"center_x": 0.5, "center_y": 0.5}
+                pos_hint={"center_x": 0.5, "center_y": 0.5},
             )
             relative_layout.add_widget(frame)
+
+            frame_button = Button(
+                on_release=partial(self.display_ending, ending_code),
+                size_hint=(0.8, 0.8),
+                width=self.image_dimension,
+                height=self.image_dimension,
+                pos_hint={"center_x": 0.5, "center_y": 0.5},
+                opacity=0
+            )
+            relative_layout.add_widget(frame_button)
 
             # Add the layout
             self.ids.my_sv_layout.add_widget(relative_layout)
