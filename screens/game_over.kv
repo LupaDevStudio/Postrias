@@ -7,7 +7,7 @@
     # Game Over Label
     Label:
         id: game_over_label
-        text: "Game Over"
+        text: root.title_text
         size_hint: 1, 0.5
         pos_hint: {"center_x": 0.5, "center_y": 0.9}
         font_size: 50*root.font_ratio
@@ -21,9 +21,9 @@
         id: back_button
         source: PATH_IMAGES + "back_arrow.png"
         size_hint: None, 0.15
-        pos_hint: {"x": 0.05, "y": 0.05}
+        pos_hint: {"x":0.025, "top": 1}
         allow_stretch: True
-        keep_ratio: True
+        width: self.height
         release_function: root.back_to_menu
 
     # Score

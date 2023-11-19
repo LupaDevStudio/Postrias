@@ -3,20 +3,21 @@
 #:import PATH_TEXT_FONT tools.path.PATH_TEXT_FONT
 #:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
 #:import partial functools.partial
-#:set center_x_faction 0.11
+#:set center_x_faction 0.1
 #:set center_x_resource 0.93
-#:set upper_y_indic 0.93
+#:set horizontal_shift 0.01
+#:set upper_y_indic 0.92
 #:set vertical_spacing_indic 0.09
 #:set label_image_spacing 0.05
 #:set image_size_indic 0.08
-#:set center_img_height 0.45
+#:set center_img_height 0.5
 #:set center_img_width 0.5
 #:set center_img_center_y 0.7
 #:set side_img_width 0.3
 #:set side_img_height 0.2
 #:set side_img_center_x 0.175
 #:set side_img_center_y 0.25
-#:set text_filling_ratio 0.9
+#:set text_filling_ratio 0.85
 #:set sign_offset 0.035
 #:set plus_minus_ratio 1/2.5
 
@@ -30,8 +31,8 @@
     Image:
         id: order_image
         source: PATH_IMAGES + "card_layout.png"
-        size_hint: 0.17, vertical_spacing_indic*4.6
-        pos_hint: {"center_x": center_x_faction - label_image_spacing*0.45, "center_y": 0.79}
+        size_hint: 0.15, vertical_spacing_indic*4.6
+        pos_hint: {"center_x": center_x_faction - label_image_spacing*0.45, "center_y": 0.785}
         allow_stretch: True
         keep_ratio:False
 
@@ -39,56 +40,56 @@
     Image:
         id: plus_order
         source: PATH_IMAGES + "plus.png"
-        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_faction + sign_offset - horizontal_shift, "center_y": upper_y_indic}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: minus_order
         source: PATH_IMAGES + "minus.png"
-        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_faction + sign_offset - horizontal_shift, "center_y": upper_y_indic}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: plus_military
         source: PATH_IMAGES + "plus.png"
-        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic- vertical_spacing_indic*1}
+        pos_hint: {"center_x": center_x_faction + sign_offset - horizontal_shift, "center_y": upper_y_indic- vertical_spacing_indic*1}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: minus_military
         source: PATH_IMAGES + "minus.png"
-        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic- vertical_spacing_indic*1}
+        pos_hint: {"center_x": center_x_faction + sign_offset - horizontal_shift, "center_y": upper_y_indic- vertical_spacing_indic*1}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: plus_civilian
         source: PATH_IMAGES + "plus.png"
-        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic- vertical_spacing_indic*2}
+        pos_hint: {"center_x": center_x_faction + sign_offset - horizontal_shift, "center_y": upper_y_indic- vertical_spacing_indic*2}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: minus_civilian
         source: PATH_IMAGES + "minus.png"
-        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic- vertical_spacing_indic*2}
+        pos_hint: {"center_x": center_x_faction + sign_offset - horizontal_shift, "center_y": upper_y_indic- vertical_spacing_indic*2}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: plus_paleo
         source: PATH_IMAGES + "plus.png"
-        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic- vertical_spacing_indic*3}
+        pos_hint: {"center_x": center_x_faction + sign_offset - horizontal_shift, "center_y": upper_y_indic- vertical_spacing_indic*3}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: minus_paleo
         source: PATH_IMAGES + "minus.png"
-        pos_hint: {"center_x": center_x_faction + sign_offset, "center_y": upper_y_indic- vertical_spacing_indic*3}
+        pos_hint: {"center_x": center_x_faction + sign_offset - horizontal_shift, "center_y": upper_y_indic- vertical_spacing_indic*3}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
@@ -97,7 +98,7 @@
     IndicatorLabel:
         id: order_label
         text: root.order_value
-        pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_faction - horizontal_shift, "center_y": upper_y_indic}
         font_size: 20*root.font_ratio
         font_name: root.font_name
         color: TEXT_FONT_COLOR
@@ -105,13 +106,13 @@
         id: order_image
         source: PATH_IMAGES + "order.png"
         size_hint: None, image_size_indic
-        pos_hint: {"center_x": center_x_faction - label_image_spacing, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_faction - label_image_spacing - horizontal_shift, "center_y": upper_y_indic}
         allow_stretch: True
         width: self.height
     IndicatorLabel:
         id: military_label
         text: root.military_value
-        pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic - vertical_spacing_indic*1}
+        pos_hint: {"center_x": center_x_faction - horizontal_shift, "center_y": upper_y_indic - vertical_spacing_indic*1}
         font_size: 20*root.font_ratio
         font_name: root.font_name
         color: TEXT_FONT_COLOR
@@ -119,13 +120,13 @@
         id: military_image
         source: PATH_IMAGES + "military.png"
         size_hint: None, image_size_indic
-        pos_hint: {"center_x": center_x_faction - label_image_spacing, "center_y": upper_y_indic - vertical_spacing_indic*1}
+        pos_hint: {"center_x": center_x_faction - label_image_spacing - horizontal_shift, "center_y": upper_y_indic - vertical_spacing_indic*1}
         allow_stretch: True
         width: self.height
     IndicatorLabel:
         id: civilian_label
         text: root.civilian_value
-        pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic - vertical_spacing_indic*2}
+        pos_hint: {"center_x": center_x_faction - horizontal_shift, "center_y": upper_y_indic - vertical_spacing_indic*2}
         font_size: 20*root.font_ratio
         font_name: root.font_name
         color: TEXT_FONT_COLOR
@@ -133,13 +134,13 @@
         id: civilian_image
         source: PATH_IMAGES + "civilian.png"
         size_hint: None, image_size_indic
-        pos_hint: {"center_x": center_x_faction - label_image_spacing, "center_y": upper_y_indic - vertical_spacing_indic*2}
+        pos_hint: {"center_x": center_x_faction - label_image_spacing - horizontal_shift, "center_y": upper_y_indic - vertical_spacing_indic*2}
         allow_stretch: True
         width: self.height
     IndicatorLabel:
         id: paleo_label
         text: root.paleo_value
-        pos_hint: {"center_x": center_x_faction, "center_y": upper_y_indic - vertical_spacing_indic*3}
+        pos_hint: {"center_x": center_x_faction - horizontal_shift, "center_y": upper_y_indic - vertical_spacing_indic*3}
         font_size: 20*root.font_ratio
         font_name: root.font_name
         color: TEXT_FONT_COLOR
@@ -147,7 +148,7 @@
         id: paleo_image
         source: PATH_IMAGES + "paleo.png"
         size_hint: None, image_size_indic
-        pos_hint: {"center_x": center_x_faction - label_image_spacing, "center_y": upper_y_indic - vertical_spacing_indic*3}
+        pos_hint: {"center_x": center_x_faction - label_image_spacing - horizontal_shift, "center_y": upper_y_indic - vertical_spacing_indic*3}
         allow_stretch: True
         width: self.height
 
@@ -155,8 +156,8 @@
     Image:
         id: resources_background
         source: PATH_IMAGES + "card_layout.png"
-        size_hint: 0.16, vertical_spacing_indic*3.6
-        pos_hint: {"center_x": center_x_resource - label_image_spacing*0.45, "center_y": 0.84}
+        size_hint: 0.15, vertical_spacing_indic*3.6
+        pos_hint: {"center_x": center_x_resource - label_image_spacing*0.45, "center_y": 0.83}
         allow_stretch: True
         keep_ratio:False
     
@@ -164,42 +165,42 @@
     Image:
         id: plus_food
         source: PATH_IMAGES + "plus.png"
-        pos_hint: {"center_x": center_x_resource + sign_offset, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: minus_food
         source: PATH_IMAGES + "minus.png"
-        pos_hint: {"center_x": center_x_resource + sign_offset, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: plus_weapons
         source: PATH_IMAGES + "plus.png"
-        pos_hint: {"center_x": center_x_resource + sign_offset, "center_y": upper_y_indic - 1* vertical_spacing_indic}
+        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic - 1* vertical_spacing_indic}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: minus_weapons
         source: PATH_IMAGES + "minus.png"
-        pos_hint: {"center_x": center_x_resource + sign_offset, "center_y": upper_y_indic - 1* vertical_spacing_indic}
+        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic - 1* vertical_spacing_indic}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: plus_tools
         source: PATH_IMAGES + "plus.png"
-        pos_hint: {"center_x": center_x_resource + sign_offset, "center_y": upper_y_indic - 2* vertical_spacing_indic}
+        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic - 2* vertical_spacing_indic}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: minus_tools
         source: PATH_IMAGES + "minus.png"
-        pos_hint: {"center_x": center_x_resource + sign_offset, "center_y": upper_y_indic - 2* vertical_spacing_indic}
+        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic - 2* vertical_spacing_indic}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
@@ -208,7 +209,7 @@
     IndicatorLabel:
         id: food_label
         text: root.food_value
-        pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_resource - horizontal_shift, "center_y": upper_y_indic}
         font_size: 20*root.font_ratio
         font_name: root.font_name
         color: TEXT_FONT_COLOR
@@ -216,13 +217,13 @@
         id: food_image
         source: PATH_IMAGES + "food.png"
         size_hint: None, image_size_indic
-        pos_hint: {"center_x": center_x_resource - label_image_spacing, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_resource - label_image_spacing - horizontal_shift, "center_y": upper_y_indic}
         allow_stretch: True
         width: self.height
     IndicatorLabel:
         id: weapons_label
         text: root.weapons_value
-        pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic -vertical_spacing_indic*1}
+        pos_hint: {"center_x": center_x_resource - horizontal_shift, "center_y": upper_y_indic -vertical_spacing_indic*1}
         font_size: 20*root.font_ratio
         font_name: root.font_name
         color: TEXT_FONT_COLOR
@@ -230,13 +231,13 @@
         id: weapons_image
         source: PATH_IMAGES + "weapons.png"
         size_hint: None, image_size_indic
-        pos_hint: {"center_x": center_x_resource - label_image_spacing, "center_y": upper_y_indic -vertical_spacing_indic*1}
+        pos_hint: {"center_x": center_x_resource - label_image_spacing - horizontal_shift, "center_y": upper_y_indic -vertical_spacing_indic*1}
         allow_stretch: True
         width: self.height
     IndicatorLabel:
         id: tools_label
         text: root.tools_value
-        pos_hint: {"center_x": center_x_resource, "center_y": upper_y_indic -vertical_spacing_indic*2}
+        pos_hint: {"center_x": center_x_resource - horizontal_shift, "center_y": upper_y_indic -vertical_spacing_indic*2}
         font_size: 20*root.font_ratio
         font_name: root.font_name
         color: TEXT_FONT_COLOR
@@ -244,7 +245,7 @@
         id: tools_image
         source: PATH_IMAGES + "tools.png"
         size_hint: None, image_size_indic
-        pos_hint: {"center_x": center_x_resource - label_image_spacing, "center_y": upper_y_indic -vertical_spacing_indic*2}
+        pos_hint: {"center_x": center_x_resource - label_image_spacing - horizontal_shift, "center_y": upper_y_indic -vertical_spacing_indic*2}
         allow_stretch: True
         width: self.height
 
@@ -270,6 +271,7 @@
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
         release_function: partial(root.choose_answer, "left")
+        text_filling_ratio: text_filling_ratio
 
     # Decision right
     ImageWithTextButton:
@@ -282,6 +284,7 @@
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
         release_function: partial(root.choose_answer, "right")
+        text_filling_ratio: text_filling_ratio
     
     # Decision guillotine
     ImageWithTextButton:
@@ -297,7 +300,7 @@
     # Event background
     ImageWithTextButton:
         id: event
-        source: PATH_IMAGES + "event_background.png"
+        source: PATH_IMAGES + "event_background.jpg"
         size_hint: center_img_width, center_img_height
         pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
         allow_stretch: True
@@ -355,7 +358,7 @@
     # Answer
     ImageWithText:
         id: answer
-        source: PATH_IMAGES + "answer_background.png"
+        source: PATH_IMAGES + "answer_background.jpg"
         size_hint: center_img_width, center_img_height
         pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
         allow_stretch: True
@@ -372,3 +375,13 @@
         allow_stretch: True
         keep_ratio: True
         release_function: root.go_to_next_card
+
+    # # Rewind button
+    # ImageWithTextButton:
+    #     id: rewind_button
+    #     source: PATH_IMAGES + "rewind_button.png"
+    #     size_hint: 0.1, None
+    #     pos_hint: {"center_x": 0.9, "center_y": 0.5}
+    #     allow_stretch: True
+    #     keep_ratio: True
+    #     release_function: root.rewind

@@ -43,6 +43,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+.buildozer
+bin
 
 # Installer logs
 pip-log.txt

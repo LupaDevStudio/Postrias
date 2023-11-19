@@ -14,7 +14,7 @@ from typing import Literal
 
 from kivy.lang import Builder
 from kivy.clock import Clock
-from kivy.properties import StringProperty
+from kivy.properties import StringProperty, NumericProperty
 from kivy.loader import Loader, ProxyImage
 
 ### Module imports ###
@@ -22,15 +22,24 @@ from kivy.loader import Loader, ProxyImage
 from tools.path import (
     PATH_TEXT_FONT,
     PATH_IMAGES,
-    PATH_SCREENS
+    PATH_MUSICS,
+    PATH_SOUNDS
 )
 from tools import (
     music_mixer,
     sound_mixer,
     game,
+    USER_DATA
 )
 from tools.kivy_tools import (
     ImprovedScreen
+)
+from tools.game_tools import (
+    load_sounds
+)
+from tools.constants import (
+    MUSIC_LIST,
+    SOUND_LIST
 )
 
 
@@ -55,12 +64,14 @@ class GameScreen(ImprovedScreen):
     weapons_value = StringProperty("0")
     tools_value = StringProperty("0")
 
+    # font_size_expand = NumericProperty(1.25)
+
     # Boolean indicating if the current moment is an answer or not
     is_answer = False
 
     def __init__(self, **kw):
         super().__init__(
-            back_image_path=PATH_IMAGES + "day_camp.png",
+            back_image_path=PATH_IMAGES + "day_camp.jpg",
             font_name=PATH_TEXT_FONT,
             ** kw)
 
@@ -98,18 +109,26 @@ class GameScreen(ImprovedScreen):
 
     def preload(self, *_):
 
-        # Load the kv content
-        # Builder.load_file(PATH_SCREENS + "game.kv", encoding="utf-8")
+        if not self.is_loaded:
 
-        # Load the night camp background
-        self.night_camp_background = Loader.image(
-            PATH_IMAGES + "night_camp.png")
+            # Load the night camp background
+            self.night_camp_background = Loader.image(
+                PATH_IMAGES + "night_camp.jpg")
 
-        self.day_camp_background = Loader.image(
-            PATH_IMAGES + "day_camp.png")
+            # Load the day camp background
+            self.day_camp_background = Loader.image(
+                PATH_IMAGES + "day_camp.jpg")
 
-        # Preload the class
-        super().preload()
+            # Load the musics and sounds
+            new_musics = load_sounds(
+                MUSIC_LIST, PATH_MUSICS, USER_DATA.music_volume)
+            new_sounds = load_sounds(SOUND_LIST, PATH_SOUNDS,
+                                     USER_DATA.sound_effects_volume)
+            music_mixer.add_sounds(new_musics)
+            sound_mixer.add_sounds(new_sounds)
+
+            # Preload the class
+            super().preload()
 
     def hide_cards(self, *_):
         """
@@ -283,3 +302,6 @@ class GameScreen(ImprovedScreen):
         else:
             self.update_display_resources()
             self.manager.current = "game_over"
+
+    def rewind(self):
+        pass

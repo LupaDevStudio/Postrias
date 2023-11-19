@@ -6,8 +6,6 @@ Module to manage musics and sound effects
 ### Imports ###
 ###############
 
-import os
-
 from math import exp
 
 from kivy.core.audio import SoundLoader
@@ -64,6 +62,17 @@ class DynamicMusicMixer(MusicMixer):
             dico_frame_state[key] = 0
         self.dico_frame_state = dico_frame_state
         self.volume = volume
+
+    def add_sounds(self, sound_dict):
+        for sound_name in sound_dict:
+            self.dico_frame_state[sound_name] = 0
+            self.musics[sound_name] = sound_dict[sound_name]
+            self.musics[sound_name].volume = self.volume
+
+    def add_sound(self, sound, sound_name):
+        self.dico_frame_state[sound_name] = 0
+        self.musics[sound_name] = sound
+        self.musics[sound_name].volume = self.volume
 
     def fade_out(self, name, duration, mode="linear"):
         if mode == "exp":
@@ -155,7 +164,7 @@ def exp_fade_out(t):
     return 1 - exp((t - 60) * 0.15)
 
 
-def load_sounds(foldername: str, volume: float) -> dict:
+def load_sounds(music_list: str, foldername: str, volume: float) -> dict:
     """
     Load all sounds of a folder at once.
 
@@ -173,7 +182,7 @@ def load_sounds(foldername: str, volume: float) -> dict:
         Dictionnary with the loaded sounds.
     """
     sound_dict = {}
-    for file in os.listdir(foldername):
+    for file in music_list:
         name_file = file.split(".")[0]
         sound_dict[name_file] = SoundLoader.load(foldername + file)
         sound_dict[name_file].volume = volume

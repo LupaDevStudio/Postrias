@@ -24,6 +24,7 @@ from kivy.properties import (
 ### Local imports ###
 
 from tools.basic_tools import get_image_size
+from tools.constants import MOBILE_MODE
 
 ###############
 ### Classes ###
@@ -44,6 +45,7 @@ class ImprovedScreen(Screen):
     # Create the font_name properties
     font_ratio = NumericProperty(1)
     font_name = StringProperty("Roboto")
+    font_size_expand = 1
 
     def __init__(self, font_name="Roboto", back_image_path=None, **kw):
 
@@ -136,6 +138,8 @@ class ImprovedScreen(Screen):
         if not self.is_loaded:
             self.preload()
 
+        self.update_font_ratio()
+
     def on_enter(self, *args):
         """
         Initialize the screen when it is opened.
@@ -173,7 +177,12 @@ class ImprovedScreen(Screen):
         """
         Update the font_name ratio to use on the screen to keep letter size constant with Window size changes.
         """
-        self.font_ratio = Window.size[1] / 600
+        if MOBILE_MODE:
+            self.font_ratio = Window.size[1] / \
+                600 + (Window.size[0] / Window.size[1] - 1) * 0.5
+        else:
+            self.font_ratio = Window.size[1] / \
+                600 + (Window.size[0] / Window.size[1] - 1) * 0.5
 
     def disable_widget(self, widget_id: str):
         """

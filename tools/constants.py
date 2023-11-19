@@ -111,21 +111,28 @@ USER_DATA = UserData()
 
 ### Language ###
 
-
 DICT_LANGUAGE_CORRESPONDANCE = {
     "french": "Français",
     "english": "English"
 }
+DICT_LANGUAGE_NAME_TO_CODE = {
+    "Français": "french",
+    "English": "english"
+}
+LANGUAGES_LIST = tuple(DICT_LANGUAGE_CORRESPONDANCE.values())
 
 
 class Text():
     def __init__(self, language) -> None:
+        self.language = language
         self.change_language(language)
 
     def change_language(self, language):
         """
         Change the language of the text contained in the class.
         """
+        # Change the language
+        self.language = language
 
         # Load the json file
         data = load_json_file(PATH_LANGUAGE + language + ".json")
@@ -149,4 +156,9 @@ TEXT = Text(language=USER_DATA.language)
 ### Colors ###
 BACKGROUND_COLOR = (0, 0, 0, 1)
 TITLE_FONT_COLOR = (0, 0, 0, 1)
-TEXT_FONT_COLOR = (50 / 255, 50 / 255, 50 / 255, 1)
+TEXT_FONT_COLOR = (0, 0, 0, 1)
+
+### Musics ###
+MUSIC_LIST = ["game_music.mp3", "time_of_the_apocalypse.mp3"]
+SOUND_LIST = ["decision.wav", "decree.wav", "guillotine.wav"]
+START_MUSIC_LIST = ["cinematic_dramatic.mp3", "my_office.mp3"]

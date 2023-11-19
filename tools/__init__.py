@@ -26,7 +26,10 @@ from tools.path import (
 )
 
 from tools.constants import (
-    USER_DATA
+    USER_DATA,
+    MUSIC_LIST,
+    SOUND_LIST,
+    START_MUSIC_LIST
 )
 
 from tools.postrias import Game
@@ -37,8 +40,9 @@ from tools.postrias import Game
 ###############
 
 # Load the dictionnaries
-MUSIC_DICT = load_sounds(PATH_MUSICS, USER_DATA.music_volume)
-SOUND_DICT = load_sounds(PATH_SOUNDS, USER_DATA.sound_effects_volume)
+MUSIC_DICT = load_sounds(START_MUSIC_LIST, PATH_MUSICS, USER_DATA.music_volume)
+SOUND_DICT = load_sounds([], PATH_SOUNDS,
+                         USER_DATA.sound_effects_volume)
 
 # Create the mixer
 music_mixer = DynamicMusicMixer(MUSIC_DICT, USER_DATA.music_volume)

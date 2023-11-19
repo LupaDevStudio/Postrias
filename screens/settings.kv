@@ -1,140 +1,117 @@
 #:kivy 2.1.0
+#:import PATH_IMAGES tools.path.PATH_IMAGES
+#:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
+#:import TEXT tools.constants.TEXT
+#:import LANGUAGES_LIST tools.constants.LANGUAGES_LIST
 
 <SettingsScreen>:
 
-    # Image:
-    #     id: back_image
-    #     source: root.path_back_image
-    #     size_hint: None,None
-    #     width: root.width_back_image
-    #     height: root.height_back_image
-    #     pos_hint: {"center_x":0.5,"center_y":0.5}
-    #     allow_stretch: True
-    #     keep_ratio: True
-        
-    # Image:
-    #     source: root.path_images + "back_arrow.png"
-    #     size_hint: None, 0.1
-    #     pos_hint: {"x":0.025, "top": 0.975}
-    #     allow_stretch: True
-    #     width: self.height
-    # Button:
-    #     size_hint: None, 0.1
-    #     width: self.height
-    #     pos_hint: {"x":0.025, "top": 0.975}
-    #     background_color: (0, 0, 0, 0)
-    #     on_release:
-    #         root.manager.init_screen("menu")
+    # Back arrow
+    ImageWithTextButton:
+        source: PATH_IMAGES + "back_arrow.png"
+        size_hint: None, 0.15
+        pos_hint: {"x":0.025, "top": 1}
+        allow_stretch: True
+        width: self.height
+        release_function: root.go_to_menu
 
+    Slider:
+        id: sound_slider
+        min: 0
+        max: 1
+        value: root.sound_volume_value
+        pos_hint: {"center_x":0.75, "center_y": 0.5}
+        size_hint: 0.3, 0.1
+
+    Label:
+        text: root.sound_volume_label
+        pos_hint: {"center_x":0.75, "center_y": 0.55}
+        font_size: 25*root.font_ratio
+        color: TEXT_FONT_COLOR
+        outline_width: 2
+        outline_color: (1,1,1,1)
+
+    Slider:
+        id: music_slider
+        min: 0
+        max: 1
+        value: root.music_volume_value
+        pos_hint: {"center_x":0.75, "center_y": 0.7}
+        size_hint: 0.3, 0.1
+
+    Label:
+        text: root.music_volume_label
+        pos_hint: {"center_x":0.75, "center_y": 0.75}
+        font_size: 25*root.font_ratio
+        color: TEXT_FONT_COLOR
+        outline_width: 2
+        outline_color: (1,1,1,1)
+
+    Button:
+        id: apply_music_settings_button
+        text: root.apply_label
+        pos_hint: {"center_x":0.75, "center_y": 0.325}
+        size_hint: 0.3, 0.1
+        font_size: 20*root.font_ratio
+        on_release:
+            root.apply_music_settings()
+
+    ### Language ###
+    Label:
+        text: root.language_label
+        pos_hint: {"center_x":0.25, "center_y": 0.75}
+        font_size: 25*root.font_ratio
+        color: TEXT_FONT_COLOR
+        outline_width: 2
+        outline_color: (1,1,1,1)
+    FocusableSpinner:
+        id: language_spinner
+        text: root.current_language
+        pos_hint: {"center_x":0.25, "center_y": 0.65}
+        size_hint: 0.3, 0.1
+        font_size: 20*root.font_ratio
+        values: root.values_language_list
+        on_text:
+            root.change_language(self.text)
+
+    ### Tutorial ###
+    Button:
+        id: watch_tutorial
+        text: root.tutorial_label
+        pos_hint: {"center_x":0.25, "center_y": 0.325}
+        size_hint: 0.3, 0.1
+        font_size: 20*root.font_ratio
+        on_release:
+            root.watch_tutorial()
+
+    ### Version ###
+    Label:
+        text: root.version_label
+        pos_hint: {"center_x":0.5, "center_y": 0.05}
+        font_size: 15*root.font_ratio
+        color: TEXT_FONT_COLOR
+        outline_width: 2
+        outline_color: (1,1,1,1)
+
+    # ### Ads ###
     # Label:
-    #     text: root.high_score
-    #     bold: True
-    #     color: root.manager.color_label
-    #     pos_hint: {"right":1, "top":1}
-    #     size_hint: 0.2, 0.1
-    #     font_name: root.font
-    #     font_size: 30*root.font_ratio
-
-
-    # # KEYBOARD CONFIGURATION
-
-    # Button:
-    #     id: top_button
-    #     text: "Move up"
-    #     size_hint: 0.15, 0.1
-    #     pos_hint: {"x":0.45, "y":0.7}
-    #     color: root.manager.gray_color
-    #     font_name: root.font
-    #     font_size: 20*root.font_ratio
-    #     on_release:
-    #         root.select_next_key("top")
-    # Button:
-    #     id: top_key_input
-    #     text: root.top_key
-    #     size_hint: 0.1, 0.1
-    #     pos_hint: {"x":0.65, "y": 0.7}
-    #     disabled: True
-    #     font_name: root.font
-    #     font_size: 20*root.font_ratio
-    #     color: root.manager.color_label
-
-    # Button:
-    #     id: left_button
-    #     text: "Move left"
-    #     size_hint: 0.15, 0.1
-    #     pos_hint: {"x":0.45, "y":0.55}
-    #     color: root.manager.gray_color
-    #     font_size: 20*root.font_ratio
-    #     font_name: root.font
-    #     on_release:
-    #         root.select_next_key("left")
-    # Button:
-    #     id: left_key_input
-    #     text: root.left_key
-    #     size_hint: 0.1, 0.1
-    #     pos_hint: {"x":0.65, "y": 0.55}
-    #     disabled: True
-    #     font_name: root.font
-    #     font_size: 20*root.font_ratio
-    #     color: root.manager.color_label
-
-    # Button:
-    #     id: bottom_button
-    #     text: "Move down"
-    #     size_hint: 0.15, 0.1
-    #     pos_hint: {"x":0.45, "y":0.4}
-    #     color: root.manager.gray_color
-    #     font_size: 20*root.font_ratio
-    #     font_name: root.font
-    #     on_release:
-    #         root.select_next_key("bottom")
-    # Button:
-    #     id: bottom_key_input
-    #     text: root.bottom_key
-    #     size_hint: 0.1, 0.1
-    #     pos_hint: {"x":0.65, "y": 0.4}
-    #     disabled: True
-    #     font_name: root.font
-    #     font_size: 20*root.font_ratio
-    #     color: root.manager.color_label
-
-
-    # Button:
-    #     id: right_button
-    #     text: "Move right"
-    #     size_hint: 0.15, 0.1
-    #     pos_hint: {"x":0.45, "y":0.25}
-    #     color: root.manager.gray_color
-    #     font_size: 20*root.font_ratio
-    #     font_name: root.font
-    #     on_release:
-    #         root.select_next_key("right")
-    # Button:
-    #     id: right_key_input
-    #     text: root.right_key
-    #     size_hint: 0.1, 0.1
-    #     disabled: True
-    #     font_name: root.font
-    #     font_size: 20*root.font_ratio
-    #     pos_hint: {"x":0.65, "y": 0.25}
-    #     color: root.manager.color_label
-
-    # Button:
-    #     id: interact_button
-    #     text: "Interact"
-    #     size_hint: 0.15, 0.1
-    #     pos_hint: {"x":0.45, "y":0.1}
-    #     color: root.manager.gray_color
-    #     font_size: 20*root.font_ratio
-    #     font_name: root.font
-    #     on_release:
-    #         root.select_next_key("INTERACT")
-    # Button:
-    #     id: interact_key_input
-    #     text: root.interact_key
-    #     size_hint: 0.1, 0.1
-    #     disabled: True
-    #     font_name: root.font
-    #     font_size: 20*root.font_ratio
-    #     pos_hint: {"x":0.65, "y": 0.1}
+    #     text: root.disable_ads_label
+    #     pos_hint: {"center_x":0.25, "center_y": 0.45}
+    #     font_size: 25*root.font_ratio
     #     color: TEXT_FONT_COLOR
+    #     outline_width: 2
+    #     outline_color: (1,1,1,1)
+
+    # TextInput:
+    #     id: code_input
+    #     hint_text: root.enter_code_label
+    #     pos_hint: {"center_x":0.25, "center_y": 0.35}
+    #     size_hint: 0.3, 0.1
+    #     font_size: 20*root.font_ratio
+    
+    # Button:
+    #     id: enter_code_button
+    #     text: root.validate_label
+    #     pos_hint: {"center_x":0.25, "center_y": 0.225}
+    #     size_hint: 0.3, 0.1
+    #     font_size: 20*root.font_ratio
