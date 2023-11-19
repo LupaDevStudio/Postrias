@@ -163,8 +163,15 @@ class Game():
         """
         Compute the score at the end of the game.
         """
-        print("TODO")
-        return 0
+        score = self.day * 100
+        score += self.food * 15
+        score += self.tools * 15
+        score += self.weapons * 15
+        score += 50 - abs(self.paleo - 50) * 2
+        score += 50 - abs(self.military - 50) * 2
+        score += 50 - abs(self.order - 50) * 2
+        score += 50 - abs(self.civilian - 50) * 2
+        return score
 
     def start_day(self):
         """
