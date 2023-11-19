@@ -229,6 +229,23 @@ class Game():
         for key in consequence_dict:
             self.effect_dict[key] += consequence_dict[key]
 
+    def continue_game(self):
+        if abs(self.order - 50) >= 50:
+            self.order = 50
+        if abs(self.military - 50) >= 50:
+            self.military = 50
+        if abs(self.civilian - 50) >= 50:
+            self.civilian = 50
+        if abs(self.paleo - 50) >= 50:
+            self.paleo = 50
+        if self.food <= 0:
+            self.food = 30
+        if self.tools <= 0:
+            self.tools = 30
+        if self.weapons <= 0:
+            self.weapons = 30
+        self.game_over = False
+
     def make_choice(self, choice: Literal["left", "down", "right"]):
         """
         Treat the decision of the player.

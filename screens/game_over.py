@@ -49,7 +49,7 @@ class GameOverScreen(ImprovedScreen):
         else:
             new_highscore = False
 
-        self.score_text = TEXT.game_over["score"] + str(game.score) + \
+        self.score_text = TEXT.game_over["score"] + str(game.score) + "\n" + \
             TEXT.game_over["highscore"] + str(USER_DATA.highscore)
 
         if game.score == 0:

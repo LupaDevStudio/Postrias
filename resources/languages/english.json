@@ -317,47 +317,47 @@
     },
     "ending": {
         "food": {
-            "title": "TODO",
+            "title": "Le dernier repas",
             "text": "Les survivants commencent à faire bouillir leurs chaussures et leurs vêtements pour se nourrir. Votre autorité n'a plus de sens pour ces hommes dont le dénuement nourrit des pulsions révolutionnaires. Ces corps décharnés vous saisissent et vous conduisent dans un immense chaudron sur la place publique. Vos jours s’achèvent en bain-marie. Vous n'obtenez guère mieux que les intestins des survivants pour sépulture."
         },
         "tools": {
-            "title": "TODO",
+            "title": "Le tournevis",
             "text": "Les équipements du camp tombent en ruine et vous ne parvenez pas à les réparer. L'agriculture, les dispositifs de sécurité et la recherche sont paralysés. Vous vous décidez à mener une expédition dans les vestiges des villes alentours afin de récolter des outils et des matériaux. L’évêque profite de votre absence pour prendre le pouvoir et vous êtes attaqué sur le chemin du retour par des vélociraptors. Vous êtes emporté à la tête de l'ultime charge de votre groupe."
         },
         "weapons": {
-            "title": "TODO",
+            "title": "Fronde VS T-Rex",
             "text": "C'est équipée de frondes et de bâtons que la Milice doit faire face à une énième attaque de tricératops. Les pierres et les boulettes de de papiers rebondissent sur leurs écailles et ces derniers ravagent le campement. Vous terminez piétiné sous une charge dévastatrice du troupeau."
         },
         "order_max": {
-            "title": "TODO",
+            "title": "Le sacrifice",
             "text": "Fort de son pouvoir sur la société, l'Ordre ardent du Dragon des derniers jours lance une campagne de purification du campement contre ses opposants. Après avoir massacré les paléontologues et pris le contrôle de la Milice, l'Ordre envoie la foule se saisir de vous. Vos os et votre chair sont consumés sur un bûcher sacrificiel."
         },
         "order_min": {
-            "title": "TODO",
+            "title": "Perte de la foi",
             "text": "Alors que le pouvoir de l'Ordre se délite, les survivants privés de l'Espérance du Salut prennent conscience de l’absurdité de l'existence dans un monde qui n'est plus celui des hommes. Ils ne vous obéissent plus et se laissent mourir. Vous êtes désormais le dernier des hommes."
         },
         "military_max": {
-            "title": "TODO",
+            "title": "Coup d'état",
             "text": "La Milice est devenue si puissante que l'on ne sait plus très bien ce qui la contraint à vous obéir. Elle-même se le demande. Vos gardes vous trahissent dans la nuit et la Milice se saisit de vous. Par un petite ouverture dans la toile du camion qui semble vous emmener hors du campement, vous avez le temps d'apercevoir des affiches de propagandes à l'effigie du général de la Milice couvrir les murs de votre ancienne demeure."
         },
         "military_min": {
-            "title": "TODO",
+            "title": "Sans défense",
             "text": "La poignée d'hommes qui reste dans la Milice n'est guère plus armée que de quelques vieilles armes rouillées quand l'attaque de vélociraptors survient. Vos défenses sont submergées et le campement est rasé de la carte."
         },
         "civilian_max": {
-            "title": "TODO",
+            "title": "Révolution !",
             "text": "Vous avez été trop tendre et les survivants se sentent pousser des ailes. La foule parvient à rallier la Milice à sa cause pour exiger la fin de votre pouvoir et la mise en place d'une gouvernance démocratique. L’émeute dégénère et les survivants débordent vos positions. Ils s'emparent de vous et vous emmènent vers la guillotine."
         },
         "civilian_min": {
-            "title": "TODO",
+            "title": "Le Tyran",
             "text": "Votre pouvoir n'a jamais semblé aussi fort. Les survivants sont à votre botte et semblent complètement apathiques. Toutefois, vous observez progressivement le campement se dépeupler. Il vous semble que ceux qui restent ne produisent presque plus rien. La poignée d'hommes qui occupe alors le campement ne peut guère vous défendre lors de l'attaque des ptéranodons, et vous périssez entre leurs griffes."
         },
         "paleo_max": {
-            "title": "TODO",
+            "title": "Eurêkaïe !",
             "text": "Les paléontologues, convaincus d'avoir enfin mis au point un appareil permettant de communiquer avec les dinosaures, se décident à en introduire quelques-uns sur le campement. Contre toute attente, l'essai est un échec. Les dinosaures ne sont pas réceptifs aux messages envoyés. Ils se déchaînent sur les survivants et vous périssez entre les mâchoires d'un tyrannosaure."
         },
         "paleo_min": {
-            "title": "TODO",
+            "title": "La fin de la Science",
             "text": "L'Ordre ardent du Dragon des derniers jours déchaîne une foule d'adeptes sur ce qui reste du laboratoire des paléontologues. Ses derniers occupants sont lynchés et leurs travaux finissent en autodafé. Sans le recours de la science, la qualité des équipements de la Milice et la productivité agricole déclinent. Ce n'est plus qu'une question de temps avant que vous mourriez de faim ou d'une attaque de dinosaures."
         }
     },
@@ -377,15 +377,18 @@
         "press_to_start": "Cliquez sur l'écran pour commencer une partie"
     },
     "game": {
-        "decree": "Le conseil d'aujourd'hui se termine tard dans la nuit. Vos conseillers vous ont préparé trois décrets pour améliorer le moral dans le camp.\n\nLequel choisissez-vous d'appliquer ?"
+        "decree": "Le conseil d'aujourd'hui se termine tard dans la nuit. Vos conseillers vous ont préparé trois décrets pour améliorer le moral dans le camp.\n\nLequel choisissez-vous d'appliquer ?",
+        "pre_game_over": "Vous sentez votre fin approcher, souhaitez-vous tenter de retarder l'inéluctable ?",
+        "watch_ad": "Faire une offrande au dragon ardent du dernier jour en vous ouvrant à ses visions.",
+        "go_to_game_over": "Attendre la fin."
     },
     "settings": {
         "apply": "Appliquer",
         "validate": "Valider",
         "music_volume": "Volume de la musique",
         "sound_volume": "Volume des bruitages",
-        "language": "Language",
-        "tutorial": "Tutorial",
+        "language": "Langue",
+        "tutorial": "Tutoriel",
         "version": "Version "
     },
     "game_over": {

@@ -3,6 +3,11 @@ from kivy.metrics import dp
 from kivy.properties import BooleanProperty
 from kivy.utils import platform
 
+
+def ad_test_func():
+    pass
+
+
 if platform == "android":
     from android import PythonJavaClass, autoclass, java_method, mActivity
     from android.runnable import run_on_ui_thread

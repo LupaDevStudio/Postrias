@@ -8,11 +8,12 @@ Module for the game screen
 
 ### Python imports ###
 
+import sys
 from typing import Literal
+sys.path.append(".")
 
 ### Kivy imports ###
 
-from kivy.lang import Builder
 from kivy.clock import Clock
 from kivy.properties import StringProperty, NumericProperty
 from kivy.loader import Loader, ProxyImage
@@ -39,8 +40,15 @@ from tools.game_tools import (
 )
 from tools.constants import (
     MUSIC_LIST,
-    SOUND_LIST
+    SOUND_LIST,
+    TEXT,
+    platform
 )
+if platform == "android":
+    from kivads import (
+        RewardedInterstitial,
+        TestID
+    )
 
 
 #############
@@ -89,6 +97,10 @@ class GameScreen(ImprovedScreen):
 
         self.answer_cards = ["answer", "next_button"]
 
+        self.pre_game_over_cards = ["decision_center",
+                                    "decision_yes",
+                                    "decision_no"]
+
         self.plus_minus = ["plus_order",
                            "minus_order",
                            "plus_military",
@@ -106,6 +118,8 @@ class GameScreen(ImprovedScreen):
 
         self.night_camp_background: ProxyImage
         self.day_camp_background: ProxyImage
+
+        self.credit: int
 
     def preload(self, *_):
 
@@ -190,6 +204,8 @@ class GameScreen(ImprovedScreen):
         # Launch the start day function
         Clock.schedule_once(self.start_day)
 
+        self.credit = 1
+
         return super().on_enter(*args)
 
     def display_card(self, *_):
@@ -228,10 +244,16 @@ class GameScreen(ImprovedScreen):
         """
         Treat the action of the player.
         """
-        self.play_choice_sound(choice=choice)
-        game.make_choice(choice=choice)
-        game.end_day()
-        self.display_answer()
+        if not game.game_over:
+            self.play_choice_sound(choice=choice)
+            game.make_choice(choice=choice)
+            game.end_day()
+            self.display_answer()
+        else:
+            if choice == "right":
+                self.play_ads()
+            else:
+                self.manager.current = "game_over"
 
     def update_display_resources(self):
         """
@@ -301,7 +323,37 @@ class GameScreen(ImprovedScreen):
             self.set_back_image_texture(self.day_camp_background.image.texture)
         else:
             self.update_display_resources()
-            self.manager.current = "game_over"
+            if self.credit > 0:
+                self.show_pre_game_over()
+            else:
+                self.manager.current = "game_over"
 
-    def rewind(self):
-        pass
+    def show_pre_game_over(self):
+        """
+        Display the pre game over screen with choice to die or to watch an add.
+        """
+        self.hide_cards()
+        self.enable_cards(self.pre_game_over_cards)
+        self.ids["decision_center"].text = TEXT.game["pre_game_over"]
+        self.ids["decision_yes"].text = TEXT.game["watch_ad"]
+        self.ids["decision_no"].text = TEXT.game["go_to_game_over"]
+
+    def play_ads(self):
+        """
+        Play an ad to continue the game.
+        """
+        if platform == "android":
+            self.reward_interstitial = RewardedInterstitial(
+                TestID.REWARD_INTERSTITIAL, self.get_ads_reward
+            )
+        else:
+            self.get_ads_reward()
+
+    def get_ads_reward(self):
+        """
+        Called after the ad to continue the game.
+        """
+        self.credit = self.credit - 1
+        game.continue_game()
+        self.update_display_resources()
+        self.start_day()
