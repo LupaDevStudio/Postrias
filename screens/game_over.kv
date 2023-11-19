@@ -39,16 +39,26 @@
         text_color: TEXT_FONT_COLOR
 
     # Ending story
-    ImageWithText:
+    Image:
         id: ending_label
-        text: root.ending_text
         source: PATH_IMAGES + "ending_background.png"
-        size_hint: 0.4, 0.4
-        pos_hint: {"center_x": 0.75, "center_y": 0.4}
+        size_hint: 0.5, 0.5
+        pos_hint: {"center_x": 0.75, "y": 0}
         allow_stretch: True
         keep_ratio:False
-        text_font_name: root.font_name
-        text_color: TEXT_FONT_COLOR
+        
+
+    Label:
+        size_hint: 0.38, 0.3
+        pos_hint: {"center_x": 0.75, "y": 0.02}
+        text: root.ending_text
+        font_name: root.font_name
+        color: TEXT_FONT_COLOR
+        text_size: self.size
+        halign: "center"
+        valign:"middle"
+        font_size: 12*root.font_ratio
+
 
     # Credit background
     ImageWithText:
