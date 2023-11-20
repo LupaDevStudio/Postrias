@@ -372,9 +372,11 @@
         "Les armes :\n\nLes armes de toute nature sont absolument essentielles à la Milice. Elle en a besoin pour maintenir l'ordre et protéger le campement des dinosaures.",
         "Les outils :\n\nLes outils sont l'ensemble des instruments qui permettent à vos survivants de travailler. Ils sont également employés pour les constructions."
     ],
-    "tutorial": ["To do"],
+    "tutorial": [
+        "To do"
+    ],
     "menu": {
-        "press_to_start": "Cliquez sur l'écran pour commencer une partie"
+        "press_to_start": "Commencer une nouvelle partie"
     },
     "game": {
         "decree": "Le conseil d'aujourd'hui se termine tard dans la nuit. Vos conseillers vous ont préparé trois décrets pour améliorer le moral dans le camp.\n\nLequel choisissez-vous d'appliquer ?",

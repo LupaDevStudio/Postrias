@@ -5,7 +5,7 @@ Module for the main menu
 
 from kivy.clock import Clock
 from kivy.properties import (
-    BooleanProperty
+    StringProperty
 )
 
 from tools.path import (
@@ -14,6 +14,7 @@ from tools.path import (
 )
 from tools.constants import (
     FPS,
+    TEXT
 )
 from tools.kivy_tools import ImprovedScreen
 from tools import (
@@ -22,6 +23,8 @@ from tools import (
 
 
 class MenuScreen(ImprovedScreen):
+
+    start_label_text = StringProperty()
 
     def __init__(self, **kw):
 
@@ -42,6 +45,9 @@ class MenuScreen(ImprovedScreen):
 
         # Schedule preload of the game screen
         Clock.schedule_once(self.manager.get_screen("game").preload)
+
+        # Set the start label text
+        self.start_label_text = TEXT.menu["press_to_start"]
 
         return super().on_enter(*args)
 
