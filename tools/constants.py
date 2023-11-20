@@ -142,6 +142,7 @@ class Text():
         self.settings = data["settings"]
         self.game_over = data["game_over"]
         self.game = data["game"]
+        self.tutorial = data["introduction"] + data["tutorial"]
 
         # Split the text for the cards
         self.decision = data["decision"]

@@ -22,6 +22,7 @@ from screens.settings import SettingsScreen
 from screens.game import GameScreen
 from screens.game_over import GameOverScreen
 from screens.achievements import AchievementsScreen
+from screens.tutorial import TutorialScreen
 
 
 ###############
@@ -33,4 +34,3 @@ from screens.achievements import AchievementsScreen
 kv_files = [file for file in os.listdir("screens") if file.endswith(".kv")]
 for file in kv_files:
     Builder.load_file(f"screens/{file}", encoding="utf-8")
-# Builder.load_file(PATH_SCREENS + "menu.kv", encoding="utf-8")

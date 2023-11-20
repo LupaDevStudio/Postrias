@@ -108,5 +108,7 @@ class SettingsScreen(ImprovedScreen):
         USER_DATA.sound_effects_volume = self.sound_volume_value
 
     def watch_tutorial(self):
-        # TODO
-        pass
+        """
+        Start the tutorial.
+        """
+        self.manager.current = "tutorial"
