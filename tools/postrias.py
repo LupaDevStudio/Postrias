@@ -93,6 +93,9 @@ class Game():
         self.order = FACTION_START_VALUE
         self.paleo = FACTION_START_VALUE
 
+        # Game over state
+        self.game_over = False
+
     def draw(self, mode: Literal["event", "decree", "decision"]) -> str:
         """
         Draw an id corresponding to the given mode.
