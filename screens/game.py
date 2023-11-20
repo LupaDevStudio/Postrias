@@ -47,7 +47,6 @@ from tools.constants import (
 if platform == "android":
     from kivads import (
         RewardedInterstitial,
-        KivAds,
         TestID
     )
 
@@ -208,7 +207,7 @@ class GameScreen(ImprovedScreen):
         # Load an add
         if platform == "android":
             self.reward_interstitial = RewardedInterstitial(
-                TestID.REWARD_INTERSTITIAL, self.get_ads_reward
+                TestID.REWARD_INTERSTITIAL, self.schedule_reward
             )
 
         # Allocate the number of credits
@@ -352,13 +351,13 @@ class GameScreen(ImprovedScreen):
         """
         if platform == "android":
             self.reward_interstitial.show()
-            self.reward_interstitial = RewardedInterstitial(
-                TestID.REWARD_INTERSTITIAL, self.get_ads_reward
-            )
         else:
-            self.get_ads_reward()
+            Clock.schedule_once(self.get_ads_reward)
 
-    def get_ads_reward(self):
+    def schedule_reward(self):
+        Clock.schedule_once(self.get_ads_reward)
+
+    def get_ads_reward(self, *args):
         """
         Called after the ad to continue the game.
         """
@@ -366,3 +365,8 @@ class GameScreen(ImprovedScreen):
         game.continue_game()
         self.update_display_resources()
         self.start_day()
+        # Load an add
+        if platform == "android":
+            self.reward_interstitial = RewardedInterstitial(
+                TestID.REWARD_INTERSTITIAL, self.schedule_reward
+            )
