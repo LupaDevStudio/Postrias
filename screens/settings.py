@@ -86,6 +86,7 @@ class SettingsScreen(ImprovedScreen):
         """
         language_code = DICT_LANGUAGE_NAME_TO_CODE[language_name]
         USER_DATA.language = language_code
+        USER_DATA.save_changes()
         TEXT.change_language(language_code)
         self.load_labels()
 
@@ -106,6 +107,7 @@ class SettingsScreen(ImprovedScreen):
 
         USER_DATA.music_volume = self.music_volume_value
         USER_DATA.sound_effects_volume = self.sound_volume_value
+        USER_DATA.save_changes()
 
     def watch_tutorial(self):
         """

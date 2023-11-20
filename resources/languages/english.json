@@ -361,18 +361,18 @@
             "text": "L'Ordre ardent du Dragon des derniers jours déchaîne une foule d'adeptes sur ce qui reste du laboratoire des paléontologues. Ses derniers occupants sont lynchés et leurs travaux finissent en autodafé. Sans le recours de la science, la qualité des équipements de la Milice et la productivité agricole déclinent. Ce n'est plus qu'une question de temps avant que vous mourriez de faim ou d'une attaque de dinosaures."
         }
     },
-    "introduction": {
-        "story": "La civilisation a assisté en silence au retour des dinosaures. Elle a disparu comme elle était apparue. Peu sont ceux qui en gardent un souvenir, et ce n'est guère plus qu'un écho imperceptible. L’Humanité se résume peut-être au campement que vous dirigez dans les grandes plaines du Dakota, non loin de ce qui était autrefois le parc des Badlands.",
-        "goal": "Vous devrez assurer la cohésion et la survie de cette communauté face à la menace constante des dinosaures. Mais ne vous méprenez pas, votre priorité est de maintenir votre pouvoir, quoiqu'il en coûte. Votre main ne devra pas trembler.",
-        "order": "L'Ordre ardent du dragon des derniers jours :\n\nDes cendres des cultes de jadis est né l'Ordre ardent du Dragon des derniers jours. Les temps rudes favorisent l'émergence de cultes et celui-ci a acquis un grand pouvoir sur les consciences. Ses membres affirment que l'apparition des dinosaures est un châtiment céleste. L'Ordre appelle par conséquent à la pénitence en attendant la venue du Dragon des derniers jours, qui délivrera l’Humanité du joug des dinosaures. L'Ordre interprétera comme une insulte au Dragon des derniers jours toute tentative profane de régler le problème des dinosaures.",
-        "military": "La Milice :\n\nLa Milice est constituée des survivants les plus braves. Sa mission est de protéger le campement et ses alentours des incursions des dinosaures. Elle mène également des missions d'exploration dans les vestiges de la civilisation antérieure, au grand désarroi de l'Ordre. La Milice est un formidable outil pour contrôler la population. Mais prenez garde à ce qu'elle ne vous devienne pas trop indispensable...",
-        "civilian": "Les Survivants :\n\nLes survivants sont les habitants dociles du campement. Ils produisent des vivres, et fabriquent armes et outils. Ils vous renverseront s'ils jugent votre pouvoir trop tyrannique. Vous devrez leur accorder quelques facilites matérielles et faire preuve de justice dans vos jugements pour les contenter. Mais n'oubliez pas : si vous leur accordez trop de pouvoir, ils pourraient être tentés de se passer de vous.",
-        "paleo": "Les paléontologues :\n\nLes paléontologues s’intéressent de près à l'étude des dinosaures. Ils sont les seuls représentants de ce qui était autrefois \"La Science\". Leurs recherches pourraient vous apporter les connaissances décisives pour mettre un terme à l'oppression des dinosaures, à moins que la soif de connaissance des paléontologues ne les attire trop près du camp...",
-        "food": "Les vivres :\n\nLes vivres sont nécessaires à l'alimentation de vos survivants. L'Ordre peut également les exiger pour des sacrifices.",
-        "tools": "Les outils :\n\nLes outils sont l'ensemble des instruments qui permettent à vos survivants de travailler. Ils sont également employés pour les constructions.",
-        "weapons": "Les armes :\n\nLes armes de toute nature sont absolument essentielles à la Milice. Elle en a besoin pour maintenir l'ordre et protéger le campement des dinosaures."
-    },
-    "tutorial": "To do",
+    "introduction": [
+        "La civilisation a assisté en silence au retour des dinosaures. Elle a disparu comme elle était apparue. Peu sont ceux qui en gardent un souvenir, et ce n'est guère plus qu'un écho imperceptible. L’Humanité se résume peut-être au campement que vous dirigez dans les grandes plaines du Dakota, non loin de ce qui était autrefois le parc des Badlands.",
+        "Vous devrez assurer la cohésion et la survie de cette communauté face à la menace constante des dinosaures. Mais ne vous méprenez pas, votre priorité est de maintenir votre pouvoir, quoiqu'il en coûte. Votre main ne devra pas trembler.",
+        "L'Ordre ardent du dragon des derniers jours :\n\nDes cendres des cultes de jadis est né l'Ordre ardent du Dragon des derniers jours. Les temps rudes favorisent l'émergence de cultes et celui-ci a acquis un grand pouvoir sur les consciences. Ses membres affirment que l'apparition des dinosaures est un châtiment céleste. L'Ordre appelle par conséquent à la pénitence en attendant la venue du Dragon des derniers jours, qui délivrera l’Humanité du joug des dinosaures. L'Ordre interprétera comme une insulte au Dragon des derniers jours toute tentative profane de régler le problème des dinosaures.",
+        "La Milice :\n\nLa Milice est constituée des survivants les plus braves. Sa mission est de protéger le campement et ses alentours des incursions des dinosaures. Elle mène également des missions d'exploration dans les vestiges de la civilisation antérieure, au grand désarroi de l'Ordre. La Milice est un formidable outil pour contrôler la population. Mais prenez garde à ce qu'elle ne vous devienne pas trop indispensable...",
+        "Les Survivants :\n\nLes survivants sont les habitants dociles du campement. Ils produisent des vivres, et fabriquent armes et outils. Ils vous renverseront s'ils jugent votre pouvoir trop tyrannique. Vous devrez leur accorder quelques facilites matérielles et faire preuve de justice dans vos jugements pour les contenter. Mais n'oubliez pas : si vous leur accordez trop de pouvoir, ils pourraient être tentés de se passer de vous.",
+        "Les paléontologues :\n\nLes paléontologues s’intéressent de près à l'étude des dinosaures. Ils sont les seuls représentants de ce qui était autrefois \"La Science\". Leurs recherches pourraient vous apporter les connaissances décisives pour mettre un terme à l'oppression des dinosaures, à moins que la soif de connaissance des paléontologues ne les attire trop près du camp...",
+        "Les vivres :\n\nLes vivres sont nécessaires à l'alimentation de vos survivants. L'Ordre peut également les exiger pour des sacrifices.",
+        "Les armes :\n\nLes armes de toute nature sont absolument essentielles à la Milice. Elle en a besoin pour maintenir l'ordre et protéger le campement des dinosaures.",
+        "Les outils :\n\nLes outils sont l'ensemble des instruments qui permettent à vos survivants de travailler. Ils sont également employés pour les constructions."
+    ],
+    "tutorial": ["To do"],
     "menu": {
         "press_to_start": "Cliquez sur l'écran pour commencer une partie"
     },
@@ -387,7 +387,7 @@
         "validate": "Valider",
         "music_volume": "Volume de la musique",
         "sound_volume": "Volume des bruitages",
-        "language": "Langue",
+        "language": "Language",
         "tutorial": "Tutoriel",
         "version": "Version "
     },

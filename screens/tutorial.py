@@ -1,12 +1,11 @@
 """
-Module for the tutorial menu
+Module for the tutorial menu.
 """
 
 ###############
 ### Imports ###
 ###############
 
-from kivy.properties import StringProperty
 from tools.path import (
     PATH_IMAGES,
     PATH_TEXT_FONT
@@ -16,7 +15,6 @@ from tools.kivy_tools import (
 )
 from tools.constants import (
     USER_DATA,
-    DICT_LANGUAGE_CORRESPONDANCE,
     TEXT
 )
 
@@ -26,9 +24,6 @@ from tools.constants import (
 
 class TutorialScreen(ImprovedScreen):
 
-    current_language = StringProperty(
-        DICT_LANGUAGE_CORRESPONDANCE[USER_DATA.language])
-
     def __init__(self, **kw):
         super().__init__(
             back_image_path=PATH_IMAGES + "tutorial_background.jpg",
@@ -37,25 +32,56 @@ class TutorialScreen(ImprovedScreen):
 
     counter_tutorial = 0
 
-    def load_labels(self):
-        """
-        Load the text labels of the screen.
-        """
-        pass
-
     def on_enter(self, *args):
-        # Load the labels
-        self.load_labels()
+        self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial]
         return super().on_enter(*args)
 
     def go_to_previous_slide(self):
-        # Go to main menu
+        """
+        Go to the previous slide of the tutorial.
+
+        Parameters
+        ----------
+        None
+
+        Returns
+        -------
+        None
+        """
+        # Go to main menu at the beginning
         if self.counter_tutorial == 0:
             self.manager.current = "menu"
         
         else:
+            self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial]
             self.counter_tutorial -= 1
 
     def go_to_next_slide(self):
+        """
+        Go to the next slide of the tutorial.
+        It can also end the tutorial, when reached the end.
+
+        Parameters
+        ----------
+        None
+
+        Returns
+        -------
+        None
+        """
         self.counter_tutorial += 1
-        pass
+
+        # Go to game or main menu at the end
+        if self.counter_tutorial == len(TEXT.tutorial):
+
+            # For the first launch of the tutorial, go to the game
+            if USER_DATA.tutorial:
+                USER_DATA.tutorial = False
+                USER_DATA.save_changes()
+                self.manager.current = "game"
+
+            else:
+                self.manager.current = "menu"
+        
+        else:
+            self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial]
