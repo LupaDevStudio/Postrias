@@ -92,7 +92,8 @@ class GameScreen(ImprovedScreen):
         self.decree_cards = ["decree_center",
                              "decree_left",
                              "decree_right",
-                             "decree_down"]
+                             "decree_down",
+                             "decree_center_bg"]
 
         self.event_cards = ["event", "next_button"]
 
@@ -173,7 +174,8 @@ class GameScreen(ImprovedScreen):
                       "plus_weapons",
                       "minus_weapons",
                       "plus_tools",
-                      "minus_tools"]
+                      "minus_tools",
+                      "decree_center_bg"]
 
         for card in cards_list:
             self.disable_widget(card)
