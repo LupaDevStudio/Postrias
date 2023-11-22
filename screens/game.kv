@@ -309,15 +309,23 @@
         text_color: TEXT_FONT_COLOR
 
     # Decree background
-    ImageWithText:
-        id: decree_center
+    Image:
+        id: decree_center_bg
         source: PATH_IMAGES + "decree_background.png"
         size_hint: center_img_width, center_img_height
         pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
         allow_stretch: True
         keep_ratio: False
-        text_font_name: root.font_name
-        text_color: TEXT_FONT_COLOR
+    Label:
+        id: decree_center
+        size_hint: 0.35, center_img_height
+        text_size: self.size
+        pos_hint: {"center_x": 0.5, "center_y": center_img_center_y}
+        font_name: root.font_name
+        color: TEXT_FONT_COLOR
+        halign: "center"
+        valign:"middle"
+        font_size: 15*root.font_ratio
     
     # Decree left
     ImageWithTextButton:
