@@ -290,11 +290,11 @@
         "agricultural_machines": {
             "text": "Un ingénieur militaire vient de trouver un moyen particulièrement efficace pour transformer des machines agricoles obsolètes en engins d'assaut dévastateurs. La Milice saura en tirer profit lors de ses prochaines expéditions."
         },
-        "researches_amonites": {
-            "text": "Les paléontologues sont parvenus à un accord avantageux avec l'évèque. Ce dernier ne s'opposera plus à leurs recherches sur les amonites, en échange de passe-droits plus que douteux. Il vaudrait mieux que les fidèles n'en apprennent rien, mais en attendant, réjouissons-nous des bénéfices à venir de ces recherches."
+        "researches_ammonites": {
+            "text": "Les paléontologues sont parvenus à un accord avantageux avec l’évêque. Ce dernier ne s'opposera plus à leurs recherches sur les ammonites, en échange de passe-droits plus que douteux. Il vaudrait mieux que les fidèles n'en apprennent rien, mais en attendant, réjouissons-nous des bénéfices à venir de ces recherches."
         },
         "storm_fear": {
-            "text": "Les craintes suscitées par les orages particulièrement violents de ces dernières semaines ont été habilement exploitées par l'Ordre. Les survivants sont désormais convaincus que l'évèque va intercéder en leur faveur pour apaiser la colère du Dragon des derniers jours."
+            "text": "Les craintes suscitées par les orages particulièrement violents de ces dernières semaines ont été habilement exploitées par l'Ordre. Les survivants sont désormais convaincus que l’évêque va intercéder en leur faveur pour apaiser la colère du Dragon des derniers jours."
         },
         "lottery": {
             "text": "Une loterie est organisée par les citoyens pour se changer les idées. Ils trouvent ce jeu particulièrement satisfaisant, ce qui leur remonte le moral."
@@ -303,16 +303,16 @@
             "text": "Eurêka ! Des documents décryptés par nos paléontologues contenaient des patrons d'instruments de menuiserie. Nous allons les mettre à profit pour améliorer l'efficacité de nos constructions."
         },
         "fire_church": {
-            "text": "Une église est en feu ! Non seulement l'origine de cet incendie est vraisemblablement criminelle, mais les survivants risquent de douter de l'efficacité de la protection de monseigneur l'évèque sur le campement."
+            "text": "Une église est en feu ! Non seulement l'origine de cet incendie est vraisemblablement criminelle, mais les survivants risquent de douter de l'efficacité de la protection de monseigneur l’évêque sur le campement."
         },
-        "oleg": {
+        "Oleg": {
             "text": "Un homme qui prétend se nommer Oleg et qui viendrait de ce qui était autrefois la Russie est arrive au camp. Nous n'avons pas l'habitude d'accepter des étrangers, mais les stocks d'armes conséquents qu'apporte Oleg faciliteront certainement son intégration en ces temps difficiles."
         },
         "dino_cave": {
             "text": "Les paléontologues ont découvert une caverne où des dinosaures stockaient toutes leurs ressources ! Ils s'empressent de ramener toutes les vivres au campement."
         },
         "dino_attack": {
-            "text": "Une horde de compsognathus attaque votre campement sans prévenir. Les survivants sont affolés mais la milice parvient à contenir la crise moyennant quelques armes. De nombreux cadavres de ces petites bestioles sont parsemés dans votre camp, pour le plus grand bonheur des paléontologues qui s'empressent d'en subtiliser quelques-uns pour les étudier. Les autres sont utilisés pour regarnir vos réserves de nourriture."
+            "text": "Une horde de compsognathus attaque votre campement sans prévenir. La milice parvient à contenir la crise au prix de quelques armes. De nombreux cadavres de ces petites bestioles sont parsemés dans votre camp, pour la plus grande joie des paléontologues qui s'empressent d'en subtiliser quelques-uns pour les étudier. Les autres sont utilisés pour regarnir vos réserves de nourriture."
         }
     },
     "ending": {
@@ -396,6 +396,6 @@
     "game_over": {
         "highscore": "Meilleur score : ",
         "score": "Score : ",
-        "credits": "Jeu original développé par :\n\n- Paul Creusy\n- Clément Perrin\n- Balthazar Patiachvili\n- Alexis Guillon\n- Yohan Abehssera\n\nRemasterisé par :\n\n- Paul Creusy\n- Agathe Aris"
+        "credits": "Jeu original développé par :\n\n- Paul Creusy\n- Clément Perrin\n- Balthazar Patiachvili\n- Alexis Guillon\n- Yohan Abehssera\n\nRemastérisé par :\n\n- Paul Creusy\n- Agathe Aris"
     }
 }
