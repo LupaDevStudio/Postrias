@@ -8,8 +8,8 @@
     ImageWithTextButton:
         id: back_button
         source: PATH_IMAGES + "back_button.png"
-        size_hint: None, 0.15
-        pos_hint: {"x":0.1, "y": 0}
+        size_hint: None, 0.2
+        pos_hint: {"center_x":0.25, "y": 0}
         allow_stretch: True
         width: self.height
         release_function: root.go_to_previous_slide
@@ -18,8 +18,8 @@
     ImageWithTextButton:
         id: next_button
         source: PATH_IMAGES + "next_button.png"
-        size_hint: None, 0.15
-        pos_hint: {"right":0.9, "y": 0}
+        size_hint: None, 0.2
+        pos_hint: {"center_x":0.75, "y": 0}
         allow_stretch: True
         width: self.height
         release_function: root.go_to_next_slide
@@ -28,9 +28,11 @@
     ImageWithText:
         id: tutorial_text
         source: PATH_IMAGES + "card_layout.png"
-        size_hint: 0.8, 0.75
-        pos_hint: {"center_x": 0.5, "center_y": 0.55}
+        size_hint: 0.45, 0.75
+        pos_hint: {"center_x": 0.25, "center_y": 0.55}
         allow_stretch: True
         keep_ratio: False
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
+
+    # Image of the tutorial

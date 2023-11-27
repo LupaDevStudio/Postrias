@@ -53,8 +53,8 @@ class TutorialScreen(ImprovedScreen):
             self.manager.current = "menu"
         
         else:
-            self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial]
             self.counter_tutorial -= 1
+            self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial]
 
     def go_to_next_slide(self):
         """
