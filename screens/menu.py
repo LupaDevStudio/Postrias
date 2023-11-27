@@ -4,9 +4,6 @@ Module for the main menu
 
 
 from kivy.clock import Clock
-from kivy.properties import (
-    BooleanProperty
-)
 
 from tools.path import (
     PATH_IMAGES,
@@ -14,8 +11,11 @@ from tools.path import (
 )
 from tools.constants import (
     FPS,
+    USER_DATA
 )
-from tools.kivy_tools import ImprovedScreen
+from tools.kivy_tools import (
+    ImprovedScreen
+)
 from tools import (
     music_mixer
 )
@@ -59,3 +59,20 @@ class MenuScreen(ImprovedScreen):
         self.ids.start_label.opacity += self.opacity_state * self.opacity_rate
         if self.ids.start_label.opacity < 0 or self.ids.start_label.opacity > 1:
             self.opacity_state = -self.opacity_state
+
+    def start_game(self):
+        """
+        Start the tutorial for the first time, otherwise the game.
+
+        Parameters
+        ----------
+        None
+
+        Returns
+        -------
+        None
+        """
+        if USER_DATA.tutorial:
+            self.manager.current = "tutorial"
+        else:
+            self.manager.current = "game"
