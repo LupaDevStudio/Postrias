@@ -10,7 +10,8 @@ from kivy.properties import StringProperty
 
 from tools.path import (
     PATH_IMAGES,
-    PATH_TEXT_FONT
+    PATH_TEXT_FONT,
+    PATH_IMAGES_TUTORIAL
 )
 from tools.kivy_tools import (
     ImprovedScreen
@@ -35,10 +36,10 @@ class TutorialScreen(ImprovedScreen):
             back_image_path=PATH_IMAGES + "tutorial_background.jpg",
             font_name=PATH_TEXT_FONT,
             **kw)
-        self.path_tutorial_image = PATH_IMAGES + "ending_paleo_max.jpg"
 
     def on_enter(self, *args):
-        self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial]
+        self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial][0]
+        self.path_tutorial_image = PATH_IMAGES_TUTORIAL + TEXT.tutorial[self.counter_tutorial][1] + ".jpg"
         return super().on_enter(*args)
 
     def go_to_previous_slide(self):
@@ -60,7 +61,7 @@ class TutorialScreen(ImprovedScreen):
         else:
             self.counter_tutorial -= 1
             self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial][0]
-            self.ids.tutorial_text.source = TEXT.tutorial[self.counter_tutorial][1]
+            self.path_tutorial_image = PATH_IMAGES_TUTORIAL + TEXT.tutorial[self.counter_tutorial][1] + ".jpg"
 
     def go_to_next_slide(self):
         """
@@ -91,4 +92,4 @@ class TutorialScreen(ImprovedScreen):
 
         else:
             self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial][0]
-            self.ids.tutorial_text.source = TEXT.tutorial[self.counter_tutorial][1]
+            self.path_tutorial_image = PATH_IMAGES_TUTORIAL + TEXT.tutorial[self.counter_tutorial][1] + ".jpg"
