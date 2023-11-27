@@ -31,8 +31,8 @@
         id: score_label
         text: root.score_text
         source: PATH_IMAGES + "credits_background.png"
-        size_hint: 0.2, 0.15
-        pos_hint: {"center_x": 0.75, "center_y": 0.7}
+        size_hint: 0.25, 0.15
+        pos_hint: {"center_x": 0.8, "center_y": 0.7}
         allow_stretch: True
         keep_ratio:False
         text_font_name: root.font_name
@@ -46,10 +46,8 @@
         pos_hint: {"center_x": 0.75, "y": 0}
         allow_stretch: True
         keep_ratio:False
-        
-
     Label:
-        size_hint: 0.38, 0.3
+        size_hint: 0.38, 0.35
         pos_hint: {"center_x": 0.75, "y": 0.02}
         text: root.ending_text
         font_name: root.font_name
@@ -57,7 +55,7 @@
         text_size: self.size
         halign: "center"
         valign:"middle"
-        font_size: 12*root.font_ratio
+        font_size: 13*root.font_ratio
 
 
     # Credit background
@@ -65,7 +63,7 @@
         id: credits_label
         text: root.credits_text
         source: PATH_IMAGES + "credits_background.png"
-        size_hint: 0.3, 0.4
+        size_hint: 0.3, 0.5
         pos_hint: {"center_x": 0.25, "center_y": 0.5}
         allow_stretch: True
         keep_ratio:False

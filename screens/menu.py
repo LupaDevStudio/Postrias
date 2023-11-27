@@ -1,9 +1,19 @@
 """
-Module for the main menu
+Module for the main menu.
 """
 
+###############
+### Imports ###
+###############
+
+### Kivy imports ###
 
 from kivy.clock import Clock
+from kivy.properties import (
+    StringProperty
+)
+
+### Module imports ###
 
 from tools.path import (
     PATH_IMAGES,
@@ -11,7 +21,8 @@ from tools.path import (
 )
 from tools.constants import (
     FPS,
-    USER_DATA
+    USER_DATA,
+    TEXT
 )
 from tools.kivy_tools import (
     ImprovedScreen
@@ -20,8 +31,13 @@ from tools import (
     music_mixer
 )
 
+###############
+### Classes ###
+###############
 
 class MenuScreen(ImprovedScreen):
+
+    start_label_text = StringProperty()
 
     def __init__(self, **kw):
 
@@ -42,6 +58,9 @@ class MenuScreen(ImprovedScreen):
 
         # Schedule preload of the game screen
         Clock.schedule_once(self.manager.get_screen("game").preload)
+
+        # Set the start label text
+        self.start_label_text = TEXT.menu["press_to_start"]
 
         return super().on_enter(*args)
 

@@ -29,7 +29,7 @@ source.exclude_dirs = test, bin, .buildozer, data/collection, data/collection_co
 source.exclude_patterns = data/collection.json,*.gitignore, requirements.txt
 
 # (str) Application versioning (method 1)
-version = 2.0.0
+version = 2.0.1
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -188,7 +188,7 @@ android.add_src = src
 #android.add_assets =
 
 # (list) Gradle dependencies to add
-android.gradle_dependencies = com.google.android.gms:play-services-ads:20.3.0
+android.gradle_dependencies = com.google.android.gms:play-services-ads:22.5.0
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
@@ -240,7 +240,7 @@ android.gradle_dependencies = com.google.android.gms:play-services-ads:20.3.0
 #android.wakelock = False
 
 # (list) Android application meta-data to set (key=value format)
-android.meta_data = com.google.android.gms.ads.APPLICATION_ID=ca-app-pub-3940256099942544~3347511713
+android.meta_data = com.google.android.gms.ads.APPLICATION_ID=ca-app-pub-2909842258525517~8955683251
 
 # (list) Android library project to add (will be added in the
 # project.properties automatically.)

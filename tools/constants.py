@@ -54,7 +54,7 @@ from tools.basic_tools import (
 
 ### Version ###
 
-__version__ = "2.0.0"
+__version__ = "2.0.1"
 
 ### Mode ###
 
@@ -90,6 +90,7 @@ if not os.path.exists(PATH_USER_DATA):
     save_json_file(PATH_USER_DATA, default_user_data)
 
 # Load the data of the user
+
 
 class UserData():
     """
@@ -131,6 +132,7 @@ class UserData():
             file_path=PATH_USER_DATA,
             dict_to_save=data)
 
+
 USER_DATA = UserData()
 
 ### Language ###
@@ -144,6 +146,7 @@ DICT_LANGUAGE_NAME_TO_CODE = {
     "English": "english"
 }
 LANGUAGES_LIST = tuple(DICT_LANGUAGE_CORRESPONDANCE.values())
+
 
 class Text():
     def __init__(self, language) -> None:
@@ -174,6 +177,7 @@ class Text():
         self.decree = data["decree"]
         self.answer = data["answer"]
 
+
 TEXT = Text(language=USER_DATA.language)
 
 ### Colors ###
@@ -187,3 +191,6 @@ TEXT_FONT_COLOR = (0, 0, 0, 1)
 MUSIC_LIST = ["game_music.mp3", "time_of_the_apocalypse.mp3"]
 SOUND_LIST = ["decision.wav", "decree.wav", "guillotine.wav"]
 START_MUSIC_LIST = ["cinematic_dramatic.mp3", "my_office.mp3"]
+
+# Ads code
+REWARD_INTERSTITIAL = "ca-app-pub-2909842258525517/6684743133"

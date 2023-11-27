@@ -42,12 +42,12 @@ from tools.constants import (
     MUSIC_LIST,
     SOUND_LIST,
     TEXT,
-    platform
+    platform,
+    REWARD_INTERSTITIAL
 )
 if platform == "android":
     from kivads import (
         RewardedInterstitial,
-        KivAds,
         TestID
     )
 
@@ -92,7 +92,8 @@ class GameScreen(ImprovedScreen):
         self.decree_cards = ["decree_center",
                              "decree_left",
                              "decree_right",
-                             "decree_down"]
+                             "decree_down",
+                             "decree_center_bg"]
 
         self.event_cards = ["event", "next_button"]
 
@@ -173,7 +174,8 @@ class GameScreen(ImprovedScreen):
                       "plus_weapons",
                       "minus_weapons",
                       "plus_tools",
-                      "minus_tools"]
+                      "minus_tools",
+                      "decree_center_bg"]
 
         for card in cards_list:
             self.disable_widget(card)
@@ -208,7 +210,7 @@ class GameScreen(ImprovedScreen):
         # Load an add
         if platform == "android":
             self.reward_interstitial = RewardedInterstitial(
-                TestID.REWARD_INTERSTITIAL, self.get_ads_reward
+                REWARD_INTERSTITIAL, self.schedule_reward
             )
 
         # Allocate the number of credits
@@ -352,13 +354,13 @@ class GameScreen(ImprovedScreen):
         """
         if platform == "android":
             self.reward_interstitial.show()
-            self.reward_interstitial = RewardedInterstitial(
-                TestID.REWARD_INTERSTITIAL, self.get_ads_reward
-            )
         else:
-            self.get_ads_reward()
+            Clock.schedule_once(self.get_ads_reward)
 
-    def get_ads_reward(self):
+    def schedule_reward(self):
+        Clock.schedule_once(self.get_ads_reward)
+
+    def get_ads_reward(self, *args):
         """
         Called after the ad to continue the game.
         """
@@ -366,3 +368,8 @@ class GameScreen(ImprovedScreen):
         game.continue_game()
         self.update_display_resources()
         self.start_day()
+        # Load an add
+        if platform == "android":
+            self.reward_interstitial = RewardedInterstitial(
+                REWARD_INTERSTITIAL, self.schedule_reward
+            )
