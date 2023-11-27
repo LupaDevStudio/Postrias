@@ -54,7 +54,8 @@ class TutorialScreen(ImprovedScreen):
         
         else:
             self.counter_tutorial -= 1
-            self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial]
+            self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial][0]
+            self.ids.tutorial_text.source = TEXT.tutorial[self.counter_tutorial][1]
 
     def go_to_next_slide(self):
         """
@@ -84,4 +85,5 @@ class TutorialScreen(ImprovedScreen):
                 self.manager.current = "menu"
         
         else:
-            self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial]
+            self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial][0]
+            self.ids.tutorial_text.source = TEXT.tutorial[self.counter_tutorial][1]
