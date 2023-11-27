@@ -25,5 +25,5 @@ PATH_FONTS = PATH_RESOURCES_FOLDER + "fonts/"
 PATH_GAMEPLAY = PATH_RESOURCES_FOLDER + "gameplay.json"
 
 # Path for the fonts
-PATH_TITLE_FONT = PATH_FONTS + "scratched_letters.ttf"
+PATH_TITLE_FONT = PATH_FONTS + "scratched_letters_V2.ttf"
 PATH_TEXT_FONT = PATH_FONTS + "Aquifer.ttf"
