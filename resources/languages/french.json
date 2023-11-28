@@ -386,7 +386,8 @@
         "decree": "Le conseil d'aujourd'hui se termine tard dans la nuit. Vos conseillers vous ont préparé trois décrets pour améliorer le moral dans le camp.\n\nLequel choisissez-vous d'appliquer ?",
         "pre_game_over": "Vous sentez votre fin approcher, souhaitez-vous tenter de retarder l'inéluctable ?",
         "watch_ad": "Faire une offrande au Dragon ardent du dernier jour en vous ouvrant à ses visions.",
-        "go_to_game_over": "Attendre la fin."
+        "go_to_game_over": "Attendre la fin.",
+        "day": "Jour "
     },
     "settings": {
         "apply": "Appliquer",
