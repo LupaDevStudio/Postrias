@@ -47,8 +47,8 @@ class SettingsScreen(ImprovedScreen):
     tutorial_label = StringProperty()
     version_label = StringProperty()
 
-    sound_volume_value = NumericProperty(0.5)
-    music_volume_value = NumericProperty(0.5)
+    sound_volume_value = USER_DATA.sound_effects_volume
+    music_volume_value = USER_DATA.music_volume
 
     def __init__(self, **kw):
         super().__init__(
@@ -101,12 +101,15 @@ class SettingsScreen(ImprovedScreen):
         """
         Apply the music settings choosed by the user using the sliders.
         """
+        # Get both values for the music and the effects
+        music_volume = self.ids.music_slider.value
+        sound_volume = self.ids.sound_slider.value
 
-        music_mixer.change_volume(self.music_volume_value)
-        sound_mixer.change_volume(self.sound_volume_value)
+        music_mixer.change_volume(music_volume)
+        sound_mixer.change_volume(sound_volume)
 
-        USER_DATA.music_volume = self.music_volume_value
-        USER_DATA.sound_effects_volume = self.sound_volume_value
+        USER_DATA.music_volume = music_volume
+        USER_DATA.sound_effects_volume = sound_volume
         USER_DATA.save_changes()
 
     def watch_tutorial(self):
