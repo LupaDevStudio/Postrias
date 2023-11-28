@@ -20,6 +20,7 @@
 #:set text_filling_ratio 0.85
 #:set sign_offset 0.035
 #:set plus_minus_ratio 1/2.5
+#:set day_indicator_height 0.09
 
 
 <IndicatorLabel@Label>:
@@ -152,55 +153,66 @@
         allow_stretch: True
         width: self.height
 
+    # Day indicator
+    ImageWithText:
+        id: day_indicator
+        source: PATH_IMAGES + "card_layout.png"
+        size_hint: 0.15, day_indicator_height
+        pos_hint: {"center_x": center_x_resource - label_image_spacing*0.45, "center_y": 0.95}
+        allow_stretch: True
+        keep_ratio: False
+        text_font_name: root.font_name
+        text_color: TEXT_FONT_COLOR
+
     # Resources background
     Image:
         id: resources_background
         source: PATH_IMAGES + "card_layout.png"
         size_hint: 0.15, vertical_spacing_indic*3.6
-        pos_hint: {"center_x": center_x_resource - label_image_spacing*0.45, "center_y": 0.83}
+        pos_hint: {"center_x": center_x_resource - label_image_spacing*0.45, "center_y": 0.83-day_indicator_height}
         allow_stretch: True
-        keep_ratio:False
-    
+        keep_ratio: False
+
     # Plus and minus for resources
     Image:
         id: plus_food
         source: PATH_IMAGES + "plus.png"
-        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic-day_indicator_height}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: minus_food
         source: PATH_IMAGES + "minus.png"
-        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic-day_indicator_height}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: plus_weapons
         source: PATH_IMAGES + "plus.png"
-        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic - 1* vertical_spacing_indic}
+        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic - 1* vertical_spacing_indic-day_indicator_height}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: minus_weapons
         source: PATH_IMAGES + "minus.png"
-        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic - 1* vertical_spacing_indic}
+        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic - 1* vertical_spacing_indic-day_indicator_height}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: plus_tools
         source: PATH_IMAGES + "plus.png"
-        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic - 2* vertical_spacing_indic}
+        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic - 2* vertical_spacing_indic-day_indicator_height}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
     Image:
         id: minus_tools
         source: PATH_IMAGES + "minus.png"
-        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic - 2* vertical_spacing_indic}
+        pos_hint: {"center_x": center_x_resource + sign_offset - horizontal_shift, "center_y": upper_y_indic - 2* vertical_spacing_indic-day_indicator_height}
         size_hint: None, image_size_indic * plus_minus_ratio
         allow_stretch: True
         width: self.height
@@ -209,7 +221,7 @@
     IndicatorLabel:
         id: food_label
         text: root.food_value
-        pos_hint: {"center_x": center_x_resource - horizontal_shift, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_resource - horizontal_shift, "center_y": upper_y_indic-day_indicator_height}
         font_size: 20*root.font_ratio
         font_name: root.font_name
         color: TEXT_FONT_COLOR
@@ -217,13 +229,13 @@
         id: food_image
         source: PATH_IMAGES + "food.png"
         size_hint: None, image_size_indic
-        pos_hint: {"center_x": center_x_resource - label_image_spacing - horizontal_shift, "center_y": upper_y_indic}
+        pos_hint: {"center_x": center_x_resource - label_image_spacing - horizontal_shift, "center_y": upper_y_indic-day_indicator_height}
         allow_stretch: True
         width: self.height
     IndicatorLabel:
         id: weapons_label
         text: root.weapons_value
-        pos_hint: {"center_x": center_x_resource - horizontal_shift, "center_y": upper_y_indic -vertical_spacing_indic*1}
+        pos_hint: {"center_x": center_x_resource - horizontal_shift, "center_y": upper_y_indic -vertical_spacing_indic*1-day_indicator_height}
         font_size: 20*root.font_ratio
         font_name: root.font_name
         color: TEXT_FONT_COLOR
@@ -231,13 +243,13 @@
         id: weapons_image
         source: PATH_IMAGES + "weapons.png"
         size_hint: None, image_size_indic
-        pos_hint: {"center_x": center_x_resource - label_image_spacing - horizontal_shift, "center_y": upper_y_indic -vertical_spacing_indic*1}
+        pos_hint: {"center_x": center_x_resource - label_image_spacing - horizontal_shift, "center_y": upper_y_indic -vertical_spacing_indic*1-day_indicator_height}
         allow_stretch: True
         width: self.height
     IndicatorLabel:
         id: tools_label
         text: root.tools_value
-        pos_hint: {"center_x": center_x_resource - horizontal_shift, "center_y": upper_y_indic -vertical_spacing_indic*2}
+        pos_hint: {"center_x": center_x_resource - horizontal_shift, "center_y": upper_y_indic -vertical_spacing_indic*2-day_indicator_height}
         font_size: 20*root.font_ratio
         font_name: root.font_name
         color: TEXT_FONT_COLOR
@@ -245,7 +257,7 @@
         id: tools_image
         source: PATH_IMAGES + "tools.png"
         size_hint: None, image_size_indic
-        pos_hint: {"center_x": center_x_resource - label_image_spacing - horizontal_shift, "center_y": upper_y_indic -vertical_spacing_indic*2}
+        pos_hint: {"center_x": center_x_resource - label_image_spacing - horizontal_shift, "center_y": upper_y_indic -vertical_spacing_indic*2-day_indicator_height}
         allow_stretch: True
         width: self.height
 

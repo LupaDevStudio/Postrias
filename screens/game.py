@@ -73,7 +73,8 @@ class GameScreen(ImprovedScreen):
     weapons_value = StringProperty("0")
     tools_value = StringProperty("0")
 
-    # font_size_expand = NumericProperty(1.25)
+    # Day counter
+    counter_day = 0
 
     # Boolean indicating if the current moment is an answer or not
     is_answer = False
@@ -216,6 +217,9 @@ class GameScreen(ImprovedScreen):
         # Allocate the number of credits
         self.credit = 1
 
+        # Reset the number of days
+        self.counter_day = 0
+
         return super().on_enter(*args)
 
     def display_card(self, *_):
@@ -319,6 +323,10 @@ class GameScreen(ImprovedScreen):
         """
         Start a new day with a new batch of cards.
         """
+        # Increase the counter of days
+        self.counter_day += 1
+        self.ids.day_indicator.text = TEXT.game["day"] + str(self.counter_day)
+
         if not game.game_over:
             # Hide the cards
             self.hide_cards()
