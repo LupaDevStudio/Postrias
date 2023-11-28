@@ -53,7 +53,7 @@ class AchievementsScreen(ImprovedScreen):
     my_highscore = StringProperty("")
     number_cols = 3
     spacing = Window.size[0] / 50
-    padding = [0.05 * Window.size[0], 0, 0.05 * Window.size[0], 0]
+    padding = [0.05 * Window.size[0], 0, 0.05 * Window.size[0], spacing]
     image_dimension = NumericProperty()
     height_layout = NumericProperty()
 
@@ -66,41 +66,12 @@ class AchievementsScreen(ImprovedScreen):
         return super().on_enter(*args)
 
     def on_resize(self, *args):
-        # TODO : la taille de la scroll view ne s'update pas quand on resize donc on ne peut pas voir toutes les icones
         self.spacing = Window.size[0] / 50
         self.image_dimension = (Window.size[0] - 2 * self.padding[0] - self.spacing * (
             self.number_cols - 1)) / self.number_cols
         self.height_layout = self.image_dimension + self.spacing
         self.build_scroll_view()
         return super().on_resize(*args)
-
-    # def resize_scrollview(self):
-    #     """
-    #     Resize the scrollview.
-    #     """
-    #     self.ids.my_sv_layout.reset_screen()
-
-    #     for ending_code in self.scroll_view_content:
-    #         label = self.scroll_view_content[ending_code]["label"]
-    #         image = self.scroll_view_content[ending_code]["image"]
-    #         frame = self.scroll_view_content[ending_code]["frame"]
-    #         label.width = self.image_dimension
-    #         image.width = self.image_dimension
-    #         image.heigth = self.image_dimension
-    #         frame.width = self.image_dimension
-    #         frame.heigth = self.image_dimension
-
-    #         relative_layout = RelativeLayout(
-    #             size_hint=(None, None),
-    #             height=self.height_layout,
-    #             width=self.image_dimension
-    #         )
-    #         relative_layout.add_widget(label)
-    #         relative_layout.add_widget(image)
-    #         relative_layout.add_widget(frame)
-
-    #         # Add the layout
-    #         self.ids.my_sv_layout.add_widget(relative_layout)
 
     def go_to_menu(self):
         """
@@ -137,12 +108,11 @@ class AchievementsScreen(ImprovedScreen):
             label = Button(
                 width=self.image_dimension,
                 size_hint=(0.8, 0.1),
-                # color=TEXT_FONT_COLOR,
                 text=title_ending,
                 pos_hint={"center_x": 0.5, "y": 0},
-                on_release=partial(self.display_ending, ending_code)
-                # font_name=self.font_name,
-                # font_size=25 * self.font_ratio
+                on_release=partial(self.display_ending, ending_code),
+                font_name=self.font_name,
+                font_size=15*self.font_ratio
             )
             relative_layout.add_widget(label)
 

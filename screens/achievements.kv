@@ -26,7 +26,7 @@
 
     RelativeLayout:
         size_hint: 1, 0.85
-        pos_hint: {"x":0, "y":0}
+        pos_hint: {"center_x":0.5, "y":0}
         ScrollView:
             id: scroll_view
             do_scroll_x: False
@@ -38,10 +38,8 @@
             MyScrollViewLayout:
                 id: my_sv_layout
                 cols: root.number_cols
-                # margin: 20
                 spacing: root.spacing
                 padding: root.padding
                 width: root.width
                 height: root.height * 1.1
-                # height: self.minimum_height+root.label_height
                 pos: root.pos
