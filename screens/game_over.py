@@ -32,10 +32,12 @@ class GameOverScreen(ImprovedScreen):
         super().__init__(
             font_name=PATH_TEXT_FONT,
             **kw)
-        self.credits_text = TEXT.game_over["credits"]
         self.new_highscore: bool
 
     def on_enter(self, *args):
+        # Load the credits sentence
+        self.credits_text = TEXT.game_over["credits"]
+
         # Play the game over music
         music_mixer.play("time_of_the_apocalypse")
 

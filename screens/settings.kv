@@ -3,6 +3,7 @@
 #:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
 #:import TEXT tools.constants.TEXT
 #:import LANGUAGES_LIST tools.constants.LANGUAGES_LIST
+#: import USER_DATA tools.constants.USER_DATA
 
 <SettingsScreen>:
 
@@ -19,7 +20,7 @@
         id: sound_slider
         min: 0
         max: 1
-        value: root.sound_volume_value
+        value: USER_DATA.sound_effects_volume
         pos_hint: {"center_x":0.75, "center_y": 0.5}
         size_hint: 0.3, 0.1
 
@@ -35,7 +36,7 @@
         id: music_slider
         min: 0
         max: 1
-        value: root.music_volume_value
+        value: USER_DATA.music_volume
         pos_hint: {"center_x":0.75, "center_y": 0.7}
         size_hint: 0.3, 0.1
 

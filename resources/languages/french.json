@@ -11,7 +11,7 @@
             "no": "Hérésie ! Brûlons-le avec ses travaux !"
         },
         "religious_sacrifice": {
-            "text": "L’évêque vous informe que les visions des oracles de l'Ordre sont sans appel : nous devons sacrifier treize survivants demain à treize heure.",
+            "text": "L’évêque vous informe que les visions des oracles de l'Ordre sont sans appel : nous devons sacrifier treize survivants demain à treize heures.",
             "yes": "Qu'il en soit selon la volonté des cieux.",
             "no": "Quelques poulets feront bien l'affaire."
         },
@@ -148,7 +148,7 @@
         "horses": {
             "text": "Un fermier a repéré des chevaux dans une plaine au loin. Ils pourraient aider les miliciens à se déplacer mais les volontaires ne se bousculent pas pour aller les attraper.",
             "yes": "Allez me chercher ces chevaux !",
-            "no": "C'est pas ma priorité vois-tu."
+            "no": "Ce n'est pas ma priorité vois-tu."
         },
         "morphine": {
             "text": "Un paléontologue rapporte que les cargaisons de morphine ont été volées par les adeptes.",
@@ -239,7 +239,7 @@
             "paleo": "Le paléontologue vous quitte en se frottant les mains, son rire nerveux et ses tics de joie sont on ne peut plus désagréables."
         },
         "no": {
-            "order": "Les traits de l’homme d’église se tendent. Il vous quitte après des salutations bien trop obséquieuses...",
+            "order": "Les traits de l'homme d’église se tendent. Il vous quitte après des salutations bien trop obséquieuses...",
             "military": "Le milicien quitte les lieux. Il peine à dissimuler sa frustration. Vous entendez le claquement rageur de ses bottes pendant de longues minutes.",
             "civilian": "Le survivant vous quitte en grommelant quelques mots inaudibles. Sans doute des insultes.",
             "paleo": "Le paléontologue s'exclame : \"Endomicropachycephalosaurus !\" et s’éloigne. Vous supposez qu'il s'agit d'une insulte."
@@ -309,7 +309,7 @@
             "text": "Un homme qui prétend se nommer Oleg et qui viendrait de ce qui était autrefois la Russie est arrive au camp. Nous n'avons pas l'habitude d'accepter des étrangers, mais les stocks d'armes conséquents qu'apporte Oleg faciliteront certainement son intégration en ces temps difficiles."
         },
         "dino_cave": {
-            "text": "Les paléontologues ont découvert une caverne où des dinosaures stockaient toutes leurs ressources ! Ils s'empressent de ramener toutes les vivres au campement."
+            "text": "Les paléontologues ont découvert une caverne où des dinosaures stockaient toutes leurs ressources ! Ils s'empressent de ramener tous les vivres au campement."
         },
         "dino_attack": {
             "text": "Une horde de compsognathus attaque votre campement sans prévenir. La milice parvient à contenir la crise au prix de quelques armes. De nombreux cadavres de ces petites bestioles sont parsemés dans votre camp, pour la plus grande joie des paléontologues qui s'empressent d'en subtiliser quelques-uns pour les étudier. Les autres sont utilisés pour regarnir vos réserves de nourriture."
@@ -338,7 +338,7 @@
         },
         "military_max": {
             "title": "Coup d'état",
-            "text": "La Milice est devenue si puissante que l'on ne sait plus très bien ce qui la contraint à vous obéir. Elle-même se le demande. Vos gardes vous trahissent dans la nuit et la Milice se saisit de vous. Par un petite ouverture dans la toile du camion qui semble vous emmener hors du campement, vous avez le temps d'apercevoir des affiches de propagandes à l'effigie du général de la Milice couvrir les murs de votre ancienne demeure."
+            "text": "La Milice est devenue si puissante que l'on ne sait plus très bien ce qui la contraint à vous obéir. Elle-même se le demande. Vos gardes vous trahissent dans la nuit et la Milice se saisit de vous. Par un petite ouverture dans la toile du camion qui semble vous emmener hors du campement, vous avez le temps d'apercevoir des affiches de propagande à l'effigie du général de la Milice couvrir les murs de votre ancienne demeure."
         },
         "military_min": {
             "title": "Sans défense",
@@ -358,7 +358,7 @@
         },
         "paleo_min": {
             "title": "La fin de la Science",
-            "text": "L'Ordre ardent du Dragon des derniers jours déchaîne une foule d'adeptes sur ce qui reste du laboratoire des paléontologues. Ses derniers occupants sont lynchés et leurs travaux finissent en autodafé. Sans le recours de la science, la qualité des équipements de la Milice et la productivité agricole déclinent. Ce n'est plus qu'une question de temps avant que vous mourriez de faim ou d'une attaque de dinosaures."
+            "text": "L'Ordre ardent du Dragon des derniers jours déchaîne une foule d'adeptes sur ce qui reste du laboratoire des paléontologues. Ses derniers occupants sont lynchés et leurs travaux finissent en autodafés. Sans le recours de la science, la qualité des équipements de la Milice et la productivité agricole déclinent. Ce n'est plus qu'une question de temps avant que vous mourriez de faim ou d'une attaque de dinosaures."
         }
     },
     "introduction": [
@@ -396,30 +396,12 @@
         ]
     ],
     "tutorial": [
-        [
-            "Dès votre arrivée au pouvoir, vos sujets viendront vous solliciter quotidiennement pour une requête. Vous serez alors amené à prendre une décision parmi les deux proposées, qui satisferont ou mécontenteront certaines factions. Si aucune des deux décisions ne vous plaît, vous pourrez toujours exécuter votre interlocuteur, mais n'espérez pas que ce soit sans conséquence.",
-            "decision"
-        ],
-        [
-            "Des événements inattendus surviendront parfois et vous n'aurez d'autre choix que d'observer les conséquences de cet imprévu.",
-            "event"
-        ],
-        [
-            "Chaque semaine, vous serez amené à passer un décret pour améliorer la vie de votre campement. Profitez de ces journées pour recharger vos stocks de ressources ou pour augmenter la satisfaction de la faction de votre choix.",
-            "decree"
-        ],
-        [
-            "À l'issue de chaque journée, les conséquences de vos choix seront appliquées. Vos ressourcess diminueront aussi légèrement pour les besoins quotidiens du campement",
-            "consequences"
-        ],
-        [
-            "Prenez garde à ce qu'aucune des satisfactions de vos factions ne devienne nulle ou n'atteigne son maximum, sinon vous serez renversé. De même, vous devez garder un œil attentif sur vos ressources. Dès que vous viendrez à en manquer d'une, la vie du campement touchera à sa fin, et la vôtre au passage.",
-            "zero"
-        ],
-        [
-            "Si par malheur l'une de ces tristes fins venait à se produire, vous pourrez bénéficier d'une seconde chance en regardant une publicité. Si vous ne désirez point vous soumettre à ces étranges pratiques, vous n'aurez qu'à accepter votre défaite.",
-            "end"
-        ]
+        ["Dès votre arrivée au pouvoir, vos sujets viendront vous solliciter quotidiennement pour une requête. Vous serez alors amené à prendre une décision parmi les deux proposées, qui satisferont ou mécontenteront certaines factions. Si aucune des deux décisions ne vous plaît, vous pourrez toujours exécuter votre interlocuteur, mais n'espérez pas que ce soit sans conséquence.", "decision"],
+        ["Des événements inattendus surviendront parfois et vous n'aurez d'autre choix que d'observer les conséquences de cet imprévu.", "event"],
+        ["Chaque semaine, vous serez amené à passer un décret pour améliorer la vie de votre campement. Profitez de ces journées pour recharger vos stocks de ressources ou pour augmenter la satisfaction de la faction de votre choix.", "decree"],
+        ["À l'issue de chaque journée, les conséquences de vos choix seront appliquées. Vos ressources diminueront aussi légèrement pour les besoins quotidiens du campement.", "consequences"],
+        ["Prenez garde à ce qu'aucune des satisfactions de vos factions ne devienne nulle ou n'atteigne son maximum, sinon vous serez renversé. De même, vous devez garder un œil attentif sur vos ressources. Dès que vous viendrez à en manquer d'une, la vie du campement touchera à sa fin, et la vôtre au passage.", "zero"],
+        ["Si par malheur l'une de ces tristes fins venait à se produire, vous pourrez bénéficier d'une seconde chance en regardant une publicité. Si vous ne désirez point vous soumettre à ces étranges pratiques, vous n'aurez qu'à accepter votre défaite.", "end"]
     ],
     "menu": {
         "press_to_start": "Commencer une nouvelle partie"

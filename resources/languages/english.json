@@ -1,401 +1,407 @@
 {
     "decision": {
         "cathedral": {
-            "text": "Vous vous êtes engagé à lancer le chantier d'une cathédrale auprès de l'Ordre, mais un milicien vous apprend qu'une brèche a été constatée dans les remparts.",
-            "yes": "La cathédrale attendra.",
-            "no": "Ces pierres ne nous protégerons pas de Son courroux, pauvres fous !"
+            "text": "You have committed to launching the construction of a cathedral with the Order, but a militiaman informs you that a breach has been observed in the ramparts.",
+            "yes": "The cathedral can wait.",
+            "no": "These stones will not protect us from His wrath, fools!"
         },
         "pteranodon_embryo": {
-            "text": "Un paléontologue vous annonce qu'il a réussi à créer in vitro un embryon de ptéranodon. Il affirme que cela nous permettra de mieux comprendre leurs forces et leurs faiblesses.",
-            "yes": "Encourageons-le à poursuivre ses recherches.",
-            "no": "Hérésie ! Brûlons-le avec ses travaux !"
+            "text": "A paleontologist informs you that they have successfully created an in vitro pteranodon embryo. They claim that this will allow us to better understand their strengths and weaknesses.",
+            "yes": "Let's encourage further research.",
+            "no": "Heresy! Burn them along with their work!"
         },
         "religious_sacrifice": {
-            "text": "L’évêque vous informe que les visions des oracles de l'Ordre sont sans appel : nous devons sacrifier treize survivants demain à treize heure.",
-            "yes": "Qu'il en soit selon la volonté des cieux.",
-            "no": "Quelques poulets feront bien l'affaire."
+            "text": "The bishop informs you that the visions of the Order's oracles are unequivocal: we must sacrifice thirteen survivors tomorrow at one o'clock.",
+            "yes": "So be it according to the will of the heavens.",
+            "no": "A few chickens will do just fine."
         },
         "tough_winter": {
-            "text": "Un ouvrier agricole vous réclame des vivres pour faire face au rude hiver qui s'annonce.",
-            "yes": "Tenez mon brave.",
-            "no": "L'État ne peut pas tout."
+            "text": "A farmworker asks you for supplies to cope with the harsh upcoming winter.",
+            "yes": "Here you go, my good fellow.",
+            "no": "The State cannot do everything."
         },
         "weapons_for_military": {
-            "text": "Le général de la Milice se plaint de l'état déplorable des équipements de ses troupes. Il menace de démissionner si les choses ne s'améliorent pas.",
-            "yes": "Très bien, très bien, ponctionnez sur les stocks stratégiques !",
-            "no": "Pour qui vous prenez-vous ?!"
+            "text": "The Milice's general complains about the deplorable state of his troops' equipment. He threatens to resign if things do not improve.",
+            "yes": "Very well, draw from the strategic stocks!",
+            "no": "Who do you think you are?!"
         },
         "food_for_dragon": {
-            "text": "Un représentant de l'Ordre vous demande des viandes et des huiles pour favoriser la venue du Dragon des derniers jours.",
-            "yes": "Qu'on les lui donne !",
-            "no": "Donnons-les plutôt au peuple !"
+            "text": "A representative of the Order asks you for meats and oils to hasten the arrival of the Dragon of the last days.",
+            "yes": "Give them to him!",
+            "no": "Let's give them to the people instead!"
         },
         "security_perimeter": {
-            "text": "Le général de la Milice est effaré des sorties régulières des survivants hors des périmètres de sécurité.",
-            "yes": "Renforcez les patrouilles et instaurez un couvre-feu !",
-            "no": "Armons les survivants directement !"
+            "text": "The Milice's general is horrified by the regular exits of the survivors beyond the security perimeters.",
+            "yes": "Reinforce patrols and impose a curfew!",
+            "no": "Arm the survivors directly!"
         },
         "merchant": {
-            "text": "Un marchand vous demande de le couvrir auprès de la Milice en échange de vivres et d'outils.",
-            "yes": "Il est vrai que nous nos coffres sont désespérément vides...",
-            "no": "Ignorons-le."
+            "text": "A merchant asks you to cover for him with the Milice in exchange for food and tools.",
+            "yes": "It is true that our coffers are desperately empty...",
+            "no": "Let's ignore him."
         },
         "witch": {
-            "text": "Un survivant s'approche de vous avec une paléontologue ligotée qui a été lynchée par la foule. Le survivant affirme l'avoir aperçue en train d'accoucher d'un reptile cornu. Il vous demande de la condamner à mort.",
-            "yes": "Libérez cette innocente, pauvre fou !",
-            "no": "C'est une sorcière, qu'il en soit ainsi."
+            "text": "A survivor approaches you with a tied-up paleontologist who was lynched by the crowd. The survivor claims to have seen her giving birth to a horned reptile. He asks you to condemn her to death.",
+            "yes": "Release this innocent, poor fool!",
+            "no": "She's a witch, so be it."
         },
         "tough_labour": {
-            "text": "Un survivant qui dit travailler à l'atelier de fabrication d'armes vous implore de réduire les cadences de production. Votre regard s'attarde sur ses mains difformes avilies par le labeur.",
-            "yes": "Silence ! Nous avons besoin de plus d'armes ! Augmentez les cadences !",
-            "no": "Oui, cela est juste et bon."
+            "text": "A survivor working at the weapons manufacturing workshop implores you to reduce the production pace. Your gaze lingers on their deformed hands, worn by labor.",
+            "yes": "Silence! We need more weapons! Increase the pace!",
+            "no": "Yes, that is fair and good."
         },
         "paleo_tools": {
-            "text": "L'intendant du laboratoire des paléontologues vous apporte un compte-rendu de leurs dépenses en outils. Elles sont anormalement élevées et vous constatez que des armes ont également été consommées.",
-            "yes": "Ils savent ce qu'ils font.",
-            "no": "Vous n'aurez rien de plus que d'habitude !"
+            "text": "The steward of the paleontologists' laboratory brings you a report of their tool expenses. They are abnormally high, and you notice that weapons have also been consumed.",
+            "yes": "They know what they're doing.",
+            "no": "You won't get more than usual!"
         },
         "black_market": {
-            "text": "Le commandant de la section \"Ordre public\" de la Milice vous somme de prendre des mesures plus fortes pour faire face à la contrebande de vivres.",
-            "yes": "Vous avez carte blanche, commandant.",
-            "no": "Tolérons plutôt ce trafic, beaucoup trop de survivants en dépendent."
+            "text": "The commander of the Milice's 'Public Order' section urges you to take stronger measures to deal with the smuggling of food.",
+            "yes": "You have carte blanche, commander.",
+            "no": "Let's tolerate this trafficking; too many survivors depend on it."
         },
         "paleo_researches": {
-            "text": "L’évêque s'indigne des enseignements prodigués par les paléontologues. Il affirme que ces derniers cherchent à embrigader des survivants dans leur quête du culte impie de la Raison.",
-            "yes": "Emprisonnez-les. La connaissance, c'est le pouvoir !",
-            "no": "Et alors ?"
+            "text": "The bishop is outraged by the teachings imparted by the paleontologists. He claims that they are trying to enlist survivors in their impious worship of Reason.",
+            "yes": "Imprison them. Knowledge is power!",
+            "no": "So what?"
         },
         "sioux_falls_ruins": {
-            "text": "Le capitaine d'une brigade d'exploration de la Milice vous fait son rapport. Il prétend avoir découvert un ordinateur d'agronomie dans les ruines de Sioux Falls. Il renferme sans doute de nombreuses connaissances.",
-            "yes": "Demandez aux paléontologues de le décrypter.",
-            "no": "Arrière ! Cet objet est porteur du vice qui a amené sur nous les dinosaures !"
+            "text": "The captain of a Milice exploration brigade gives you his report. He claims to have discovered an agronomy computer in the ruins of Sioux Falls. It undoubtedly holds numerous insights.",
+            "yes": "Ask the paleontologists to decipher it.",
+            "no": "Away! That object bears the vice that brought the dinosaurs upon us!"
         },
         "riots": {
-            "text": "Depuis plusieurs jours des va-nu-pieds s'agglutinent devant votre quartier général pour réclamer des vivres. Certains brûlent vos portraits et portent des banderoles dénonçant l'opulence de l'Ordre.",
-            "yes": "Donnons-leur des vivres et parlementons avec eux.",
-            "no": "Que la Milice disperse les émeutiers !"
+            "text": "For several days now, ragged individuals have been gathering outside your headquarters demanding food. Some burn your portraits and carry banners denouncing the opulence of the Order.",
+            "yes": "Give them food and negotiate with them.",
+            "no": "Let the Milice disperse the rioters!"
         },
         "party_for_the_dragon": {
-            "text": "Une comète a été aperçue dans le ciel. Votre aumônier affirme que c'est un signe de la venue prochaine du Dragon des derniers jours, et qu'il nous faut afficher notre foi en lui offrant une grande part de nos ressources.",
-            "yes": "Faire de l'événement une grande fête populaire.",
-            "no": "Congédier l'aumônier."
+            "text": "A comet has been spotted in the sky. Your chaplain claims it is a sign of the imminent arrival of the Dragon of the last days and that we must display our faith by offering a large portion of our resources.",
+            "yes": "Turn the event into a grand popular celebration.",
+            "no": "Dismiss the chaplain."
         },
         "alamosaurus": {
-            "text": "Un paléontologue vous informe qu'un nid d'Alamosaurus sanjuanensis a été découvert non loin du campement. Une aubaine pour en savoir plus sur cette sous-espèce ! Mais vos chasseurs préfèrent collecter le bois du nid pour en faire des armes... Hérésie !",
-            "yes": "Une sous-espèce... intéressant !",
-            "no": "C'est toi l'hérétique ! Allez prendre ce bois !"
+            "text": "A paleontologist informs you that a nest of Alamosaurus sanjuanensis has been discovered near the camp. An opportunity to learn more about this subspecies! But your hunters prefer to collect wood from the nest to make weapons... Heresy!",
+            "yes": "A subspecies... interesting!",
+            "no": "You're the heretic! Go take that wood!"
         },
         "thief": {
-            "text": "Un soldat vous annonce qu'un adepte est venu voler des outils destinés à la Milice pour réparer l'autel de l'Église.",
-            "yes": "Punissez-le !",
-            "no": "L'autel est plus important !"
+            "text": "A soldier reports that a follower came to steal tools intended for the Milice to repair the Church's altar.",
+            "yes": "Punish him!",
+            "no": "The altar is more important!"
         },
         "circle_game": {
-            "text": "Un milicien vous rapporte que des citoyens se sont amusés à faire le jeu du rond aux soldats pour les agacer.",
-            "yes": "Ce jeu est idiot...",
-            "no": "Ce jeu est génial !"
+            "text": "A militiaman reports that citizens have been playing the 'circle game' with the soldiers to annoy them.",
+            "yes": "This game is foolish...",
+            "no": "This game is great!"
         },
         "eggs": {
-            "text": "Un survivant vous informe que des œufs ont été trouvés près du camp. Votre peuple a faim, mais vos paléontologues ont besoin de cet œuf pour l'analyser.",
-            "yes": "Ce soir, c'est œufs au plat !",
-            "no": "Pas touche à ces œufs !"
+            "text": "A survivor informs you that eggs have been found near the camp. Your people are hungry, but your paleontologists need this egg for analysis.",
+            "yes": "Tonight, we'll have scrambled eggs!",
+            "no": "Hands off those eggs!"
         },
         "iron_mine": {
-            "text": "Un professeur prétend avoir détecté une ancienne mine de fer encore exploitable sous notre campement. Les fanatiques affirment qu'elle renferme un artefact sacré qui causera notre perte si nous y accédons.",
-            "yes": "De l'acier pour notre survie !",
-            "no": "Arrière, serviteur du diable !"
+            "text": "A professor claims to have detected an ancient iron mine still exploitable beneath our camp. Fanatics assert that it contains a sacred artifact that will cause our downfall if accessed.",
+            "yes": "Steel for our survival!",
+            "no": "Back off, servant of the devil!"
         },
         "services": {
-            "text": "L’évêque dénonce l'absence du peuple aux messes organisées pour assurer la croissance de nos plantations.",
-            "yes": "Messe obligatoire !",
-            "no": "Prêtres, à vos charrues !"
+            "text": "The bishop denounces the people's absence from the masses organized to ensure the growth of our plantations.",
+            "yes": "Mandatory mass!",
+            "no": "Priests, to your plows!"
         },
         "snake_soup": {
-            "text": "Un commerçant affirme que la consommation de serpents fraîchement tués est excellente pour gagner de la vigueur en combat et souhaite en servir une soupe à la Milice.",
-            "yes": "Enfin un connaisseur !",
-            "no": "On dit la même chose des fesses de babouin ! Pas de ça chez moi !"
+            "text": "A merchant claims that consuming freshly killed snakes is excellent for gaining vigor in combat and wants to serve it as soup to the Milice.",
+            "yes": "Finally, a connoisseur!",
+            "no": "The same is said about baboon buttocks! Not in my place!"
         },
         "market": {
-            "text": "Un démocrate vous demande de créer un grand marché hebdomadaire pour lutter contre le trafic de nourriture.",
-            "yes": "Vive le capitalisme !",
-            "no": "J'aime le marché noir."
+            "text": "A democrat asks you to create a large weekly market to combat food trafficking.",
+            "yes": "Long live capitalism!",
+            "no": "I love the black market."
         },
         "religious_songs": {
-            "text": "Un habitant se plaint des chants religieux trop forts à côté de chez lui.",
-            "yes": "Qu'on les fasse taire.",
-            "no": "Qu'on te fasse taire."
+            "text": "A resident complains about the religious songs being too loud near his dwelling.",
+            "yes": "Silence them.",
+            "no": "They should silence you."
         },
         "sunglasses": {
-            "text": "Le général de la Milice demande à ce que l'on fournisse des lunettes de soleil à toute la Milice pour ne pas être ébloui lors des combats contre les dinosaures de plus de trois mètres de haut.",
-            "yes": "Du confort pour être plus fort !",
-            "no": "Brûle-toi les yeux pour ton souverain."
+            "text": "The Milice's general asks for sunglasses to be provided to the entire Milice to avoid being blinded during fights against dinosaurs over three meters tall.",
+            "yes": "Comfort to be stronger!",
+            "no": "Burn your eyes for your sovereign."
         },
         "trapped_by_trex": {
-            "text": "Un paléontologue vous supplie d'aider ses collègues, pris au piège par des tyrannosaures alors qu'ils étudiaient quelques empreintes de chenilles.",
-            "yes": "Vite ! Leurs travaux doivent être importants !",
-            "no": "Des imbéciles en moins !"
+            "text": "A paleontologist begs you to help his colleagues, trapped by tyrannosaurs while studying some caterpillar tracks.",
+            "yes": "Quickly! Their work must be important!",
+            "no": "Fewer idiots!"
         },
         "conversion": {
-            "text": "Un habitant se plaint car les religieux se sont mis à venir dans sa tente pour tenter de le convertir.",
-            "yes": "Stoppez cette pratique !",
-            "no": "Fais comme tout le monde, accepte-les !"
+            "text": "A resident complains that the religious have started coming into his tent to try to convert him.",
+            "yes": "Stop this practice!",
+            "no": "Do as everyone else, accept them!"
         },
         "bananas": {
-            "text": "Un soldat vous rapporte qu'une caisse remplie de bananes encore mûres vient d'être déterrée près de l'église.",
-            "yes": "Un festin pour mes soldats !",
-            "no": "Rendez-ça aux prêtres ! "
+            "text": "A soldier reports that a crate filled with ripe bananas has just been unearthed near the church.",
+            "yes": "A feast for my soldiers!",
+            "no": "Give that back to the priests!"
         },
         "horses": {
-            "text": "Un fermier a repéré des chevaux dans une plaine au loin. Ils pourraient aider les miliciens à se déplacer mais les volontaires ne se bousculent pas pour aller les attraper.",
-            "yes": "Allez me chercher ces chevaux !",
-            "no": "C'est pas ma priorité vois-tu."
+            "text": "A farmer spotted horses in a distant plain. They could help the Milice move, but volunteers are not eager to go catch them.",
+            "yes": "Go get those horses for me!",
+            "no": "It's not my priority, you see."
         },
         "morphine": {
-            "text": "Un paléontologue rapporte que les cargaisons de morphine ont été volées par les adeptes.",
-            "yes": "Ils paieront pour cet affront !",
-            "no": "Il leur faut au moins ça..."
+            "text": "A paleontologist reports that the morphine shipments were stolen by followers.",
+            "yes": "They will pay for this affront!",
+            "no": "They need it at least..."
         },
         "therizinosaurus": {
-            "text": "Un général vous explique qu'il faut abattre la reine des therizinosaurus avant qu'elle ne se reproduise.",
-            "yes": "Allez-y !",
-            "no": "Pas touche à la maman !"
+            "text": "A general explains that it is necessary to kill the therizinosaurus queen before she reproduces.",
+            "yes": "Go for it!",
+            "no": "Don't touch the mother!"
         },
         "buried_weapons": {
-            "text": "Un paléontologue a déterré une caisse d'armes lors de ses fouilles.",
-            "yes": "Je prends.",
-            "no": "C'est un piège !"
+            "text": "A paleontologist unearthed a crate of weapons during their excavations.",
+            "yes": "I'll take it.",
+            "no": "It's a trap!"
         },
         "magic_tools": {
-            "text": "Un fabricant a inventé un procédé ingénieux permettant de créer des outils, mais il a disparu avoir de l'avoir entièrement finalisé. Une seule utilisation est possible.",
-            "yes": "C'est mieux que rien.",
-            "no": "C'est louche."
+            "text": "A manufacturer invented a clever process for creating tools, but disappeared before fully finalizing it. Only one use is possible.",
+            "yes": "It's better than nothing.",
+            "no": "It's suspicious."
         },
         "monument_for_soldiers": {
-            "text": "Un sergent demande à ce que l'on érige un monument en hommage aux guerriers disparus.",
-            "yes": "Nous devons les remercier.",
-            "no": "De quoi parlez-vous ?"
+            "text": "A sergeant asks to erect a monument in honor of the fallen warriors.",
+            "yes": "We must thank them.",
+            "no": "What are you talking about?"
         },
         "fertilizer": {
-            "text": "Un paléontologue propose d'utiliser les os de diplodocus broyés au niveau des cultures de mais afin d'en augmenter les rendements.",
-            "yes": "Que ces protocoles soient immédiatement appliqués !",
-            "no": "Des os de diplodocus ? Vous voulez corrompre notre sol avec cette horreur ?"
+            "text": "A paleontologist suggests using ground diplodocus bones near the corn crops to increase yields.",
+            "yes": "Let these protocols be immediately applied!",
+            "no": "Diplodocus bones? You want to corrupt our soil with that horror?"
         },
         "prison": {
-            "text": "Vous visitez vos geôles et un brigand vous interpelle. Il vous propose de vous livrer le contenu de sa cache d'armes en l'échange de sa liberté.",
-            "yes": "Il est vrai que nous manquons cruellement d'armes...",
-            "no": "Je crois que je vais plutôt vous laisser pourrir ici."
+            "text": "You visit your dungeons, and a brigand calls out to you. He offers to reveal the contents of his weapons cache in exchange for his freedom.",
+            "yes": "It is true that we are sorely lacking in weapons...",
+            "no": "I think I'll let you rot here instead."
         },
         "workshop": {
-            "text": "Un artisan patriote décède et décide de vous léguer son atelier. Il ne vous est d'aucune utilité mais vous pouvez récolter des matériaux en le démantelant.",
-            "yes": "Conservez-le, il inspirera les générations futures.",
-            "no": "Démantelez l'atelier."
+            "text": "A patriotic artisan passes away and bequeaths his workshop to you. It is of no use to you, but you can gather materials by dismantling it.",
+            "yes": "Keep it; it will inspire future generations.",
+            "no": "Dismantle the workshop."
         },
         "parade": {
-            "text": "Le général de la Milice demande à organiser un défilé militaire chaque année à la gloire de ses soldats.",
-            "yes": "J'en propose même deux !",
-            "no": "Très bien mais pas cher ! Pas de folies cette année !"
+            "text": "The Milice's general asks to organize a military parade every year in honor of the soldiers.",
+            "yes": "I even propose two!",
+            "no": "Alright, but don't spend too much! No extravagance this year!"
         },
         "weapons_manufacture": {
-            "text": "Un fabricant d'armes vous explique qu'il peut augmenter sa production si vous acceptez de lui donner quelques guerriers.",
-            "yes": "Sacrifice facile.",
-            "no": "Mes soldats valent mieux que ça !"
+            "text": "A weapons manufacturer explains that they can increase production if you agree to give them a few warriors.",
+            "yes": "Easy sacrifice.",
+            "no": "My soldiers are worth more than that!"
         },
         "dino_carcass": {
-            "text": "Le directeur des paléontologues veut vous donner les carcasses de dinosaures non utilisées pour nourrir votre camp. Mais il exige des outils en retour.",
-            "yes": "Merci, tenez vos outils.",
-            "no": "Je les prends mais vous n'aurez rien."
+            "text": "The director of the paleontologists wants to give you the unused dinosaur carcasses to feed your camp. But he demands tools in return.",
+            "yes": "Thank you, keep your tools.",
+            "no": "I'll take them, but you won't get anything."
         },
         "tools_food": {
-            "text": "Une paléontologue a inventé un système rendant les outils plus résistants. Elle demande une prime en vivres pour sa découverte.",
-            "yes": "Merci, cela mérite bien une prime !",
-            "no": "Je prends, mais vous n'avez qu'à manger vos outils."
+            "text": "A paleontologist has invented a system that makes tools more resistant. She asks for a food bonus for her discovery.",
+            "yes": "Thank you, this deserves a bonus!",
+            "no": "I'll take it, but you can eat your tools."
         },
         "dino_bile": {
-            "text": "Un chercheur rapporte que les paléontologues ont extrait des armes de l'estomac d'un diplodocus, mais ils veulent les garder pour pouvoir se défendre.",
-            "yes": "Très bien, gardez vos armes dégoûtantes.",
-            "no": "Donnez ces armes à mes guerriers !"
+            "text": "A researcher reports that the paleontologists have extracted weapons from a diplodocus's stomach, but they want to keep them to defend themselves.",
+            "yes": "Very well, keep your disgusting weapons.",
+            "no": "Give those weapons to my warriors!"
         },
         "tools_with_bones": {
-            "text": "L'une de vos équipes de paléontologues a découvert un nouveau procédé pour rendre plus rigides des os de dinosaures. Ils seraient parfaits pour faire des outils mais votre équipe souhaite continuer les expériences sur les échantillons déjà créés.",
-            "yes": "Bizarre mais après tout, chacun ses passe-temps.",
-            "no": "Parfait, je vous les prends, on manquait de bêches !"
+            "text": "One of your teams of paleontologists has discovered a new process to make dinosaur bones more rigid. They would be perfect for making tools, but your team wants to continue experiments on the already created samples.",
+            "yes": "Weird, but hey, to each their own hobbies.",
+            "no": "Perfect, I'll take them. We were running short on shovels!"
         },
         "weapons_for_paleo": {
-            "text": "Le général de la Milice vous rend visite pour vous faire état du nombre infime d'armes restant à la disposition de ses soldats. Il propose que vous réquisitionnez les paléontologues pour supporter l'effort des survivants à créer de nouvelles armes.",
-            "yes": "Prenez-en vingt, pour une fois qu'ils peuvent se rendre utiles !",
-            "no": "Revenez me voir quand vous saurez compter jusqu'à vingt !"
+            "text": "The Militia General pays you a visit to report the extremely low number of weapons remaining for his soldiers. He suggests that you requisition the paleontologists to support the survivors' effort in creating new weapons.",
+            "yes": "Take twenty of them. For once, they can be useful!",
+            "no": "Come back when you can count up to twenty!"
         },
         "suspect_individual": {
-            "text": "Un individu suspect vêtu de haillons se présente à vous tout bégayant. L'un de ses amis marchand s'est retrouvé coincé dans une ruine non loin de votre campement par quelques compsognathus affamés. Il vous supplie de lui venir en aide et vous promet que son ami pourra vous donner sa cargaison d'outils.",
-            "yes": "Ton histoire d'outils a intérêt à être vraie. Qu'on dépêche des soldats pour aider le marchand !",
-            "no": "Qu'on te fasse taire, toi et tes mensonges !"
-        }
+            "text": "A suspicious individual clad in rags stammers as he approaches you. One of his merchant friends got stuck in a ruin not far from your camp due to a few hungry compsognathuses. He begs you to help and promises that his friend will give you his cargo of tools.",
+            "yes": "Your story about the tools better be true. Dispatch soldiers to help the merchant!",
+            "no": "Silence your lies!"
+        }          
     },
     "answer": {
         "yes": {
-            "order": "L'homme d’église vous adresse sa bénédiction et s’en retourne dans son temple.",
-            "military": "Le milicien vous salue et quitte les lieux.",
-            "civilian": "Le survivant s'incline respectueusement et recule en vous regardant jusqu'à atteindre la porte.",
-            "paleo": "Le paléontologue vous quitte en se frottant les mains, son rire nerveux et ses tics de joie sont on ne peut plus désagréables."
+        "order": "The clergyman blesses you and returns to his temple.",
+        "military": "The militiaman salutes you and leaves the premises.",
+        "civilian": "The survivor respectfully bows and steps back, looking at you until reaching the door.",
+        "paleo": "The paleontologist leaves, rubbing his hands together. His nervous laughter and joyful ticks are extremely unpleasant."
         },
         "no": {
-            "order": "Les traits de l’homme d’église se tendent. Il vous quitte après des salutations bien trop obséquieuses...",
-            "military": "Le milicien quitte les lieux. Il peine à dissimuler sa frustration. Vous entendez le claquement rageur de ses bottes pendant de longues minutes.",
-            "civilian": "Le survivant vous quitte en grommelant quelques mots inaudibles. Sans doute des insultes.",
-            "paleo": "Le paléontologue s'exclame : \"Endomicropachycephalosaurus !\" et s’éloigne. Vous supposez qu'il s'agit d'une insulte."
+        "order": "The features of the clergyman tighten. He leaves after excessively obsequious farewells...",
+        "military": "The militiaman leaves. He struggles to conceal his frustration. You hear the angry clack of his boots for long minutes.",
+        "civilian": "The survivor leaves muttering some inaudible words. Probably insults.",
+        "paleo": "The paleontologist exclaims, \"Endomicropachycephalosaurus!\" and walks away. You assume it's an insult."
         },
-        "guillotine": "Vous regardez les miliciens s’emparer du condamné et le conduire à l’échafaud. Vous entendez le sifflement sinistre de la lame fendre l'air.",
-        "decree": "Le décret a été appliqué selon votre volonté. Votre suprématie est réaffirmée.",
-        "event": "À la suite de ces péripéties, vous partez vous coucher en espérant que le jour suivant sera moins mouvementé."
+        "guillotine": "You watch the militiamen take the condemned and lead them to the guillotine. You hear the ominous whistle of the blade slicing through the air.",
+        "decree": "The decree has been executed according to your will. Your supremacy is reaffirmed.",
+        "event": "Following these events, you go to bed, hoping that the next day will be less eventful."
     },
     "decree": {
         "cocks": {
-            "text": "Organiser des combats de coqs sur la place centrale."
+        "text": "Organize cockfights in the central square."
         },
         "missionaries": {
-            "text": "Envoyer des missionnaires dans les écoles."
+        "text": "Send missionaries to the schools."
         },
         "propaganda": {
-            "text": "Lancer une campagne de propagande en faveur de la Milice."
+        "text": "Launch a propaganda campaign in favor of the Militia."
         },
         "researches": {
-            "text": "Assouplir la réglementation de la recherche."
+        "text": "Relax the regulations on research."
         },
         "obsolete_weapons": {
-            "text": "Réquisitionner les artisans pour remettre en état des armes obsolètes."
+        "text": "Requisition artisans to refurbish obsolete weapons."
         },
         "edible_animals": {
-            "text": "Introduire de nouvelles espèces dans la liste officielle des animaux comestibles."
+        "text": "Introduce new species into the official list of edible animals."
         },
         "non_essential_infrastructures": {
-            "text": "Désassembler des infrastructures non-essentielles."
+        "text": "Disassemble non-essential infrastructures."
         },
         "prayers": {
-            "text": "Prier le Dragon des derniers jours pour augmenter les rendements agricoles."
+        "text": "Pray to the Dragon of the last days to increase agricultural yields."
         },
         "puzzle": {
-            "text": "Organiser sur la place publique un atelier puzzle géant avec des os de brachiosaures."
+        "text": "Organize a giant puzzle workshop with brachiosaurus bones in the public square."
         }
     },
     "event": {
         "rain": {
-            "text": "Il pleut !"
+        "text": "It's raining!"
         },
         "military_career": {
-            "text": "De plus en plus de survivants s'engagent dans une carrière militaire, avec l'espoir d'accéder ainsi a davantage de facilités matérielles. Vaine espérance de leur part, mais cela sert vos intérêts."
+        "text": "More and more survivors are opting for a military career, hoping for better material facilities. Futile hope on their part, but it serves your interests."
         },
         "wooded_sector": {
-            "text": "La Milice a fini par sécuriser un secteur arboré aux alentours du campement. Le bois de grande qualité de ce secteur nous permettra de produire un grand nombre d'outils."
+        "text": "The Militia has finally secured a wooded area around the encampment. The high-quality wood from this area will allow us to produce a large number of tools."
         },
         "agricultural_machines": {
-            "text": "Un ingénieur militaire vient de trouver un moyen particulièrement efficace pour transformer des machines agricoles obsolètes en engins d'assaut dévastateurs. La Milice saura en tirer profit lors de ses prochaines expéditions."
+        "text": "A military engineer has found a particularly effective way to convert obsolete agricultural machines into devastating assault vehicles. The Militia will benefit from this in its upcoming expeditions."
         },
         "researches_ammonites": {
-            "text": "Les paléontologues sont parvenus à un accord avantageux avec l'évèque. Ce dernier ne s'opposera plus à leurs recherches sur les amonites, en échange de passe-droits plus que douteux. Il vaudrait mieux que les fidèles n'en apprennent rien, mais en attendant, réjouissons-nous des bénéfices à venir de ces recherches."
+        "text": "The paleontologists have reached a favorable agreement with the bishop. The latter will no longer oppose their research on ammonites in exchange for rather dubious privileges. It would be better if the faithful didn't find out, but for now, let's rejoice in the forthcoming benefits of this research."
         },
         "storm_fear": {
-            "text": "Les craintes suscitées par les orages particulièrement violents de ces dernières semaines ont été habilement exploitées par l'Ordre. Les survivants sont désormais convaincus que l'évèque va intercéder en leur faveur pour apaiser la colère du Dragon des derniers jours."
+        "text": "Fears aroused by the particularly violent storms of recent weeks have been skillfully exploited by the Order. Survivors are now convinced that the bishop will intercede on their behalf to appease the anger of the Dragon of the last days."
         },
         "lottery": {
-            "text": "Une loterie est organisée par les citoyens pour se changer les idées. Ils trouvent ce jeu particulièrement satisfaisant, ce qui leur remonte le moral."
+        "text": "A lottery is organized by the citizens to lighten the mood. They find this game particularly satisfying, lifting their spirits."
         },
         "carpentry_tools": {
-            "text": "Eurêka ! Des documents décryptés par nos paléontologues contenaient des patrons d'instruments de menuiserie. Nous allons les mettre à profit pour améliorer l'efficacité de nos constructions."
+        "text": "Eureka! Documents decrypted by our paleontologists contained patterns for carpentry tools. We will use them to improve the efficiency of our constructions."
         },
         "fire_church": {
-            "text": "Une église est en feu ! Non seulement l'origine de cet incendie est vraisemblablement criminelle, mais les survivants risquent de douter de l'efficacité de la protection de monseigneur l'évèque sur le campement."
+        "text": "A church is on fire! Not only is the origin of this fire likely criminal, but survivors might doubt the effectiveness of the protection provided by Bishop Monseigneur over the encampment."
         },
-        "oleg": {
-            "text": "Un homme qui prétend se nommer Oleg et qui viendrait de ce qui était autrefois la Russie est arrive au camp. Nous n'avons pas l'habitude d'accepter des étrangers, mais les stocks d'armes conséquents qu'apporte Oleg faciliteront certainement son intégration en ces temps difficiles."
+        "Oleg": {
+        "text": "A man claiming to be named Oleg and hailing from what was once Russia has arrived at the camp. We're not used to accepting strangers, but Oleg's substantial weapons stocks will surely ease his integration in these difficult times."
         },
         "dino_cave": {
-            "text": "Les paléontologues ont découvert une caverne où des dinosaures stockaient toutes leurs ressources ! Ils s'empressent de ramener toutes les vivres au campement."
+        "text": "Paleontologists have discovered a cave where dinosaurs stored all their resources! They rush to bring all the supplies back to the encampment."
         },
         "dino_attack": {
-            "text": "Une horde de compsognathus attaque votre campement sans prévenir. Les survivants sont affolés mais la milice parvient à contenir la crise moyennant quelques armes. De nombreux cadavres de ces petites bestioles sont parsemés dans votre camp, pour le plus grand bonheur des paléontologues qui s'empressent d'en subtiliser quelques-uns pour les étudier. Les autres sont utilisés pour regarnir vos réserves de nourriture."
+        "text": "A horde of compsognathus attacks your encampment without warning. The militia manages to contain the crisis at the cost of a few weapons. Many corpses of these small creatures are scattered in your camp, much to the delight of the paleontologists who eagerly snatch a few to study. The others are used to replenish your food reserves."
         }
     },
     "ending": {
         "food": {
-            "title": "Le dernier repas",
-            "text": "Les survivants commencent à faire bouillir leurs chaussures et leurs vêtements pour se nourrir. Votre autorité n'a plus de sens pour ces hommes dont le dénuement nourrit des pulsions révolutionnaires. Ces corps décharnés vous saisissent et vous conduisent dans un immense chaudron sur la place publique. Vos jours s’achèvent en bain-marie. Vous n'obtenez guère mieux que les intestins des survivants pour sépulture."
+        "title": "The Last Meal",
+        "text": "Survivors begin to boil their shoes and clothes to feed themselves. Your authority no longer makes sense to these men whose destitution fuels revolutionary impulses. These emaciated bodies seize you and lead you to a huge cauldron in the public square. Your days end in a water bath. You get no better than the intestines of the survivors for burial."
         },
         "tools": {
-            "title": "Le tournevis",
-            "text": "Les équipements du camp tombent en ruine et vous ne parvenez pas à les réparer. L'agriculture, les dispositifs de sécurité et la recherche sont paralysés. Vous vous décidez à mener une expédition dans les vestiges des villes alentours afin de récolter des outils et des matériaux. L’évêque profite de votre absence pour prendre le pouvoir et vous êtes attaqué sur le chemin du retour par des vélociraptors. Vous êtes emporté à la tête de l'ultime charge de votre groupe."
+        "title": "The Screwdriver",
+        "text": "The camp's equipment is falling apart, and you cannot repair it. Agriculture, security devices, and research are paralyzed. You decide to lead an expedition into the remains of the surrounding cities to gather tools and materials. In your absence, the bishop takes advantage and seizes power. You are attacked on the way back by velociraptors. You are carried away at the head of your group's final charge."
         },
         "weapons": {
-            "title": "Fronde VS T-Rex",
-            "text": "C'est équipée de frondes et de bâtons que la Milice doit faire face à une énième attaque de tricératops. Les pierres et les boulettes de de papiers rebondissent sur leurs écailles et ces derniers ravagent le campement. Vous terminez piétiné sous une charge dévastatrice du troupeau."
+        "title": "Sling VS T-Rex",
+        "text": "Armed with slings and sticks, the Militia must face yet another attack from triceratops. Stones and paper balls bounce off their scales, and the latter ravage the camp. You end up trampled under a devastating charge from the herd."
         },
         "order_max": {
-            "title": "Le sacrifice",
-            "text": "Fort de son pouvoir sur la société, l'Ordre ardent du Dragon des derniers jours lance une campagne de purification du campement contre ses opposants. Après avoir massacré les paléontologues et pris le contrôle de la Milice, l'Ordre envoie la foule se saisir de vous. Vos os et votre chair sont consumés sur un bûcher sacrificiel."
+        "title": "The Sacrifice",
+        "text": "Empowered by its control over society, the Ardent Order of the Last Days launches a purification campaign in the camp against its opponents. After massacring the paleontologists and taking control of the Militia, the Order sends the crowd to seize you. Your bones and flesh are consumed on a sacrificial pyre."
         },
         "order_min": {
-            "title": "Perte de la foi",
-            "text": "Alors que le pouvoir de l'Ordre se délite, les survivants privés de l'Espérance du Salut prennent conscience de l’absurdité de l'existence dans un monde qui n'est plus celui des hommes. Ils ne vous obéissent plus et se laissent mourir. Vous êtes désormais le dernier des hommes."
+        "title": "Loss of Faith",
+        "text": "As the power of the Order crumbles, the survivors deprived of the Hope of Salvation become aware of the absurdity of existence in a world that is no longer that of men. They no longer obey you and let themselves die. You are now the last of men."
         },
         "military_max": {
-            "title": "Coup d'état",
-            "text": "La Milice est devenue si puissante que l'on ne sait plus très bien ce qui la contraint à vous obéir. Elle-même se le demande. Vos gardes vous trahissent dans la nuit et la Milice se saisit de vous. Par un petite ouverture dans la toile du camion qui semble vous emmener hors du campement, vous avez le temps d'apercevoir des affiches de propagandes à l'effigie du général de la Milice couvrir les murs de votre ancienne demeure."
+        "title": "Coup d'état",
+        "text": "The Militia has become so powerful that it is no longer clear what constrains it to obey you. It itself wonders. Your guards betray you in the night, and the Militia seizes you. Through a small opening in the truck's canvas that seems to take you out of the camp, you have time to see propaganda posters featuring the Militia general covering the walls of your former home."
         },
         "military_min": {
-            "title": "Sans défense",
-            "text": "La poignée d'hommes qui reste dans la Milice n'est guère plus armée que de quelques vieilles armes rouillées quand l'attaque de vélociraptors survient. Vos défenses sont submergées et le campement est rasé de la carte."
+        "title": "Defenseless",
+        "text": "The handful of men remaining in the Militia is armed with little more than a few old rusty weapons when the velociraptor attack occurs. Your defenses are overwhelmed, and the camp is wiped off the map."
         },
         "civilian_max": {
-            "title": "Révolution !",
-            "text": "Vous avez été trop tendre et les survivants se sentent pousser des ailes. La foule parvient à rallier la Milice à sa cause pour exiger la fin de votre pouvoir et la mise en place d'une gouvernance démocratique. L’émeute dégénère et les survivants débordent vos positions. Ils s'emparent de vous et vous emmènent vers la guillotine."
+        "title": "Revolution!",
+        "text": "You have been too lenient, and the survivors feel empowered. The crowd manages to rally the Militia to demand an end to your power and the establishment of democratic governance. The riot escalates, and the survivors overrun your positions. They seize you and take you to the guillotine."
         },
         "civilian_min": {
-            "title": "Le Tyran",
-            "text": "Votre pouvoir n'a jamais semblé aussi fort. Les survivants sont à votre botte et semblent complètement apathiques. Toutefois, vous observez progressivement le campement se dépeupler. Il vous semble que ceux qui restent ne produisent presque plus rien. La poignée d'hommes qui occupe alors le campement ne peut guère vous défendre lors de l'attaque des ptéranodons, et vous périssez entre leurs griffes."
+        "title": "The Tyrant",
+        "text": "Your power has never seemed stronger. The survivors are at your beck and call and seem completely apathetic. However, you gradually observe the camp depopulating. It seems that those who remain produce almost nothing. The handful of men who then occupy the camp can hardly defend you during the attack of the pteranodons, and you perish in their claws."
         },
         "paleo_max": {
-            "title": "Eurêkaïe !",
-            "text": "Les paléontologues, convaincus d'avoir enfin mis au point un appareil permettant de communiquer avec les dinosaures, se décident à en introduire quelques-uns sur le campement. Contre toute attente, l'essai est un échec. Les dinosaures ne sont pas réceptifs aux messages envoyés. Ils se déchaînent sur les survivants et vous périssez entre les mâchoires d'un tyrannosaure."
+        "title": "Eureka!",
+        "text": "The paleontologists, convinced they have finally developed a device to communicate with dinosaurs, decide to introduce some onto the camp. Unexpectedly, the trial fails. Dinosaurs are not receptive to the messages sent. They unleash themselves on the survivors, and you perish between the jaws of a tyrannosaurus."
         },
         "paleo_min": {
-            "title": "La fin de la Science",
-            "text": "L'Ordre ardent du Dragon des derniers jours déchaîne une foule d'adeptes sur ce qui reste du laboratoire des paléontologues. Ses derniers occupants sont lynchés et leurs travaux finissent en autodafé. Sans le recours de la science, la qualité des équipements de la Milice et la productivité agricole déclinent. Ce n'est plus qu'une question de temps avant que vous mourriez de faim ou d'une attaque de dinosaures."
+        "title": "The End of Science",
+        "text": "The Ardent Order of the Last Days unleashes a crowd of followers on what remains of the paleontologists' laboratory. Its last occupants are lynched, and their work ends up in autodafés. Without the use of science, the quality of the Militia's equipment and agricultural productivity decline. It's only a matter of time before you die of starvation or a dinosaur attack."
         }
     },
     "introduction": [
-        "La civilisation a assisté en silence au retour des dinosaures. Elle a disparu comme elle était apparue. Peu sont ceux qui en gardent un souvenir, et ce n'est guère plus qu'un écho imperceptible. L’Humanité se résume peut-être au campement que vous dirigez dans les grandes plaines du Dakota, non loin de ce qui était autrefois le parc des Badlands.",
-        "Vous devrez assurer la cohésion et la survie de cette communauté face à la menace constante des dinosaures. Mais ne vous méprenez pas, votre priorité est de maintenir votre pouvoir, quoiqu'il en coûte. Votre main ne devra pas trembler.",
-        "L'Ordre ardent du dragon des derniers jours :\n\nDes cendres des cultes de jadis est né l'Ordre ardent du Dragon des derniers jours. Les temps rudes favorisent l'émergence de cultes et celui-ci a acquis un grand pouvoir sur les consciences. Ses membres affirment que l'apparition des dinosaures est un châtiment céleste. L'Ordre appelle par conséquent à la pénitence en attendant la venue du Dragon des derniers jours, qui délivrera l’Humanité du joug des dinosaures. L'Ordre interprétera comme une insulte au Dragon des derniers jours toute tentative profane de régler le problème des dinosaures.",
-        "La Milice :\n\nLa Milice est constituée des survivants les plus braves. Sa mission est de protéger le campement et ses alentours des incursions des dinosaures. Elle mène également des missions d'exploration dans les vestiges de la civilisation antérieure, au grand désarroi de l'Ordre. La Milice est un formidable outil pour contrôler la population. Mais prenez garde à ce qu'elle ne vous devienne pas trop indispensable...",
-        "Les Survivants :\n\nLes survivants sont les habitants dociles du campement. Ils produisent des vivres, et fabriquent armes et outils. Ils vous renverseront s'ils jugent votre pouvoir trop tyrannique. Vous devrez leur accorder quelques facilites matérielles et faire preuve de justice dans vos jugements pour les contenter. Mais n'oubliez pas : si vous leur accordez trop de pouvoir, ils pourraient être tentés de se passer de vous.",
-        "Les paléontologues :\n\nLes paléontologues s’intéressent de près à l'étude des dinosaures. Ils sont les seuls représentants de ce qui était autrefois \"La Science\". Leurs recherches pourraient vous apporter les connaissances décisives pour mettre un terme à l'oppression des dinosaures, à moins que la soif de connaissance des paléontologues ne les attire trop près du camp...",
-        "Les vivres :\n\nLes vivres sont nécessaires à l'alimentation de vos survivants. L'Ordre peut également les exiger pour des sacrifices.",
-        "Les armes :\n\nLes armes de toute nature sont absolument essentielles à la Milice. Elle en a besoin pour maintenir l'ordre et protéger le campement des dinosaures.",
-        "Les outils :\n\nLes outils sont l'ensemble des instruments qui permettent à vos survivants de travailler. Ils sont également employés pour les constructions."
+        ["Civilization silently witnessed the return of dinosaurs. It vanished as it appeared. Few remember it, and it's barely more than an imperceptible echo. Humanity may be summed up in the camp you lead in the great plains of Dakota, not far from what was once the Badlands Park.", "intro_dakota"],
+        ["You must ensure the cohesion and survival of this community in the face of the constant threat of dinosaurs. But make no mistake, your priority is to maintain your power at all costs. Your hand must not tremble.", "dinosaurs"],
+        ["Your community is divided into four rival factions that fate has forced to ally in order to survive, and you are the last arbiter between them.", "mayor"],
+        ["The Ardent Order of the Last Days:\n\nFrom the ashes of past cults arose the Ardent Order of the Last Days. Harsh times favor the emergence of cults, and this one has gained great power over consciences. Its members claim that the appearance of dinosaurs is a celestial punishment. Therefore, the Order calls for penance while awaiting the coming of the Last Days Dragon, who will deliver humanity from the yoke of dinosaurs. The Order will interpret any profane attempt to solve the dinosaur problem as an insult to the Last Days Dragon.", "order"],
+        ["The Militia:\n\nThe Militia consists of the bravest survivors. Its mission is to protect the camp and its surroundings from dinosaur incursions. It also conducts exploratory missions into the remains of the previous civilization, much to the dismay of the Order. The Militia is a powerful tool for controlling the population. But be careful not to become too indispensable to it...", "militia"],
+        ["The Survivors:\n\nThe survivors are the docile inhabitants of the camp. They produce food and manufacture weapons and tools. They will overthrow you if they deem your power too tyrannical. You must grant them some material facilities and exercise justice in your judgments to satisfy them. But remember: if you give them too much power, they might be tempted to do without you.", "citizens"],
+        ["The Paleontologists:\n\nThe paleontologists are closely interested in studying dinosaurs. They are the only representatives of what was once 'Science.' Their research could bring you the decisive knowledge to put an end to the oppression of dinosaurs, unless their thirst for knowledge draws them too close to the camp...", "paleontologists"],
+        ["You have limited resources to ensure the survival of your camp: make sure never to run out of any of them.\n\nFood is necessary for feeding your population, but the Order may also demand it for sacrifices.\n\nWeapons of any kind are absolutely essential for the Militia to maintain order and protect the camp from dinosaurs.\n\nTools, however rudimentary they may be, are all the instruments that allow survivors to work and carry out constructions.", "resources"]
     ],
     "tutorial": [
-        "To do"
+        ["Upon your rise to power, your subjects will come to you daily with a request. You will then have to make a decision among the two proposed, which will satisfy or displease certain factions. If neither decision pleases you, you can always execute your interlocutor, but not without consequences.", "decision"],
+        ["Unexpected events will sometimes occur, and you will have no choice but to observe the consequences of this unforeseen event.", "event"],
+        ["Every week, you will be required to pass a decree to improve life in your camp. Take advantage of these days to replenish your resource stocks or increase the satisfaction of the faction of your choice.", "decree"],
+        ["At the end of each day, the consequences of your choices will be applied. Your resources will also decrease slightly for the daily needs of the camp.", "consequences"],
+        ["Be careful that none of your faction's satisfactions becomes null or reaches its maximum, or you will be overthrown. Similarly, you must keep a close eye on your resources. As soon as you run out of any, the camp's life will come to an end, and yours as well in the process.", "zero"],
+        ["If, unfortunately, one of these sad ends were to occur, you could benefit from a second chance by watching an advertisement. If you do not wish to submit to these strange practices, you will simply have to accept your defeat.", "end"]
     ],
     "menu": {
-        "press_to_start": "Cliquez sur l'écran pour commencer une partie"
+        "press_to_start": "Start a new game"
     },
     "game": {
-        "decree": "Le conseil d'aujourd'hui se termine tard dans la nuit. Vos conseillers vous ont préparé trois décrets pour améliorer le moral dans le camp.\n\nLequel choisissez-vous d'appliquer ?",
-        "pre_game_over": "Vous sentez votre fin approcher, souhaitez-vous tenter de retarder l'inéluctable ?",
-        "watch_ad": "Faire une offrande au dragon ardent du dernier jour en vous ouvrant à ses visions.",
-        "go_to_game_over": "Attendre la fin."
+        "decree": "Today's council ends late into the night. Your advisors have prepared three decrees to boost morale in the camp.\n\nWhich one do you choose to apply?",
+        "pre_game_over": "You feel your end approaching, do you want to try to delay the inevitable?",
+        "watch_ad": "Make an offering to the Ardent Dragon of the Last Day by opening yourself to its visions.",
+        "go_to_game_over": "Wait for the end.",
+        "day": "Day "
     },
     "settings": {
-        "apply": "Appliquer",
-        "validate": "Valider",
-        "music_volume": "Volume de la musique",
-        "sound_volume": "Volume des bruitages",
+        "apply": "Apply",
+        "validate": "Validate",
+        "music_volume": "Music Volume",
+        "sound_volume": "Sound Volume",
         "language": "Language",
-        "tutorial": "Tutoriel",
+        "tutorial": "Tutorial",
         "version": "Version "
     },
     "game_over": {
-        "highscore": "Meilleur score : ",
-        "score": "Score : ",
-        "credits": "Jeu original développé par :\n\n- Paul Creusy\n-TODO\n\nRemasterisé par :\n\n- Paul Creusy\n- Agathe Aris"
+        "highscore": "Highscore: ",
+        "score": "Score: ",
+        "credits": "Original game developed by:\n\n- Paul Creusy\n- Clément Perrin\n- Balthazar Patiachvili\n- Alexis Guillon\n- Yohan Abehssera\n\nRemastered by:\n\n- Paul Creusy\n- Agathe Aris"
     }
+       
 }
