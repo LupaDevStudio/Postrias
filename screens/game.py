@@ -43,11 +43,13 @@ from tools.constants import (
     SOUND_LIST,
     TEXT,
     platform,
-    REWARD_INTERSTITIAL
+    REWARD_INTERSTITIAL,
+    INTERSTITIAL
 )
 if platform == "android":
     from kivads import (
         RewardedInterstitial,
+        InterstitialAd,
         TestID
     )
 
@@ -213,6 +215,9 @@ class GameScreen(ImprovedScreen):
             self.reward_interstitial = RewardedInterstitial(
                 REWARD_INTERSTITIAL, self.schedule_reward
             )
+            self.reward_static = InterstitialAd(
+                INTERSTITIAL
+            )
 
         # Allocate the number of credits
         self.credit = 1
@@ -372,6 +377,8 @@ class GameScreen(ImprovedScreen):
         """
         Called after the ad to continue the game.
         """
+        if platform == "android":
+            self.reward_static.show()
         self.credit = self.credit - 1
         game.continue_game()
         self.update_display_resources()
@@ -380,4 +387,7 @@ class GameScreen(ImprovedScreen):
         if platform == "android":
             self.reward_interstitial = RewardedInterstitial(
                 REWARD_INTERSTITIAL, self.schedule_reward
+            )
+            self.reward_static = InterstitialAd(
+                INTERSTITIAL
             )

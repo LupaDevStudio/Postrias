@@ -194,3 +194,4 @@ START_MUSIC_LIST = ["cinematic_dramatic.mp3", "my_office.mp3"]
 
 # Ads code
 REWARD_INTERSTITIAL = "ca-app-pub-2909842258525517/6684743133"
+INTERSTITIAL = "ca-app-pub-2909842258525517/7085343595"
