@@ -290,7 +290,7 @@
         "agricultural_machines": {
             "text": "Un ingénieur militaire vient de trouver un moyen particulièrement efficace pour transformer des machines agricoles obsolètes en engins d'assaut dévastateurs. La Milice saura en tirer profit lors de ses prochaines expéditions."
         },
-        "researches_amonites": {
+        "researches_ammonites": {
             "text": "Les paléontologues sont parvenus à un accord avantageux avec l'évèque. Ce dernier ne s'opposera plus à leurs recherches sur les amonites, en échange de passe-droits plus que douteux. Il vaudrait mieux que les fidèles n'en apprennent rien, mais en attendant, réjouissons-nous des bénéfices à venir de ces recherches."
         },
         "storm_fear": {
@@ -372,7 +372,9 @@
         "Les armes :\n\nLes armes de toute nature sont absolument essentielles à la Milice. Elle en a besoin pour maintenir l'ordre et protéger le campement des dinosaures.",
         "Les outils :\n\nLes outils sont l'ensemble des instruments qui permettent à vos survivants de travailler. Ils sont également employés pour les constructions."
     ],
-    "tutorial": ["To do"],
+    "tutorial": [
+        "To do"
+    ],
     "menu": {
         "press_to_start": "Cliquez sur l'écran pour commencer une partie"
     },
