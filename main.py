@@ -2,6 +2,8 @@
 Main module of the generator of dialogs.
 """
 
+print("Start Postrias")
+
 
 ###############
 ### Imports ###
@@ -15,6 +17,7 @@ import platform
 os_name = platform.system()
 if os_name == "Windows":
     os.environ['KIVY_TEXT'] = 'pil'
+print("Python packages loaded")
 
 ### Kivy imports ###
 
@@ -26,24 +29,23 @@ from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, NoTransition, Screen
 from kivy.uix.widget import Widget
 from kivy.core.window import Window
+from kivy.uix.image import Image
+print("Kivy packages loaded")
 
 ### Module imports ###
 
 from tools.path import (
-    PATH_IMAGES
+    PATH_IMAGES,
+    PATH_RESOURCES_FOLDER
 )
 from tools.constants import (
     MOBILE_MODE,
     FPS,
     MSAA_LEVEL
 )
-from screens import (   # pylint: disable=unused-import
-    MenuScreen,
-    GameScreen,
-    SettingsScreen,
-    GameOverScreen,
-    AchievementsScreen
-)
+from screens import OpeningScreen
+
+print("Local packages loaded")
 
 
 ###############
@@ -59,9 +61,11 @@ class WindowManager(ScreenManager):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.transition = NoTransition()
-        self.add_widget(Screen(name="opening"))
-        self.current = "opening"
         self.list_former_screens = []
+        opening_screen = OpeningScreen(name="opening")
+        self.add_widget(opening_screen)
+        self.current = "opening"
+        print("WindowManager initialised")
 
 
 class MainApp(App, Widget):
@@ -100,7 +104,9 @@ class MainApp(App, Widget):
             Window.update_viewport()
 
         # Open the menu screen
-        self.root_window.children[0].current = "menu"
+        # self.root_window.children[0].current = "menu"
+
+        print("Main app started")
 
         return super().on_start()
 

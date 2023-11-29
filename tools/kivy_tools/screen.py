@@ -55,9 +55,6 @@ class ImprovedScreen(Screen):
         # Boolean to indicate whether the screen is loaded or no
         self.is_loaded = False
 
-        # Init the kv screen
-        super().__init__(**kw)
-
         # Set the font
         self.font_name = font_name
 
@@ -68,6 +65,9 @@ class ImprovedScreen(Screen):
         self.back_image_disabled = False
         self.back_image_opacity = 1
         self.back_image_ratio = 1
+
+        # Init the kv screen
+        super().__init__(**kw)
 
     def preload(self, *args):
         """
