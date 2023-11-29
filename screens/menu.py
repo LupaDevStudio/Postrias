@@ -35,6 +35,7 @@ from tools import (
 ### Classes ###
 ###############
 
+
 class MenuScreen(ImprovedScreen):
 
     start_label_text = StringProperty()
@@ -65,10 +66,6 @@ class MenuScreen(ImprovedScreen):
         return super().on_enter(*args)
 
     def on_pre_leave(self, *args):
-        # Stop the title music
-        if self.manager.current != "settings":
-            music_mixer.stop()
-
         # Unschedule the clock update
         Clock.unschedule(self.update, 1 / FPS)
 

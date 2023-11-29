@@ -26,10 +26,10 @@ source.exclude_dirs = test, bin, .buildozer, data/collection, data/collection_co
 
 # (list) List of exclusions using pattern matching
 # Do not prefix with './'
-source.exclude_patterns = data/collection.json,*.gitignore, requirements.txt
+source.exclude_patterns = data.json,*.gitignore, requirements.txt
 
 # (str) Application versioning (method 1)
-version = 2.0.1
+version = 2.0.2
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]

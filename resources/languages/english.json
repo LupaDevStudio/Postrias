@@ -229,20 +229,20 @@
             "text": "A suspicious individual clad in rags stammers as he approaches you. One of his merchant friends got stuck in a ruin not far from your camp due to a few hungry compsognathuses. He begs you to help and promises that his friend will give you his cargo of tools.",
             "yes": "Your story about the tools better be true. Dispatch soldiers to help the merchant!",
             "no": "Silence your lies!"
-        }          
+        }
     },
     "answer": {
         "yes": {
-        "order": "The clergyman blesses you and returns to his temple.",
-        "military": "The militiaman salutes you and leaves the premises.",
-        "civilian": "The survivor respectfully bows and steps back, looking at you until reaching the door.",
-        "paleo": "The paleontologist leaves, rubbing his hands together. His nervous laughter and joyful ticks are extremely unpleasant."
+            "order": "The clergyman blesses you and returns to his temple.",
+            "military": "The militiaman salutes you and leaves the premises.",
+            "civilian": "The survivor respectfully bows and steps back, looking at you until reaching the door.",
+            "paleo": "The paleontologist leaves, rubbing his hands together. His nervous laughter and joyful ticks are extremely unpleasant."
         },
         "no": {
-        "order": "The features of the clergyman tighten. He leaves after excessively obsequious farewells...",
-        "military": "The militiaman leaves. He struggles to conceal his frustration. You hear the angry clack of his boots for long minutes.",
-        "civilian": "The survivor leaves muttering some inaudible words. Probably insults.",
-        "paleo": "The paleontologist exclaims, \"Endomicropachycephalosaurus!\" and walks away. You assume it's an insult."
+            "order": "The features of the clergyman tighten. He leaves after excessively obsequious farewells...",
+            "military": "The militiaman leaves. He struggles to conceal his frustration. You hear the angry clack of his boots for long minutes.",
+            "civilian": "The survivor leaves muttering some inaudible words. Probably insults.",
+            "paleo": "The paleontologist exclaims, \"Endomicropachycephalosaurus!\" and walks away. You assume it's an insult."
         },
         "guillotine": "You watch the militiamen take the condemned and lead them to the guillotine. You hear the ominous whistle of the blade slicing through the air.",
         "decree": "The decree has been executed according to your will. Your supremacy is reaffirmed.",
@@ -250,134 +250,176 @@
     },
     "decree": {
         "cocks": {
-        "text": "Organize cockfights in the central square."
+            "text": "Organize cockfights in the central square."
         },
         "missionaries": {
-        "text": "Send missionaries to the schools."
+            "text": "Send missionaries to the schools."
         },
         "propaganda": {
-        "text": "Launch a propaganda campaign in favor of the Militia."
+            "text": "Launch a propaganda campaign in favor of the Militia."
         },
         "researches": {
-        "text": "Relax the regulations on research."
+            "text": "Relax the regulations on research."
         },
         "obsolete_weapons": {
-        "text": "Requisition artisans to refurbish obsolete weapons."
+            "text": "Requisition artisans to refurbish obsolete weapons."
         },
         "edible_animals": {
-        "text": "Introduce new species into the official list of edible animals."
+            "text": "Introduce new species into the official list of edible animals."
         },
         "non_essential_infrastructures": {
-        "text": "Disassemble non-essential infrastructures."
+            "text": "Disassemble non-essential infrastructures."
         },
         "prayers": {
-        "text": "Pray to the Dragon of the last days to increase agricultural yields."
+            "text": "Pray to the Dragon of the last days to increase agricultural yields."
         },
         "puzzle": {
-        "text": "Organize a giant puzzle workshop with brachiosaurus bones in the public square."
+            "text": "Organize a giant puzzle workshop with brachiosaurus bones in the public square."
         }
     },
     "event": {
         "rain": {
-        "text": "It's raining!"
+            "text": "It's raining!"
         },
         "military_career": {
-        "text": "More and more survivors are opting for a military career, hoping for better material facilities. Futile hope on their part, but it serves your interests."
+            "text": "More and more survivors are opting for a military career, hoping for better material facilities. Futile hope on their part, but it serves your interests."
         },
         "wooded_sector": {
-        "text": "The Militia has finally secured a wooded area around the encampment. The high-quality wood from this area will allow us to produce a large number of tools."
+            "text": "The Militia has finally secured a wooded area around the encampment. The high-quality wood from this area will allow us to produce a large number of tools."
         },
         "agricultural_machines": {
-        "text": "A military engineer has found a particularly effective way to convert obsolete agricultural machines into devastating assault vehicles. The Militia will benefit from this in its upcoming expeditions."
+            "text": "A military engineer has found a particularly effective way to convert obsolete agricultural machines into devastating assault vehicles. The Militia will benefit from this in its upcoming expeditions."
         },
         "researches_ammonites": {
-        "text": "The paleontologists have reached a favorable agreement with the bishop. The latter will no longer oppose their research on ammonites in exchange for rather dubious privileges. It would be better if the faithful didn't find out, but for now, let's rejoice in the forthcoming benefits of this research."
+            "text": "The paleontologists have reached a favorable agreement with the bishop. The latter will no longer oppose their research on ammonites in exchange for rather dubious privileges. It would be better if the faithful didn't find out, but for now, let's rejoice in the forthcoming benefits of this research."
         },
         "storm_fear": {
-        "text": "Fears aroused by the particularly violent storms of recent weeks have been skillfully exploited by the Order. Survivors are now convinced that the bishop will intercede on their behalf to appease the anger of the Dragon of the last days."
+            "text": "Fears aroused by the particularly violent storms of recent weeks have been skillfully exploited by the Order. Survivors are now convinced that the bishop will intercede on their behalf to appease the anger of the Dragon of the last days."
         },
         "lottery": {
-        "text": "A lottery is organized by the citizens to lighten the mood. They find this game particularly satisfying, lifting their spirits."
+            "text": "A lottery is organized by the citizens to lighten the mood. They find this game particularly satisfying, lifting their spirits."
         },
         "carpentry_tools": {
-        "text": "Eureka! Documents decrypted by our paleontologists contained patterns for carpentry tools. We will use them to improve the efficiency of our constructions."
+            "text": "Eureka! Documents decrypted by our paleontologists contained patterns for carpentry tools. We will use them to improve the efficiency of our constructions."
         },
         "fire_church": {
-        "text": "A church is on fire! Not only is the origin of this fire likely criminal, but survivors might doubt the effectiveness of the protection provided by Bishop Monseigneur over the encampment."
+            "text": "A church is on fire! Not only is the origin of this fire likely criminal, but survivors might doubt the effectiveness of the protection provided by Bishop Monseigneur over the encampment."
         },
         "Oleg": {
-        "text": "A man claiming to be named Oleg and hailing from what was once Russia has arrived at the camp. We're not used to accepting strangers, but Oleg's substantial weapons stocks will surely ease his integration in these difficult times."
+            "text": "A man claiming to be named Oleg and hailing from what was once Russia has arrived at the camp. We're not used to accepting strangers, but Oleg's substantial weapons stocks will surely ease his integration in these difficult times."
         },
         "dino_cave": {
-        "text": "Paleontologists have discovered a cave where dinosaurs stored all their resources! They rush to bring all the supplies back to the encampment."
+            "text": "Paleontologists have discovered a cave where dinosaurs stored all their resources! They rush to bring all the supplies back to the encampment."
         },
         "dino_attack": {
-        "text": "A horde of compsognathus attacks your encampment without warning. The militia manages to contain the crisis at the cost of a few weapons. Many corpses of these small creatures are scattered in your camp, much to the delight of the paleontologists who eagerly snatch a few to study. The others are used to replenish your food reserves."
+            "text": "A horde of compsognathus attacks your encampment without warning. The militia manages to contain the crisis at the cost of a few weapons. Many corpses of these small creatures are scattered in your camp, much to the delight of the paleontologists who eagerly snatch a few to study. The others are used to replenish your food reserves."
         }
     },
     "ending": {
         "food": {
-        "title": "The Last Meal",
-        "text": "Survivors begin to boil their shoes and clothes to feed themselves. Your authority no longer makes sense to these men whose destitution fuels revolutionary impulses. These emaciated bodies seize you and lead you to a huge cauldron in the public square. Your days end in a water bath. You get no better than the intestines of the survivors for burial."
+            "title": "The Last Meal",
+            "text": "Survivors begin to boil their shoes and clothes to feed themselves. Your authority no longer makes sense to these men whose destitution fuels revolutionary impulses. These emaciated bodies seize you and lead you to a huge cauldron in the public square. Your days end in a water bath. You get no better than the intestines of the survivors for burial."
         },
         "tools": {
-        "title": "The Screwdriver",
-        "text": "The camp's equipment is falling apart, and you cannot repair it. Agriculture, security devices, and research are paralyzed. You decide to lead an expedition into the remains of the surrounding cities to gather tools and materials. In your absence, the bishop takes advantage and seizes power. You are attacked on the way back by velociraptors. You are carried away at the head of your group's final charge."
+            "title": "The Screwdriver",
+            "text": "The camp's equipment is falling apart, and you cannot repair it. Agriculture, security devices, and research are paralyzed. You decide to lead an expedition into the remains of the surrounding cities to gather tools and materials. In your absence, the bishop takes advantage and seizes power. You are attacked on the way back by velociraptors. You are carried away at the head of your group's final charge."
         },
         "weapons": {
-        "title": "Sling VS T-Rex",
-        "text": "Armed with slings and sticks, the Militia must face yet another attack from triceratops. Stones and paper balls bounce off their scales, and the latter ravage the camp. You end up trampled under a devastating charge from the herd."
+            "title": "Sling VS T-Rex",
+            "text": "Armed with slings and sticks, the Militia must face yet another attack from triceratops. Stones and paper balls bounce off their scales, and the latter ravage the camp. You end up trampled under a devastating charge from the herd."
         },
         "order_max": {
-        "title": "The Sacrifice",
-        "text": "Empowered by its control over society, the Ardent Order of the Last Days launches a purification campaign in the camp against its opponents. After massacring the paleontologists and taking control of the Militia, the Order sends the crowd to seize you. Your bones and flesh are consumed on a sacrificial pyre."
+            "title": "The Sacrifice",
+            "text": "Empowered by its control over society, the Ardent Order of the Last Days launches a purification campaign in the camp against its opponents. After massacring the paleontologists and taking control of the Militia, the Order sends the crowd to seize you. Your bones and flesh are consumed on a sacrificial pyre."
         },
         "order_min": {
-        "title": "Loss of Faith",
-        "text": "As the power of the Order crumbles, the survivors deprived of the Hope of Salvation become aware of the absurdity of existence in a world that is no longer that of men. They no longer obey you and let themselves die. You are now the last of men."
+            "title": "Loss of Faith",
+            "text": "As the power of the Order crumbles, the survivors deprived of the Hope of Salvation become aware of the absurdity of existence in a world that is no longer that of men. They no longer obey you and let themselves die. You are now the last of men."
         },
         "military_max": {
-        "title": "Coup d'état",
-        "text": "The Militia has become so powerful that it is no longer clear what constrains it to obey you. It itself wonders. Your guards betray you in the night, and the Militia seizes you. Through a small opening in the truck's canvas that seems to take you out of the camp, you have time to see propaganda posters featuring the Militia general covering the walls of your former home."
+            "title": "Coup d'état",
+            "text": "The Militia has become so powerful that it is no longer clear what constrains it to obey you. It itself wonders. Your guards betray you in the night, and the Militia seizes you. Through a small opening in the truck's canvas that seems to take you out of the camp, you have time to see propaganda posters featuring the Militia general covering the walls of your former home."
         },
         "military_min": {
-        "title": "Defenseless",
-        "text": "The handful of men remaining in the Militia is armed with little more than a few old rusty weapons when the velociraptor attack occurs. Your defenses are overwhelmed, and the camp is wiped off the map."
+            "title": "Defenseless",
+            "text": "The handful of men remaining in the Militia is armed with little more than a few old rusty weapons when the velociraptor attack occurs. Your defenses are overwhelmed, and the camp is wiped off the map."
         },
         "civilian_max": {
-        "title": "Revolution!",
-        "text": "You have been too lenient, and the survivors feel empowered. The crowd manages to rally the Militia to demand an end to your power and the establishment of democratic governance. The riot escalates, and the survivors overrun your positions. They seize you and take you to the guillotine."
+            "title": "Revolution!",
+            "text": "You have been too lenient, and the survivors feel empowered. The crowd manages to rally the Militia to demand an end to your power and the establishment of democratic governance. The riot escalates, and the survivors overrun your positions. They seize you and take you to the guillotine."
         },
         "civilian_min": {
-        "title": "The Tyrant",
-        "text": "Your power has never seemed stronger. The survivors are at your beck and call and seem completely apathetic. However, you gradually observe the camp depopulating. It seems that those who remain produce almost nothing. The handful of men who then occupy the camp can hardly defend you during the attack of the pteranodons, and you perish in their claws."
+            "title": "The Tyrant",
+            "text": "Your power has never seemed stronger. The survivors are at your beck and call and seem completely apathetic. However, you gradually observe the camp depopulating. It seems that those who remain produce almost nothing. The handful of men who then occupy the camp can hardly defend you during the attack of the pteranodons, and you perish in their claws."
         },
         "paleo_max": {
-        "title": "Eureka!",
-        "text": "The paleontologists, convinced they have finally developed a device to communicate with dinosaurs, decide to introduce some onto the camp. Unexpectedly, the trial fails. Dinosaurs are not receptive to the messages sent. They unleash themselves on the survivors, and you perish between the jaws of a tyrannosaurus."
+            "title": "Eureka!",
+            "text": "The paleontologists, convinced they have finally developed a device to communicate with dinosaurs, decide to introduce some onto the camp. Unexpectedly, the trial fails. Dinosaurs are not receptive to the messages sent. They unleash themselves on the survivors, and you perish between the jaws of a tyrannosaurus."
         },
         "paleo_min": {
-        "title": "The End of Science",
-        "text": "The Ardent Order of the Last Days unleashes a crowd of followers on what remains of the paleontologists' laboratory. Its last occupants are lynched, and their work ends up in autodafés. Without the use of science, the quality of the Militia's equipment and agricultural productivity decline. It's only a matter of time before you die of starvation or a dinosaur attack."
+            "title": "The End of Science",
+            "text": "The Ardent Order of the Last Days unleashes a crowd of followers on what remains of the paleontologists' laboratory. Its last occupants are lynched, and their work ends up in autodafés. Without the use of science, the quality of the Militia's equipment and agricultural productivity decline. It's only a matter of time before you die of starvation or a dinosaur attack."
         }
     },
     "introduction": [
-        ["Civilization silently witnessed the return of dinosaurs. It vanished as it appeared. Few remember it, and it's barely more than an imperceptible echo. Humanity may be summed up in the camp you lead in the great plains of Dakota, not far from what was once the Badlands Park.", "intro_dakota"],
-        ["You must ensure the cohesion and survival of this community in the face of the constant threat of dinosaurs. But make no mistake, your priority is to maintain your power at all costs. Your hand must not tremble.", "dinosaurs"],
-        ["Your community is divided into four rival factions that fate has forced to ally in order to survive, and you are the last arbiter between them.", "mayor"],
-        ["The Ardent Order of the Last Days:\n\nFrom the ashes of past cults arose the Ardent Order of the Last Days. Harsh times favor the emergence of cults, and this one has gained great power over consciences. Its members claim that the appearance of dinosaurs is a celestial punishment. Therefore, the Order calls for penance while awaiting the coming of the Last Days Dragon, who will deliver humanity from the yoke of dinosaurs. The Order will interpret any profane attempt to solve the dinosaur problem as an insult to the Last Days Dragon.", "order"],
-        ["The Militia:\n\nThe Militia consists of the bravest survivors. Its mission is to protect the camp and its surroundings from dinosaur incursions. It also conducts exploratory missions into the remains of the previous civilization, much to the dismay of the Order. The Militia is a powerful tool for controlling the population. But be careful not to become too indispensable to it...", "militia"],
-        ["The Survivors:\n\nThe survivors are the docile inhabitants of the camp. They produce food and manufacture weapons and tools. They will overthrow you if they deem your power too tyrannical. You must grant them some material facilities and exercise justice in your judgments to satisfy them. But remember: if you give them too much power, they might be tempted to do without you.", "citizens"],
-        ["The Paleontologists:\n\nThe paleontologists are closely interested in studying dinosaurs. They are the only representatives of what was once 'Science.' Their research could bring you the decisive knowledge to put an end to the oppression of dinosaurs, unless their thirst for knowledge draws them too close to the camp...", "paleontologists"],
-        ["You have limited resources to ensure the survival of your camp: make sure never to run out of any of them.\n\nFood is necessary for feeding your population, but the Order may also demand it for sacrifices.\n\nWeapons of any kind are absolutely essential for the Militia to maintain order and protect the camp from dinosaurs.\n\nTools, however rudimentary they may be, are all the instruments that allow survivors to work and carry out constructions.", "resources"]
+        [
+            "Civilization silently witnessed the return of dinosaurs. It vanished as it appeared. Few remember it, and it's barely more than an imperceptible echo. Humanity may be summed up in the camp you lead in the great plains of Dakota, not far from what was once the Badlands Park.",
+            "intro_dakota"
+        ],
+        [
+            "You must ensure the cohesion and survival of this community in the face of the constant threat of dinosaurs. But make no mistake, your priority is to maintain your power at all costs. Your hand must not tremble.",
+            "dinosaurs"
+        ],
+        [
+            "Your community is divided into four rival factions that fate has forced to ally in order to survive, and you are the last arbiter between them.",
+            "mayor"
+        ],
+        [
+            "The Ardent Order of the Last Days:\n\nFrom the ashes of past cults arose the Ardent Order of the Last Days. Harsh times favor the emergence of cults, and this one has gained great power over consciences. Its members claim that the appearance of dinosaurs is a celestial punishment. Therefore, the Order calls for penance while awaiting the coming of the Last Days Dragon, who will deliver humanity from the yoke of dinosaurs. The Order will interpret any profane attempt to solve the dinosaur problem as an insult to the Last Days Dragon.",
+            "order"
+        ],
+        [
+            "The Militia:\n\nThe Militia consists of the bravest survivors. Its mission is to protect the camp and its surroundings from dinosaur incursions. It also conducts exploratory missions into the remains of the previous civilization, much to the dismay of the Order. The Militia is a powerful tool for controlling the population. But be careful not to become too indispensable to it...",
+            "militia"
+        ],
+        [
+            "The Survivors:\n\nThe survivors are the docile inhabitants of the camp. They produce food and manufacture weapons and tools. They will overthrow you if they deem your power too tyrannical. You must grant them some material facilities and exercise justice in your judgments to satisfy them. But remember: if you give them too much power, they might be tempted to do without you.",
+            "citizens"
+        ],
+        [
+            "The Paleontologists:\n\nThe paleontologists are closely interested in studying dinosaurs. They are the only representatives of what was once 'Science.' Their research could bring you the decisive knowledge to put an end to the oppression of dinosaurs, unless their thirst for knowledge draws them too close to the camp...",
+            "paleontologists"
+        ],
+        [
+            "You have limited resources to ensure the survival of your camp: make sure never to run out of any of them.\n\nFood is necessary for feeding your population, but the Order may also demand it for sacrifices.\n\nWeapons of any kind are absolutely essential for the Militia to maintain order and protect the camp from dinosaurs.\n\nTools, however rudimentary they may be, are all the instruments that allow survivors to work and carry out constructions.",
+            "resources"
+        ]
     ],
     "tutorial": [
-        ["Upon your rise to power, your subjects will come to you daily with a request. You will then have to make a decision among the two proposed, which will satisfy or displease certain factions. If neither decision pleases you, you can always execute your interlocutor, but not without consequences.", "decision"],
-        ["Unexpected events will sometimes occur, and you will have no choice but to observe the consequences of this unforeseen event.", "event"],
-        ["Every week, you will be required to pass a decree to improve life in your camp. Take advantage of these days to replenish your resource stocks or increase the satisfaction of the faction of your choice.", "decree"],
-        ["At the end of each day, the consequences of your choices will be applied. Your resources will also decrease slightly for the daily needs of the camp.", "consequences"],
-        ["Be careful that none of your faction's satisfactions becomes null or reaches its maximum, or you will be overthrown. Similarly, you must keep a close eye on your resources. As soon as you run out of any, the camp's life will come to an end, and yours as well in the process.", "zero"],
-        ["If, unfortunately, one of these sad ends were to occur, you could benefit from a second chance by watching an advertisement. If you do not wish to submit to these strange practices, you will simply have to accept your defeat.", "end"]
+        [
+            "Upon your rise to power, your subjects will come to you daily with a request. You will then have to make a decision among the two proposed, which will satisfy or displease certain factions. If neither decision pleases you, you can always execute your interlocutor, but not without consequences.",
+            "decision"
+        ],
+        [
+            "Unexpected events will sometimes occur, and you will have no choice but to observe the consequences of this unforeseen event.",
+            "event"
+        ],
+        [
+            "Every week, you will be required to pass a decree to improve life in your camp. Take advantage of these days to replenish your resource stocks or increase the satisfaction of the faction of your choice.",
+            "decree"
+        ],
+        [
+            "At the end of each day, the consequences of your choices will be applied. Your resources will also decrease slightly for the daily needs of the camp.",
+            "consequences"
+        ],
+        [
+            "Be careful that none of your faction's satisfactions becomes null or reaches its maximum, or you will be overthrown. Similarly, you must keep a close eye on your resources. As soon as you run out of any, the camp's life will come to an end, and yours as well in the process.",
+            "zero"
+        ],
+        [
+            "If, unfortunately, one of these sad ends were to occur, you could benefit from a second chance by watching an advertisement. If you do not wish to submit to these strange practices, you will simply have to accept your defeat.",
+            "end"
+        ]
     ],
     "menu": {
         "press_to_start": "Start a new game"
@@ -403,5 +445,4 @@
         "score": "Score: ",
         "credits": "Original game developed by:\n\n- Paul Creusy\n- Clément Perrin\n- Balthazar Patiachvili\n- Alexis Guillon\n- Yohan Abehssera\n\nRemastered by:\n\n- Paul Creusy\n- Agathe Aris"
     }
-       
 }
