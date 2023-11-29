@@ -59,6 +59,7 @@ class MenuScreen(ImprovedScreen):
 
         # Schedule preload of the game screen
         Clock.schedule_once(self.manager.get_screen("game").preload)
+        Clock.schedule_once(self.manager.get_screen("game_over").preload)
 
         # Set the start label text
         self.start_label_text = TEXT.menu["press_to_start"]
