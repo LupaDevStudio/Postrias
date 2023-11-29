@@ -34,12 +34,9 @@ class GameOverScreen(ImprovedScreen):
             **kw)
         self.new_highscore: bool
 
-    def on_enter(self, *args):
+    def on_pre_enter(self, *args):
         # Load the credits sentence
         self.credits_text = TEXT.game_over["credits"]
-
-        # Play the game over music
-        music_mixer.play("time_of_the_apocalypse")
 
         # Load the ending text
         self.ending_text = game.ending_text
@@ -65,6 +62,13 @@ class GameOverScreen(ImprovedScreen):
             self.ids["score_label"].opacity = 1
             self.back_destination = "menu"
             self.title_text = "Game Over"
+
+        return super().on_pre_enter(*args)
+
+    def on_enter(self, *args):
+
+        # Play the game over music
+        music_mixer.play("time_of_the_apocalypse")
 
         # Display something when getting a new highscore
         return super().on_enter(*args)

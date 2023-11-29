@@ -69,7 +69,7 @@ class ImprovedScreen(Screen):
         self.back_image_opacity = 1
         self.back_image_ratio = 1
 
-    def preload(self):
+    def preload(self, *args):
         """
         Load all the assets of the screen.
 
@@ -139,6 +139,9 @@ class ImprovedScreen(Screen):
             self.preload()
 
         self.update_font_ratio()
+
+        # Update the back image size
+        self.update_back_image_size()
 
     def on_enter(self, *args):
         """
