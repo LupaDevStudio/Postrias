@@ -1,9 +1,23 @@
 """
-Module for the game over screen
+Module for the game over screen.
 """
 
-from kivy.properties import StringProperty, ObjectProperty, NumericProperty
-from tools.kivy_tools import ImprovedScreen
+###############
+### Imports ###
+###############
+
+### Kivy imports ###
+
+from kivy.properties import (
+    StringProperty,
+    BooleanProperty
+)
+
+### Module imports ###
+
+from tools.kivy_tools import (
+    ImprovedScreen
+)
 from tools.path import (
     PATH_IMAGES,
     PATH_TEXT_FONT
@@ -17,6 +31,9 @@ from tools.constants import (
     USER_DATA
 )
 
+###############
+### Classes ###
+###############
 
 class GameOverScreen(ImprovedScreen):
     """
@@ -27,6 +44,7 @@ class GameOverScreen(ImprovedScreen):
     credits_text = StringProperty()
     score_text = StringProperty()
     title_text = StringProperty()
+    share_button = BooleanProperty()
 
     def __init__(self, **kw):
         super().__init__(
@@ -58,10 +76,12 @@ class GameOverScreen(ImprovedScreen):
             self.ids["score_label"].opacity = 0
             self.back_destination = "achievements"
             self.title_text = TEXT.ending[game.ending]["title"]
+            self.share_button = False
         else:
             self.ids["score_label"].opacity = 1
             self.back_destination = "menu"
             self.title_text = "Game Over"
+            self.share_button = True
 
         return super().on_pre_enter(*args)
 
@@ -88,3 +108,8 @@ class GameOverScreen(ImprovedScreen):
         Go back to the main menu
         """
         self.manager.current = self.back_destination
+
+    def share_score(self):
+        if self.share_button:
+            print("Share score")
+            # TODO paul
