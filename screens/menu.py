@@ -48,6 +48,7 @@ class MenuScreen(ImprovedScreen):
             **kw)
         self.opacity_state = -1
         self.opacity_rate = 0.03
+        self.other_screens_loaded = False
 
     def on_enter(self, *args):
         # Launch the title music
@@ -56,10 +57,6 @@ class MenuScreen(ImprovedScreen):
 
         # Schedule the update for the text opacity effect
         Clock.schedule_interval(self.update, 1 / FPS)
-
-        # Schedule preload of the game screen
-        Clock.schedule_once(self.manager.get_screen("game").preload)
-        Clock.schedule_once(self.manager.get_screen("game_over").preload)
 
         # Set the start label text
         self.start_label_text = TEXT.menu["press_to_start"]

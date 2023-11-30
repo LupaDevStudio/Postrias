@@ -23,14 +23,9 @@ from screens.game import GameScreen
 from screens.game_over import GameOverScreen
 from screens.achievements import AchievementsScreen
 from screens.tutorial import TutorialScreen
+from screens.opening import OpeningScreen
 
 
 ###############
 ### Process ###
 ###############
-
-### Load the kv files of the screens ###
-
-kv_files = [file for file in os.listdir("screens") if file.endswith(".kv")]
-for file in kv_files:
-    Builder.load_file(f"screens/{file}", encoding="utf-8")
