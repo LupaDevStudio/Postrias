@@ -107,19 +107,19 @@
     color: pink_color
     allow_stretch: True
 
-<ImprovedMDTextField@MDTextField>:
-    color_mode: "custom"
-    mode: "rectangle"
-    line_color_focus: pink_color
-    line_color_normal: blue_color if not self.disabled else gray_color
-    normal_color: blue_color
-    color_active: pink_color
-    disabled_color: gray_color
-    text_color_focus: black_color
-    text_color_normal: blue_color
-    hint_text_color_normal: pink_color
-    hint_text_color_focus: blue_color
-    selection_color: highlight_text_color
+# <ImprovedMDTextField@MDTextField>:
+#     color_mode: "custom"
+#     mode: "rectangle"
+#     line_color_focus: pink_color
+#     line_color_normal: blue_color if not self.disabled else gray_color
+#     normal_color: blue_color
+#     color_active: pink_color
+#     disabled_color: gray_color
+#     text_color_focus: black_color
+#     text_color_normal: blue_color
+#     hint_text_color_normal: pink_color
+#     hint_text_color_focus: blue_color
+#     selection_color: highlight_text_color
 
 
 ###############
@@ -194,20 +194,20 @@
 ####################
 
 
-<ProgressBar>:
-    canvas:
-        Color:
-            rgb: 1, 1, 1
-        BorderImage:
-            border: (12, 12, 12, 12)
-            pos: self.x, self.center_y - 12
-            size: self.width, 24
-            source: atlas_prefix + 'progressbar_background'
-        BorderImage:
-            border: [int(min(self.width * (self.value / float(self.max)) if self.max else 0, 12))] * 4
-            pos: self.x, self.center_y - 12
-            size: self.width * (self.value / float(self.max)) if self.max else 0, 24
-            source: atlas_prefix + 'progressbar'
+# <ProgressBar>:
+#     canvas:
+#         Color:
+#             rgb: 1, 1, 1
+#         BorderImage:
+#             border: (12, 12, 12, 12)
+#             pos: self.x, self.center_y - 12
+#             size: self.width, 24
+#             source: atlas_prefix + 'progressbar_background'
+#         BorderImage:
+#             border: [int(min(self.width * (self.value / float(self.max)) if self.max else 0, 12))] * 4
+#             pos: self.x, self.center_y - 12
+#             size: self.width * (self.value / float(self.max)) if self.max else 0, 24
+#             source: atlas_prefix + 'progressbar'
 
 
 ##############
@@ -215,22 +215,22 @@
 ##############
 
 
-<Switch>:
-    active_norm_pos: max(0., min(1., (int(self.active) + self.touch_distance / sp(41))))
-    canvas:
-        Color:
-            rgb: 1, 1, 1
-        Rectangle:
-            source: atlas_prefix + 'switch-background{}'.format('_disabled' if self.disabled else '')
-            size: sp(83), sp(32)
-            pos: int(self.center_x - sp(41)), int(self.center_y - sp(16))
-    canvas.after:
-        Color:
-            rgb: 1, 1, 1
-        Rectangle:
-            source: atlas_prefix + 'switch-button{}'.format('_disabled' if self.disabled else '')
-            size: sp(43), sp(32)
-            pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
+# <Switch>:
+#     active_norm_pos: max(0., min(1., (int(self.active) + self.touch_distance / sp(41))))
+#     canvas:
+#         Color:
+#             rgb: 1, 1, 1
+#         Rectangle:
+#             source: atlas_prefix + 'switch-background{}'.format('_disabled' if self.disabled else '')
+#             size: sp(83), sp(32)
+#             pos: int(self.center_x - sp(41)), int(self.center_y - sp(16))
+#     canvas.after:
+#         Color:
+#             rgb: 1, 1, 1
+#         Rectangle:
+#             source: atlas_prefix + 'switch-button{}'.format('_disabled' if self.disabled else '')
+#             size: sp(43), sp(32)
+#             pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
 
 
 ################
@@ -238,50 +238,50 @@
 ################
 
 
-<FocusableCheckBox>:
-    canvas:
-        Color:
-            rgba: self.color
-        Rectangle:
-            source: ((atlas_prefix + 'checkbox_radio_focus_on' if self.focus else atlas_prefix + 'checkbox_radio_disabled_on' if self.disabled else atlas_prefix + 'checkbox_radio_on') if self.active else (atlas_prefix + 'checkbox_radio_focus_off' if self.focus else atlas_prefix + 'checkbox_radio_disabled_off' if self.disabled else atlas_prefix + 'checkbox_radio_off')) if self.group else ((atlas_prefix + 'checkbox_focus_on' if self.focus else atlas_prefix + 'checkbox_disabled_on' if self.disabled else atlas_prefix + 'checkbox_on') if self.active else (atlas_prefix + 'checkbox_focus_off' if self.focus else atlas_prefix + 'checkbox_disabled_off' if self.disabled else atlas_prefix + 'checkbox_off'))
-            size: sp(32), sp(32)
-            pos: int(self.center_x - sp(16)), int(self.center_y - sp(16))
+# <FocusableCheckBox>:
+#     canvas:
+#         Color:
+#             rgba: self.color
+#         Rectangle:
+#             source: ((atlas_prefix + 'checkbox_radio_focus_on' if self.focus else atlas_prefix + 'checkbox_radio_disabled_on' if self.disabled else atlas_prefix + 'checkbox_radio_on') if self.active else (atlas_prefix + 'checkbox_radio_focus_off' if self.focus else atlas_prefix + 'checkbox_radio_disabled_off' if self.disabled else atlas_prefix + 'checkbox_radio_off')) if self.group else ((atlas_prefix + 'checkbox_focus_on' if self.focus else atlas_prefix + 'checkbox_disabled_on' if self.disabled else atlas_prefix + 'checkbox_on') if self.active else (atlas_prefix + 'checkbox_focus_off' if self.focus else atlas_prefix + 'checkbox_disabled_off' if self.disabled else atlas_prefix + 'checkbox_off'))
+#             size: sp(32), sp(32)
+#             pos: int(self.center_x - sp(16)), int(self.center_y - sp(16))
 
-<LabelledCheckBox>:
-    pos_hint: root.pos_hint
-    FocusableCheckBox:
-        id: checkbox
-        pos_hint: {"x":0, "y":0}
-        size_hint: root.size_hint_cb
-        group: root.group
-        disabled: root.disabled_cb
-        on_active:
-            root.function_cb
-    Label:
-        text: root.text_label
-        color: root.color_label
-        size_hint: root.size_hint_label
-        pos_hint: {"x":0.1, "y":0}
-        text_size: self.size
-        halign: "left"
-        valign: "center"
+# <LabelledCheckBox>:
+#     pos_hint: root.pos_hint
+#     FocusableCheckBox:
+#         id: checkbox
+#         pos_hint: {"x":0, "y":0}
+#         size_hint: root.size_hint_cb
+#         group: root.group
+#         disabled: root.disabled_cb
+#         on_active:
+#             root.function_cb
+#     Label:
+#         text: root.text_label
+#         color: root.color_label
+#         size_hint: root.size_hint_label
+#         pos_hint: {"x":0.1, "y":0}
+#         text_size: self.size
+#         halign: "left"
+#         valign: "center"
 
 #############
 ### Popup ###
 #############
 
 
-<ImprovedPopupLayout>:
-    size: root.size_popup
-    pos_hint: {"x":0, "y":0}
+# <ImprovedPopupLayout>:
+#     size: root.size_popup
+#     pos_hint: {"x":0, "y":0}
 
-    Widget:
-        canvas:
-            Color:
-                rgba: root.blue_color
-            Rectangle:
-                pos: root.x, root.top
-                size: self.width, dp(3)
+#     Widget:
+#         canvas:
+#             Color:
+#                 rgba: root.blue_color
+#             Rectangle:
+#                 pos: root.x, root.top
+#                 size: self.width, dp(3)
 
 
 ###############
@@ -289,12 +289,12 @@
 ###############
 
 
-<ToolTip>:
-    size_hint: None, None
-    size: self.texture_size[0]+5, self.texture_size[1]+5
-    canvas.before:
-        Color:
-            rgb: 0.2, 0.2, 0.2
-        Rectangle:
-            size: self.size
-            pos: self.pos
+# <ToolTip>:
+#     size_hint: None, None
+#     size: self.texture_size[0]+5, self.texture_size[1]+5
+#     canvas.before:
+#         Color:
+#             rgb: 0.2, 0.2, 0.2
+#         Rectangle:
+#             size: self.size
+#             pos: self.pos

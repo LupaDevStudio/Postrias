@@ -31,12 +31,13 @@ class OpeningScreen(ImprovedScreen):
     def on_enter(self, *args):
         print("enter opening screen")
         # Schedule preload of the game screen
-        thread = Thread(target=self.load_kv_files)
-        thread.start()
+
         return super().on_enter(*args)
 
-    # def switch_to_menu(self, *args):
-    #     self.manager.current = "menu"
+    def launch_thread(self, *_):
+        print("launch threads")
+        thread = Thread(target=self.load_kv_files)
+        thread.start()
 
     def load_kv_files(self, *_):
         print("load the screens")
@@ -62,6 +63,9 @@ class OpeningScreen(ImprovedScreen):
 
         Clock.schedule_once(self.load_other_screens)
 
+    def switch_to_menu(self, *args):
+        self.manager.current = "menu"
+
     def load_other_screens(self, *args):
 
         ### Load the kv files of the screens ###
@@ -80,4 +84,5 @@ class OpeningScreen(ImprovedScreen):
         # Preload screens
         Clock.schedule_once(self.manager.get_screen("game").preload)
         Clock.schedule_once(self.manager.get_screen("game_over").preload)
-        self.manager.current = "menu"
+        # self.manager.current = "menu"
+        Clock.schedule_once(self.switch_to_menu, 2)

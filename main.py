@@ -29,7 +29,7 @@ from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, NoTransition, Screen
 from kivy.uix.widget import Widget
 from kivy.core.window import Window
-from kivy.uix.image import Image
+from kivy.clock import Clock
 print("Kivy packages loaded")
 
 ### Module imports ###
@@ -43,7 +43,7 @@ from tools.constants import (
     FPS,
     MSAA_LEVEL
 )
-from screens import OpeningScreen
+import screens.opening
 
 print("Local packages loaded")
 
@@ -62,9 +62,9 @@ class WindowManager(ScreenManager):
         super().__init__(**kwargs)
         self.transition = NoTransition()
         self.list_former_screens = []
-        opening_screen = OpeningScreen(name="opening")
-        self.add_widget(opening_screen)
-        self.current = "opening"
+        current_screen = Screen(name="temp")
+        self.add_widget(current_screen)
+        self.current = "temp"
         print("WindowManager initialised")
 
 
@@ -103,8 +103,16 @@ class MainApp(App, Widget):
         if MOBILE_MODE:
             Window.update_viewport()
 
-        # Open the menu screen
+        # super().on_start()
+
+        # Open the opening screen
         # self.root_window.children[0].current = "menu"
+        opening_screen = screens.opening.OpeningScreen(name="opening")
+        self.root_window.children[0].add_widget(opening_screen)
+        self.root_window.children[0].current = "opening"
+
+        Clock.schedule_once(
+            self.root_window.children[0].get_screen("opening").launch_thread, 1)
 
         print("Main app started")
 
