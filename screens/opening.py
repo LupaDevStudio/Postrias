@@ -10,11 +10,12 @@ import os
 from threading import Thread
 from tools.kivy_tools import ImprovedScreen
 from tools.path import (
-    PATH_RESOURCES_FOLDER,
+    PATH_IMAGES,
     PATH_TEXT_FONT
 )
 from kivy.clock import Clock
 from kivy.lang import Builder
+from kivy.uix.label import Label
 
 
 class OpeningScreen(ImprovedScreen):
@@ -25,14 +26,31 @@ class OpeningScreen(ImprovedScreen):
     def __init__(self, **kw):
         super().__init__(
             font_name=PATH_TEXT_FONT,
-            back_image_path=PATH_RESOURCES_FOLDER + "logo_roadsign.png",
+            back_image_path=PATH_IMAGES + "opening.jpg",
             **kw)
+        self.opacity_state = -1
+        self.opacity_rate = 0.03
+        self.label = Label(text="", pos_hint={
+            "bottom": 1, "left": 1})
+        self.add_widget(self.label)
+
+    def update(self, *args):
+        self.label.opacity += self.opacity_state * self.opacity_rate
+        if self.label.opacity < 0 or self.label.opacity > 1:
+            self.opacity_state = -self.opacity_state
 
     def on_enter(self, *args):
         print("enter opening screen")
-        # Schedule preload of the game screen
+        # Schedule the update for the text opacity effect
+        Clock.schedule_interval(self.update, 1 / 60)
 
         return super().on_enter(*args)
+
+    def on_pre_leave(self, *args):
+        # Unschedule the clock update
+        Clock.unschedule(self.update, 1 / 60)
+
+        return super().on_leave(*args)
 
     def launch_thread(self, *_):
         print("launch threads")
@@ -85,4 +103,4 @@ class OpeningScreen(ImprovedScreen):
         Clock.schedule_once(self.manager.get_screen("game").preload)
         Clock.schedule_once(self.manager.get_screen("game_over").preload)
         # self.manager.current = "menu"
-        Clock.schedule_once(self.switch_to_menu, 2)
+        Clock.schedule_once(self.switch_to_menu)

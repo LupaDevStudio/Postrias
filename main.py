@@ -103,16 +103,13 @@ class MainApp(App, Widget):
         if MOBILE_MODE:
             Window.update_viewport()
 
-        # super().on_start()
-
         # Open the opening screen
-        # self.root_window.children[0].current = "menu"
         opening_screen = screens.opening.OpeningScreen(name="opening")
         self.root_window.children[0].add_widget(opening_screen)
         self.root_window.children[0].current = "opening"
 
         Clock.schedule_once(
-            self.root_window.children[0].get_screen("opening").launch_thread, 1)
+            self.root_window.children[0].get_screen("opening").launch_thread)
 
         print("Main app started")
 
