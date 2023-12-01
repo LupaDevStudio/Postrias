@@ -6,12 +6,17 @@ Module for the game over screen.
 ### Imports ###
 ###############
 
+### Python imports ###
+
+import os
+
 ### Kivy imports ###
 
 from kivy.properties import (
     StringProperty,
     BooleanProperty
 )
+from kivy.core.window import Window
 
 ### Module imports ###
 
@@ -28,12 +33,20 @@ from tools import (
 )
 from tools.constants import (
     TEXT,
-    USER_DATA
+    USER_DATA,
+    MOBILE_MODE
 )
+
+if MOBILE_MODE:
+    from androidstorage4kivy import SharedStorage, ShareSheet  # type: ignore
+    from android.storage import app_storage_path  # type: ignore
+    from android.permissions import request_permissions, Permission  # pylint: disable=import-error # type: ignore
+
 
 ###############
 ### Classes ###
 ###############
+
 
 class GameOverScreen(ImprovedScreen):
     """
@@ -111,5 +124,32 @@ class GameOverScreen(ImprovedScreen):
 
     def share_score(self):
         if self.share_button:
-            print("Share score")
-            # TODO paul
+            print("start sharing")
+            if MOBILE_MODE:
+                request_permissions(
+                    [Permission.READ_FRAME_BUFFER, Permission.CAPTURE_VIDEO_OUTPUT, Permission.CAPTURE_SECURE_VIDEO_OUTPUT])
+            # Save the screenshot
+            if os.path.exists("screenshot0001.png"):
+                os.remove("screenshot0001.png")
+            # self.ids["share_button"].opacity = 0
+            # self.ids["back_button"].opacity = 0
+            print("hiding finished")
+            Window.screenshot("screenshot.png")
+            print("screenshot taken")
+            # self.ids["share_button"].opacity = 1
+            # self.ids["back_button"].opacity = 1
+            # print("redisplay buttons")
+
+            if MOBILE_MODE:
+                # Copy it into the shared storage
+                print("save in shared storage")
+                shared_storage = SharedStorage()
+                PATH_APP_FOLDER = app_storage_path()
+                print(os.listdir("."))
+                print(os.listdir(PATH_APP_FOLDER))
+                file_to_share = shared_storage.copy_to_shared(
+                    "screenshot0001.png", filepath="/screenshot0001.png")
+                # Share it
+                print("share the image")
+                shared_sheet = ShareSheet()
+                shared_sheet.share_file(file_to_share)

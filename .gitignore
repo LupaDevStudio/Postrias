@@ -1,6 +1,9 @@
 # Ignore the reports folder
 reports
 
+# Ignore screenshots
+screenshot*
+
 # Ignore ini files
 *ini
 

@@ -26,7 +26,7 @@ source.exclude_dirs = test, bin, .buildozer, data/collection, data/collection_co
 
 # (list) List of exclusions using pattern matching
 # Do not prefix with './'
-source.exclude_patterns = data.json,*.gitignore, requirements.txt
+source.exclude_patterns = data.json,*.gitignore, requirements.txt,draft_*
 
 # (str) Application versioning (method 1)
 version = 2.0.2
@@ -37,7 +37,7 @@ version = 2.0.2
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy
+requirements = python3,kivy,androidstorage4kivy
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -94,7 +94,7 @@ android.presplash_lottie = resources/presplash.json
 #icon.adaptive_background.filename = %(source.dir)s/data/icon_bg.png
 
 # (list) Permissions
-android.permissions = INTERNET, ACCESS_NETWORK_STATE
+android.permissions = INTERNET, ACCESS_NETWORK_STATE,READ_FRAME_BUFFER, CAPTURE_VIDEO_OUTPUT, CAPTURE_SECURE_VIDEO_OUTPUT
 
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host
