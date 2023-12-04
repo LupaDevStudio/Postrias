@@ -151,7 +151,7 @@
             "no": "It's not my priority, you see."
         },
         "morphine": {
-            "text": "A paleontologist reports that the morphine shipments were stolen by followers.",
+            "text": "A paleontologist reports that the morphine shipments were stolen by followers of the Order.",
             "yes": "They will pay for this affront!",
             "no": "They need it at least..."
         },
@@ -387,7 +387,7 @@
             "citizens"
         ],
         [
-            "The Paleontologists:\n\nThe paleontologists are closely interested in studying dinosaurs. They are the only representatives of what was once 'Science.' Their research could bring you the decisive knowledge to put an end to the oppression of dinosaurs, unless their thirst for knowledge draws them too close to the camp...",
+            "The Paleontologists:\n\nThe paleontologists are closely interested in studying dinosaurs. They are the only representatives of what was once 'Science.' Their research could bring you the decisive knowledge to put an end to the oppression of dinosaurs, unless their experiments draws them too close to the camp...",
             "paleontologists"
         ],
         [
