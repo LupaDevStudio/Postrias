@@ -151,7 +151,7 @@
             "no": "Ce n'est pas ma priorité vois-tu."
         },
         "morphine": {
-            "text": "Un paléontologue rapporte que les cargaisons de morphine ont été volées par les adeptes.",
+            "text": "Un paléontologue rapporte que les cargaisons de morphine ont été volées par les adeptes de l'Ordre.",
             "yes": "Ils paieront pour cet affront !",
             "no": "Il leur faut au moins ça..."
         },
@@ -387,7 +387,7 @@
             "citizens"
         ],
         [
-            "Les paléontologues :\n\nLes paléontologues s’intéressent de près à l'étude des dinosaures. Ils sont les seuls représentants de ce qui était autrefois \"La Science\". Leurs recherches pourraient vous apporter les connaissances décisives pour mettre un terme à l'oppression des dinosaures, à moins que leur soif de connaissance ne les attire trop près du camp...",
+            "Les paléontologues :\n\nLes paléontologues s’intéressent de près à l'étude des dinosaures. Ils sont les seuls représentants de ce qui était autrefois \"La Science\". Leurs recherches pourraient vous apporter les connaissances décisives pour mettre un terme à la domination des dinosaures, à moins que leurs machines ne les attirent trop près du camp...",
             "paleontologists"
         ],
         [
