@@ -37,10 +37,11 @@ class TutorialScreen(ImprovedScreen):
             font_name=PATH_TEXT_FONT,
             **kw)
 
-    def on_enter(self, *args):
+    def on_pre_enter(self, *args):
         self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial][0]
-        self.path_tutorial_image = PATH_IMAGES_TUTORIAL + TEXT.tutorial[self.counter_tutorial][1] + ".jpg"
-        return super().on_enter(*args)
+        self.path_tutorial_image = PATH_IMAGES_TUTORIAL + \
+            TEXT.tutorial[self.counter_tutorial][1] + ".jpg"
+        return super().on_pre_enter(*args)
 
     def go_to_previous_slide(self):
         """
@@ -61,7 +62,8 @@ class TutorialScreen(ImprovedScreen):
         else:
             self.counter_tutorial -= 1
             self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial][0]
-            self.path_tutorial_image = PATH_IMAGES_TUTORIAL + TEXT.tutorial[self.counter_tutorial][1] + ".jpg"
+            self.path_tutorial_image = PATH_IMAGES_TUTORIAL + \
+                TEXT.tutorial[self.counter_tutorial][1] + ".jpg"
 
     def go_to_next_slide(self):
         """
@@ -92,4 +94,5 @@ class TutorialScreen(ImprovedScreen):
 
         else:
             self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial][0]
-            self.path_tutorial_image = PATH_IMAGES_TUTORIAL + TEXT.tutorial[self.counter_tutorial][1] + ".jpg"
+            self.path_tutorial_image = PATH_IMAGES_TUTORIAL + \
+                TEXT.tutorial[self.counter_tutorial][1] + ".jpg"
