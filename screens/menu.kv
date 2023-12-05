@@ -56,16 +56,6 @@
         on_release:
             root.manager.current = "settings"
 
-    # Label:
-    #     id: high_score_label
-    #     text: root.high_score
-    #     bold: True
-    #     color: TITLE_FONT_COLOR
-    #     pos_hint: {"right":1, "y":0}
-    #     size_hint: 0.2, 0.1
-    #     font_name: root.font_name
-    #     font_size: 30*root.font_ratio
-
     Image:
         source: PATH_IMAGES + "achievements_logo.png"
         size_hint: None, side_logo_size
@@ -79,3 +69,17 @@
         width: self.height
         on_release:
             root.manager.current = "achievements"
+
+    Image:
+        source: PATH_IMAGES + "lupa_logo.png"
+        size_hint: None, side_logo_size*0.7
+        pos_hint: {"center_x": 0.5, "y": 0.05}
+        allow_stretch: True
+        width: self.height
+    Button:
+        size_hint: None,side_logo_size*0.7
+        pos_hint: {"center_x": 0.5, "y": 0.05}
+        background_color: (0, 0, 0, 0)
+        width: self.height
+        on_release:
+            root.open_lupa_website()

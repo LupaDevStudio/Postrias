@@ -6,6 +6,10 @@ Module for the main menu.
 ### Imports ###
 ###############
 
+### Python imports ###
+
+import webbrowser
+
 ### Kivy imports ###
 
 from kivy.clock import Clock
@@ -90,3 +94,6 @@ class MenuScreen(ImprovedScreen):
             self.manager.current = "tutorial"
         else:
             self.manager.current = "game"
+
+    def open_lupa_website(self):
+        webbrowser.open("https://lupadevstudio.com", 2)
