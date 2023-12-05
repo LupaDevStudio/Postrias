@@ -99,6 +99,11 @@ class MainApp(App, Widget):
         Window.clearcolor = (0, 0, 0, 1)
         self.icon = PATH_IMAGES + "logo.png"
 
+    def on_resume(self):
+        current_screen_name = self.root_window.children[0].current
+        self.root_window.children[0].get_screen(current_screen_name).refresh()
+        return super().on_resume()
+
     def on_start(self):
         if MOBILE_MODE:
             Window.update_viewport()
