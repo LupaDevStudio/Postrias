@@ -13,7 +13,9 @@ from copy import copy
 ### Kivy imports ###
 
 from kivy.core.window import Window
+from kivy.clock import Clock
 from kivy.uix.screenmanager import Screen
+from kivy.uix.label import Label
 from kivy.properties import (
     StringProperty,
     NumericProperty,
@@ -206,3 +208,11 @@ class ImprovedScreen(Screen):
         widget.opacity = 1
         widget.disabled = False
         widget.pos_hint = self.temp_pos[widget_id]
+
+    def refresh(self):
+        self.label_widget = Label(text=" ", pos_hint={"x": 1, "y": 1})
+        self.add_widget(self.label_widget)
+        Clock.schedule_once(self.post_refresh)
+
+    def post_refresh(self, *args):
+        self.remove_widget(self.label_widget)
