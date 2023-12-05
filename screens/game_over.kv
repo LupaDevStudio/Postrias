@@ -57,7 +57,6 @@
         valign:"middle"
         font_size: 13*root.font_ratio
 
-
     # Credit background
     ImageWithText:
         id: credits_label
@@ -69,3 +68,14 @@
         keep_ratio:False
         text_font_name: root.font_name
         text_color: TEXT_FONT_COLOR
+
+    # Share button
+    ImageWithTextButton:
+        id: share_button
+        source: PATH_IMAGES + "share_button.png"
+        size_hint: None, 0.15
+        pos_hint: {"x":0.025, "bottom": 0.1}
+        allow_stretch: True
+        width: self.height
+        opacity: 1 if root.share_button else 0
+        release_function: root.share_score

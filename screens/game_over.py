@@ -1,9 +1,28 @@
 """
-Module for the game over screen
+Module for the game over screen.
 """
 
-from kivy.properties import StringProperty, ObjectProperty, NumericProperty
-from tools.kivy_tools import ImprovedScreen
+###############
+### Imports ###
+###############
+
+### Python imports ###
+
+import os
+
+### Kivy imports ###
+
+from kivy.properties import (
+    StringProperty,
+    BooleanProperty
+)
+
+
+### Module imports ###
+
+from tools.kivy_tools import (
+    ImprovedScreen
+)
 from tools.path import (
     PATH_IMAGES,
     PATH_TEXT_FONT
@@ -14,8 +33,22 @@ from tools import (
 )
 from tools.constants import (
     TEXT,
-    USER_DATA
+    USER_DATA,
+    MOBILE_MODE
 )
+from tools.share_image import (
+    create_image_to_share
+)
+
+if MOBILE_MODE:
+    from androidstorage4kivy import SharedStorage, ShareSheet  # type: ignore
+    from android.storage import app_storage_path  # type: ignore
+    from android.permissions import request_permissions, Permission  # pylint: disable=import-error # type: ignore
+
+
+###############
+### Classes ###
+###############
 
 
 class GameOverScreen(ImprovedScreen):
@@ -27,6 +60,7 @@ class GameOverScreen(ImprovedScreen):
     credits_text = StringProperty()
     score_text = StringProperty()
     title_text = StringProperty()
+    share_button = BooleanProperty()
 
     def __init__(self, **kw):
         super().__init__(
@@ -58,10 +92,12 @@ class GameOverScreen(ImprovedScreen):
             self.ids["score_label"].opacity = 0
             self.back_destination = "achievements"
             self.title_text = TEXT.ending[game.ending]["title"]
+            self.share_button = False
         else:
             self.ids["score_label"].opacity = 1
             self.back_destination = "menu"
             self.title_text = "Game Over"
+            self.share_button = True
 
         return super().on_pre_enter(*args)
 
@@ -88,3 +124,28 @@ class GameOverScreen(ImprovedScreen):
         Go back to the main menu
         """
         self.manager.current = self.back_destination
+
+    def share_score(self):
+        if self.share_button:
+            print("start sharing")
+            # Save the screenshot
+            if os.path.exists("share_image.png"):
+                os.remove("share_image.png")
+
+            create_image_to_share(
+                game.score, TEXT.ending[game.ending]["title"], self.back_image_path)
+            print("Image created")
+
+            if MOBILE_MODE:
+                # Copy it into the shared storage
+                print("save in shared storage")
+                shared_storage = SharedStorage()
+                PATH_APP_FOLDER = app_storage_path()
+                print(os.listdir("."))
+                print(os.listdir(PATH_APP_FOLDER))
+                file_to_share = shared_storage.copy_to_shared(
+                    "share_image.png", filepath="/share_image.png")
+                # Share it
+                print("share the image")
+                shared_sheet = ShareSheet()
+                shared_sheet.share_file(file_to_share)
