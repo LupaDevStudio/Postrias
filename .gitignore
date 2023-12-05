@@ -3,7 +3,7 @@ reports
 
 # Ignore screenshots
 screenshot*
-share_image*
+share_image.png
 
 # Ignore ini files
 *ini
