@@ -16,7 +16,7 @@ from kivy.properties import (
     StringProperty,
     BooleanProperty
 )
-from kivy.core.window import Window
+
 
 ### Module imports ###
 
@@ -35,6 +35,9 @@ from tools.constants import (
     TEXT,
     USER_DATA,
     MOBILE_MODE
+)
+from tools.share_image import (
+    create_image_to_share
 )
 
 if MOBILE_MODE:
@@ -125,20 +128,13 @@ class GameOverScreen(ImprovedScreen):
     def share_score(self):
         if self.share_button:
             print("start sharing")
-            if MOBILE_MODE:
-                request_permissions(
-                    [Permission.READ_FRAME_BUFFER, Permission.CAPTURE_VIDEO_OUTPUT, Permission.CAPTURE_SECURE_VIDEO_OUTPUT])
             # Save the screenshot
-            if os.path.exists("screenshot0001.png"):
-                os.remove("screenshot0001.png")
-            # self.ids["share_button"].opacity = 0
-            # self.ids["back_button"].opacity = 0
-            print("hiding finished")
-            Window.screenshot("screenshot.png")
-            print("screenshot taken")
-            # self.ids["share_button"].opacity = 1
-            # self.ids["back_button"].opacity = 1
-            # print("redisplay buttons")
+            if os.path.exists("share_image.png"):
+                os.remove("share_image.png")
+
+            create_image_to_share(
+                game.score, TEXT.ending[game.ending]["title"], self.back_image_path)
+            print("Image created")
 
             if MOBILE_MODE:
                 # Copy it into the shared storage
@@ -148,7 +144,7 @@ class GameOverScreen(ImprovedScreen):
                 print(os.listdir("."))
                 print(os.listdir(PATH_APP_FOLDER))
                 file_to_share = shared_storage.copy_to_shared(
-                    "screenshot0001.png", filepath="/screenshot0001.png")
+                    "share_image.png", filepath="/share_image.png")
                 # Share it
                 print("share the image")
                 shared_sheet = ShareSheet()
