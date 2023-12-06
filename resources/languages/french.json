@@ -398,27 +398,27 @@
     "tutorial": [
         [
             "Dès votre arrivée au pouvoir, vos sujets viendront vous solliciter quotidiennement pour une requête. Vous serez alors amené à prendre une décision parmi les deux proposées, qui satisferont ou mécontenteront certaines factions. Si aucune des deux décisions ne vous plaît, vous pourrez toujours exécuter votre interlocuteur, mais n'espérez pas que ce soit sans conséquence.",
-            "decision"
+            "decision_french"
         ],
         [
             "Des événements inattendus surviendront parfois et vous n'aurez d'autre choix que d'observer les conséquences de cet imprévu.",
-            "event"
+            "event_french"
         ],
         [
             "Chaque semaine, vous serez amené à passer un décret pour améliorer la vie de votre campement. Profitez de ces journées pour recharger vos stocks de ressources ou pour augmenter la satisfaction de la faction de votre choix.",
-            "decree"
+            "decree_french"
         ],
         [
             "À l'issue de chaque journée, les conséquences de vos choix seront appliquées. Vos ressources diminueront aussi légèrement pour les besoins quotidiens du campement.",
-            "consequences"
+            "consequences_french"
         ],
         [
             "Prenez garde à ce qu'aucune des satisfactions de vos factions ne devienne nulle ou n'atteigne son maximum, sinon vous serez renversé. De même, vous devez garder un œil attentif sur vos ressources. Dès que vous viendrez à en manquer d'une, la vie du campement touchera à sa fin, et la vôtre au passage.",
-            "zero"
+            "zero_french"
         ],
         [
             "Si par malheur l'une de ces tristes fins venait à se produire, vous pourrez bénéficier d'une seconde chance en regardant une publicité. Si vous ne désirez point vous soumettre à ces étranges pratiques, vous n'aurez qu'à accepter votre défaite.",
-            "end"
+            "end_french"
         ]
     ],
     "menu": {

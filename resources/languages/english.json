@@ -398,27 +398,27 @@
     "tutorial": [
         [
             "Upon your rise to power, your subjects will come to you daily with a request. You will then have to make a decision among the two proposed, which will satisfy or displease certain factions. If neither decision pleases you, you can always execute your interlocutor, but not without consequences.",
-            "decision"
+            "decision_english"
         ],
         [
             "Unexpected events will sometimes occur, and you will have no choice but to observe the consequences of this unforeseen event.",
-            "event"
+            "event_english"
         ],
         [
             "Every week, you will be required to pass a decree to improve life in your camp. Take advantage of these days to replenish your resource stocks or increase the satisfaction of the faction of your choice.",
-            "decree"
+            "decree_english"
         ],
         [
             "At the end of each day, the consequences of your choices will be applied. Your resources will also decrease slightly for the daily needs of the camp.",
-            "consequences"
+            "consequences_english"
         ],
         [
             "Be careful that none of your faction's satisfactions becomes null or reaches its maximum, or you will be overthrown. Similarly, you must keep a close eye on your resources. As soon as you run out of any, the camp's life will come to an end, and yours as well in the process.",
-            "zero"
+            "zero_english"
         ],
         [
             "If, unfortunately, one of these sad ends were to occur, you could benefit from a second chance by watching an advertisement. If you do not wish to submit to these strange practices, you will simply have to accept your defeat.",
-            "end"
+            "end_english"
         ]
     ],
     "menu": {
