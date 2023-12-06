@@ -427,7 +427,7 @@
     "game": {
         "decree": "Today's council ends late into the night. Your advisors have prepared three decrees to boost morale in the camp.\n\nWhich one do you choose to apply?",
         "pre_game_over": "You feel your end approaching, do you want to try to delay the inevitable?",
-        "watch_ad": "Make an offering to the Ardent Dragon of the Last Day by opening yourself to its visions.",
+        "watch_ad": "Watch an ad to continue the game.",
         "go_to_game_over": "Wait for the end.",
         "day": "Day "
     },
