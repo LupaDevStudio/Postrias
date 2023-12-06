@@ -38,6 +38,7 @@ class TutorialScreen(ImprovedScreen):
             **kw)
 
     def on_pre_enter(self, *args):
+        self.counter_tutorial = 0
         self.ids.tutorial_text.text = TEXT.tutorial[self.counter_tutorial][0]
         self.path_tutorial_image = PATH_IMAGES_TUTORIAL + \
             TEXT.tutorial[self.counter_tutorial][1] + ".jpg"
