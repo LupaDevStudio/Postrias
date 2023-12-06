@@ -16,11 +16,15 @@ This game has been developed in April 2020 for the [Hitbox Makers game jam](http
 
 ### Story
 
+In a post-apocalyptic world where dinosaurs resurface, a leader in the American Midwest's last human enclave must protect against these creatures while maintaining power.
+
 ### Gameplay
+
+Balancing factions—the influential Ardent Order, loyal Militia, fellow citizens and knowledgeable yet controversial paleontologists—is crucial. To survive, the leader must utilize all resources, navigate internal strife, and confront the dinosaur threat with decisive measures. In this unforgiving landscape, apathy is deadly, requiring a delicate balance between control, alliances, and confronting external dangers for the community's survival.
 
 ## Distribution
 
-This game is available on the PlayStore, on [itch.io](https://the-washing-machine.itch.io/postrias) and on Github.
+This game is available on the [PlayStore](https://play.google.com/store/apps/details?id=lupadevstudio.com.postrias), on [itch.io](https://the-washing-machine.itch.io/postrias) and on Github.
 
 ## Authors
 
