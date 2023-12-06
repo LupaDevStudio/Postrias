@@ -4,16 +4,18 @@
 #:import TEXT tools.constants.TEXT
 #:import LANGUAGES_LIST tools.constants.LANGUAGES_LIST
 #: import USER_DATA tools.constants.USER_DATA
+#:import BACK_ARROW_SIZE tools.constants.BACK_ARROW_SIZE
+
 
 <SettingsScreen>:
 
     # Back arrow
     ImageWithTextButton:
         source: PATH_IMAGES + "back_arrow.png"
-        size_hint: None, 0.15
-        pos_hint: {"x":0.025, "top": 1}
+        size_hint: BACK_ARROW_SIZE, BACK_ARROW_SIZE*0.6
+        pos_hint: {"x":0.025, "top": 0.975}
         allow_stretch: True
-        width: self.height
+        keep_ratio: False
         release_function: root.go_to_menu
 
     Slider:

@@ -1,6 +1,7 @@
 #:kivy 2.1.0
 #:import TITLE_FONT_COLOR tools.constants.TITLE_FONT_COLOR
 #:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
+#:import BACK_ARROW_SIZE tools.constants.BACK_ARROW_SIZE
 
 <GameOverScreen>:
 
@@ -18,12 +19,11 @@
 
     # Back button
     ImageWithTextButton:
-        id: back_button
         source: PATH_IMAGES + "back_arrow.png"
-        size_hint: None, 0.15
-        pos_hint: {"x":0.025, "top": 1}
+        size_hint: BACK_ARROW_SIZE, BACK_ARROW_SIZE*0.6
+        pos_hint: {"x":0.025, "top": 0.975}
         allow_stretch: True
-        width: self.height
+        keep_ratio: False
         release_function: root.back_to_menu
 
     # Score

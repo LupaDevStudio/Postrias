@@ -62,6 +62,7 @@ MOBILE_MODE = platform == "android"
 DEBUG_MODE = False
 FPS = 30
 MSAA_LEVEL = 2
+BACK_ARROW_SIZE = 0.2
 
 ### Data loading ###
 
