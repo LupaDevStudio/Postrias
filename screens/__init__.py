@@ -23,7 +23,7 @@ from screens.game import GameScreen
 from screens.game_over import GameOverScreen
 from screens.achievements import AchievementsScreen
 from screens.tutorial import TutorialScreen
-from screens.opening import OpeningScreen
+from screens.help import HelpScreen
 
 
 ###############

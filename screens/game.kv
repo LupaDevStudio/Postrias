@@ -21,6 +21,7 @@
 #:set sign_offset 0.035
 #:set plus_minus_ratio 1/2.5
 #:set day_indicator_height 0.09
+#:set help_button_size 0.1
 
 
 <IndicatorLabel@Label>:
@@ -396,14 +397,22 @@
         keep_ratio: True
         release_function: root.go_to_next_card
 
-    
+    # Factions help button
+    ImageWithTextButton:
+        id: factions_help_button
+        source: PATH_IMAGES + "help_button.png"
+        size_hint: None, help_button_size
+        pos_hint: {"center_x":0.07, "center_y":0.5}
+        allow_stretch: True
+        keep_ratio: True
+        release_function: root.display_factions_help
 
-    # # Rewind button
-    # ImageWithTextButton:
-    #     id: rewind_button
-    #     source: PATH_IMAGES + "rewind_button.png"
-    #     size_hint: 0.1, None
-    #     pos_hint: {"center_x": 0.9, "center_y": 0.5}
-    #     allow_stretch: True
-    #     keep_ratio: True
-    #     release_function: root.rewind
+    # Resources help button
+    ImageWithTextButton:
+        id: resources_help_button
+        source: PATH_IMAGES + "help_button.png"
+        size_hint: None, help_button_size
+        pos_hint: {"center_x":0.93, "center_y":0.5}
+        allow_stretch: True
+        keep_ratio: True
+        release_function: root.display_resources_help

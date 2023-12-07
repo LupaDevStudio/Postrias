@@ -1,0 +1,26 @@
+#:kivy 2.1.0
+#:import PATH_IMAGES tools.path.PATH_IMAGES
+#:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
+
+<HelpScreen>:
+
+    # Next arrow
+    ImageWithTextButton:
+        id: next_button
+        source: PATH_IMAGES + "next_button.png"
+        size_hint: None, 0.2
+        pos_hint: {"center_x":0.5, "y": 0}
+        allow_stretch: True
+        width: self.height
+        release_function: root.go_back_to_game
+
+    # Text of the help message
+    ImageWithText:
+        id: help_text
+        source: PATH_IMAGES + "card_layout.png"
+        size_hint: 0.5, 0.75
+        pos_hint: {"center_x": 0.5, "center_y": 0.55}
+        allow_stretch: True
+        keep_ratio: False
+        text_font_name: root.font_name
+        text_color: TEXT_FONT_COLOR

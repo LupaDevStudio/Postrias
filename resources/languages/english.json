@@ -429,7 +429,9 @@
         "pre_game_over": "You feel your end approaching, do you want to try to delay the inevitable?",
         "watch_ad": "Watch an ad to continue the game.",
         "go_to_game_over": "Wait for the end.",
-        "day": "Day "
+        "day": "Day ",
+        "factions_help": "The four factions are:\n\nThe Ardent Order of the Dragon of the Last Days, symbolized by a dragon\n\nThe Militia, symbolized by a medal\n\nThe Survivors, symbolized by a sheaf of wheat\n\nThe Paleontologists, symbolized by an insect in amber\n\nYour role as a leader is to make the right decisions to always keep the influence of the factions between 0 and 100.",
+        "resources_help": "The three resources are:\n\nFood, essential to allow your citizens to survive.\n\nWeapons, used by the Militia to protect the camp.\n\nTools, used to maintain your camp and its defenses.\n\nIf any of these resources reach 0, the camp you are in charge of will collapse, and your citizens will perish."
     },
     "settings": {
         "apply": "Apply",

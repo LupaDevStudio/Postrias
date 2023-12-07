@@ -429,7 +429,9 @@
         "pre_game_over": "Vous sentez votre fin approcher, souhaitez-vous tenter de retarder l'inéluctable ?",
         "watch_ad": "Regarder une publicité pour continuer la partie.",
         "go_to_game_over": "Attendre la fin.",
-        "day": "Jour "
+        "day": "Jour ",
+        "factions_help": "Les quatre factions sont:\n\nL'Ordre ardent du Dragon des derniers jours, symbolisé par un dragon\n\nLa Milice, symbolisée par une médaille\n\nLes Survivants, symbolisés par un épi de blé\n\nLes Paléontologues, symbolisés par un insecte dans l'ambre\n\nVotre rôle en tant que chef est de prendre les bonnes décisions pour toujours maintenir l'influence des factions en 0 et 100.",
+        "resources_help": "Les trois ressources sont:\n\nLa nourriture, elle est essentielle pour permettre à vos citoyens de survivre.\n\nLes armes, elles sont utilisées par la Milice pour protéger le camp.\n\nLes outils, ils servent à entretenir votre campement et ses défenses.\n\nSi l'une de ces ressources atteint 0, le campement dont vous avez la charge s'effondrera et vos citoyens périront."
     },
     "settings": {
         "apply": "Appliquer",

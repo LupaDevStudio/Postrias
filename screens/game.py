@@ -125,6 +125,7 @@ class GameScreen(ImprovedScreen):
         self.day_camp_background: ProxyImage
 
         self.credit: int
+        self.help_mode = False
 
     def preload(self, *_):
 
@@ -194,36 +195,42 @@ class GameScreen(ImprovedScreen):
 
         super().on_pre_enter(*args)
 
-        # Load the gameplay json
-        game.load_resources()
-        game.reset_variables()
-        self.update_display_resources()
+        if not self.help_mode:
 
-        # Hide all cards
-        self.hide_cards()
+            # Load the gameplay json
+            game.load_resources()
+            game.reset_variables()
+            self.update_display_resources()
+
+            # Hide all cards
+            self.hide_cards()
 
     def on_enter(self, *args):
 
-        # Start the game music
-        music_mixer.play("game_music", loop=True)
+        if not self.help_mode:
 
-        # Launch the start day function
-        Clock.schedule_once(self.start_day)
+            # Start the game music
+            music_mixer.play("game_music", loop=True)
 
-        # Load an add
-        if platform == "android":
-            self.reward_interstitial = RewardedInterstitial(
-                REWARD_INTERSTITIAL, self.schedule_reward
-            )
-            self.reward_static = InterstitialAd(
-                INTERSTITIAL
-            )
+            # Launch the start day function
+            Clock.schedule_once(self.start_day)
 
-        # Allocate the number of credits
-        self.credit = 1
+            # Load an add
+            if platform == "android":
+                self.reward_interstitial = RewardedInterstitial(
+                    REWARD_INTERSTITIAL, self.schedule_reward
+                )
+                self.reward_static = InterstitialAd(
+                    INTERSTITIAL
+                )
 
-        # Reset the number of days
-        self.counter_day = 0
+            # Allocate the number of credits
+            self.credit = 1
+
+            # Reset the number of days
+            self.counter_day = 0
+        else:
+            self.help_mode = False
 
         return super().on_enter(*args)
 
@@ -318,11 +325,14 @@ class GameScreen(ImprovedScreen):
         When an answer is currently displayed, we'll go to the next day.
         When an event is displayed, we'll go to the answer to this answer.
         """
-        if self.is_answer:
-            self.is_answer = False
-            self.start_day()
+        if self.help_mode:
+            pass
         else:
-            self.choose_answer("down")
+            if self.is_answer:
+                self.is_answer = False
+                self.start_day()
+            else:
+                self.choose_answer("down")
 
     def start_day(self, *_):
         """
@@ -391,3 +401,13 @@ class GameScreen(ImprovedScreen):
             self.reward_static = InterstitialAd(
                 INTERSTITIAL
             )
+
+    def display_factions_help(self):
+        self.help_mode = True
+        self.manager.get_screen("help").help_mode = "factions_help"
+        self.manager.current = "help"
+
+    def display_resources_help(self):
+        self.help_mode = True
+        self.manager.get_screen("help").help_mode = "resources_help"
+        self.manager.current = "help"
