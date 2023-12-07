@@ -65,7 +65,8 @@ class OpeningScreen(ImprovedScreen):
             SettingsScreen,
             GameOverScreen,
             AchievementsScreen,
-            TutorialScreen)
+            TutorialScreen,
+            HelpScreen)
 
         kv_files = [file for file in os.listdir(
             "screens") if file.endswith(".kv")]
@@ -78,6 +79,7 @@ class OpeningScreen(ImprovedScreen):
         self.GameOverScreen = GameOverScreen
         self.AchievementsScreen = AchievementsScreen
         self.TutorialScreen = TutorialScreen
+        self.HelpScreen = HelpScreen
 
         Clock.schedule_once(self.load_other_screens)
 
@@ -99,6 +101,8 @@ class OpeningScreen(ImprovedScreen):
         self.manager.add_widget(achievements_screen)
         tutorial_screen = self.TutorialScreen(name="tutorial")
         self.manager.add_widget(tutorial_screen)
+        help_screen = self.HelpScreen(name="help")
+        self.manager.add_widget(help_screen)
         # Preload screens
         Clock.schedule_once(self.manager.get_screen("game").preload)
         Clock.schedule_once(self.manager.get_screen("game_over").preload)

@@ -94,7 +94,7 @@ android.presplash_lottie = resources/presplash.json
 #icon.adaptive_background.filename = %(source.dir)s/data/icon_bg.png
 
 # (list) Permissions
-android.permissions = INTERNET, ACCESS_NETWORK_STATE,READ_FRAME_BUFFER, CAPTURE_VIDEO_OUTPUT, CAPTURE_SECURE_VIDEO_OUTPUT
+android.permissions = INTERNET, ACCESS_NETWORK_STATE
 
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host
