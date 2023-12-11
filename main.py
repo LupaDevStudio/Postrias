@@ -1,5 +1,5 @@
 """
-Main module of the generator of dialogs.
+Main module of Postrias.
 """
 
 print("Start Postrias")
@@ -35,8 +35,7 @@ print("Kivy packages loaded")
 ### Module imports ###
 
 from tools.path import (
-    PATH_IMAGES,
-    PATH_RESOURCES_FOLDER
+    PATH_IMAGES
 )
 from tools.constants import (
     MOBILE_MODE,
