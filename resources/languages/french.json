@@ -11,7 +11,7 @@
             "no": "Hérésie ! Brûlons-le avec ses travaux !"
         },
         "religious_sacrifice": {
-            "text": "L’évêque vous informe que les visions des oracles de l'Ordre sont sans appel : nous devons sacrifier treize survivants demain à treize heures.",
+            "text": "L'évêque vous informe que les visions des oracles de l'Ordre sont sans appel : nous devons sacrifier treize survivants demain à treize heures.",
             "yes": "Qu'il en soit selon la volonté des cieux.",
             "no": "Quelques poulets feront bien l'affaire."
         },
@@ -61,7 +61,7 @@
             "no": "Tolérons plutôt ce trafic, beaucoup trop de survivants en dépendent."
         },
         "paleo_researches": {
-            "text": "L’évêque s'indigne des enseignements prodigués par les paléontologues. Il affirme que ces derniers cherchent à embrigader des survivants dans leur quête du culte impie de la Raison.",
+            "text": "L'évêque s'indigne des enseignements prodigués par les paléontologues. Il affirme que ces derniers cherchent à embrigader des survivants dans leur quête du culte impie de la Raison.",
             "yes": "Emprisonnez-les. La connaissance, c'est le pouvoir !",
             "no": "Et alors ?"
         },
@@ -106,7 +106,7 @@
             "no": "Arrière, serviteur du diable !"
         },
         "services": {
-            "text": "L’évêque dénonce l'absence du peuple aux messes organisées pour assurer la croissance de nos plantations.",
+            "text": "L'évêque dénonce l'absence du peuple aux messes organisées pour assurer la croissance de nos plantations.",
             "yes": "Messe obligatoire !",
             "no": "Prêtres, à vos charrues !"
         },
@@ -233,18 +233,44 @@
     },
     "answer": {
         "yes": {
-            "order": "L'homme d’église vous adresse sa bénédiction et s’en retourne dans son temple.",
-            "military": "Le milicien vous salue et quitte les lieux.",
-            "civilian": "Le survivant s'incline respectueusement et recule en vous regardant jusqu'à atteindre la porte.",
-            "paleo": "Le paléontologue vous quitte en se frottant les mains, son rire nerveux et ses tics de joie sont on ne peut plus désagréables."
+            "order": [
+                "L'homme d'église vous adresse sa bénédiction et s'en retourne dans son temple.",
+                "L'homme d'église joint ses deux mains et murmure doucement des paroles. Vous suggérez qu'il remercie le Dragon des Derniers Jours pour avoir été clément."
+            ],
+            "military": [
+                "Le milicien vous salue et quitte les lieux d'un pas un peu trop pressé.",
+                "Vous avez tout juste le temps d'apercevoir un rapide sourire de satisfaction s'esquisser sur le visage du militaire avant qu'il ne vous salue respectueusement et ne prenne congé de vous."
+            ],
+            "civilian": [
+                "Le survivant s'incline respectueusement et recule en vous regardant jusqu'à atteindre la porte.",
+                "Le survivant vous regarde avec de grands yeux pétillants de joie et quitte les lieux hâtivement, ayant même oublié de vous saluer.",
+                "Vous entendez votre interlocuteur murmurer \"Votre bonté nous sauvera, Sire !\" juste avant d'effectuer' une révérence quelque peu maladroite. Vous esquissez un sourire satisfait."
+            ],
+            "paleo": [
+                "Le paléontologue vous quitte en se frottant les mains ; son rire nerveux et ses tics de joie sont on ne peut plus désagréables.",
+                "Visiblement très satisfait de votre réponse, le scientifique fait hâtivement volte-face et s'en va sans un mot. Malgré la joie de votre sujet, vous ne pouvez vous empêcher de grommeler face à ce manque de respect."
+            ]
         },
         "no": {
-            "order": "Les traits de l'homme d’église se tendent. Il vous quitte après des salutations bien trop obséquieuses...",
-            "military": "Le milicien quitte les lieux. Il peine à dissimuler sa frustration. Vous entendez le claquement rageur de ses bottes pendant de longues minutes.",
-            "civilian": "Le survivant vous quitte en grommelant quelques mots inaudibles. Sans doute des insultes.",
-            "paleo": "Le paléontologue s'exclame : \"Endomicropachycephalosaurus !\" et s’éloigne. Vous supposez qu'il s'agit d'une insulte."
+            "order": [
+                "Les traits de l'homme d'église se tendent. Il vous quitte après des salutations bien trop obséquieuses.",
+                "Vous voyez les lèvres de l'homme d'église articuler des mots, comme s'il invoquait une justice céleste. Vous soutenez son regard, sans crainte d'un quelconque châtiment, jusqu'à ce que l'homme quitte la salle.",
+                "\"Votre manque de foi vous perdra.\" se contente de répondre l'homme d'église. Vous restez de marbre face à cette déclaration et il se retire."
+            ],
+            "military": [
+                "Le milicien peine à dissimuler sa frustration lorsqu'il quitte les lieux. Vous entendez le claquement rageur de ses bottes pendant de longues minutes.",
+                "Sans vous adresser la moindre parole supplémentaire, le militaire se hâte de quitter la salle et claque violemment la porte derrière lui."
+            ],
+            "civilian": [
+                "Le survivant vous quitte en grommelant quelques mots inaudibles. Sans doute des insultes.",
+                "L'homme vous adresse un regard pathétique qui ne vous fait ni chaud ni froid, avant de quitter la salle en comprenant que vous ne reviendrez pas sur votre décision."
+            ],
+            "paleo": [
+                "Le paléontologue s'exclame \"Endomicropachycephalosaurus !\" et s'éloigne. Vous supposez qu'il s'agit d'une insulte.",
+                "\"Vous regrettrez un jour d'avoir autant négligé la science !\" vous annonce savamment le paléontologue. Vous laissez échapper un ricanement de mépris face à ces paroles."
+            ]
         },
-        "guillotine": "Vous regardez les miliciens s’emparer du condamné et le conduire à l’échafaud. Vous entendez le sifflement sinistre de la lame fendre l'air.",
+        "guillotine": "Vous regardez les miliciens s'emparer du condamné et le conduire à l'échafaud. Vous entendez le sifflement sinistre de la lame fendre l'air.",
         "decree": "Le décret a été appliqué selon votre volonté. Votre suprématie est réaffirmée.",
         "event": "À la suite de ces péripéties, vous partez vous coucher en espérant que le jour suivant sera moins mouvementé."
     },
@@ -291,10 +317,10 @@
             "text": "Un ingénieur militaire vient de trouver un moyen particulièrement efficace pour transformer des machines agricoles obsolètes en engins d'assaut dévastateurs. La Milice saura en tirer profit lors de ses prochaines expéditions."
         },
         "researches_ammonites": {
-            "text": "Les paléontologues sont parvenus à un accord avantageux avec l’évêque. Ce dernier ne s'opposera plus à leurs recherches sur les ammonites, en échange de passe-droits plus que douteux. Il vaudrait mieux que les fidèles n'en apprennent rien, mais en attendant, réjouissons-nous des bénéfices à venir de ces recherches."
+            "text": "Les paléontologues sont parvenus à un accord avantageux avec l'évêque. Ce dernier ne s'opposera plus à leurs recherches sur les ammonites, en échange de passe-droits plus que douteux. Il vaudrait mieux que les fidèles n'en apprennent rien, mais en attendant, réjouissons-nous des bénéfices à venir de ces recherches."
         },
         "storm_fear": {
-            "text": "Les craintes suscitées par les orages particulièrement violents de ces dernières semaines ont été habilement exploitées par l'Ordre. Les survivants sont désormais convaincus que l’évêque va intercéder en leur faveur pour apaiser la colère du Dragon des derniers jours."
+            "text": "Les craintes suscitées par les orages particulièrement violents de ces dernières semaines ont été habilement exploitées par l'Ordre. Les survivants sont désormais convaincus que l'évêque va intercéder en leur faveur pour apaiser la colère du Dragon des derniers jours."
         },
         "lottery": {
             "text": "Une loterie est organisée par les citoyens pour se changer les idées. Ils trouvent ce jeu particulièrement satisfaisant, ce qui leur remonte le moral."
@@ -303,7 +329,7 @@
             "text": "Eurêka ! Des documents décryptés par nos paléontologues contenaient des patrons d'instruments de menuiserie. Nous allons les mettre à profit pour améliorer l'efficacité de nos constructions."
         },
         "fire_church": {
-            "text": "Une église est en feu ! Non seulement l'origine de cet incendie est vraisemblablement criminelle, mais les survivants risquent de douter de l'efficacité de la protection de monseigneur l’évêque sur le campement."
+            "text": "Une église est en feu ! Non seulement l'origine de cet incendie est vraisemblablement criminelle, mais les survivants risquent de douter de l'efficacité de la protection de monseigneur l'évêque sur le campement."
         },
         "oleg": {
             "text": "Un homme qui prétend se nommer Oleg et qui viendrait de ce qui était autrefois la Russie est arrive au camp. Nous n'avons pas l'habitude d'accepter des étrangers, mais les stocks d'armes conséquents qu'apporte Oleg faciliteront certainement son intégration en ces temps difficiles."
@@ -318,11 +344,11 @@
     "ending": {
         "food": {
             "title": "Le dernier repas",
-            "text": "Les survivants commencent à faire bouillir leurs chaussures et leurs vêtements pour se nourrir. Votre autorité n'a plus de sens pour ces hommes dont le dénuement nourrit des pulsions révolutionnaires. Ces corps décharnés vous saisissent et vous conduisent dans un immense chaudron sur la place publique. Vos jours s’achèvent en bain-marie. Vous n'obtenez guère mieux que les intestins des survivants pour sépulture."
+            "text": "Les survivants commencent à faire bouillir leurs chaussures et leurs vêtements pour se nourrir. Votre autorité n'a plus de sens pour ces hommes dont le dénuement nourrit des pulsions révolutionnaires. Ces corps décharnés vous saisissent et vous conduisent dans un immense chaudron sur la place publique. Vos jours s'achèvent en bain-marie. Vous n'obtenez guère mieux que les intestins des survivants pour sépulture."
         },
         "tools": {
             "title": "Le tournevis",
-            "text": "Les équipements du camp tombent en ruine et vous ne parvenez pas à les réparer. L'agriculture, les dispositifs de sécurité et la recherche sont paralysés. Vous vous décidez à mener une expédition dans les vestiges des villes alentours afin de récolter des outils et des matériaux. L’évêque profite de votre absence pour prendre le pouvoir et vous êtes attaqué sur le chemin du retour par des vélociraptors. Vous êtes emporté à la tête de l'ultime charge de votre groupe."
+            "text": "Les équipements du camp tombent en ruine et vous ne parvenez pas à les réparer. L'agriculture, les dispositifs de sécurité et la recherche sont paralysés. Vous vous décidez à mener une expédition dans les vestiges des villes alentours afin de récolter des outils et des matériaux. L'évêque profite de votre absence pour prendre le pouvoir et vous êtes attaqué sur le chemin du retour par des vélociraptors. Vous êtes emporté à la tête de l'ultime charge de votre groupe."
         },
         "weapons": {
             "title": "Fronde VS T-Rex",
@@ -334,7 +360,7 @@
         },
         "order_min": {
             "title": "Perte de la foi",
-            "text": "Alors que le pouvoir de l'Ordre se délite, les survivants privés de l'Espérance du Salut prennent conscience de l’absurdité de l'existence dans un monde qui n'est plus celui des hommes. Ils ne vous obéissent plus et se laissent mourir. Vous êtes désormais le dernier des hommes."
+            "text": "Alors que le pouvoir de l'Ordre se délite, les survivants privés de l'Espérance du Salut prennent conscience de l'absurdité de l'existence dans un monde qui n'est plus celui des hommes. Ils ne vous obéissent plus et se laissent mourir. Vous êtes désormais le dernier des hommes."
         },
         "military_max": {
             "title": "Coup d'état",
@@ -346,7 +372,7 @@
         },
         "civilian_max": {
             "title": "Révolution !",
-            "text": "Vous avez été trop tendre et les survivants se sentent pousser des ailes. La foule parvient à rallier la Milice à sa cause pour exiger la fin de votre pouvoir et la mise en place d'une gouvernance démocratique. L’émeute dégénère et les survivants débordent vos positions. Ils s'emparent de vous et vous emmènent vers la guillotine."
+            "text": "Vous avez été trop tendre et les survivants se sentent pousser des ailes. La foule parvient à rallier la Milice à sa cause pour exiger la fin de votre pouvoir et la mise en place d'une gouvernance démocratique. L'émeute dégénère et les survivants débordent vos positions. Ils s'emparent de vous et vous emmènent vers la guillotine."
         },
         "civilian_min": {
             "title": "Le Tyran",
@@ -363,7 +389,7 @@
     },
     "introduction": [
         [
-            "La civilisation a assisté en silence au retour des dinosaures. Elle a disparu comme elle était apparue. Peu sont ceux qui en gardent un souvenir, et ce n'est guère plus qu'un écho imperceptible. L’Humanité se résume peut-être au campement que vous dirigez dans les grandes plaines du Dakota, non loin de ce qui était autrefois le parc des Badlands.",
+            "La civilisation a assisté en silence au retour des dinosaures. Elle a disparu comme elle était apparue. Peu sont ceux qui en gardent un souvenir, et ce n'est guère plus qu'un écho imperceptible. L'Humanité se résume peut-être au campement que vous dirigez dans les grandes plaines du Dakota, non loin de ce qui était autrefois le parc des Badlands.",
             "intro_dakota"
         ],
         [
@@ -375,7 +401,7 @@
             "mayor"
         ],
         [
-            "L'Ordre ardent du Dragon des derniers jours :\n\nDes cendres des cultes de jadis est né l'Ordre ardent du Dragon des derniers jours. Les temps rudes favorisent l'émergence de cultes et celui-ci a acquis un grand pouvoir sur les consciences. Ses membres affirment que l'apparition des dinosaures est un châtiment céleste. L'Ordre appelle par conséquent à la pénitence en attendant la venue du Dragon des derniers jours, qui délivrera l’Humanité du joug des dinosaures. L'Ordre interprétera comme une insulte au Dragon des derniers jours toute tentative profane de régler le problème des dinosaures.",
+            "L'Ordre ardent du Dragon des derniers jours :\n\nDes cendres des cultes de jadis est né l'Ordre ardent du Dragon des derniers jours. Les temps rudes favorisent l'émergence de cultes et celui-ci a acquis un grand pouvoir sur les consciences. Ses membres affirment que l'apparition des dinosaures est un châtiment céleste. L'Ordre appelle par conséquent à la pénitence en attendant la venue du Dragon des derniers jours, qui délivrera l'Humanité du joug des dinosaures. L'Ordre interprétera comme une insulte au Dragon des derniers jours toute tentative profane de régler le problème des dinosaures.",
             "order"
         ],
         [
@@ -387,7 +413,7 @@
             "citizens"
         ],
         [
-            "Les Paléontologues :\n\nLes paléontologues s’intéressent de près à l'étude des dinosaures. Ils sont les seuls représentants de ce qui était autrefois \"La Science\". Leurs recherches pourraient vous apporter les connaissances décisives pour mettre un terme à la domination des dinosaures, à moins que leurs machines ne les attirent trop près du camp...",
+            "Les Paléontologues :\n\nLes paléontologues s'intéressent de près à l'étude des dinosaures. Ils sont les seuls représentants de ce qui était autrefois \"La Science\". Leurs recherches pourraient vous apporter les connaissances décisives pour mettre un terme à la domination des dinosaures, à moins que leurs machines ne les attirent trop près du camp...",
             "paleontologists"
         ],
         [
