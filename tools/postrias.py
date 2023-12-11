@@ -299,9 +299,10 @@ class Game():
             self.text_dict["answer"] = TEXT.answer[self.phase]
         elif self.phase == "decision":
             if choice in ["yes", "no"]:
-                self.text_dict["answer"] = \
-                    TEXT.answer[choice][self.gameplay["decision"]
+                list_text = TEXT.answer[choice][self.gameplay["decision"]
                                         [self.card_id]["complainant"]]
+                self.text_dict["answer"] = random.choice(list_text)
+                    
             else:
                 self.text_dict["answer"] = TEXT.answer[choice]
 
