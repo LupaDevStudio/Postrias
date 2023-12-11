@@ -184,10 +184,10 @@ class ImprovedScreen(Screen):
         """
         if MOBILE_MODE:
             self.font_ratio = Window.size[1] / \
-                600 + (Window.size[0] / Window.size[1] - 1) * 0.5
+                600 + (Window.size[0] / Window.size[1] - 1) * 0.8
         else:
             self.font_ratio = Window.size[1] / \
-                600 + (Window.size[0] / Window.size[1] - 1) * 0.5
+                600 + (Window.size[0] / Window.size[1] - 1) * 0.8
 
     def disable_widget(self, widget_id: str):
         """
