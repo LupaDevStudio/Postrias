@@ -235,7 +235,7 @@
         "yes": {
             "order": [
             "The clergyman blesses you and returns to his temple.",
-            "The clergyman clasps his hands and softly murmurs words. You suggest he thank the Dragon of the Last Days for being merciful."
+            "The clergyman clasps his hands and softly murmurs words. You suggest he thank the Dragon of the last days for being merciful."
             ],
             "military": [
             "The militiaman salutes you and hastily leaves the premises.",
@@ -356,7 +356,7 @@
         },
         "order_max": {
             "title": "The Sacrifice",
-            "text": "Empowered by its control over society, the Ardent Order of the Last Days launches a purification campaign in the camp against its opponents. After massacring the paleontologists and taking control of the Militia, the Order sends the crowd to seize you. Your bones and flesh are consumed on a sacrificial pyre."
+            "text": "Empowered by its control over society, the Ardent Order of the last days launches a purification campaign in the camp against its opponents. After massacring the paleontologists and taking control of the Militia, the Order sends the crowd to seize you. Your bones and flesh are consumed on a sacrificial pyre."
         },
         "order_min": {
             "title": "Loss of Faith",
@@ -384,7 +384,7 @@
         },
         "paleo_min": {
             "title": "The End of Science",
-            "text": "The Ardent Order of the Last Days unleashes a crowd of followers on what remains of the paleontologists' laboratory. Its last occupants are lynched, and their work ends up in autodafés. Without the use of science, the quality of the Militia's equipment and agricultural productivity decline. It's only a matter of time before you die of starvation or a dinosaur attack."
+            "text": "The Ardent Order of the last days unleashes a crowd of followers on what remains of the paleontologists' laboratory. Its last occupants are lynched, and their work ends up in autodafés. Without the use of science, the quality of the Militia's equipment and agricultural productivity decline. It's only a matter of time before you die of starvation or a dinosaur attack."
         }
     },
     "introduction": [
@@ -401,7 +401,7 @@
             "mayor"
         ],
         [
-            "The Ardent Order of the Last Days:\n\nFrom the ashes of past cults arose the Ardent Order of the Last Days. Harsh times favor the emergence of cults, and this one has gained great power over consciences. Its members claim that the appearance of dinosaurs is a celestial punishment. Therefore, the Order calls for penance while awaiting the coming of the Last Days Dragon, who will deliver humanity from the yoke of dinosaurs. The Order will interpret any profane attempt to solve the dinosaur problem as an insult to the Last Days Dragon.",
+            "The Ardent Order of the last days:\n\nFrom the ashes of past cults arose the Ardent Order of the last days. Harsh times favor the emergence of cults, and this one has gained great power over consciences. Its members claim that the appearance of dinosaurs is a celestial punishment. Therefore, the Order calls for penance while awaiting the coming of the last days Dragon, who will deliver humanity from the yoke of dinosaurs. The Order will interpret any profane attempt to solve the dinosaur problem as an insult to the last days Dragon.",
             "order"
         ],
         [
@@ -417,7 +417,7 @@
             "paleontologists"
         ],
         [
-            "You have limited resources to ensure the survival of your camp: make sure never to run out of any of them.\n\nFood is necessary for feeding your population, but the Order may also demand it for sacrifices.\n\nWeapons of any kind are absolutely essential for the Militia to maintain order and protect the camp from dinosaurs.\n\nTools, however rudimentary they may be, are all the instruments that allow survivors to work and carry out constructions.",
+            "You have limited resources to ensure the survival of your camp: make sure never to run out of any of them.\nFood is necessary for feeding your population, but the Order may also demand it for sacrifices.\nWeapons of any kind are absolutely essential for the Militia to maintain order and protect the camp from dinosaurs.\nTools, however rudimentary they may be, are all the instruments that allow survivors to work and carry out constructions.",
             "resources"
         ]
     ],
@@ -456,7 +456,7 @@
         "watch_ad": "Watch an ad to continue the game.",
         "go_to_game_over": "Wait for the end.",
         "day": "Day ",
-        "factions_help": "The four factions are:\n\nThe Ardent Order of the Dragon of the Last Days, symbolized by a dragon\n\nThe Militia, symbolized by a medal\n\nThe Survivors, symbolized by a sheaf of wheat\n\nThe Paleontologists, symbolized by an insect in amber\n\nYour role as a leader is to make the right decisions to always keep the influence of the factions between 0 and 100.",
+        "factions_help": "The four factions are:\n\nThe Ardent Order of the Dragon of the last days, symbolized by a dragon\n\nThe Militia, symbolized by a medal\n\nThe Survivors, symbolized by a sheaf of wheat\n\nThe Paleontologists, symbolized by an insect in amber\n\nYour role as a leader is to make the right decisions to always keep the influence of the factions between 0 and 100.",
         "resources_help": "The three resources are:\n\nFood, essential to allow your citizens to survive.\n\nWeapons, used by the Militia to protect the camp.\n\nTools, used to maintain your camp and its defenses.\n\nIf any of these resources reach 0, the camp you are in charge of will collapse, and your citizens will perish."
     },
     "settings": {

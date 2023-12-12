@@ -235,7 +235,7 @@
         "yes": {
             "order": [
                 "L'homme d'église vous adresse sa bénédiction et s'en retourne dans son temple.",
-                "L'homme d'église joint ses deux mains et murmure doucement des paroles. Vous suggérez qu'il remercie le Dragon des Derniers Jours pour avoir été clément."
+                "L'homme d'église joint ses deux mains et murmure doucement des paroles. Vous suggérez qu'il remercie le Dragon des derniers jours pour avoir été clément."
             ],
             "military": [
                 "Le milicien vous salue et quitte les lieux d'un pas un peu trop pressé.",
@@ -417,7 +417,7 @@
             "paleontologists"
         ],
         [
-            "Vous disposez de ressources limitées pour assurer la survie de votre campement : veillez à ne jamais manquer de l'une d'entre elles.\n\n Les vivres sont nécessaires à l'alimentation de votre population, mais l'Ordre peut également les exiger pour des sacrifices.\n\nLes armes de toute nature sont absolument essentielles à la Milice pour maintenir l'ordre et protéger le campement des dinosaures.\n\nLes outils sont quant à eux tous les instruments aussi rudimentaires soient-ils qui permettent aux survivants de travailler et de réaliser des constructions.",
+            "Vous disposez de ressources limitées pour assurer la survie de votre campement : veillez à ne jamais manquer de l'une d'entre elles.\nLes vivres sont nécessaires à l'alimentation de votre population, mais l'Ordre peut également les exiger pour des sacrifices.\nLes armes de toute nature sont absolument essentielles à la Milice pour maintenir l'ordre et protéger le campement des dinosaures.\nLes outils sont quant à eux tous les instruments aussi rudimentaires soient-ils qui permettent aux survivants de travailler et de réaliser des constructions.",
             "resources"
         ]
     ],
