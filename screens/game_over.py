@@ -16,6 +16,7 @@ from kivy.properties import (
     StringProperty,
     BooleanProperty
 )
+from kivy.clock import Clock
 
 
 ### Module imports ###
@@ -43,7 +44,6 @@ from tools.share_image import (
 if MOBILE_MODE:
     from androidstorage4kivy import SharedStorage, ShareSheet  # type: ignore
     from android.storage import app_storage_path  # type: ignore
-    from android.permissions import request_permissions, Permission  # pylint: disable=import-error # type: ignore
 
 
 ###############
@@ -125,8 +125,12 @@ class GameOverScreen(ImprovedScreen):
         """
         self.manager.current = self.back_destination
 
+    def re_enable_share_button(self, *args):
+        self.share_button = True
+
     def share_score(self):
         if self.share_button:
+            self.share_button = False
             print("start sharing")
             # Save the screenshot
             if os.path.exists("share_image.png"):
@@ -149,3 +153,4 @@ class GameOverScreen(ImprovedScreen):
                 print("share the image")
                 shared_sheet = ShareSheet()
                 shared_sheet.share_file(file_to_share)
+            Clock.schedule_once(self.re_enable_share_button, 2)
