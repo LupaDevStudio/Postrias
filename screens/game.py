@@ -411,3 +411,6 @@ class GameScreen(ImprovedScreen):
         self.help_mode = True
         self.manager.get_screen("help").help_mode = "resources_help"
         self.manager.current = "help"
+
+    def go_to_menu(self):
+        self.manager.current = "menu"
