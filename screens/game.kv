@@ -3,6 +3,7 @@
 #:import PATH_TEXT_FONT tools.path.PATH_TEXT_FONT
 #:import TEXT_FONT_COLOR tools.constants.TEXT_FONT_COLOR
 #:import partial functools.partial
+#:import BACK_ARROW_SIZE tools.constants.BACK_ARROW_SIZE
 #:set center_x_faction 0.1
 #:set center_x_resource 0.93
 #:set horizontal_shift 0.01
@@ -16,7 +17,7 @@
 #:set side_img_width 0.3
 #:set side_img_height 0.25
 #:set side_img_center_x 0.175
-#:set side_img_center_y 0.25
+#:set side_img_center_y 0.3
 #:set text_filling_ratio 0.85
 #:set sign_offset 0.035
 #:set plus_minus_ratio 1/2.5
@@ -416,3 +417,11 @@
         allow_stretch: True
         keep_ratio: True
         release_function: root.display_resources_help
+
+    ImageWithTextButton:
+        source: PATH_IMAGES + "back_arrow.png"
+        size_hint: BACK_ARROW_SIZE, BACK_ARROW_SIZE*0.6
+        pos_hint: {"x":0.025, "center_y": 0.08}
+        allow_stretch: True
+        keep_ratio: False
+        release_function: root.go_to_menu
