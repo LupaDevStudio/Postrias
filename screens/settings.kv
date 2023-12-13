@@ -23,12 +23,13 @@
         min: 0
         max: 1
         value: USER_DATA.sound_effects_volume
-        pos_hint: {"center_x":0.75, "center_y": 0.5}
+        pos_hint: {"center_x":0.75, "center_y": 0.35}
         size_hint: 0.3, 0.1
+        on_touch_up: root.update_sound_volume
 
     Label:
         text: root.sound_volume_label
-        pos_hint: {"center_x":0.75, "center_y": 0.58}
+        pos_hint: {"center_x":0.75, "center_y": 0.43}
         font_size: 20*root.font_ratio
         color: TEXT_FONT_COLOR
         outline_width: 2
@@ -39,25 +40,17 @@
         min: 0
         max: 1
         value: USER_DATA.music_volume
-        pos_hint: {"center_x":0.75, "center_y": 0.7}
+        pos_hint: {"center_x":0.75, "center_y": 0.68}
         size_hint: 0.3, 0.1
+        on_touch_move: root.update_music_volume
 
     Label:
         text: root.music_volume_label
-        pos_hint: {"center_x":0.75, "center_y": 0.78}
+        pos_hint: {"center_x":0.75, "center_y": 0.75}
         font_size: 20*root.font_ratio
         color: TEXT_FONT_COLOR
         outline_width: 2
         outline_color: (1,1,1,1)
-
-    Button:
-        id: apply_music_settings_button
-        text: root.apply_label
-        pos_hint: {"center_x":0.75, "center_y": 0.325}
-        size_hint: 0.3, 0.1
-        font_size: 20*root.font_ratio
-        on_release:
-            root.apply_music_settings()
 
     ### Language ###
     Label:
@@ -81,7 +74,7 @@
     Button:
         id: watch_tutorial
         text: root.tutorial_label
-        pos_hint: {"center_x":0.25, "center_y": 0.325}
+        pos_hint: {"center_x":0.25, "center_y": 0.35}
         size_hint: 0.3, 0.1
         font_size: 20*root.font_ratio
         on_release:

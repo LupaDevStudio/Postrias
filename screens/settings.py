@@ -73,7 +73,13 @@ class SettingsScreen(ImprovedScreen):
         self.load_labels()
         # Set the values of the language spinner
         self.values_language_list = LANGUAGES_LIST
+        self.ids.sound_slider.bind(value=self.update_sound_volume)
+        self.ids.music_slider.bind(value=self.update_music_volume)
         return super().on_enter(*args)
+
+    def on_leave(self, *args):
+        USER_DATA.save_changes()
+        return super().on_leave(*args)
 
     def change_language(self, language_name):
         """
@@ -97,20 +103,15 @@ class SettingsScreen(ImprovedScreen):
 
         self.manager.current = "menu"
 
-    def apply_music_settings(self):
-        """
-        Apply the music settings choosed by the user using the sliders.
-        """
-        # Get both values for the music and the effects
-        music_volume = self.ids.music_slider.value
-        sound_volume = self.ids.sound_slider.value
-
-        music_mixer.change_volume(music_volume)
+    def update_sound_volume(self, widget, value):
+        sound_volume = value
         sound_mixer.change_volume(sound_volume)
-
-        USER_DATA.music_volume = music_volume
         USER_DATA.sound_effects_volume = sound_volume
-        USER_DATA.save_changes()
+
+    def update_music_volume(self, widget, value):
+        music_volume = value
+        music_mixer.change_volume(music_volume)
+        USER_DATA.music_volume = music_volume
 
     def watch_tutorial(self):
         """
