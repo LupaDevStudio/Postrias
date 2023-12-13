@@ -42,13 +42,13 @@
         },
         "witch": {
             "text": "Un survivant s'approche de vous avec une paléontologue ligotée qui a été lynchée par la foule. Le survivant affirme l'avoir aperçue en train d'accoucher d'un reptile cornu. Il vous demande de la condamner à mort.",
-            "yes": "Libérez cette innocente, pauvre fou !",
-            "no": "C'est une sorcière, qu'il en soit ainsi."
+            "no": "Libérez cette innocente, pauvre fou !",
+            "yes": "C'est une sorcière, qu'il en soit ainsi."
         },
         "tough_labour": {
             "text": "Un survivant qui dit travailler à l'atelier de fabrication d'armes vous implore de réduire les cadences de production. Votre regard s'attarde sur ses mains difformes avilies par le labeur.",
-            "yes": "Silence ! Nous avons besoin de plus d'armes ! Augmentez les cadences !",
-            "no": "Oui, cela est juste et bon."
+            "no": "Silence ! Nous avons besoin de plus d'armes ! Augmentez les cadences !",
+            "yes": "Oui, cela est juste et bon."
         },
         "paleo_tools": {
             "text": "L'intendant du laboratoire des paléontologues vous apporte un compte-rendu de leurs dépenses en outils. Elles sont anormalement élevées et vous constatez que des armes ont également été consommées.",

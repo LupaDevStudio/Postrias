@@ -42,13 +42,13 @@
         },
         "witch": {
             "text": "A survivor approaches you with a tied-up paleontologist who was lynched by the crowd. The survivor claims to have seen her giving birth to a horned reptile. He asks you to condemn her to death.",
-            "yes": "Release this innocent, poor fool!",
-            "no": "She's a witch, so be it."
+            "no": "Release this innocent, poor fool!",
+            "yes": "She's a witch, so be it."
         },
         "tough_labour": {
             "text": "A survivor working at the weapons manufacturing workshop implores you to reduce the production pace. Your gaze lingers on their deformed hands, worn by labor.",
-            "yes": "Silence! We need more weapons! Increase the pace!",
-            "no": "Yes, that is fair and good."
+            "no": "Silence! We need more weapons! Increase the pace!",
+            "yes": "Yes, that is fair and good."
         },
         "paleo_tools": {
             "text": "The steward of the paleontologists' laboratory brings you a report of their tool expenses. They are abnormally high, and you notice that weapons have also been consumed.",
@@ -234,42 +234,42 @@
     "answer": {
         "yes": {
             "order": [
-            "The clergyman blesses you and returns to his temple.",
-            "The clergyman clasps his hands and softly murmurs words. You suggest he thank the Dragon of the last days for being merciful."
+                "The clergyman blesses you and returns to his temple.",
+                "The clergyman clasps his hands and softly murmurs words. You suggest he thank the Dragon of the last days for being merciful."
             ],
             "military": [
-            "The militiaman salutes you and hastily leaves the premises.",
-            "You barely catch a glimpse of a satisfied smile on the soldier's face before he respectfully salutes you and takes his leave."
+                "The militiaman salutes you and hastily leaves the premises.",
+                "You barely catch a glimpse of a satisfied smile on the soldier's face before he respectfully salutes you and takes his leave."
             ],
             "civilian": [
-            "The survivor respectfully bows and steps back, looking at you until reaching the door.",
-            "The survivor looks at you with wide eyes filled with joy and hurriedly leaves, even forgetting to bid you farewell.",
-            "You hear your interlocutor whisper, 'Your kindness will save us, Sire!' just before performing a somewhat clumsy bow. You give a satisfied smile."
+                "The survivor respectfully bows and steps back, looking at you until reaching the door.",
+                "The survivor looks at you with wide eyes filled with joy and hurriedly leaves, even forgetting to bid you farewell.",
+                "You hear your interlocutor whisper, 'Your kindness will save us, Sire!' just before performing a somewhat clumsy bow. You give a satisfied smile."
             ],
             "paleo": [
-            "The paleontologist leaves rubbing his hands; his nervous laughter and joyous tics are rather unpleasant.",
-            "Clearly pleased with your response, the scientist swiftly turns around and leaves without a word. Despite your subject's joy, you can't help but grumble at this lack of respect."
+                "The paleontologist leaves rubbing his hands; his nervous laughter and joyous tics are rather unpleasant.",
+                "Clearly pleased with your response, the scientist swiftly turns around and leaves without a word. Despite your subject's joy, you can't help but grumble at this lack of respect."
             ]
         },
         "no": {
             "order": [
-            "The clergyman's features tense up. He leaves after overly obsequious farewells.",
-            "You see the clergyman's lips articulate words, as if invoking celestial justice. You meet his gaze, unafraid of any punishment, until he exits the room.",
-            "\"Your lack of faith will be your downfall,\" the clergyman simply responds. You remain unmoved by this statement, and he withdraws."
+                "The clergyman's features tense up. He leaves after overly obsequious farewells.",
+                "You see the clergyman's lips articulate words, as if invoking celestial justice. You meet his gaze, unafraid of any punishment, until he exits the room.",
+                "\"Your lack of faith will be your downfall,\" the clergyman simply responds. You remain unmoved by this statement, and he withdraws."
             ],
             "military": [
-            "The militiaman struggles to hide his frustration as he leaves the premises. You hear the enraged stomping of his boots for long minutes.",
-            "Without another word to you, the soldier hastily exits the room and slams the door behind him."
+                "The militiaman struggles to hide his frustration as he leaves the premises. You hear the enraged stomping of his boots for long minutes.",
+                "Without another word to you, the soldier hastily exits the room and slams the door behind him."
             ],
             "civilian": [
-            "The survivor leaves muttering some inaudible words. Probably insults.",
-            "The man gives you a pathetic look that neither affects nor bothers you, before leaving the room, understanding that you won't reconsider your decision."
+                "The survivor leaves muttering some inaudible words. Probably insults.",
+                "The man gives you a pathetic look that neither affects nor bothers you, before leaving the room, understanding that you won't reconsider your decision."
             ],
             "paleo": [
-            "The paleontologist exclaims 'Endomicropachycephalosaurus!' and moves away. You assume it's an insult.",
-            "\"You will regret neglecting science so much one day!\" the paleontologist sagely announces. You let out a scornful chuckle at these words."
+                "The paleontologist exclaims 'Endomicropachycephalosaurus!' and moves away. You assume it's an insult.",
+                "\"You will regret neglecting science so much one day!\" the paleontologist sagely announces. You let out a scornful chuckle at these words."
             ]
-        },        
+        },
         "guillotine": "You watch the militiamen take the condemned and lead them to the guillotine. You hear the ominous whistle of the blade slicing through the air.",
         "decree": "The decree has been executed according to your will. Your supremacy is reaffirmed.",
         "event": "Following these events, you go to bed, hoping that the next day will be less eventful."

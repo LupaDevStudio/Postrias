@@ -93,12 +93,12 @@
             "complainant": "civilian"
         },
         "witch": {
-            "yes": {
+            "no": {
                 "order": -10,
                 "civilian": -10,
                 "paleo": 10
             },
-            "no": {
+            "yes": {
                 "order": 10,
                 "civilian": 10,
                 "paleo": -25
@@ -106,11 +106,11 @@
             "complainant": "civilian"
         },
         "tough_labour": {
-            "yes": {
+            "no": {
                 "weapons": 10,
                 "civilian": -10
             },
-            "no": {
+            "yes": {
                 "weapons": -5,
                 "civilian": 10
             },
