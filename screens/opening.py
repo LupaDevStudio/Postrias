@@ -61,6 +61,7 @@ class OpeningScreen(ImprovedScreen):
         print("load the screens")
         from screens import (
             MenuScreen,
+            IntermediateMenuScreen,
             GameScreen,
             SettingsScreen,
             GameOverScreen,
@@ -74,6 +75,7 @@ class OpeningScreen(ImprovedScreen):
             Builder.load_file(f"screens/{file}", encoding="utf-8")
 
         self.MenuScreen = MenuScreen
+        self.IntermediateMenuScreen = IntermediateMenuScreen
         self.GameScreen = GameScreen
         self.SettingsScreen = SettingsScreen
         self.GameOverScreen = GameOverScreen
@@ -91,6 +93,8 @@ class OpeningScreen(ImprovedScreen):
         ### Load the kv files of the screens ###
         menu_screen = self.MenuScreen(name="menu")
         self.manager.add_widget(menu_screen)
+        intermediate_menu = self.IntermediateMenuScreen(name="intermediate_menu")
+        self.manager.add_widget(intermediate_menu)
         game_screen = self.GameScreen(name="game")
         self.manager.add_widget(game_screen)
         settings_screen = self.SettingsScreen(name="settings")

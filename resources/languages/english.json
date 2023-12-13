@@ -448,7 +448,7 @@
         ]
     ],
     "menu": {
-        "press_to_start": "Start a new game",
+        "press_to_start": "Start a game",
         "continue_game": "Continue",
         "new_game": "New game"
     },

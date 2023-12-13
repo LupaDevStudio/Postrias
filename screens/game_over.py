@@ -119,7 +119,7 @@ class GameOverScreen(ImprovedScreen):
 
         return super().on_leave(*args)
 
-    def back_to_menu(self):
+    def go_to_menu(self):
         """
         Go back to the main menu
         """

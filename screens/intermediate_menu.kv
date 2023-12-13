@@ -1,0 +1,49 @@
+#:kivy 2.1.0
+#: import PATH_IMAGES tools.path.PATH_IMAGES
+#: import TITLE_FONT_COLOR tools.constants.TITLE_FONT_COLOR
+#: import BACK_ARROW_SIZE tools.constants.BACK_ARROW_SIZE
+
+<IntermediateMenuScreen>:
+
+    # Back button
+    ImageWithTextButton:
+        source: PATH_IMAGES + "back_arrow.png"
+        size_hint: BACK_ARROW_SIZE, BACK_ARROW_SIZE*0.6
+        pos_hint: {"x":0.025, "top": 0.975}
+        allow_stretch: True
+        keep_ratio: False
+        release_function: root.go_to_menu
+
+    Label:
+        id: start_new_game
+        text: root.start_label_text
+        size_hint: 0.5, 0.2
+        pos_hint: {"center_x": 0.5, "center_y": 0.6}
+        font_size: 40*root.font_ratio
+        font_name: root.font_name
+        color: TITLE_FONT_COLOR
+        outline_width: 2
+        outline_color: (1,1,1,1)
+    Button:
+        size_hint: 0.5, 0.2
+        pos_hint: {"center_x": 0.5, "center_y": 0.6}
+        background_color: 0, 0, 0, 0
+        on_release:
+            root.start_game("new")
+
+    Label:
+        id: continue_game
+        text: root.continue_label_text
+        size_hint: 0.5, 0.2
+        pos_hint: {"center_x": 0.5, "center_y": 0.4}
+        font_size: 40*root.font_ratio
+        font_name: root.font_name
+        color: TITLE_FONT_COLOR
+        outline_width: 2
+        outline_color: (1,1,1,1)
+    Button:
+        size_hint: 0.5, 0.2
+        pos_hint: {"center_x": 0.5, "center_y": 0.4}
+        background_color: 0, 0, 0, 0
+        on_release:
+            root.start_game("continue")
