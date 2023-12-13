@@ -2,17 +2,11 @@
 #: import PATH_IMAGES tools.path.PATH_IMAGES
 #: import TITLE_FONT_COLOR tools.constants.TITLE_FONT_COLOR
 #: import MOBILE_MODE tools.constants.MOBILE_MODE
-#:set side_logo_size 0.2
+#: set side_logo_size 0.2
 
 <MenuScreen>:
 
     Label:
-        # canvas.before:
-        #     Color:
-        #         rgba: (1,1,1,1)
-        #     Rectangle:
-        #         size: self.size
-        #         pos: self.pos
         id: title_label
         text: "Postrias"
         size_hint: 0.5, 0.2
@@ -24,18 +18,18 @@
         outline_color: (1,1,1,1)
 
     Label:
-        id: start_label
+        id: start_game
         text: root.start_label_text
         size_hint: 0.7, 0.25
-        pos_hint: {"center_x": 0.5, "center_y": 0.45}
-        font_size: 50*root.font_ratio
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        font_size: 40*root.font_ratio
         font_name: root.font_name
         color: TITLE_FONT_COLOR
         outline_width: 2
         outline_color: (1,1,1,1)
     Button:
         size_hint: 0.7, 0.25
-        pos_hint: {"center_x": 0.5, "center_y": 0.45}
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
         background_color: 0, 0, 0, 0
         on_release:
             root.start_game()

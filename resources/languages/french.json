@@ -448,7 +448,9 @@
         ]
     ],
     "menu": {
-        "press_to_start": "Commencer une nouvelle partie"
+        "press_to_start": "Commencer une partie",
+        "continue_game": "Continuer une partie",
+        "new_game": "Nouvelle partie"
     },
     "game": {
         "decree": "Le conseil d'aujourd'hui se termine tard dans la nuit. Vos conseillers vous ont préparé trois décrets pour améliorer le moral dans le camp.\n\nLequel choisissez-vous d'appliquer ?",

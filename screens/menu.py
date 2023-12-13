@@ -25,7 +25,6 @@ from tools.path import (
 )
 from tools.constants import (
     FPS,
-    USER_DATA,
     TEXT
 )
 from tools.kivy_tools import (
@@ -74,13 +73,13 @@ class MenuScreen(ImprovedScreen):
         return super().on_leave(*args)
 
     def update(self, *args):
-        self.ids.start_label.opacity += self.opacity_state * self.opacity_rate
-        if self.ids.start_label.opacity < 0 or self.ids.start_label.opacity > 1:
+        self.ids.start_game.opacity += self.opacity_state * self.opacity_rate
+        if self.ids.start_game.opacity < 0 or self.ids.start_game.opacity > 1:
             self.opacity_state = -self.opacity_state
 
     def start_game(self):
         """
-        Start the tutorial for the first time, otherwise the game.
+        Start the intermediate menu, to choose between a saved or new game.
 
         Parameters
         ----------
@@ -90,10 +89,7 @@ class MenuScreen(ImprovedScreen):
         -------
         None
         """
-        if USER_DATA.tutorial:
-            self.manager.current = "tutorial"
-        else:
-            self.manager.current = "game"
+        self.manager.current = "intermediate_menu"
 
     def open_lupa_website(self):
         webbrowser.open("https://lupadevstudio.com", 2)

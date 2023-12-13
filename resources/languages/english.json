@@ -448,7 +448,9 @@
         ]
     ],
     "menu": {
-        "press_to_start": "Start a new game"
+        "press_to_start": "Start a game",
+        "continue_game": "Continue",
+        "new_game": "New game"
     },
     "game": {
         "decree": "Today's council ends late into the night. Your advisors have prepared three decrees to boost morale in the camp.\n\nWhich one do you choose to apply?",

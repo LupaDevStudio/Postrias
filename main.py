@@ -119,7 +119,6 @@ class MainApp(App, Widget):
 
         return super().on_start()
 
-
 # Run the application
 if __name__ == "__main__":
     MainApp().run()
