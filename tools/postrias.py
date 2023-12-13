@@ -208,6 +208,9 @@ class Game():
 
         # Draw the card corresponding to the phase
         self.card_id = self.draw(self.phase)
+        self.extract_texts()
+
+    def extract_texts(self):
 
         # Extract the texts to display
         if self.phase == "decree":
@@ -300,9 +303,9 @@ class Game():
         elif self.phase == "decision":
             if choice in ["yes", "no"]:
                 list_text = TEXT.answer[choice][self.gameplay["decision"]
-                                        [self.card_id]["complainant"]]
+                                                [self.card_id]["complainant"]]
                 self.text_dict["answer"] = random.choice(list_text)
-                    
+
             else:
                 self.text_dict["answer"] = TEXT.answer[choice]
 

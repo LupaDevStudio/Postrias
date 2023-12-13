@@ -75,9 +75,6 @@ class GameScreen(ImprovedScreen):
     weapons_value = StringProperty("0")
     tools_value = StringProperty("0")
 
-    # Day counter
-    counter_day = 0
-
     # Boolean indicating if the current moment is an answer or not
     is_answer = False
 
@@ -126,6 +123,8 @@ class GameScreen(ImprovedScreen):
 
         self.credit: int
         self.help_mode = False
+
+        self.game_mode = "new"
 
     def preload(self, *_):
 
@@ -194,16 +193,19 @@ class GameScreen(ImprovedScreen):
     def on_pre_enter(self, *args):
 
         super().on_pre_enter(*args)
+        self.disable_widget("back_button")
 
         if not self.help_mode:
 
             # Load the gameplay json
             game.load_resources()
-            game.reset_variables()
+            if self.game_mode == "new":
+                game.reset_variables()
+                # Hide all cards
+                self.hide_cards()
+            else:
+                self.load_game()
             self.update_display_resources()
-
-            # Hide all cards
-            self.hide_cards()
 
     def on_enter(self, *args):
 
@@ -212,8 +214,9 @@ class GameScreen(ImprovedScreen):
             # Start the game music
             music_mixer.play("game_music", loop=True)
 
-            # Launch the start day function
-            Clock.schedule_once(self.start_day)
+            if self.game_mode == "new":
+                # Launch the start day function
+                Clock.schedule_once(self.start_day)
 
             # Load an add
             if platform == "android":
@@ -227,8 +230,6 @@ class GameScreen(ImprovedScreen):
             # Allocate the number of credits
             self.credit = 1
 
-            # Reset the number of days
-            self.counter_day = 0
         else:
             self.help_mode = False
 
@@ -238,6 +239,8 @@ class GameScreen(ImprovedScreen):
         """
         Load and display the cards depending on the game phase.
         """
+        # Increase the counter of days
+        self.ids.day_indicator.text = TEXT.game["day"] + str(game.day)
         if game.phase == "decision":
             self.ids["decision_center"].text = game.text_dict["card"]
             self.ids["decision_no"].text = game.text_dict["left"]
@@ -275,6 +278,7 @@ class GameScreen(ImprovedScreen):
             game.make_choice(choice=choice)
             game.end_day()
             self.display_answer()
+            self.disable_widget("back_button")
         else:
             if choice == "right":
                 self.play_ads()
@@ -338,9 +342,7 @@ class GameScreen(ImprovedScreen):
         """
         Start a new day with a new batch of cards.
         """
-        # Increase the counter of days
-        self.counter_day += 1
-        self.ids.day_indicator.text = TEXT.game["day"] + str(self.counter_day)
+        self.enable_widget("back_button")
 
         if not game.game_over:
             # Hide the cards
@@ -354,7 +356,10 @@ class GameScreen(ImprovedScreen):
 
             # Set the day background
             self.set_back_image_texture(self.day_camp_background.image.texture)
+
+            self.save_game()
         else:
+            self.disable_widget("back_button")
             self.update_display_resources()
             if self.credit > 0:
                 self.show_pre_game_over()
@@ -414,3 +419,39 @@ class GameScreen(ImprovedScreen):
 
     def go_to_menu(self):
         self.manager.current = "menu"
+
+    def save_game(self):
+        save_dict = {}
+        save_dict["card_id"] = game.card_id
+        save_dict["phase"] = game.phase
+        save_dict["day"] = game.day
+        save_dict["food"] = game.food
+        save_dict["weapons"] = game.weapons
+        save_dict["tools"] = game.tools
+        save_dict["military"] = game.military
+        save_dict["civilian"] = game.civilian
+        save_dict["paleo"] = game.paleo
+        save_dict["order"] = game.order
+        USER_DATA.saved_data = save_dict
+        USER_DATA.save_changes()
+
+    def load_game(self):
+        save_dict = USER_DATA.saved_data
+        game.card_id = save_dict["card_id"]
+        game.phase = save_dict["phase"]
+        game.day = save_dict["day"]
+        game.food = save_dict["food"]
+        game.weapons = save_dict["weapons"]
+        game.tools = save_dict["tools"]
+        game.military = save_dict["military"]
+        game.civilian = save_dict["civilian"]
+        game.paleo = save_dict["paleo"]
+        game.order = save_dict["order"]
+        game.extract_texts()
+        self.hide_cards()
+        self.enable_widget("back_button")
+        self.display_card()
+
+    def reset_variables(self):
+        game.reset_variables()
+        self.start_day()

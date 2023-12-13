@@ -106,6 +106,10 @@ class GameOverScreen(ImprovedScreen):
         # Play the game over music
         music_mixer.play("time_of_the_apocalypse")
 
+        # Clear the saved game data
+        USER_DATA.saved_data = None
+        USER_DATA.save_changes()
+
         # Display something when getting a new highscore
         return super().on_enter(*args)
 

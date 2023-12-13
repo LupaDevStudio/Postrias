@@ -46,13 +46,14 @@ class IntermediateMenuScreen(ImprovedScreen):
             **kw)
         self.other_screens_loaded = False
 
-    def on_enter(self, *args):
+    def on_pre_enter(self, *args):
 
         # Set the labels text
         self.start_label_text = TEXT.menu["new_game"]
-        self.continue_label_text = TEXT.menu["continue_game"]
+        if USER_DATA.saved_data is not None:
+            self.continue_label_text = TEXT.menu["continue_game"]
 
-        return super().on_enter(*args)
+        return super().on_pre_enter(*args)
 
     def go_to_menu(self):
         """
@@ -74,8 +75,8 @@ class IntermediateMenuScreen(ImprovedScreen):
         -------
         None
         """
-        # PAUL
-        print(mode)
+        self.manager.get_screen("game").game_mode = mode
+
         if USER_DATA.tutorial:
             self.manager.current = "tutorial"
         else:

@@ -107,6 +107,10 @@ class UserData():
         self.tutorial = data["tutorial"]
         self.music_volume = data["music_volume"]
         self.sound_effects_volume = data["sound_effects_volume"]
+        if "saved_data" not in data:
+            self.saved_data = None
+        else:
+            self.saved_data = data["saved_data"]
 
     def save_changes(self) -> None:
         """
@@ -128,6 +132,7 @@ class UserData():
         data["tutorial"] = self.tutorial
         data["music_volume"] = self.music_volume
         data["sound_effects_volume"] = self.sound_effects_volume
+        data["saved_data"] = self.saved_data
 
         # Save this dictionary
         save_json_file(
