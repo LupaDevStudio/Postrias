@@ -86,7 +86,8 @@ if not os.path.exists(PATH_USER_DATA):
         },
         "tutorial": True,
         "music_volume": 0.5,
-        "sound_effects_volume": 0.5
+        "sound_effects_volume": 0.5,
+        "saved_data": None
     }
     save_json_file(PATH_USER_DATA, default_user_data)
 
