@@ -338,7 +338,7 @@
             "text": "Les paléontologues ont découvert une caverne où des dinosaures stockaient toutes leurs ressources ! Ils s'empressent de ramener tous les vivres au campement."
         },
         "dino_attack": {
-            "text": "Une horde de compsognathus attaque votre campement sans prévenir. La milice parvient à contenir la crise au prix de quelques armes. De nombreux cadavres de ces petites bestioles sont parsemés dans votre camp, pour la plus grande joie des paléontologues qui s'empressent d'en subtiliser quelques-uns pour les étudier. Les autres sont utilisés pour regarnir vos réserves de nourriture."
+            "text": "Une horde de compsognathus attaque votre campement. La milice parvient à contenir la crise au prix de quelques armes. Des cadavres de ces petites bestioles sont parsemés dans votre camp, pour la joie des paléontologues qui en subtilisent quelques-uns pour les étudier. Les autres rejoignent vos réserves de nourriture."
         }
     },
     "ending": {
