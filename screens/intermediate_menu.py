@@ -50,8 +50,12 @@ class IntermediateMenuScreen(ImprovedScreen):
 
         # Set the labels text
         self.start_label_text = TEXT.menu["new_game"]
+        self.continue_label_text = TEXT.menu["continue_game"]
+        self.disable_widget("continue_game")
+        self.disable_widget("continue_game_button")
         if USER_DATA.saved_data is not None:
-            self.continue_label_text = TEXT.menu["continue_game"]
+            self.enable_widget("continue_game")
+            self.enable_widget("continue_game_button")
 
         return super().on_pre_enter(*args)
 
