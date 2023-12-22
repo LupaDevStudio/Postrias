@@ -80,7 +80,7 @@ class GameScreen(ImprovedScreen):
 
     def __init__(self, **kw):
         super().__init__(
-            back_image_path=PATH_IMAGES + "day_camp.jpg",
+            back_image_path=PATH_IMAGES + "day_camp_christmas.jpg",
             font_name=PATH_TEXT_FONT,
             ** kw)
 
@@ -132,11 +132,11 @@ class GameScreen(ImprovedScreen):
 
             # Load the night camp background
             self.night_camp_background = Loader.image(
-                PATH_IMAGES + "night_camp.jpg")
+                PATH_IMAGES + "night_camp_christmas.jpg")
 
             # Load the day camp background
             self.day_camp_background = Loader.image(
-                PATH_IMAGES + "day_camp.jpg")
+                PATH_IMAGES + "day_camp_christmas.jpg")
 
             # Load the musics and sounds
             new_musics = load_sounds(

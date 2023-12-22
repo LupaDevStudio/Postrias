@@ -41,7 +41,7 @@ class IntermediateMenuScreen(ImprovedScreen):
     def __init__(self, **kw):
 
         super().__init__(
-            back_image_path=PATH_IMAGES + "menu_background.jpg",
+            back_image_path=PATH_IMAGES + "menu_background_christmas.jpg",
             font_name=PATH_TITLE_FONT,
             **kw)
         self.other_screens_loaded = False
