@@ -93,6 +93,7 @@ if not os.path.exists(PATH_USER_DATA):
 
 # Load the data of the user
 
+NUMBER_ADS_CREDITS = 1
 
 class UserData():
     """
@@ -111,6 +112,8 @@ class UserData():
             self.saved_data = None
         else:
             self.saved_data = data["saved_data"]
+            if not "credit" in self.saved_data:
+                 self.saved_data["credit"] = NUMBER_ADS_CREDITS
 
     def save_changes(self) -> None:
         """
