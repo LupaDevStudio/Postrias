@@ -15,7 +15,7 @@ sys.path.append(".")
 ### Kivy imports ###
 
 from kivy.clock import Clock
-from kivy.properties import StringProperty, NumericProperty
+from kivy.properties import StringProperty
 from kivy.loader import Loader, ProxyImage
 
 ### Module imports ###
@@ -25,6 +25,9 @@ from tools.path import (
     PATH_IMAGES,
     PATH_MUSICS,
     PATH_SOUNDS
+)
+from tools.constants import (
+    NUMBER_ADS_CREDITS
 )
 from tools import (
     music_mixer,
@@ -49,8 +52,7 @@ from tools.constants import (
 if platform == "android":
     from kivads import (
         RewardedInterstitial,
-        InterstitialAd,
-        TestID
+        InterstitialAd
     )
 
 
@@ -218,17 +220,17 @@ class GameScreen(ImprovedScreen):
                 # Launch the start day function
                 Clock.schedule_once(self.start_day)
 
-            # Load an add
-            if platform == "android":
-                self.reward_interstitial = RewardedInterstitial(
-                    REWARD_INTERSTITIAL, self.schedule_reward
-                )
-                self.reward_static = InterstitialAd(
-                    INTERSTITIAL
-                )
+                # Allocate the number of credits
+                self.credit = NUMBER_ADS_CREDITS
 
-            # Allocate the number of credits
-            self.credit = 1
+                # Load an add
+                if platform == "android":
+                    self.reward_interstitial = RewardedInterstitial(
+                        REWARD_INTERSTITIAL, self.schedule_reward
+                    )
+                    self.reward_static = InterstitialAd(
+                        INTERSTITIAL
+                    )
 
         else:
             self.help_mode = False
@@ -432,6 +434,7 @@ class GameScreen(ImprovedScreen):
         save_dict["civilian"] = game.civilian
         save_dict["paleo"] = game.paleo
         save_dict["order"] = game.order
+        save_dict["credit"] = self.credit
         USER_DATA.saved_data = save_dict
         USER_DATA.save_changes()
 
@@ -447,6 +450,7 @@ class GameScreen(ImprovedScreen):
         game.civilian = save_dict["civilian"]
         game.paleo = save_dict["paleo"]
         game.order = save_dict["order"]
+        self.credit = save_dict["credit"]
         game.extract_texts()
         self.hide_cards()
         self.enable_widget("back_button")
