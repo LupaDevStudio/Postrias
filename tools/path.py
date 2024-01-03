@@ -2,7 +2,23 @@
 Module to store all the paths used for the app files and folders
 """
 
+##############
+### Import ###
+##############
+
+import datetime
+
+
+#################
+### Constants ###
+#################
+
+current_datetime = datetime.datetime.now()
+IS_WINTER = current_datetime.month in (1, 2, 12)
+
+#############
 ### Paths ###
+#############
 
 # Path for the folders
 PATH_RESOURCES_FOLDER = "resources/"
@@ -28,3 +44,13 @@ PATH_IMAGES_TUTORIAL = PATH_IMAGES + "tutorial_"
 # Path for the fonts
 PATH_TITLE_FONT = PATH_FONTS + "scratched_letters_V2.ttf"
 PATH_TEXT_FONT = PATH_FONTS + "Aquifer.ttf"
+
+# Path for the backgrounds
+if IS_WINTER:
+    PATH_MENU_BACKGROUND = PATH_IMAGES + "menu_background_christmas.jpg"
+    PATH_DAY_CAMP_BACKGROUND = PATH_IMAGES + "day_camp_christmas.jpg"
+    PATH_NIGHT_CAMP_BACKGROUND = PATH_IMAGES + "night_camp_christmas.jpg"
+else:
+    PATH_MENU_BACKGROUND = PATH_IMAGES + "menu_background.jpg"
+    PATH_DAY_CAMP_BACKGROUND = PATH_IMAGES + "day_camp.jpg"
+    PATH_NIGHT_CAMP_BACKGROUND = PATH_IMAGES + "night_camp.jpg"
