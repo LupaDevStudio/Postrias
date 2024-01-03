@@ -24,7 +24,9 @@ from tools.path import (
     PATH_TEXT_FONT,
     PATH_IMAGES,
     PATH_MUSICS,
-    PATH_SOUNDS
+    PATH_SOUNDS,
+    PATH_DAY_CAMP_BACKGROUND,
+    PATH_NIGHT_CAMP_BACKGROUND
 )
 from tools.constants import (
     NUMBER_ADS_CREDITS
@@ -82,7 +84,7 @@ class GameScreen(ImprovedScreen):
 
     def __init__(self, **kw):
         super().__init__(
-            back_image_path=PATH_IMAGES + "day_camp_christmas.jpg",
+            back_image_path=PATH_DAY_CAMP_BACKGROUND,
             font_name=PATH_TEXT_FONT,
             ** kw)
 
@@ -134,11 +136,11 @@ class GameScreen(ImprovedScreen):
 
             # Load the night camp background
             self.night_camp_background = Loader.image(
-                PATH_IMAGES + "night_camp_christmas.jpg")
+                PATH_NIGHT_CAMP_BACKGROUND)
 
             # Load the day camp background
             self.day_camp_background = Loader.image(
-                PATH_IMAGES + "day_camp_christmas.jpg")
+                PATH_DAY_CAMP_BACKGROUND)
 
             # Load the musics and sounds
             new_musics = load_sounds(
