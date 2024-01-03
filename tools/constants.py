@@ -95,6 +95,7 @@ if not os.path.exists(PATH_USER_DATA):
 
 NUMBER_ADS_CREDITS = 1
 
+
 class UserData():
     """
     A class to store the user data.
@@ -112,8 +113,8 @@ class UserData():
             self.saved_data = None
         else:
             self.saved_data = data["saved_data"]
-            if not "credit" in self.saved_data:
-                 self.saved_data["credit"] = NUMBER_ADS_CREDITS
+            if self.saved_data is not None and not "credit" in self.saved_data:
+                self.saved_data["credit"] = NUMBER_ADS_CREDITS
 
     def save_changes(self) -> None:
         """
