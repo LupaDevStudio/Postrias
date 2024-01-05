@@ -7,6 +7,7 @@ Module to store all the paths used for the app files and folders
 ##############
 
 import datetime
+from kivy.utils import platform
 
 
 #################
@@ -15,16 +16,24 @@ import datetime
 
 current_datetime = datetime.datetime.now()
 IS_WINTER = current_datetime.month in (1, 2, 12)
+MOBILE_MODE = platform == "android"
 
 #############
 ### Paths ###
 #############
 
+if MOBILE_MODE:
+    from android.storage import app_storage_path  # pylint: disable=import-error # type: ignore
+    PATH_APP_FOLDER = app_storage_path() + "/"
+else:
+    PATH_APP_FOLDER = "./"
+
+
 # Path for the folders
 PATH_RESOURCES_FOLDER = "resources/"
 
 # Path for the user data
-PATH_USER_DATA = "data.json"
+PATH_USER_DATA = PATH_APP_FOLDER + "data.json"
 
 # Path for the screen
 PATH_SCREENS = "screens/"

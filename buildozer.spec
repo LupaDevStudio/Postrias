@@ -29,7 +29,7 @@ source.exclude_dirs = test, bin, .buildozer, data/collection, data/collection_co
 source.exclude_patterns = data.json,*.gitignore, requirements.txt,draft_*
 
 # (str) Application versioning (method 1)
-version = 2.2.0
+version = 2.2.1
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
