@@ -47,7 +47,7 @@ requirements = python3,kivy,androidstorage4kivy,Pillow
 #presplash.filename = ./resources/logo_collector_1024.png
 
 # (str) Icon of the application
-icon.filename = ./resources/logo_2.png
+icon.filename = ./resources/logo_3.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = landscape
