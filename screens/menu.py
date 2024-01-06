@@ -26,7 +26,8 @@ from tools.path import (
 )
 from tools.constants import (
     FPS,
-    TEXT
+    TEXT,
+    MOBILE_MODE
 )
 from tools.kivy_tools import (
     ImprovedScreen
@@ -34,6 +35,7 @@ from tools.kivy_tools import (
 from tools import (
     music_mixer
 )
+
 
 ###############
 ### Classes ###
