@@ -44,6 +44,7 @@ from tools.share_image import (
 if MOBILE_MODE:
     from androidstorage4kivy import SharedStorage, ShareSheet  # type: ignore
     from android.storage import app_storage_path  # type: ignore
+    from tools.kivyreview import request_review
 
 
 ###############
@@ -78,6 +79,12 @@ class GameOverScreen(ImprovedScreen):
         # Set the background
         self.set_back_image_path(
             PATH_IMAGES + "ending_" + game.ending + ".jpg")
+
+        # Detect if it is the first game of the player
+        if USER_DATA.highscore == 0 and game.score != 0:
+            self.is_first_game = True
+        else:
+            self.is_first_game = False
 
         if game.score > USER_DATA.highscore:
             self.new_highscore = True
@@ -120,6 +127,10 @@ class GameOverScreen(ImprovedScreen):
 
         # Save the changes
         USER_DATA.save_changes()
+
+        # Open the in app review window if it is the first game
+        if self.is_first_game and MOBILE_MODE:
+            Clock.schedule_once(request_review, 1)
 
         return super().on_leave(*args)
 
