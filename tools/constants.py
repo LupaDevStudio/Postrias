@@ -54,7 +54,7 @@ from tools.basic_tools import (
 
 ### Version ###
 
-__version__ = "2.2.1"
+__version__ = "2.2.2"
 
 ### Mode ###
 
@@ -206,3 +206,6 @@ START_MUSIC_LIST = ["cinematic_dramatic.mp3", "my_office.mp3"]
 # Ads code
 REWARD_INTERSTITIAL = "ca-app-pub-2909842258525517/6684743133"
 INTERSTITIAL = "ca-app-pub-2909842258525517/7085343595"
+
+# Game Services Project ID
+game_services_rpoject_id = "163527384353"

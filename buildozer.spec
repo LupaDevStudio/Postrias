@@ -29,7 +29,7 @@ source.exclude_dirs = test, bin, .buildozer, data/collection, data/collection_co
 source.exclude_patterns = data.json,*.gitignore, requirements.txt,draft_*
 
 # (str) Application versioning (method 1)
-version = 2.2.1
+version = 2.2.2
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -188,7 +188,7 @@ android.add_src = src
 #android.add_assets =
 
 # (list) Gradle dependencies to add
-android.gradle_dependencies = com.google.android.gms:play-services-ads:22.5.0, androidx.fragment:fragment-ktx:1.3.0-beta01, com.google.android.ump:user-messaging-platform:2.1.0, com.google.android.play:core:1.10.0
+android.gradle_dependencies = com.google.android.gms:play-services-ads:22.5.0, androidx.fragment:fragment-ktx:1.3.0-beta01, com.google.android.ump:user-messaging-platform:2.1.0, com.google.android.play:core:1.10.0, com.google.android.gms:play-services-games-v2:+
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.

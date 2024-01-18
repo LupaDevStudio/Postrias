@@ -35,6 +35,7 @@ from tools.kivy_tools import (
 from tools import (
     music_mixer
 )
+from tools.kivygameservices import connect
 
 
 ###############
@@ -95,4 +96,5 @@ class MenuScreen(ImprovedScreen):
         self.manager.current = "intermediate_menu"
 
     def open_lupa_website(self):
-        webbrowser.open("https://lupadevstudio.com", 2)
+        connect()
+        # webbrowser.open("https://lupadevstudio.com", 2)
