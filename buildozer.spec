@@ -29,7 +29,7 @@ source.exclude_dirs = test, bin, .buildozer, data/collection, data/collection_co
 source.exclude_patterns = data.json,*.gitignore, requirements.txt,draft_*
 
 # (str) Application versioning (method 1)
-version = 2.2.1
+version = 2.2.3
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -37,7 +37,7 @@ version = 2.2.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,androidstorage4kivy,Pillow
+requirements = python3,kivy, pyjnius==1.6.1, android,androidstorage4kivy,Pillow
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -100,13 +100,13 @@ android.permissions = INTERNET, ACCESS_NETWORK_STATE
 #android.features = android.hardware.usb.host
 
 # (int) Target Android API, should be as high as possible.
-android.api = 34
+android.api = 36
 
 # (int) Minimum API your APK / AAB will support.
-android.minapi = 28
+android.minapi = 24
 
 # (int) Android SDK version to use
-android.sdk = 34
+#android.sdk = 34
 
 # (str) Android NDK version to use
 #android.ndk = 19b
@@ -188,12 +188,12 @@ android.add_src = src
 #android.add_assets =
 
 # (list) Gradle dependencies to add
-android.gradle_dependencies = com.google.android.gms:play-services-ads:22.5.0, androidx.fragment:fragment-ktx:1.3.0-beta01, com.google.android.ump:user-messaging-platform:2.1.0, com.google.android.play:core:1.10.0
+android.gradle_dependencies = com.google.android.gms:play-services-ads:22.5.0, androidx.fragment:fragment-ktx:1.3.0-beta01, com.google.android.ump:user-messaging-platform:2.1.0, com.google.android.play:review:2.0.1
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
 # contains an 'androidx' package, or any package from Kotlin source.
 # android.enable_androidx requires android.api >= 28
-# android.enable_androidx = True
+android.enable_androidx = True
 
 # (list) add java compile options
 # this can for example be necessary when importing certain java libraries using the 'android.gradle_dependencies' option
