@@ -1,1 +1,2 @@
-buildozer
+buildozer==1.6.0
+Cython==3.2.8

@@ -1,3 +1,2 @@
-kivy==2.1.0
-Pillow==10.3.0
-Cython==0.29.26
+kivy==2.3.1
+Pillow==12.2.0

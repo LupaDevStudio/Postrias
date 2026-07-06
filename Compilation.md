@@ -4,11 +4,11 @@
 
 ### Compilation of a debug version
 
-`python -m buildozer -v android debug`
+`buildozer -v android debug`
 
 ### Launch the debug version on a device connected to the computer
 
-`python -m buildozer -v android deploy run logcat | grep python`
+`buildozer -v android deploy run logcat | grep python`
 
 ## Release
 
@@ -26,7 +26,7 @@ export P4A_RELEASE_KEYALIAS="Postrias"
 export P4A_RELEASE_KEYSTORE=~/keystores/Postrias.keystore
 export P4A_RELEASE_KEYSTORE_PASSWD=
 export P4A_RELEASE_KEYALIAS_PASSWD=
-python -m buildozer android release
+buildozer android release
 ```
 
 ## Bug fix

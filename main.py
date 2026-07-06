@@ -4,7 +4,9 @@ Main module of Postrias.
 
 print("Start Postrias")
 
+__version__ = "2.3.0"
 
+ 
 ###############
 ### Imports ###
 ###############
